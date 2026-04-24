@@ -1,0 +1,23 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "2647",
+  "difficulty": "VERY_HARD",
+  "skill_types": [
+    "data_structures"
+  ],
+  "tags": [
+    "tree_algorithms",
+    "graph_algorithms",
+    "data_structures",
+    "spanning_trees"
+  ],
+  "family_assignment": "data_structures",
+  "family_assignments": [
+    "data_structures"
+  ],
+  "subtype_assignment": "tree_data_structures",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "tree_algorithms__graph_algorithms__spanning_trees",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}

@@ -1,0 +1,23 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "8919",
+  "difficulty": "MEDIUM_HARD",
+  "skill_types": [
+    "complete_search"
+  ],
+  "tags": [
+    "graph_algorithms",
+    "graph_traversal",
+    "combinatorics",
+    "complete_search"
+  ],
+  "family_assignment": "complete_search",
+  "family_assignments": [
+    "complete_search"
+  ],
+  "subtype_assignment": "graph_search",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "graph_algorithms__graph_traversal__combinatorics",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}

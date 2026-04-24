@@ -1,0 +1,23 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "3585",
+  "difficulty": "HARD",
+  "skill_types": [
+    "data_structures"
+  ],
+  "tags": [
+    "graph_algorithms",
+    "data_structures",
+    "combinatorics",
+    "flows_and_cuts"
+  ],
+  "family_assignment": "data_structures",
+  "family_assignments": [
+    "data_structures"
+  ],
+  "subtype_assignment": "graph_data_structures",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "graph_algorithms__combinatorics__flows_and_cuts",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}

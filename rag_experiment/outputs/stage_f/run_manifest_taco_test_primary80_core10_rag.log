@@ -1,0 +1,263 @@
+2026-04-23 15:42:04 | INFO    | stage_f | Loaded Stage F eval manifest: /home/hjr/algo-skill-factory/rag_experiment/outputs/stage_f/eval_sets/taco_test_primary80_core10.jsonl (problems=80 tests=80)
+2026-04-23 15:42:10 | INFO    | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-23 15:42:10 | INFO    | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/modules.json "HTTP/1.1 200 OK"
+2026-04-23 15:42:10 | INFO    | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-04-23 15:42:10 | WARNING | huggingface_hub.utils._http | Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-04-23 15:42:10 | INFO    | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-04-23 15:42:10 | INFO    | sentence_transformers.base.model | Loading SentenceTransformer model from BAAI/bge-base-en-v1.5.
+2026-04-23 15:42:10 | INFO    | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-23 15:42:10 | INFO    | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-04-23 15:42:11 | INFO    | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-04-23 15:42:11 | INFO    | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/README.md "HTTP/1.1 200 OK"
+2026-04-23 15:42:11 | INFO    | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-23 15:42:11 | INFO    | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/modules.json "HTTP/1.1 200 OK"
+2026-04-23 15:42:12 | INFO    | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-23 15:42:12 | INFO    | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-04-23 15:42:12 | INFO    | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-04-23 15:42:12 | INFO    | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-23 15:42:12 | INFO    | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/config.json "HTTP/1.1 200 OK"
+2026-04-23 15:42:13 | INFO    | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-23 15:42:13 | INFO    | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/config.json "HTTP/1.1 200 OK"
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 4814.45it/s]
+[1mBertModel LOAD REPORT[0m from: BAAI/bge-base-en-v1.5
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+2026-04-23 15:42:13 | INFO    | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-04-23 15:42:14 | INFO    | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-04-23 15:42:14 | INFO    | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-04-23 15:42:14 | INFO    | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-04-23 15:42:15 | INFO    | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-23 15:42:15 | INFO    | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-04-23 15:42:15 | INFO    | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-23 15:42:15 | INFO    | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/config.json "HTTP/1.1 200 OK"
+2026-04-23 15:42:16 | INFO    | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-23 15:42:16 | INFO    | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/config.json "HTTP/1.1 200 OK"
+2026-04-23 15:42:16 | INFO    | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-23 15:42:16 | INFO    | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-04-23 15:42:16 | INFO    | httpx | HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-base-en-v1.5/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-04-23 15:42:17 | INFO    | httpx | HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-base-en-v1.5/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-04-23 15:42:17 | INFO    | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-23 15:42:17 | INFO    | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-04-23 15:42:18 | INFO    | httpx | HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-base-en-v1.5 "HTTP/1.1 200 OK"
+2026-04-23 15:42:18 | INFO    | src.rag.pipeline | RAGContext: graph retriever initialised (top_k=3)
+2026-04-23 15:42:18 | INFO    | stage_f | Loading Qwen code LLM: Qwen/Qwen2.5-Coder-7B-Instruct
+2026-04-23 15:42:18 | INFO    | stage_f | [1/80] Generating 3 samples for taco_test_000029
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  4.53it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  4.53it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 25.28it/s]
+Loading weights:   0%|          | 0/339 [00:00<?, ?it/s]Loading weights:   0%|          | 1/339 [00:00<04:51,  1.16it/s]Loading weights:   9%|▉         | 30/339 [00:00<00:07, 41.21it/s]Loading weights:  13%|█▎        | 45/339 [00:01<00:07, 41.92it/s]Loading weights:  16%|█▌        | 55/339 [00:01<00:06, 41.84it/s]Loading weights:  19%|█▉        | 64/339 [00:01<00:05, 48.84it/s]Loading weights:  22%|██▏       | 73/339 [00:01<00:05, 51.44it/s]Loading weights:  24%|██▍       | 81/339 [00:01<00:04, 52.69it/s]Loading weights:  26%|██▋       | 89/339 [00:02<00:04, 52.22it/s]Loading weights:  28%|██▊       | 96/339 [00:02<00:04, 53.95it/s]Loading weights:  30%|███       | 103/339 [00:02<00:05, 42.56it/s]Loading weights:  34%|███▎      | 114/339 [00:02<00:04, 53.80it/s]Loading weights:  37%|███▋      | 126/339 [00:02<00:03, 65.59it/s]Loading weights:  40%|████      | 137/339 [00:02<00:02, 74.88it/s]Loading weights:  44%|████▍     | 150/339 [00:02<00:02, 86.41it/s]Loading weights:  48%|████▊     | 162/339 [00:03<00:01, 92.86it/s]Loading weights:  51%|█████▏    | 174/339 [00:03<00:01, 96.54it/s]Loading weights:  55%|█████▍    | 185/339 [00:03<00:01, 94.30it/s]Loading weights:  58%|█████▊    | 198/339 [00:03<00:01, 97.02it/s]Loading weights:  62%|██████▏   | 210/339 [00:03<00:01, 98.06it/s]Loading weights:  65%|██████▌   | 222/339 [00:03<00:01, 97.91it/s]Loading weights:  69%|██████▉   | 234/339 [00:03<00:01, 98.26it/s]Loading weights:  72%|███████▏  | 244/339 [00:03<00:00, 95.48it/s]Loading weights:  76%|███████▌  | 258/339 [00:04<00:00, 101.38it/s]Loading weights:  79%|███████▉  | 269/339 [00:04<00:00, 99.24it/s] Loading weights:  83%|████████▎ | 282/339 [00:04<00:00, 102.40it/s]Loading weights:  87%|████████▋ | 294/339 [00:04<00:00, 100.96it/s]Loading weights:  90%|█████████ | 306/339 [00:04<00:00, 100.27it/s]Loading weights:  94%|█████████▍| 318/339 [00:04<00:00, 100.58it/s]Loading weights:  97%|█████████▋| 329/339 [00:04<00:00, 98.54it/s] Loading weights: 100%|██████████| 339/339 [00:04<00:00, 71.53it/s]
+2026-04-23 15:43:20 | INFO    | stage_f | [2/80] Generating 3 samples for taco_test_000032
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.36it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.35it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 59.08it/s]
+2026-04-23 15:44:14 | INFO    | stage_f | [3/80] Generating 3 samples for taco_test_000095
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.23it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.23it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 19.02it/s]
+2026-04-23 15:44:50 | INFO    | stage_f | [4/80] Generating 3 samples for taco_test_000102
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 11.40it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 19.60it/s]
+2026-04-23 15:47:23 | INFO    | stage_f | [5/80] Generating 3 samples for taco_test_000131
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.98it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.98it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 26.94it/s]
+2026-04-23 15:49:12 | INFO    | stage_f | [6/80] Generating 3 samples for taco_test_000139
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  3.11it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  3.10it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 26.79it/s]
+2026-04-23 15:52:03 | INFO    | stage_f | [7/80] Generating 3 samples for taco_test_000171
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  5.43it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  5.42it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 18.40it/s]
+2026-04-23 15:54:00 | INFO    | stage_f | [8/80] Generating 3 samples for taco_test_000286
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.25it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.25it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 31.35it/s]
+2026-04-23 15:58:04 | INFO    | stage_f | [9/80] Generating 3 samples for taco_test_000358
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:02<00:00,  2.62s/it]Batches: 100%|██████████| 1/1 [00:02<00:00,  2.62s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:02<00:00,  2.80s/it]Batches: 100%|██████████| 1/1 [00:02<00:00,  2.80s/it]
+2026-04-23 16:00:32 | INFO    | stage_f | [10/80] Generating 3 samples for taco_test_000669
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.50it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.50it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 17.84it/s]
+2026-04-23 16:03:31 | INFO    | stage_f | [11/80] Generating 3 samples for taco_test_000085
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.87it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.87it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 13.56it/s]
+Traceback (most recent call last):
+  File "/home/hjr/algo-skill-factory/rag_experiment/scripts/run_stage_f_eval.py", line 390, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/home/hjr/algo-skill-factory/rag_experiment/scripts/run_stage_f_eval.py", line 276, in main
+    trace = generate_with_rag(
+        code_llm=code_llm,
+    ...<3 lines>...
+        seed_base=hash(pid) & 0xFFFF,
+    )
+  File "/home/hjr/algo-skill-factory/rag_experiment/src/generation/generate_with_rag.py", line 74, in generate_with_rag
+    outputs = code_llm.generate(
+        system=system,
+    ...<6 lines>...
+        seed=seed_base + i,
+    )
+  File "/home/hjr/algo-skill-factory/rag_experiment/src/llm/qwen_local.py", line 113, in generate
+    output_ids = self._model.generate(**inputs, **gen_kwargs)
+  File "/home/hjr/.local/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/hjr/.local/lib/python3.13/site-packages/transformers/generation/utils.py", line 2535, in generate
+    result = decoding_method(
+        self,
+    ...<5 lines>...
+        **model_kwargs,
+    )
+  File "/home/hjr/.local/lib/python3.13/site-packages/transformers/generation/utils.py", line 2728, in _sample
+    outputs = self._prefill(
+        input_ids,
+    ...<2 lines>...
+        is_first_iteration=not generation_config.is_assistant,
+    )
+  File "/home/hjr/.local/lib/python3.13/site-packages/transformers/generation/utils.py", line 3776, in _prefill
+    return self(**model_inputs, return_dict=True)
+  File "/home/hjr/.local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/hjr/.local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/hjr/.local/lib/python3.13/site-packages/accelerate/hooks.py", line 192, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/home/hjr/.local/lib/python3.13/site-packages/transformers/utils/generic.py", line 843, in wrapper
+    output = func(self, *args, **kwargs)
+  File "/home/hjr/.local/lib/python3.13/site-packages/transformers/models/qwen2/modeling_qwen2.py", line 476, in forward
+    outputs: BaseModelOutputWithPast = self.model(
+                                       ~~~~~~~~~~^
+        input_ids=input_ids,
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "/home/hjr/.local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/hjr/.local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/hjr/.local/lib/python3.13/site-packages/transformers/utils/generic.py", line 917, in wrapper
+    output = func(self, *args, **kwargs)
+  File "/home/hjr/.local/lib/python3.13/site-packages/transformers/utils/output_capturing.py", line 253, in wrapper
+    outputs = func(self, *args, **kwargs)
+  File "/home/hjr/.local/lib/python3.13/site-packages/transformers/models/qwen2/modeling_qwen2.py", line 411, in forward
+    hidden_states = decoder_layer(
+        hidden_states,
+    ...<6 lines>...
+        **kwargs,
+    )
+  File "/home/hjr/.local/lib/python3.13/site-packages/transformers/modeling_layers.py", line 93, in __call__
+    return super().__call__(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/hjr/.local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/hjr/.local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/hjr/.local/lib/python3.13/site-packages/accelerate/hooks.py", line 192, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/home/hjr/.local/lib/python3.13/site-packages/transformers/models/qwen2/modeling_qwen2.py", line 313, in forward
+    hidden_states = self.mlp(hidden_states)
+  File "/home/hjr/.local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/hjr/.local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/hjr/.local/lib/python3.13/site-packages/accelerate/hooks.py", line 192, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/home/hjr/.local/lib/python3.13/site-packages/transformers/models/qwen2/modeling_qwen2.py", line 47, in forward
+    down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
+                               ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/hjr/.local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/hjr/.local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/hjr/.local/lib/python3.13/site-packages/transformers/activations.py", line 103, in forward
+    return nn.functional.silu(input)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/home/hjr/.local/lib/python3.13/site-packages/torch/nn/functional.py", line 2397, in silu
+    return torch._C._nn.silu(input)
+           ~~~~~~~~~~~~~~~~~^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 92.00 MiB. GPU 3 has a total capacity of 47.38 GiB of which 52.44 MiB is free. Process 826147 has 43.01 GiB memory in use. Including non-PyTorch memory, this process has 4.30 GiB memory in use. Of the allocated memory 3.78 GiB is allocated by PyTorch, and 135.48 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+2026-04-23 20:55:07 | INFO    | stage_f | Loaded Stage F eval manifest: /home/hjr/algo-skill-factory/rag_experiment/outputs/stage_f/eval_sets/taco_test_primary80_core10.jsonl (problems=80 tests=80)
+2026-04-23 20:55:16 | INFO    | httpx | HTTP Request: HEAD https://hf-mirror.com/BAAI/bge-base-en-v1.5/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-23 20:55:16 | INFO    | httpx | HTTP Request: HEAD https://hf-mirror.com/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/modules.json "HTTP/1.1 200 OK"
+2026-04-23 20:55:17 | INFO    | httpx | HTTP Request: HEAD https://hf-mirror.com/BAAI/bge-base-en-v1.5/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-23 20:55:17 | INFO    | httpx | HTTP Request: HEAD https://hf-mirror.com/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-04-23 20:55:17 | INFO    | sentence_transformers.base.model | Loading SentenceTransformer model from BAAI/bge-base-en-v1.5.
+2026-04-23 20:55:18 | INFO    | httpx | HTTP Request: HEAD https://hf-mirror.com/BAAI/bge-base-en-v1.5/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-23 20:55:19 | INFO    | httpx | HTTP Request: HEAD https://hf-mirror.com/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-04-23 20:55:21 | INFO    | httpx | HTTP Request: HEAD https://hf-mirror.com/BAAI/bge-base-en-v1.5/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-04-23 20:55:21 | INFO    | httpx | HTTP Request: HEAD https://hf-mirror.com/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/README.md "HTTP/1.1 200 OK"
+2026-04-23 20:55:21 | INFO    | httpx | HTTP Request: HEAD https://hf-mirror.com/BAAI/bge-base-en-v1.5/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-23 20:55:21 | INFO    | httpx | HTTP Request: HEAD https://hf-mirror.com/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/modules.json "HTTP/1.1 200 OK"
+2026-04-23 20:55:22 | INFO    | httpx | HTTP Request: HEAD https://hf-mirror.com/BAAI/bge-base-en-v1.5/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-23 20:55:23 | INFO    | httpx | HTTP Request: HEAD https://hf-mirror.com/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-04-23 20:55:23 | INFO    | httpx | HTTP Request: HEAD https://hf-mirror.com/BAAI/bge-base-en-v1.5/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-04-23 20:55:24 | INFO    | httpx | HTTP Request: HEAD https://hf-mirror.com/BAAI/bge-base-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-23 20:55:24 | INFO    | httpx | HTTP Request: HEAD https://hf-mirror.com/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/config.json "HTTP/1.1 200 OK"
+2026-04-23 20:55:24 | INFO    | httpx | HTTP Request: HEAD https://hf-mirror.com/BAAI/bge-base-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-23 20:55:25 | INFO    | httpx | HTTP Request: HEAD https://hf-mirror.com/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/config.json "HTTP/1.1 200 OK"
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 4738.22it/s]
+[1mBertModel LOAD REPORT[0m from: BAAI/bge-base-en-v1.5
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+2026-04-23 20:55:25 | INFO    | httpx | HTTP Request: HEAD https://hf-mirror.com/BAAI/bge-base-en-v1.5/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-04-23 20:55:25 | INFO    | httpx | HTTP Request: HEAD https://hf-mirror.com/BAAI/bge-base-en-v1.5/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-04-23 20:55:26 | INFO    | httpx | HTTP Request: HEAD https://hf-mirror.com/BAAI/bge-base-en-v1.5/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-04-23 20:55:26 | INFO    | httpx | HTTP Request: HEAD https://hf-mirror.com/BAAI/bge-base-en-v1.5/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-04-23 20:55:27 | INFO    | httpx | HTTP Request: HEAD https://hf-mirror.com/BAAI/bge-base-en-v1.5/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-23 20:55:27 | INFO    | httpx | HTTP Request: HEAD https://hf-mirror.com/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-04-23 20:55:28 | INFO    | httpx | HTTP Request: HEAD https://hf-mirror.com/BAAI/bge-base-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-23 20:55:28 | INFO    | httpx | HTTP Request: HEAD https://hf-mirror.com/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/config.json "HTTP/1.1 200 OK"
+2026-04-23 20:55:29 | INFO    | httpx | HTTP Request: HEAD https://hf-mirror.com/BAAI/bge-base-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-23 20:55:30 | INFO    | httpx | HTTP Request: HEAD https://hf-mirror.com/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/config.json "HTTP/1.1 200 OK"
+2026-04-23 20:55:30 | INFO    | httpx | HTTP Request: HEAD https://hf-mirror.com/BAAI/bge-base-en-v1.5/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-23 20:55:30 | INFO    | httpx | HTTP Request: HEAD https://hf-mirror.com/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-04-23 20:55:30 | INFO    | httpx | HTTP Request: GET https://hf-mirror.com/api/models/BAAI/bge-base-en-v1.5/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-04-23 20:55:31 | INFO    | httpx | HTTP Request: GET https://hf-mirror.com/api/models/BAAI/bge-base-en-v1.5/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-04-23 20:55:31 | INFO    | httpx | HTTP Request: HEAD https://hf-mirror.com/BAAI/bge-base-en-v1.5/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-23 20:55:32 | INFO    | httpx | HTTP Request: HEAD https://hf-mirror.com/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-04-23 20:55:33 | INFO    | httpx | HTTP Request: GET https://hf-mirror.com/api/models/BAAI/bge-base-en-v1.5 "HTTP/1.1 200 OK"
+2026-04-23 20:55:33 | INFO    | src.rag.pipeline | RAGContext: graph retriever initialised (top_k=3)
+2026-04-23 20:55:33 | INFO    | stage_f | Loading Qwen code LLM: Qwen/Qwen2.5-Coder-7B-Instruct
+2026-04-23 20:55:33 | INFO    | stage_f | Resume: 30 runs already present.
+2026-04-23 20:55:33 | INFO    | stage_f | [11/80] Generating 3 samples for taco_test_000085
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  5.68it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  5.67it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 29.60it/s]
+2026-04-23 20:55:34 | INFO    | src.llm.qwen_local | Qwen: restricting to GPUs 0,1,2 (free: 0=38.7GiB, 1=31.9GiB, 2=38.7GiB); total_free=113.3 GiB
+Loading weights:   0%|          | 0/339 [00:00<?, ?it/s]Loading weights:   0%|          | 1/339 [00:00<00:54,  6.17it/s]Loading weights:   4%|▎         | 12/339 [00:00<00:06, 53.59it/s]Loading weights:   6%|▋         | 22/339 [00:00<00:04, 71.17it/s]Loading weights:   9%|▉         | 30/339 [00:00<00:04, 71.40it/s]Loading weights:  12%|█▏        | 42/339 [00:00<00:03, 85.74it/s]Loading weights:  16%|█▌        | 54/339 [00:00<00:02, 95.35it/s]Loading weights:  19%|█▉        | 66/339 [00:00<00:02, 98.72it/s]Loading weights:  23%|██▎       | 78/339 [00:00<00:02, 101.17it/s]Loading weights:  27%|██▋       | 90/339 [00:01<00:02, 104.44it/s]Loading weights:  30%|██▉       | 101/339 [00:01<00:02, 102.41it/s]Loading weights:  34%|███▎      | 114/339 [00:01<00:02, 107.03it/s]Loading weights:  37%|███▋      | 126/339 [00:01<00:02, 106.41it/s]Loading weights:  41%|████      | 138/339 [00:01<00:01, 108.32it/s]Loading weights:  44%|████▍     | 150/339 [00:01<00:01, 108.65it/s]Loading weights:  47%|████▋     | 161/339 [00:01<00:01, 103.59it/s]Loading weights:  51%|█████▏    | 174/339 [00:01<00:01, 105.72it/s]Loading weights:  55%|█████▍    | 186/339 [00:01<00:01, 103.24it/s]Loading weights:  58%|█████▊    | 198/339 [00:02<00:01, 100.74it/s]Loading weights:  62%|██████▏   | 210/339 [00:02<00:01, 99.78it/s] Loading weights:  65%|██████▌   | 222/339 [00:02<00:01, 99.29it/s]Loading weights:  69%|██████▉   | 234/339 [00:02<00:01, 100.65it/s]Loading weights:  73%|███████▎  | 246/339 [00:02<00:00, 105.25it/s]Loading weights:  76%|███████▌  | 258/339 [00:02<00:00, 104.65it/s]Loading weights:  80%|███████▉  | 270/339 [00:02<00:00, 103.45it/s]Loading weights:  83%|████████▎ | 282/339 [00:02<00:00, 102.62it/s]Loading weights:  86%|████████▋ | 293/339 [00:02<00:00, 100.73it/s]Loading weights:  90%|█████████ | 306/339 [00:03<00:00, 103.41it/s]Loading weights:  94%|█████████▎| 317/339 [00:03<00:00, 99.76it/s] Loading weights:  97%|█████████▋| 330/339 [00:03<00:00, 102.81it/s]Loading weights: 100%|██████████| 339/339 [00:03<00:00, 100.70it/s]
+2026-04-23 20:57:37 | INFO    | stage_f | [12/80] Generating 3 samples for taco_test_000098
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  6.13it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  6.12it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 40.69it/s]
+2026-04-23 20:58:49 | INFO    | stage_f | [13/80] Generating 3 samples for taco_test_000108
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.89it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.89it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 15.72it/s]
+2026-04-23 21:00:31 | INFO    | stage_f | [14/80] Generating 3 samples for taco_test_000159
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.19it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.18it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 19.28it/s]
+2026-04-23 21:02:15 | INFO    | stage_f | [15/80] Generating 3 samples for taco_test_000165
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.10it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.10it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 18.08it/s]
+2026-04-23 21:03:24 | INFO    | stage_f | [16/80] Generating 3 samples for taco_test_000176
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.45it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.44it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 47.15it/s]
+2026-04-23 21:04:10 | INFO    | stage_f | [17/80] Generating 3 samples for taco_test_000186
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 13.53it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 20.42it/s]
+2026-04-23 21:05:23 | INFO    | stage_f | [18/80] Generating 3 samples for taco_test_000192
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.40it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.40it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 40.03it/s]
+2026-04-23 21:06:06 | INFO    | stage_f | [19/80] Generating 3 samples for taco_test_000209
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.35it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.35it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 33.09it/s]
+2026-04-23 21:07:13 | INFO    | stage_f | [20/80] Generating 3 samples for taco_test_000227
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 13.13it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 15.11it/s]

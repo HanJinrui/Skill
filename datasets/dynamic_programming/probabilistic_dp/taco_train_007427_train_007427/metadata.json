@@ -1,0 +1,24 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "7427",
+  "difficulty": "VERY_HARD",
+  "skill_types": [
+    "dynamic_programming"
+  ],
+  "tags": [
+    "square_root_algorithms",
+    "probability",
+    "combinatorics",
+    "dynamic_programming",
+    "mathematics"
+  ],
+  "family_assignment": "dynamic_programming",
+  "family_assignments": [
+    "dynamic_programming"
+  ],
+  "subtype_assignment": "probabilistic_dp",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "square_root_algorithms__probability__combinatorics__mathematics",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}

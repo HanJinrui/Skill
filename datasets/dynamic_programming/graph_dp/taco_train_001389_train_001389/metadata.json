@@ -1,0 +1,24 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "1389",
+  "difficulty": "MEDIUM",
+  "skill_types": [
+    "dynamic_programming"
+  ],
+  "tags": [
+    "graph_algorithms",
+    "directed_graphs",
+    "dynamic_programming",
+    "game_theory",
+    "mathematics"
+  ],
+  "family_assignment": "dynamic_programming",
+  "family_assignments": [
+    "dynamic_programming"
+  ],
+  "subtype_assignment": "graph_dp",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "graph_algorithms__directed_graphs__game_theory__mathematics",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}

@@ -1,0 +1,133 @@
+{
+  "name": "taco_test_primary80_core10",
+  "source_dataset": "TACO",
+  "source_split": "test",
+  "selection_strategy": {
+    "type": "per_primary_family_quota",
+    "quota_per_core_family": 10,
+    "sort_key": [
+      "candidate_family_count_asc",
+      "scope_single_first",
+      "source_index_asc"
+    ]
+  },
+  "num_problems": 80,
+  "per_primary_family": {
+    "amortized_analysis": 10,
+    "bit_manipulation": 10,
+    "complete_search": 10,
+    "data_structures": 10,
+    "dynamic_programming": 10,
+    "greedy_algorithms": 10,
+    "range_queries": 10,
+    "sorting": 10
+  },
+  "scope_counts": {
+    "multi": 9,
+    "single": 71
+  },
+  "candidate_family_count_histogram": {
+    "1": 71,
+    "2": 4,
+    "3": 5
+  },
+  "manifest_path": "/home/hjr/algo-skill-factory/rag_experiment/outputs/stage_f/eval_sets/taco_test_primary80_core10.jsonl",
+  "problem_ids_by_family": {
+    "amortized_analysis": [
+      "taco_test_000286",
+      "taco_test_000095",
+      "taco_test_000102",
+      "taco_test_000358",
+      "taco_test_000669",
+      "taco_test_000029",
+      "taco_test_000032",
+      "taco_test_000131",
+      "taco_test_000139",
+      "taco_test_000171"
+    ],
+    "bit_manipulation": [
+      "taco_test_000085",
+      "taco_test_000098",
+      "taco_test_000108",
+      "taco_test_000159",
+      "taco_test_000165",
+      "taco_test_000176",
+      "taco_test_000186",
+      "taco_test_000192",
+      "taco_test_000209",
+      "taco_test_000227"
+    ],
+    "complete_search": [
+      "taco_test_000011",
+      "taco_test_000037",
+      "taco_test_000071",
+      "taco_test_000075",
+      "taco_test_000126",
+      "taco_test_000242",
+      "taco_test_000247",
+      "taco_test_000334",
+      "taco_test_000345",
+      "taco_test_000366"
+    ],
+    "data_structures": [
+      "taco_test_000017",
+      "taco_test_000021",
+      "taco_test_000025",
+      "taco_test_000033",
+      "taco_test_000040",
+      "taco_test_000042",
+      "taco_test_000049",
+      "taco_test_000076",
+      "taco_test_000077",
+      "taco_test_000096"
+    ],
+    "dynamic_programming": [
+      "taco_test_000005",
+      "taco_test_000006",
+      "taco_test_000013",
+      "taco_test_000014",
+      "taco_test_000092",
+      "taco_test_000129",
+      "taco_test_000172",
+      "taco_test_000174",
+      "taco_test_000184",
+      "taco_test_000201"
+    ],
+    "greedy_algorithms": [
+      "taco_test_000028",
+      "taco_test_000048",
+      "taco_test_000063",
+      "taco_test_000082",
+      "taco_test_000094",
+      "taco_test_000113",
+      "taco_test_000122",
+      "taco_test_000137",
+      "taco_test_000140",
+      "taco_test_000169"
+    ],
+    "range_queries": [
+      "taco_test_000142",
+      "taco_test_000314",
+      "taco_test_000341",
+      "taco_test_000357",
+      "taco_test_000378",
+      "taco_test_000429",
+      "taco_test_000430",
+      "taco_test_000498",
+      "taco_test_000674",
+      "taco_test_000696"
+    ],
+    "sorting": [
+      "taco_test_000070",
+      "taco_test_000112",
+      "taco_test_000152",
+      "taco_test_000154",
+      "taco_test_000168",
+      "taco_test_000170",
+      "taco_test_000173",
+      "taco_test_000205",
+      "taco_test_000241",
+      "taco_test_000301"
+    ]
+  }
+}

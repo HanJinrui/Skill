@@ -1,0 +1,4 @@
+class Solution:
+
+	def karyTree(self, k, m):
+		return pow(k, m, 1000000007)

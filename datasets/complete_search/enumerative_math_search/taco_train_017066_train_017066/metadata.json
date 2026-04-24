@@ -1,0 +1,25 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "17066",
+  "difficulty": "EASY",
+  "skill_types": [
+    "complete_search"
+  ],
+  "tags": [
+    "constructive_algorithms",
+    "combinatorics",
+    "implementation",
+    "complete_search",
+    "number_theory",
+    "mathematics"
+  ],
+  "family_assignment": "complete_search",
+  "family_assignments": [
+    "complete_search"
+  ],
+  "subtype_assignment": "enumerative_math_search",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "constructive_algorithms__combinatorics__implementation__number_theor__c0015880",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}

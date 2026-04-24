@@ -1,0 +1,22 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "5384",
+  "difficulty": "EASY",
+  "skill_types": [
+    "complete_search"
+  ],
+  "tags": [
+    "complete_search",
+    "implementation",
+    "ad_hoc"
+  ],
+  "family_assignment": "complete_search",
+  "family_assignments": [
+    "complete_search"
+  ],
+  "subtype_assignment": "implementation_search",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "implementation__ad_hoc",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}

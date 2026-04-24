@@ -1,0 +1,25 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "6104",
+  "difficulty": "VERY_HARD",
+  "skill_types": [
+    "sorting"
+  ],
+  "tags": [
+    "graph_algorithms",
+    "graph_traversal",
+    "constructive_algorithms",
+    "geometry",
+    "sorting",
+    "tree_algorithms"
+  ],
+  "family_assignment": "sorting",
+  "family_assignments": [
+    "sorting"
+  ],
+  "subtype_assignment": "geometry_sorting",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "graph_algorithms__graph_traversal__constructive_algorithms__geometry__bf627585",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}

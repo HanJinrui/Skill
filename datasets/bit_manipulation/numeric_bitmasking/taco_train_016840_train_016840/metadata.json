@@ -1,0 +1,22 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "16840",
+  "difficulty": "EASY",
+  "skill_types": [
+    "bit_manipulation"
+  ],
+  "tags": [
+    "number_theory",
+    "bit_manipulation",
+    "constructive_algorithms"
+  ],
+  "family_assignment": "bit_manipulation",
+  "family_assignments": [
+    "bit_manipulation"
+  ],
+  "subtype_assignment": "numeric_bitmasking",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "number_theory__constructive_algorithms",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}

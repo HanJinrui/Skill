@@ -1,0 +1,23 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "4201",
+  "difficulty": "HARD",
+  "skill_types": [
+    "amortized_analysis"
+  ],
+  "tags": [
+    "mathematics",
+    "matrices",
+    "amortized_analysis",
+    "number_theory"
+  ],
+  "family_assignment": "amortized_analysis",
+  "family_assignments": [
+    "amortized_analysis"
+  ],
+  "subtype_assignment": "numeric_amortized",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "mathematics__matrices__number_theory",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}

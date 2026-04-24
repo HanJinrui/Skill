@@ -1,0 +1,23 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "9038",
+  "difficulty": "MEDIUM",
+  "skill_types": [
+    "greedy_algorithms"
+  ],
+  "tags": [
+    "greedy_algorithms",
+    "spanning_trees",
+    "graph_traversal",
+    "shortest_paths"
+  ],
+  "family_assignment": "greedy_algorithms",
+  "family_assignments": [
+    "greedy_algorithms"
+  ],
+  "subtype_assignment": "graph_greedy",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "spanning_trees__graph_traversal__shortest_paths",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}

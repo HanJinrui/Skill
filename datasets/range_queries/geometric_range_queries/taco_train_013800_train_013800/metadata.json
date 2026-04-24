@@ -1,0 +1,23 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "13800",
+  "difficulty": "HARD",
+  "skill_types": [
+    "range_queries"
+  ],
+  "tags": [
+    "geometry",
+    "range_queries",
+    "mathematics",
+    "constructive_algorithms"
+  ],
+  "family_assignment": "range_queries",
+  "family_assignments": [
+    "range_queries"
+  ],
+  "subtype_assignment": "geometric_range_queries",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "geometry__mathematics__constructive_algorithms",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}

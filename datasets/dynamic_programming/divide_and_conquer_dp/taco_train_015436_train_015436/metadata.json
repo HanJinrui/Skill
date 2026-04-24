@@ -1,0 +1,22 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "15436",
+  "difficulty": "VERY_HARD",
+  "skill_types": [
+    "dynamic_programming"
+  ],
+  "tags": [
+    "polynomials_and_generating_functions",
+    "dynamic_programming",
+    "divide_and_conquer"
+  ],
+  "family_assignment": "dynamic_programming",
+  "family_assignments": [
+    "dynamic_programming"
+  ],
+  "subtype_assignment": "divide_and_conquer_dp",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "polynomials_and_generating_functions__divide_and_conquer",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}

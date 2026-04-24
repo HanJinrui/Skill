@@ -1,0 +1,17 @@
+{
+  "view": "signal_view",
+  "n_items": 10,
+  "dense_dim": 768,
+  "node_ids": [
+    "skill::amortized_analysis",
+    "skill::sorting",
+    "skill::greedy_algorithms",
+    "skill::bit_manipulation",
+    "skill::complete_search",
+    "skill::data_structures",
+    "skill::greedy_algorithms__sorting",
+    "skill::dynamic_programming",
+    "skill::range_queries",
+    "skill::amortized_analysis__greedy_algorithms"
+  ]
+}

@@ -1,0 +1,40 @@
+You are given two positive integers d and s. Find minimal positive integer n which is divisible by d and has sum of digits equal to s.
+
+Input
+
+The first line contains two positive integers d and s (1 ≤ d ≤ 500, 1 ≤ s ≤ 5000) separated by space.
+
+Output
+
+Print the required number or -1 if it doesn't exist.
+
+Examples
+
+Input
+
+13 50
+
+
+Output
+
+699998
+
+
+Input
+
+61 2
+
+
+Output
+
+1000000000000000000000000000001
+
+
+Input
+
+15 50
+
+
+Output
+
+-1

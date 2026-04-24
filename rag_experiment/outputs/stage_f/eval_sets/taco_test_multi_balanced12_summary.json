@@ -1,0 +1,41 @@
+{
+  "name": "taco_test_multi_balanced12",
+  "source_dataset": "TACO",
+  "source_split": "test",
+  "scope": "multi",
+  "selection_strategy": {
+    "type": "greedy_balanced_cover",
+    "target_per_family": 4,
+    "max_candidate_families_per_problem": 3,
+    "sort_key": [
+      "num_candidate_families_asc",
+      "source_index_asc"
+    ]
+  },
+  "num_problems": 12,
+  "family_coverage": {
+    "amortized_analysis": 4,
+    "bit_manipulation": 4,
+    "complete_search": 4,
+    "data_structures": 6,
+    "dynamic_programming": 4,
+    "greedy_algorithms": 4,
+    "range_queries": 4,
+    "sorting": 4
+  },
+  "problem_ids": [
+    "taco_test_000029",
+    "taco_test_000030",
+    "taco_test_000032",
+    "taco_test_000038",
+    "taco_test_000050",
+    "taco_test_000056",
+    "taco_test_000062",
+    "taco_test_000131",
+    "taco_test_000147",
+    "taco_test_000640",
+    "taco_test_000120",
+    "taco_test_000163"
+  ],
+  "manifest_path": "/home/hjr/algo-skill-factory/rag_experiment/outputs/stage_f/eval_sets/taco_test_multi_balanced12.jsonl"
+}

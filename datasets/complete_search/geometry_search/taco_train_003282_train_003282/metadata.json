@@ -1,0 +1,23 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "3282",
+  "difficulty": "MEDIUM",
+  "skill_types": [
+    "complete_search"
+  ],
+  "tags": [
+    "mathematics",
+    "geometry",
+    "implementation",
+    "complete_search"
+  ],
+  "family_assignment": "complete_search",
+  "family_assignments": [
+    "complete_search"
+  ],
+  "subtype_assignment": "geometry_search",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "mathematics__geometry__implementation",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}

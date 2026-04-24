@@ -1,0 +1,23 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "14896",
+  "difficulty": "MEDIUM_HARD",
+  "skill_types": [
+    "data_structures"
+  ],
+  "tags": [
+    "number_theory",
+    "combinatorics",
+    "data_structures",
+    "mathematics"
+  ],
+  "family_assignment": "data_structures",
+  "family_assignments": [
+    "data_structures"
+  ],
+  "subtype_assignment": "numeric_data_structures",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "number_theory__combinatorics__mathematics",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}

@@ -1,0 +1,61 @@
+{
+  "schema_version": "graph_rag@v1",
+  "counts": {
+    "skill_nodes": 10,
+    "family_nodes": 8,
+    "mechanism_nodes": 39,
+    "signal_nodes": 36,
+    "prototype_problem_nodes": 74,
+    "prototype_solution_nodes": 74,
+    "edges": 1099
+  },
+  "edge_types": {
+    "skill_has_family": 12,
+    "family_has_mechanism": 49,
+    "skill_implements_mechanism": 67,
+    "skill_triggered_by_signal": 31,
+    "prototype_problem_supports_skill": 74,
+    "prototype_problem_has_signal": 225,
+    "prototype_solution_supports_skill": 74,
+    "prototype_solution_uses_mechanism": 503,
+    "bundle_contains_skill": 4,
+    "skill_cooccurs_skill": 46,
+    "skill_conflicts_skill": 6,
+    "mechanism_conflicts_mechanism": 8
+  },
+  "indices": {
+    "skill_master": {
+      "n_items": 10,
+      "dense_dim": 768
+    },
+    "signal_view": {
+      "n_items": 10,
+      "dense_dim": 768
+    },
+    "prototype_problem": {
+      "n_items": 74,
+      "dense_dim": 768
+    },
+    "prototype_solution": {
+      "n_items": 74,
+      "dense_dim": 768
+    },
+    "facet_index": {
+      "mechanism_tags": 39,
+      "signal_tags": 15,
+      "input_shape_tags": 2,
+      "operation_tags": 5,
+      "goal_tags": 3,
+      "complexity_tags": 4,
+      "negative_tags": 0,
+      "families": 8
+    }
+  },
+  "source_files": {
+    "skills": "outputs/stage_d/skills_merged.jsonl",
+    "solutions": "outputs/stage_c/solution_consistent.jsonl",
+    "problem_labels": "outputs/stage_b/problem_labels.jsonl",
+    "problems_multi": "outputs/stage_a/selected_problems_multi.jsonl"
+  },
+  "dense_model": "BAAI/bge-base-en-v1.5"
+}

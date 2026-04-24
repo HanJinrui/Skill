@@ -1,0 +1,6 @@
+n = int(input())
+y = lambda l: sorted(list((l[i + 1] - l[i] for i in range(len(l) - 1))))
+z = lambda : list(map(int, input().split()))
+c = z()
+t = z()
+print(['No', 'Yes'][c[0] == t[0] and y(c) == y(t)])

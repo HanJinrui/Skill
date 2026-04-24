@@ -1,0 +1,23 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "10135",
+  "difficulty": "MEDIUM",
+  "skill_types": [
+    "data_structures"
+  ],
+  "tags": [
+    "matrices",
+    "data_structures",
+    "graph_traversal",
+    "spanning_trees"
+  ],
+  "family_assignment": "data_structures",
+  "family_assignments": [
+    "data_structures"
+  ],
+  "subtype_assignment": "graph_data_structures",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "matrices__graph_traversal__spanning_trees",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}

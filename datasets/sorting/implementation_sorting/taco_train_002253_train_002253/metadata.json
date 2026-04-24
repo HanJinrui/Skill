@@ -1,0 +1,22 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "2253",
+  "difficulty": "EASY",
+  "skill_types": [
+    "sorting"
+  ],
+  "tags": [
+    "sorting",
+    "implementation",
+    "ad_hoc"
+  ],
+  "family_assignment": "sorting",
+  "family_assignments": [
+    "sorting"
+  ],
+  "subtype_assignment": "implementation_sorting",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "implementation__ad_hoc",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}

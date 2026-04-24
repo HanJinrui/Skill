@@ -1,0 +1,58 @@
+Read problems statements in Mandarin Chinese  and Russian. 
+
+Yesterday Chef had a great party and doesn't remember the way he celebreated it. But he found a strange paper in his kitchen containing n digits (lets give them indices from 1 to n and name them a_{1}, a_{2} ... a_{N}). 
+Chef remembers that he played such game:
+On each step he choose an index x from 1 to n.
+For all indices y (y < x) he calculated the difference b_{y} = a_{x} - a_{y}. 
+Then he calculated B1 - sum of all b_{y} which are greater than 0 and B2 - sum of all b_{y} which are less than 0. 
+The answer for this step is B1 - B2. 
+
+Chef remembers the game, but forgot the answer. Please, help him!
+
+------ Input ------ 
+
+The first line contains two integers n, m denoting the number of digits and number of steps. The second line contains n digits (without spaces) a_{1}, a_{2}, ..., a_{n}. 
+Each of next m lines contains single integer x denoting the index for current step. 
+ 
+------ Output ------ 
+
+For each of m steps print single number in a line - answer of the step.
+ 
+------ Constraints ------ 
+
+$1 ≤ n, m ≤ 10^{5}$
+$0 ≤ a_{i} ≤ 9$
+$1 ≤ x ≤ n$
+ 
+----- Sample Input 1 ------ 
+10 3
+0324152397
+1
+4
+7
+----- Sample Output 1 ------ 
+0
+7
+9
+----- explanation 1 ------ 
+For index 1 there are no indexes which are less, so B1 = B2 = 0 and the answer is 0.
+For index 4 we have 
+
+b1 = 4-0=4, 
+b2 = 4-3=1, 
+b3 = 4-2=2, 
+
+so B1 = 4+1+2 = 7, B2 = 0 
+and the answer is 7.
+For index 7 we have
+
+b1 = 2-0=2, 
+b2 = 2-3=-1, 
+b3 = 2-2=0, 
+b4 = 2-4=-2, 
+b5 = 2-1=1, 
+b6 = 2-5=-3, 
+
+so B1 = 2 + 1 = 3,
+B2 = -1 -2 -3 = -6 
+and the answer is 9.

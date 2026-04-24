@@ -1,0 +1,24 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "19003",
+  "difficulty": "VERY_HARD",
+  "skill_types": [
+    "complete_search"
+  ],
+  "tags": [
+    "combinatorics",
+    "complete_search",
+    "mathematics",
+    "matrices",
+    "ad_hoc"
+  ],
+  "family_assignment": "complete_search",
+  "family_assignments": [
+    "complete_search"
+  ],
+  "subtype_assignment": "enumerative_math_search",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "combinatorics__mathematics__matrices__ad_hoc",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}

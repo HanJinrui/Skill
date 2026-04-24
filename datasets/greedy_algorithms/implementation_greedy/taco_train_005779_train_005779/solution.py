@@ -1,0 +1,5 @@
+i = lambda : map(int, input().split())
+(_, _, r) = i()
+a = min(i())
+b = max(a, *i())
+print(r // a * b + r % a)

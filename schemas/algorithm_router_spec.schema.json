@@ -1,0 +1,372 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/algorithm_router_spec.schema.json",
+  "title": "AlgorithmRouterSpec",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "kind",
+    "skill_name",
+    "description",
+    "generation_decision",
+    "supported_families",
+    "family_selection_rules",
+    "ambiguity_policy",
+    "refusal_rules",
+    "handoff_policy",
+    "output_contract",
+    "files"
+  ],
+  "properties": {
+    "kind": {
+      "const": "algorithm_router"
+    },
+    "skill_name": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 80,
+      "allOf": [
+        {
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        {
+          "not": {
+            "pattern": "(^|-)skill(-|$)"
+          }
+        }
+      ]
+    },
+    "description": {
+      "type": "string",
+      "minLength": 20,
+      "maxLength": 320,
+      "pattern": "^[a-z0-9][a-z0-9 ,()/_:+.-]*$"
+    },
+    "generation_decision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "should_generate_skill",
+        "confidence",
+        "reason"
+      ],
+      "properties": {
+        "should_generate_skill": {
+          "type": "boolean"
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 10,
+          "maxLength": 400
+        }
+      }
+    },
+    "supported_families": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 16,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "family_name",
+          "skill_name",
+          "short_description",
+          "trigger_summary"
+        ],
+        "properties": {
+          "family_name": {
+            "type": "string",
+            "enum": [
+              "amortized_analysis",
+              "bit_manipulation",
+              "complete_search",
+              "data_structures",
+              "dynamic_programming",
+              "greedy_algorithms",
+              "range_queries",
+              "sorting"
+            ]
+          },
+          "skill_name": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 80,
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          },
+          "short_description": {
+            "type": "string",
+            "minLength": 10,
+            "maxLength": 220
+          },
+          "trigger_summary": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 4,
+            "items": {
+              "type": "string",
+              "minLength": 4,
+              "maxLength": 180
+            }
+          }
+        }
+      }
+    },
+    "family_selection_rules": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 12,
+      "items": {
+        "type": "string",
+        "minLength": 6,
+        "maxLength": 260
+      }
+    },
+    "ambiguity_policy": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 8,
+      "items": {
+        "type": "string",
+        "minLength": 6,
+        "maxLength": 240
+      }
+    },
+    "refusal_rules": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 8,
+      "items": {
+        "type": "string",
+        "minLength": 6,
+        "maxLength": 240
+      }
+    },
+    "handoff_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "after_family_selected",
+        "when_multiple_families_plausible",
+        "when_no_family_matches"
+      ],
+      "properties": {
+        "after_family_selected": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 6,
+          "items": {
+            "type": "string",
+            "minLength": 6,
+            "maxLength": 240
+          }
+        },
+        "when_multiple_families_plausible": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 6,
+          "items": {
+            "type": "string",
+            "minLength": 6,
+            "maxLength": 240
+          }
+        },
+        "when_no_family_matches": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 6,
+          "items": {
+            "type": "string",
+            "minLength": 6,
+            "maxLength": 240
+          }
+        }
+      }
+    },
+    "output_contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sections",
+        "emit_code"
+      ],
+      "properties": {
+        "sections": {
+          "const": [
+            "候选算法家族",
+            "选择理由",
+            "不确定性",
+            "下一步"
+          ]
+        },
+        "emit_code": {
+          "const": false
+        }
+      }
+    },
+    "files": {
+      "type": "array",
+      "minItems": 0,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "path",
+          "content"
+        ],
+        "properties": {
+          "path": {
+            "type": "string",
+            "enum": [
+              "SKILL.md",
+              "agents/openai.yaml",
+              "references/family-selection.md",
+              "references/refusal-rules.md",
+              "references/handoff-policy.md"
+            ]
+          },
+          "content": {
+            "type": "string",
+            "minLength": 20
+          }
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "generation_decision": {
+            "type": "object",
+            "properties": {
+              "should_generate_skill": {
+                "const": true
+              }
+            },
+            "required": [
+              "should_generate_skill"
+            ]
+          }
+        },
+        "required": [
+          "generation_decision"
+        ]
+      },
+      "then": {
+        "properties": {
+          "files": {
+            "type": "array",
+            "minItems": 5,
+            "maxItems": 5,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "path",
+                "content"
+              ],
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "enum": [
+                    "SKILL.md",
+                    "agents/openai.yaml",
+                    "references/family-selection.md",
+                    "references/refusal-rules.md",
+                    "references/handoff-policy.md"
+                  ]
+                },
+                "content": {
+                  "type": "string",
+                  "minLength": 20
+                }
+              }
+            },
+            "allOf": [
+              {
+                "contains": {
+                  "type": "object",
+                  "required": [
+                    "path"
+                  ],
+                  "properties": {
+                    "path": {
+                      "const": "SKILL.md"
+                    }
+                  }
+                }
+              },
+              {
+                "contains": {
+                  "type": "object",
+                  "required": [
+                    "path"
+                  ],
+                  "properties": {
+                    "path": {
+                      "const": "agents/openai.yaml"
+                    }
+                  }
+                }
+              },
+              {
+                "contains": {
+                  "type": "object",
+                  "required": [
+                    "path"
+                  ],
+                  "properties": {
+                    "path": {
+                      "const": "references/family-selection.md"
+                    }
+                  }
+                }
+              },
+              {
+                "contains": {
+                  "type": "object",
+                  "required": [
+                    "path"
+                  ],
+                  "properties": {
+                    "path": {
+                      "const": "references/refusal-rules.md"
+                    }
+                  }
+                }
+              },
+              {
+                "contains": {
+                  "type": "object",
+                  "required": [
+                    "path"
+                  ],
+                  "properties": {
+                    "path": {
+                      "const": "references/handoff-policy.md"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "files": {
+            "type": "array",
+            "maxItems": 0
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+Read problems statements in [Hindi], [Mandarin Chinese], [Russian], [Vietnamese], and [Bengali] as well.
+
+Ridbit is given an array $a_{1}, a_{2}, \ldots, a_{N}$. He needs to find the number of ways to divide the array into contiguous subarrays such that:
+Each element of the sequence $a$ belongs to exactly one of the subarrays.
+There is an integer $m$ such that the MEX of every subarray is equal to $m$. The MEX of a sequence is the smallest non-negative integer which does not occur in this sequence.
+
+Help Ridbit with this task.
+
+------  Input ------
+The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.
+The first line of each test case contains a single integer $N$.
+The second line contains $N$ space-separated integers $a_{1}, a_{2}, \ldots, a_{N}$.
+
+------  Output ------
+For each test case, print a single line containing one integer ― the number of ways to divide the sequence, modulo $10^{9} + 7$.
+
+------  Constraints ------
+$1 ≤ T ≤ 10$
+$1 ≤ N ≤ 100,000$
+$0 ≤ a_{i} ≤ N$ for each valid $i$
+
+----- Sample Input 1 ------ 
+2
+
+6
+
+1 0 0 1 0 1
+
+3
+
+1 2 3
+----- Sample Output 1 ------ 
+5
+
+4
+----- explanation 1 ------ 
+Example case 1: The five valid ways to divide the sequence are:
+- $[1, 0, 0, 1, 0, 1]$
+- $[1, 0], [0, 1, 0, 1]$
+- $[1, 0, 0], [1, 0, 1]$
+- $[1, 0, 0, 1], [0, 1]$
+- $[1, 0], [0, 1], [0, 1]$

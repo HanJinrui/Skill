@@ -1,0 +1,105 @@
+2026-04-23 16:03:36 | INFO    | stage_f | Loaded Stage F eval manifest: /home/hjr/algo-skill-factory/rag_experiment/outputs/stage_f/eval_sets/taco_test_primary80_core10.jsonl (problems=80 tests=80)
+2026-04-23 16:03:36 | INFO    | stage_f | Loading Qwen code LLM: Qwen/Qwen2.5-Coder-7B-Instruct
+2026-04-23 16:03:36 | INFO    | stage_f | [1/80] Generating 3 samples for taco_test_000029
+Loading weights:   0%|          | 0/339 [00:00<?, ?it/s]Loading weights:   0%|          | 1/339 [00:00<00:58,  5.76it/s]Loading weights:   5%|▍         | 16/339 [00:00<00:05, 63.73it/s]Loading weights:   8%|▊         | 28/339 [00:00<00:04, 76.61it/s]Loading weights:  12%|█▏        | 40/339 [00:00<00:03, 83.77it/s]Loading weights:  15%|█▌        | 52/339 [00:00<00:03, 91.95it/s]Loading weights:  19%|█▉        | 64/339 [00:00<00:02, 97.83it/s]Loading weights:  22%|██▏       | 76/339 [00:00<00:02, 97.63it/s]Loading weights:  26%|██▌       | 88/339 [00:01<00:02, 100.57it/s]Loading weights:  29%|██▉       | 100/339 [00:01<00:02, 91.76it/s]Loading weights:  33%|███▎      | 113/339 [00:01<00:02, 98.08it/s]Loading weights:  37%|███▋      | 125/339 [00:01<00:02, 93.40it/s]Loading weights:  41%|████      | 138/339 [00:01<00:02, 100.16it/s]Loading weights:  44%|████▍     | 150/339 [00:01<00:01, 102.01it/s]Loading weights:  48%|████▊     | 162/339 [00:01<00:01, 103.74it/s]Loading weights:  51%|█████▏    | 174/339 [00:01<00:01, 103.81it/s]Loading weights:  55%|█████▍    | 185/339 [00:01<00:01, 98.78it/s] Loading weights:  58%|█████▊    | 198/339 [00:02<00:01, 99.27it/s]Loading weights:  62%|██████▏   | 210/339 [00:02<00:01, 96.63it/s]Loading weights:  65%|██████▌   | 222/339 [00:02<00:01, 95.50it/s]Loading weights:  69%|██████▊   | 233/339 [00:02<00:01, 93.70it/s]Loading weights:  73%|███████▎  | 246/339 [00:02<00:00, 99.48it/s]Loading weights:  76%|███████▌  | 258/339 [00:02<00:00, 96.69it/s]Loading weights:  80%|███████▉  | 270/339 [00:02<00:00, 98.98it/s]Loading weights:  83%|████████▎ | 281/339 [00:02<00:00, 97.37it/s]Loading weights:  86%|████████▌ | 292/339 [00:03<00:00, 97.55it/s]Loading weights:  90%|█████████ | 306/339 [00:03<00:00, 103.49it/s]Loading weights:  94%|█████████▍| 318/339 [00:03<00:00, 102.16it/s]Loading weights:  97%|█████████▋| 330/339 [00:03<00:00, 101.34it/s]Loading weights: 100%|██████████| 339/339 [00:03<00:00, 97.58it/s] 
+2026-04-23 16:05:56 | INFO    | stage_f | [2/80] Generating 3 samples for taco_test_000032
+2026-04-23 16:11:12 | INFO    | stage_f | [3/80] Generating 3 samples for taco_test_000095
+2026-04-23 16:13:23 | INFO    | stage_f | [4/80] Generating 3 samples for taco_test_000102
+2026-04-23 16:16:12 | INFO    | stage_f | [5/80] Generating 3 samples for taco_test_000131
+2026-04-23 16:18:33 | INFO    | stage_f | [6/80] Generating 3 samples for taco_test_000139
+2026-04-23 16:20:20 | INFO    | stage_f | [7/80] Generating 3 samples for taco_test_000171
+2026-04-23 16:21:13 | INFO    | stage_f | [8/80] Generating 3 samples for taco_test_000286
+2026-04-23 16:23:14 | INFO    | stage_f | [9/80] Generating 3 samples for taco_test_000358
+2026-04-23 16:25:19 | INFO    | stage_f | [10/80] Generating 3 samples for taco_test_000669
+2026-04-23 16:30:13 | INFO    | stage_f | [11/80] Generating 3 samples for taco_test_000085
+Traceback (most recent call last):
+  File "/home/hjr/algo-skill-factory/rag_experiment/scripts/run_stage_f_eval.py", line 390, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/home/hjr/algo-skill-factory/rag_experiment/scripts/run_stage_f_eval.py", line 276, in main
+    trace = generate_with_rag(
+        code_llm=code_llm,
+    ...<3 lines>...
+        seed_base=hash(pid) & 0xFFFF,
+    )
+  File "/home/hjr/algo-skill-factory/rag_experiment/src/generation/generate_with_rag.py", line 74, in generate_with_rag
+    outputs = code_llm.generate(
+        system=system,
+    ...<6 lines>...
+        seed=seed_base + i,
+    )
+  File "/home/hjr/algo-skill-factory/rag_experiment/src/llm/qwen_local.py", line 113, in generate
+    output_ids = self._model.generate(**inputs, **gen_kwargs)
+  File "/home/hjr/.local/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/hjr/.local/lib/python3.13/site-packages/transformers/generation/utils.py", line 2535, in generate
+    result = decoding_method(
+        self,
+    ...<5 lines>...
+        **model_kwargs,
+    )
+  File "/home/hjr/.local/lib/python3.13/site-packages/transformers/generation/utils.py", line 2728, in _sample
+    outputs = self._prefill(
+        input_ids,
+    ...<2 lines>...
+        is_first_iteration=not generation_config.is_assistant,
+    )
+  File "/home/hjr/.local/lib/python3.13/site-packages/transformers/generation/utils.py", line 3776, in _prefill
+    return self(**model_inputs, return_dict=True)
+  File "/home/hjr/.local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/hjr/.local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/hjr/.local/lib/python3.13/site-packages/accelerate/hooks.py", line 192, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/home/hjr/.local/lib/python3.13/site-packages/transformers/utils/generic.py", line 843, in wrapper
+    output = func(self, *args, **kwargs)
+  File "/home/hjr/.local/lib/python3.13/site-packages/transformers/models/qwen2/modeling_qwen2.py", line 476, in forward
+    outputs: BaseModelOutputWithPast = self.model(
+                                       ~~~~~~~~~~^
+        input_ids=input_ids,
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "/home/hjr/.local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/hjr/.local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/hjr/.local/lib/python3.13/site-packages/transformers/utils/generic.py", line 917, in wrapper
+    output = func(self, *args, **kwargs)
+  File "/home/hjr/.local/lib/python3.13/site-packages/transformers/utils/output_capturing.py", line 253, in wrapper
+    outputs = func(self, *args, **kwargs)
+  File "/home/hjr/.local/lib/python3.13/site-packages/transformers/models/qwen2/modeling_qwen2.py", line 411, in forward
+    hidden_states = decoder_layer(
+        hidden_states,
+    ...<6 lines>...
+        **kwargs,
+    )
+  File "/home/hjr/.local/lib/python3.13/site-packages/transformers/modeling_layers.py", line 93, in __call__
+    return super().__call__(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/hjr/.local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/hjr/.local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/hjr/.local/lib/python3.13/site-packages/accelerate/hooks.py", line 192, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/home/hjr/.local/lib/python3.13/site-packages/transformers/models/qwen2/modeling_qwen2.py", line 313, in forward
+    hidden_states = self.mlp(hidden_states)
+  File "/home/hjr/.local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/hjr/.local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/hjr/.local/lib/python3.13/site-packages/accelerate/hooks.py", line 192, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/home/hjr/.local/lib/python3.13/site-packages/transformers/models/qwen2/modeling_qwen2.py", line 47, in forward
+    down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 70.00 MiB. GPU 3 has a total capacity of 47.38 GiB of which 52.44 MiB is free. Process 826147 has 43.01 GiB memory in use. Including non-PyTorch memory, this process has 4.30 GiB memory in use. Of the allocated memory 3.82 GiB is allocated by PyTorch, and 93.40 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)

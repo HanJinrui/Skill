@@ -1,0 +1,21 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "2061",
+  "difficulty": "EASY",
+  "skill_types": [
+    "complete_search"
+  ],
+  "tags": [
+    "divide_and_conquer",
+    "complete_search"
+  ],
+  "family_assignment": "complete_search",
+  "family_assignments": [
+    "complete_search"
+  ],
+  "subtype_assignment": "general_complete_search",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "divide_and_conquer",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}

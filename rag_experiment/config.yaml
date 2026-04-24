@@ -1,0 +1,88 @@
+experiment:
+  name: taco_skill_rag_v1
+  seed: 20260419
+  top_n_per_family: 30
+  core_families:
+    - amortized_analysis
+    - bit_manipulation
+    - complete_search
+    - data_structures
+    - dynamic_programming
+    - greedy_algorithms
+    - range_queries
+    - sorting
+
+paths:
+  parent_datasets_dir: ../datasets          # existing folder with problems
+  taco_hf_name: BAAI/TACO
+  taco_hf_split: train
+
+labeling:
+  prompt_version_problem: problem_labeling@v1
+  prompt_version_solution: solution_labeling@v1
+  prompt_version_skill: skill_generation@v1
+  max_retries: 3
+  min_problem_confidence: 0.5
+  min_solution_confidence: 0.5
+  consistency:
+    partial_overlap_min: 1         # at least 1 shared family to be "partial"
+
+stage_d:
+  allow_heuristic_fallback: false
+
+rag:
+  retrieval:
+    mode: graph                     # flat | graph
+    dense_model: BAAI/bge-base-en-v1.5
+    bm25_k1: 1.5
+    bm25_b: 0.75
+    top_k: 3                       # flat-retriever final top-k (kept for BC)
+    fusion: rrf                    # rrf | dense_only | bm25_only | weighted
+    rrf_k: 60
+    # Graph-retriever specific knobs (ignored when mode=flat):
+    seed_top_k: 20
+    candidate_top_k: 50
+    final_top_k: 3
+    graph_alpha: 0.30
+    graph_steps: 3
+    conflict_penalty: 0.7
+    max_bundle_size: 3
+    max_prototype_per_skill: 1
+    edge_weights:
+      skill_implements_mechanism: 1.0
+      skill_triggered_by_signal: 0.9
+      prototype_problem_supports_skill: 0.8
+      prototype_solution_supports_skill: 1.2
+      skill_cooccurs_skill: 0.5
+      bundle_contains_skill: 0.6
+      skill_has_family: 0.5
+      prototype_problem_has_signal: 0.4
+      prototype_solution_uses_mechanism: 0.6
+  index:
+    index_dir: outputs/stage_e/index
+    rebuild: false
+  graph_index:
+    dir: outputs/stage_e/graph_index
+    rebuild: false
+    max_prototype_per_skill_build: 8
+  prompt:
+    max_skill_tokens: 900          # approx per-skill char budget in prompt
+
+generation:
+  samples_per_problem: 3
+  stop_sequences: ["```", "\n# END\n"]
+  code_fence_language: python
+
+evaluation:
+  per_test_timeout_seconds: 5
+  max_tests_per_problem: 20
+  pass_strategy: all_visible       # all_visible | any
+  sandbox:
+    python_executable: python3
+    memory_limit_mb: 512
+    cpu_limit_seconds: 10
+  output_dir: outputs/stage_f
+
+logging:
+  level: INFO
+  file: outputs/run.log

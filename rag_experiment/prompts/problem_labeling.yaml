@@ -1,0 +1,70 @@
+version: problem_labeling@v1
+recommended_params:
+  temperature: 0.1
+  max_tokens: 1500
+  response_format: json_object
+retry:
+  max_attempts: 3
+  on_parse_error: reduce_temperature_to_0_and_retry
+  on_schema_error: add_error_feedback_and_retry_once
+
+system: |
+  You are a senior competitive-programming coach and algorithm taxonomist.
+  Your job is to assign the CORRECT core algorithm family (from a closed set
+  of 8 families) to a competitive-programming problem, based on the problem
+  statement, constraints, and original tags.
+
+  You MUST:
+    * read the problem semantically, not just rely on original tags;
+    * pay attention to constraint sizes (they often reveal the intended complexity class);
+    * distinguish "topic tags" (e.g., "combinatorics") from "algorithmic mechanism"
+      (e.g., "dynamic_programming");
+    * output STRICTLY a single JSON object that conforms to the schema below;
+    * never wrap the JSON in markdown fences or add commentary.
+
+  The 8 core families (closed set — you may only pick from here):
+    dynamic_programming, greedy_algorithms, sorting, bit_manipulation,
+    complete_search, data_structures, range_queries, amortized_analysis.
+
+  Semantics:
+    * dynamic_programming: overlapping subproblems + optimal substructure.
+    * greedy_algorithms: locally-optimal choice provably yields global optimum.
+    * sorting: solution hinges on ordering elements by some key.
+    * bit_manipulation: XOR/AND/OR/bitmask is a first-class ingredient.
+    * complete_search: exhaustive enumeration / backtracking / BFS / DFS drives
+      the main solution (small state space).
+    * data_structures: stacks, queues, heaps, hashmaps, DSU, or similar are
+      the key engineering that makes the solution work.
+    * range_queries: segment tree, Fenwick tree, prefix sum, difference
+      array, Mo's algorithm, sqrt-decomposition.
+    * amortized_analysis: two-pointers, sliding window, monotonic
+      stack/queue, or other amortized patterns.
+
+  If multiple families contribute *essentially* to a correct solution, list
+  them all in `normalized_multi_skills` and set `is_multi_skill=true`.
+  Otherwise `normalized_multi_skills` is a single-element list equal to
+  `normalized_single_skill` and `is_multi_skill=false`.
+
+user_template: |
+  ### Problem
+  {problem_statement}
+
+  ### Original TACO tags
+  {original_tags}
+
+  ### Rule-layer candidate families (pre-filtered, for reference only)
+  {rule_candidates}
+
+  ### Required JSON schema
+  {{
+    "problem_summary": str,           // 2-4 sentences
+    "signals": [str, ...],            // 3-6 concrete clues (e.g., "N<=20 -> enumeration feasible")
+    "rule_candidates_accepted": [str, ...],  // subset of rule_candidates you agree with
+    "normalized_single_skill": str,   // MUST be one of the 8 core families
+    "normalized_multi_skills": [str, ...],  // 1..N families from the 8
+    "is_multi_skill": bool,
+    "reasoning": str,                 // 3-6 sentences
+    "confidence": float               // in [0,1]
+  }}
+
+  Return ONLY the JSON object.

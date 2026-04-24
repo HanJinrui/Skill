@@ -1,0 +1,26 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "9916",
+  "difficulty": "HARD",
+  "skill_types": [
+    "data_structures"
+  ],
+  "tags": [
+    "graph_algorithms",
+    "probability",
+    "combinatorics",
+    "number_theory",
+    "tree_algorithms",
+    "mathematics",
+    "data_structures"
+  ],
+  "family_assignment": "data_structures",
+  "family_assignments": [
+    "data_structures"
+  ],
+  "subtype_assignment": "tree_data_structures",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "graph_algorithms__probability__combinatorics__number_theory__tree_al__c7f8a771",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}

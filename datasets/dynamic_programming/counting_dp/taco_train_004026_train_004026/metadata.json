@@ -1,0 +1,22 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "4026",
+  "difficulty": "MEDIUM",
+  "skill_types": [
+    "dynamic_programming"
+  ],
+  "tags": [
+    "dynamic_programming",
+    "combinatorics",
+    "ad_hoc"
+  ],
+  "family_assignment": "dynamic_programming",
+  "family_assignments": [
+    "dynamic_programming"
+  ],
+  "subtype_assignment": "counting_dp",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "combinatorics__ad_hoc",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}

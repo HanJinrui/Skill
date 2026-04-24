@@ -1,0 +1,21 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "3552",
+  "difficulty": "EASY",
+  "skill_types": [
+    "dynamic_programming"
+  ],
+  "tags": [
+    "dynamic_programming",
+    "mathematics"
+  ],
+  "family_assignment": "dynamic_programming",
+  "family_assignments": [
+    "dynamic_programming"
+  ],
+  "subtype_assignment": "numeric_dp",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "mathematics",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}

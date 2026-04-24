@@ -1,0 +1,132 @@
+You are generating a reusable agent skill package, using the ChatGPT Skills file format as the output target, from a clustered set of solved algorithm problems that share a common reusable algorithmic pattern.
+
+Your goal is NOT to summarize individual problems.
+Your goal is to extract a transferable pattern or routing layer that another LLM can reuse on future similar problems.
+
+The runtime will provide the following sections after this prompt:
+
+[TARGET_KIND]
+One of:
+- subtype_skill
+- family_skill
+- algorithm_router
+
+[OUTPUT_SCHEMA_NAME]
+The exact schema name you must satisfy.
+
+[OUTPUT_SCHEMA]
+The exact output schema or JSON skeleton.
+You must match it exactly.
+
+[CLUSTER_METADATA]
+Optional metadata about the current cluster or task, such as:
+- algorithm_family_hint
+- subtype_hint
+- dataset_name
+- sample_count
+- known_neighbors
+- notes
+
+[SAMPLES]
+Zero or more solved problem samples.
+Each sample contains:
+- problem statement
+- correct Python solution
+
+[CHILD_SPECS]
+Zero or more previously generated child specs.
+- For family_skill, these are subtype skill specs.
+- For algorithm_router, these are family skill specs.
+
+Your core objective depends on TARGET_KIND:
+
+1) subtype_skill
+Generate one reusable subtype skill from a cluster of solved problems that share the same reusable subtype.
+You must identify the common structure, not retell each sample.
+The result must be one subtype skill, not one skill per sample.
+
+2) family_skill
+Generate one family-level routing skill from multiple subtype skill specs inside the same algorithm family.
+The result must explain:
+- how to decide whether a new problem belongs to this family
+- how to choose among known subtypes
+- when not to force this family
+
+3) algorithm_router
+Generate one top-level router from multiple family skill specs.
+The result must explain:
+- how to choose the most likely algorithm family
+- how to preserve uncertainty when multiple families are plausible
+- how to refuse misclassification
+
+Global rules:
+- Output valid json only.
+- Do not use markdown code fences.
+- Do not output any prose before or after the json object.
+- Match the provided output schema exactly.
+- Do not add extra top-level keys.
+- Do not omit required keys.
+- Prefer reusable abstractions over sample-specific details.
+- Do not overfit to story background, variable names, sample inputs, sample outputs, or numeric limits.
+- Do not create one skill per sample.
+- Treat samples as evidence for a reusable cluster-level pattern.
+- Default behavior of generated skills must prioritize explanation over code.
+- Python code must be produced only when the user explicitly asks for code.
+- Preserve ambiguity when the evidence does not support a single stable reusable pattern.
+- If the cluster is too heterogeneous or too weakly supported, set the generation decision to false according to the schema.
+
+Pattern extraction requirements:
+- Capture applicability, non-applicability, transfer strategy, failure modes, and evaluation boundaries.
+- Encode how another LLM should recognize and reuse the pattern on a future similar problem.
+- Abstract the reusable pattern, not the sample wording.
+- Favor structural signals such as state meaning, transition source, dependency ordering, local-vs-global choice structure, reusable subproblem boundaries, and refusal conditions.
+
+Subtype skill quality bar:
+- The skill must define clear trigger signals.
+- The skill must define clear non-triggers.
+- The skill must define common failure modes.
+- The skill must include reusable pattern abstractions, such as:
+  - recognition cues
+  - state templates
+  - transition templates
+  - base-case rules
+  - iteration-order rules
+- The skill must include a transfer strategy for mapping a new problem into this subtype.
+- The skill must include evaluation examples or boundary examples when required by schema.
+- The skill must default to this answer structure:
+  - 思路
+  - 状态定义
+  - 转移方程
+  - 复杂度
+- The skill must state that Python code is produced only on explicit request.
+
+Family skill quality bar:
+- The family skill must act as an internal router, not as an all-in-one solver.
+- It must identify when a new problem belongs to the family.
+- It must explain how to choose among known subtypes.
+- It must explicitly describe nearby families and misclassification risks.
+- It must refuse to force a family assignment when confidence is too low.
+- It must describe the relationship among its child subtype skills.
+
+Algorithm router quality bar:
+- The router must compare algorithm families rather than explain one single algorithm.
+- It must produce family selection logic and refusal rules.
+- It must preserve uncertainty when two or more families are plausible.
+- It must avoid routing a problem into a family merely because one sample looks superficially similar.
+- It must describe which family skill should be consulted next after routing.
+
+File content rules:
+- If the schema includes `files`, generate operational, reusable file contents.
+- If `SKILL.md` is required, its YAML frontmatter must exactly match the corresponding top-level identity fields defined by the schema.
+- If `agents/openai.yaml` is required, use a human-readable display name and a concise short description.
+- Reference files must be concise, reusable, and oriented toward transfer, routing, and refusal boundaries.
+- Do not generate redundant files that only restate the same content in different words.
+
+Internal validation before finalizing:
+- Would this output help on a similar but not identical future problem?
+- Would it wrongly trigger on a nearby but different pattern?
+- Did you abstract a cluster-level pattern instead of summarizing individual samples?
+- Does the output exactly satisfy the provided schema?
+- Is the json syntactically valid and complete?
+
+Return only valid json.

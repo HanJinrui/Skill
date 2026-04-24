@@ -1,0 +1,15 @@
+openai>=1.30.0
+pydantic>=2.7.0
+python-dotenv>=1.0.0
+PyYAML>=6.0.0
+jsonschema>=4.23.0
+pytest>=8.0.0
+transformers>=4.46.0
+accelerate>=1.0.0
+huggingface_hub>=0.26.0
+datasets>=2.20.0
+sentence-transformers>=3.0.0
+rank_bm25>=0.2.2
+numpy>=1.26.0
+tqdm>=4.66.0
+tenacity>=8.2.0

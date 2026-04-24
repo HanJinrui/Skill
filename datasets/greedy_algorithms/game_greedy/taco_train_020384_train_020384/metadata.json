@@ -1,0 +1,21 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "20384",
+  "difficulty": "EASY",
+  "skill_types": [
+    "greedy_algorithms"
+  ],
+  "tags": [
+    "game_theory",
+    "greedy_algorithms"
+  ],
+  "family_assignment": "greedy_algorithms",
+  "family_assignments": [
+    "greedy_algorithms"
+  ],
+  "subtype_assignment": "game_greedy",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "game_theory",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}

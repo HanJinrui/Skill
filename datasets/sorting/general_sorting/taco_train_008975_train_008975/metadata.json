@@ -1,0 +1,21 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "8975",
+  "difficulty": "VERY_HARD",
+  "skill_types": [
+    "sorting"
+  ],
+  "tags": [
+    "sorting",
+    "sweep_line_algorithms"
+  ],
+  "family_assignment": "sorting",
+  "family_assignments": [
+    "sorting"
+  ],
+  "subtype_assignment": "general_sorting",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "sweep_line_algorithms",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}

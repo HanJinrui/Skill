@@ -1,0 +1,22 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "22212",
+  "difficulty": "VERY_HARD",
+  "skill_types": [
+    "sorting"
+  ],
+  "tags": [
+    "sorting",
+    "graph_algorithms",
+    "flows_and_cuts"
+  ],
+  "family_assignment": "sorting",
+  "family_assignments": [
+    "sorting"
+  ],
+  "subtype_assignment": "graph_sorting",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "graph_algorithms__flows_and_cuts",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}

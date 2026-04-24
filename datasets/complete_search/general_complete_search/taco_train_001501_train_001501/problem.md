@@ -1,0 +1,66 @@
+Find the number of ways that a given integer, $\mbox{X}$, can be expressed as the sum of the $N^{\mbox{th}}$ powers of unique, natural numbers. 
+
+For example, if $X=13$ and $N=2$, we have to find all combinations of unique squares adding up to $13$.  The only solution is  $2^2+3^2$.  
+
+Function Description
+
+Complete the powerSum function in the editor below.  It should return an integer that represents the number of possible combinations.  
+
+powerSum has the following parameter(s):  
+
+X: the integer to sum to  
+N: the integer power to raise numbers to  
+
+Input Format
+
+The first line contains an integer $\mbox{X}$. 
+
+The second line contains an integer $N$.  
+
+Constraints
+
+$1\leq X\leq1000$   
+$2\leq N\leq10$  
+
+Output Format
+
+Output a single integer, the number of possible combinations caclulated.   
+
+Sample Input 0
+10
+2
+
+Sample Output 0
+1
+
+Explanation 0
+
+If $X=10$ and $N=2$, we need to find the number of ways that $10$ can be represented as the sum of squares of unique numbers.
+
+$10=1^2+3^2$  
+
+This is the only way in which $10$ can be expressed as the sum of unique squares. 
+
+Sample Input 1
+100
+2
+
+Sample Output 1
+3
+
+Explanation 1
+
+$100=(10^2)=(6^2+8^2)=(1^2+3^2+4^2+5^2+7^2)$
+
+Sample Input 2
+100
+3
+
+Sample Output 2
+1
+
+Explanation 2
+
+$100$ can be expressed as the sum of the cubes of $1,2,3,4$. 
+
+$(1+8+27+64=100)$. There is no other way to express $100$ as the sum of cubes.

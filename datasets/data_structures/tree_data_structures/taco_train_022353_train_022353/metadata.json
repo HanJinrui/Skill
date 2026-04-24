@@ -1,0 +1,22 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "22353",
+  "difficulty": "VERY_HARD",
+  "skill_types": [
+    "data_structures"
+  ],
+  "tags": [
+    "tree_algorithms",
+    "data_structures",
+    "divide_and_conquer"
+  ],
+  "family_assignment": "data_structures",
+  "family_assignments": [
+    "data_structures"
+  ],
+  "subtype_assignment": "tree_data_structures",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "tree_algorithms__divide_and_conquer",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}

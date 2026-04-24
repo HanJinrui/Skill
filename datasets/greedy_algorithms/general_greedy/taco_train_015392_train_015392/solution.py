@@ -1,0 +1,3 @@
+z = lambda : list(map(int, input().split()))
+(n, m, k) = z()
+print(n % 2 * min(m // (n // 2 + 1) * k, *z()[::2]))

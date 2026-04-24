@@ -1,0 +1,23 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "21027",
+  "difficulty": "MEDIUM_HARD",
+  "skill_types": [
+    "bit_manipulation"
+  ],
+  "tags": [
+    "bit_manipulation",
+    "preprocessing",
+    "game_theory",
+    "mathematics"
+  ],
+  "family_assignment": "bit_manipulation",
+  "family_assignments": [
+    "bit_manipulation"
+  ],
+  "subtype_assignment": "game_bitmasking",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "preprocessing__game_theory__mathematics",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}

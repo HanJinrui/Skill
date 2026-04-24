@@ -1,0 +1,5 @@
+import sys
+X = lambda i: [i, 2, i + 2, 0][i % 8 // 2]
+for _ in range(int(input())):
+	(L, R) = map(int, input().strip().split())
+	print(X(R) ^ X(L - 1))

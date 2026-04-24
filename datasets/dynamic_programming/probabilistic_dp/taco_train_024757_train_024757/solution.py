@@ -1,0 +1,20 @@
+(n, m) = (int(s) for s in input().split())
+(i, j) = (int(s) for s in input().split())
+
+def find(n, m, i, j):
+	if i == n:
+		return 0
+	if m == 1:
+		return 2 * (n - i)
+	(e, a, b) = ([0.0] * m, [0] * m, [0] * m)
+	for l in range(n - 1, 0, -1):
+		(a[0], b[0]) = (0.5, 0.5 * (3 + e[0]))
+		for k in range(1, m - 1):
+			a[k] = 1 / (3 - a[k - 1])
+			b[k] = a[k] * (b[k - 1] + 4 + e[k])
+		e[m - 1] = (3 + b[m - 2] + e[m - 1]) / (2 - a[m - 2])
+		for k in range(m - 2, -1, -1):
+			e[k] = a[k] * e[k + 1] + b[k]
+		if l == i:
+			return e[j]
+print(find(n, m, i, m - j))

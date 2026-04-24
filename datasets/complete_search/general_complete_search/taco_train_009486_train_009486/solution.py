@@ -1,0 +1,10 @@
+(s, u) = (input(), input())
+t = [0] * len(s)
+p = {i: [] for i in 'abcdefghijklmnopqrstuvwxyz'}
+for (i, j) in enumerate(s):
+	p[j].append(i)
+for j in u:
+	for i in p[j]:
+		t[i] += 1
+	t = [0] + t
+print(len(u) - max(t))

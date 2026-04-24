@@ -1,0 +1,21 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "22312",
+  "difficulty": "EASY",
+  "skill_types": [
+    "greedy_algorithms"
+  ],
+  "tags": [
+    "mathematics",
+    "greedy_algorithms"
+  ],
+  "family_assignment": "greedy_algorithms",
+  "family_assignments": [
+    "greedy_algorithms"
+  ],
+  "subtype_assignment": "numeric_greedy",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "mathematics",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}

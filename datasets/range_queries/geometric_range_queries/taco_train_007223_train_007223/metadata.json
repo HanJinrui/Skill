@@ -1,0 +1,21 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "7223",
+  "difficulty": "VERY_HARD",
+  "skill_types": [
+    "range_queries"
+  ],
+  "tags": [
+    "sweep_line_algorithms",
+    "range_queries"
+  ],
+  "family_assignment": "range_queries",
+  "family_assignments": [
+    "range_queries"
+  ],
+  "subtype_assignment": "geometric_range_queries",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "sweep_line_algorithms",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}

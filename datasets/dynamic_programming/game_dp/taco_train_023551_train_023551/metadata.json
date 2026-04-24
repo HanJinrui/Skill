@@ -1,0 +1,23 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "23551",
+  "difficulty": "VERY_HARD",
+  "skill_types": [
+    "dynamic_programming"
+  ],
+  "tags": [
+    "number_theory",
+    "dynamic_programming",
+    "game_theory",
+    "mathematics"
+  ],
+  "family_assignment": "dynamic_programming",
+  "family_assignments": [
+    "dynamic_programming"
+  ],
+  "subtype_assignment": "game_dp",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "number_theory__game_theory__mathematics",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}

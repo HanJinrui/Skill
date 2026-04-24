@@ -1,0 +1,8 @@
+{"node_type": "family", "node_id": "family::amortized_analysis", "family_id": "amortized_analysis", "display_name": "amortized_analysis"}
+{"node_type": "family", "node_id": "family::bit_manipulation", "family_id": "bit_manipulation", "display_name": "bit_manipulation"}
+{"node_type": "family", "node_id": "family::complete_search", "family_id": "complete_search", "display_name": "complete_search"}
+{"node_type": "family", "node_id": "family::data_structures", "family_id": "data_structures", "display_name": "data_structures"}
+{"node_type": "family", "node_id": "family::dynamic_programming", "family_id": "dynamic_programming", "display_name": "dynamic_programming"}
+{"node_type": "family", "node_id": "family::greedy_algorithms", "family_id": "greedy_algorithms", "display_name": "greedy_algorithms"}
+{"node_type": "family", "node_id": "family::range_queries", "family_id": "range_queries", "display_name": "range_queries"}
+{"node_type": "family", "node_id": "family::sorting", "family_id": "sorting", "display_name": "sorting"}

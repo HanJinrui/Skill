@@ -1,0 +1,17 @@
+{
+  "dense_model": "BAAI/bge-base-en-v1.5",
+  "dense_dim": 768,
+  "n_skills": 10,
+  "skill_ids": [
+    "amortized_analysis",
+    "sorting",
+    "greedy_algorithms",
+    "bit_manipulation",
+    "complete_search",
+    "data_structures",
+    "greedy_algorithms__sorting",
+    "dynamic_programming",
+    "range_queries",
+    "amortized_analysis__greedy_algorithms"
+  ]
+}

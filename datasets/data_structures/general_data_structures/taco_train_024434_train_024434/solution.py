@@ -1,0 +1,6 @@
+import statistics as st
+t = int(input())
+for _ in range(t):
+	n = int(input())
+	l = list(map(int, input().split()))
+	print(len(l) - l.count(st.mode(l)))

@@ -1,0 +1,5 @@
+i = lambda : map(int, input().split())
+i()
+a = sum(i())
+(*_, b, c) = sorted(i())
+print('YNEOS'[a > b + c::2])

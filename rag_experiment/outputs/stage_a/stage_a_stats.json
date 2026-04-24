@@ -1,0 +1,41 @@
+{
+  "total_records_scanned": 25443,
+  "records_with_tests": 10252,
+  "records_with_solutions": 8633,
+  "records_with_core_family": 10542,
+  "per_family_available": {
+    "amortized_analysis": 554,
+    "bit_manipulation": 816,
+    "complete_search": 1886,
+    "data_structures": 4695,
+    "dynamic_programming": 2585,
+    "greedy_algorithms": 2649,
+    "range_queries": 233,
+    "sorting": 2234
+  },
+  "per_family_selected": {
+    "amortized_analysis": 36,
+    "bit_manipulation": 36,
+    "complete_search": 36,
+    "data_structures": 36,
+    "dynamic_programming": 36,
+    "greedy_algorithms": 36,
+    "range_queries": 35,
+    "sorting": 35
+  },
+  "target_unique": 240,
+  "selected_unique": 240,
+  "unique_shortfall": 0,
+  "single_label_count": 105,
+  "multi_label_count": 135,
+  "family_shortfall": {
+    "amortized_analysis": 0,
+    "bit_manipulation": 0,
+    "complete_search": 0,
+    "data_structures": 0,
+    "dynamic_programming": 0,
+    "greedy_algorithms": 0,
+    "range_queries": 0,
+    "sorting": 0
+  }
+}

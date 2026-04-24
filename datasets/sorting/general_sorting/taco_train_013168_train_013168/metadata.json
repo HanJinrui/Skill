@@ -1,0 +1,22 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "13168",
+  "difficulty": "MEDIUM",
+  "skill_types": [
+    "sorting"
+  ],
+  "tags": [
+    "fundamentals",
+    "sorting",
+    "game_theory"
+  ],
+  "family_assignment": "sorting",
+  "family_assignments": [
+    "sorting"
+  ],
+  "subtype_assignment": "general_sorting",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "fundamentals__game_theory",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}

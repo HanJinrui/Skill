@@ -1,0 +1,21 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "2407",
+  "difficulty": "EASY",
+  "skill_types": [
+    "bit_manipulation"
+  ],
+  "tags": [
+    "bit_manipulation",
+    "divide_and_conquer"
+  ],
+  "family_assignment": "bit_manipulation",
+  "family_assignments": [
+    "bit_manipulation"
+  ],
+  "subtype_assignment": "divide_and_conquer_bitmasking",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "divide_and_conquer",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}

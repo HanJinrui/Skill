@@ -1,0 +1,113 @@
+{
+  "total_problems": 80,
+  "total_runs": 240,
+  "pass_at_1": 0.0625,
+  "pass_at_3": 0.0875,
+  "single_subset": {
+    "problems": 71,
+    "passed": 5,
+    "pass_at_3": 0.07042253521126761
+  },
+  "multi_subset": {
+    "problems": 9,
+    "passed": 2,
+    "pass_at_3": 0.2222222222222222
+  },
+  "retrieval": {
+    "avg_calls_per_problem": 0.0,
+    "avg_correct_per_problem": 0.0,
+    "overall_correct_rate": 0.0,
+    "total_calls": 0,
+    "total_hits": 0
+  },
+  "per_family": {
+    "amortized_analysis": {
+      "problems": 10,
+      "passed_problems": 2,
+      "runs": 30,
+      "passed_runs": 3,
+      "retrieval_hits": 0,
+      "retrieval_calls": 0,
+      "pass_at_3": 0.2,
+      "pass_at_1": 0.1,
+      "retrieval_hit_rate": 0.0
+    },
+    "bit_manipulation": {
+      "problems": 10,
+      "passed_problems": 0,
+      "runs": 30,
+      "passed_runs": 0,
+      "retrieval_hits": 0,
+      "retrieval_calls": 0,
+      "pass_at_3": 0.0,
+      "pass_at_1": 0.0,
+      "retrieval_hit_rate": 0.0
+    },
+    "complete_search": {
+      "problems": 10,
+      "passed_problems": 0,
+      "runs": 30,
+      "passed_runs": 0,
+      "retrieval_hits": 0,
+      "retrieval_calls": 0,
+      "pass_at_3": 0.0,
+      "pass_at_1": 0.0,
+      "retrieval_hit_rate": 0.0
+    },
+    "data_structures": {
+      "problems": 10,
+      "passed_problems": 0,
+      "runs": 30,
+      "passed_runs": 0,
+      "retrieval_hits": 0,
+      "retrieval_calls": 0,
+      "pass_at_3": 0.0,
+      "pass_at_1": 0.0,
+      "retrieval_hit_rate": 0.0
+    },
+    "dynamic_programming": {
+      "problems": 10,
+      "passed_problems": 1,
+      "runs": 30,
+      "passed_runs": 3,
+      "retrieval_hits": 0,
+      "retrieval_calls": 0,
+      "pass_at_3": 0.1,
+      "pass_at_1": 0.1,
+      "retrieval_hit_rate": 0.0
+    },
+    "greedy_algorithms": {
+      "problems": 10,
+      "passed_problems": 0,
+      "runs": 30,
+      "passed_runs": 0,
+      "retrieval_hits": 0,
+      "retrieval_calls": 0,
+      "pass_at_3": 0.0,
+      "pass_at_1": 0.0,
+      "retrieval_hit_rate": 0.0
+    },
+    "range_queries": {
+      "problems": 10,
+      "passed_problems": 3,
+      "runs": 30,
+      "passed_runs": 6,
+      "retrieval_hits": 0,
+      "retrieval_calls": 0,
+      "pass_at_3": 0.3,
+      "pass_at_1": 0.2,
+      "retrieval_hit_rate": 0.0
+    },
+    "sorting": {
+      "problems": 10,
+      "passed_problems": 1,
+      "runs": 30,
+      "passed_runs": 3,
+      "retrieval_hits": 0,
+      "retrieval_calls": 0,
+      "pass_at_3": 0.1,
+      "pass_at_1": 0.1,
+      "retrieval_hit_rate": 0.0
+    }
+  }
+}

@@ -1,0 +1,6 @@
+I = lambda : map(int, input().split())
+(_, *X) = I()
+(_, *Y) = I()
+(_, *Z) = I()
+(A, B) = I()
+print(max(X) / (1 + A * min(Z) / (B * max(Y))) ** 0.5)

@@ -1,0 +1,319 @@
+{
+  "mechanism_tags": {
+    "two_pointers": [
+      "amortized_analysis",
+      "greedy_algorithms",
+      "amortized_analysis__greedy_algorithms"
+    ],
+    "hash_lookup": [
+      "amortized_analysis",
+      "data_structures"
+    ],
+    "sliding_window": [
+      "amortized_analysis",
+      "amortized_analysis__greedy_algorithms"
+    ],
+    "monotonic_stack": [
+      "amortized_analysis",
+      "data_structures",
+      "amortized_analysis__greedy_algorithms"
+    ],
+    "monotonic_queue": [
+      "amortized_analysis",
+      "data_structures",
+      "amortized_analysis__greedy_algorithms"
+    ],
+    "sort_then_greedy": [
+      "sorting",
+      "greedy_algorithms",
+      "greedy_algorithms__sorting",
+      "amortized_analysis__greedy_algorithms"
+    ],
+    "comparator_sort": [
+      "sorting",
+      "greedy_algorithms__sorting"
+    ],
+    "coordinate_compression": [
+      "sorting",
+      "greedy_algorithms__sorting",
+      "range_queries"
+    ],
+    "counting_sort": [
+      "sorting",
+      "greedy_algorithms__sorting"
+    ],
+    "backtracking": [
+      "greedy_algorithms",
+      "complete_search"
+    ],
+    "exchange_argument": [
+      "greedy_algorithms",
+      "greedy_algorithms__sorting",
+      "amortized_analysis__greedy_algorithms"
+    ],
+    "priority_greedy": [
+      "greedy_algorithms",
+      "data_structures",
+      "greedy_algorithms__sorting",
+      "amortized_analysis__greedy_algorithms"
+    ],
+    "scanning_greedy": [
+      "greedy_algorithms",
+      "greedy_algorithms__sorting",
+      "amortized_analysis__greedy_algorithms"
+    ],
+    "bitmask_enumeration": [
+      "bit_manipulation",
+      "complete_search"
+    ],
+    "xor_tricks": [
+      "bit_manipulation"
+    ],
+    "bitmask_dp": [
+      "bit_manipulation",
+      "dynamic_programming"
+    ],
+    "shift_ops": [
+      "bit_manipulation"
+    ],
+    "dp_on_subsets": [
+      "bit_manipulation",
+      "dynamic_programming"
+    ],
+    "dfs_enumeration": [
+      "complete_search"
+    ],
+    "bfs_enumeration": [
+      "complete_search"
+    ],
+    "branch_and_bound": [
+      "complete_search"
+    ],
+    "heap_maintenance": [
+      "data_structures"
+    ],
+    "union_find": [
+      "data_structures"
+    ],
+    "stack_simulation": [
+      "data_structures"
+    ],
+    "queue_simulation": [
+      "data_structures"
+    ],
+    "balanced_bst": [
+      "data_structures"
+    ],
+    "fenwick_tree": [
+      "data_structures",
+      "range_queries"
+    ],
+    "segment_tree": [
+      "data_structures",
+      "range_queries"
+    ],
+    "state_transition_dp": [
+      "dynamic_programming"
+    ],
+    "dp_on_indices": [
+      "dynamic_programming"
+    ],
+    "dp_on_tree": [
+      "dynamic_programming"
+    ],
+    "knapsack": [
+      "dynamic_programming"
+    ],
+    "digit_dp": [
+      "dynamic_programming"
+    ],
+    "interval_dp": [
+      "dynamic_programming"
+    ],
+    "prefix_sum": [
+      "range_queries"
+    ],
+    "difference_array": [
+      "range_queries"
+    ],
+    "sparse_table": [
+      "range_queries"
+    ],
+    "offline_queries": [
+      "range_queries"
+    ],
+    "mo_algorithm": [
+      "range_queries"
+    ]
+  },
+  "signal_tags": {
+    "subarray": [
+      "amortized_analysis",
+      "sorting"
+    ],
+    "substring": [
+      "amortized_analysis"
+    ],
+    "string_input": [
+      "amortized_analysis"
+    ],
+    "minimize": [
+      "amortized_analysis",
+      "greedy_algorithms",
+      "complete_search",
+      "greedy_algorithms__sorting",
+      "amortized_analysis__greedy_algorithms"
+    ],
+    "maximize": [
+      "amortized_analysis",
+      "greedy_algorithms",
+      "complete_search",
+      "greedy_algorithms__sorting",
+      "amortized_analysis__greedy_algorithms"
+    ],
+    "sort_action": [
+      "sorting",
+      "bit_manipulation",
+      "amortized_analysis__greedy_algorithms"
+    ],
+    "dp_keyword": [
+      "greedy_algorithms",
+      "dynamic_programming"
+    ],
+    "greedy_keyword": [
+      "greedy_algorithms",
+      "complete_search",
+      "greedy_algorithms__sorting",
+      "amortized_analysis__greedy_algorithms"
+    ],
+    "enumerate_permutations": [
+      "bit_manipulation",
+      "greedy_algorithms__sorting"
+    ],
+    "xor_keyword": [
+      "bit_manipulation"
+    ],
+    "bitmask_keyword": [
+      "bit_manipulation"
+    ],
+    "construct": [
+      "data_structures"
+    ],
+    "interval_list_input": [
+      "greedy_algorithms__sorting"
+    ],
+    "range_update": [
+      "range_queries"
+    ],
+    "prefix_keyword": [
+      "range_queries"
+    ]
+  },
+  "input_shape_tags": {
+    "string_input": [
+      "amortized_analysis"
+    ],
+    "interval_list_input": [
+      "greedy_algorithms__sorting"
+    ]
+  },
+  "operation_tags": {
+    "subarray": [
+      "amortized_analysis",
+      "sorting"
+    ],
+    "substring": [
+      "amortized_analysis"
+    ],
+    "sort_action": [
+      "sorting",
+      "bit_manipulation",
+      "amortized_analysis__greedy_algorithms"
+    ],
+    "enumerate_permutations": [
+      "bit_manipulation",
+      "greedy_algorithms__sorting"
+    ],
+    "range_update": [
+      "range_queries"
+    ]
+  },
+  "goal_tags": {
+    "minimize": [
+      "amortized_analysis",
+      "greedy_algorithms",
+      "complete_search",
+      "greedy_algorithms__sorting",
+      "amortized_analysis__greedy_algorithms"
+    ],
+    "maximize": [
+      "amortized_analysis",
+      "greedy_algorithms",
+      "complete_search",
+      "greedy_algorithms__sorting",
+      "amortized_analysis__greedy_algorithms"
+    ],
+    "construct": [
+      "data_structures"
+    ]
+  },
+  "complexity_tags": {
+    "o_n": [
+      "amortized_analysis",
+      "greedy_algorithms",
+      "bit_manipulation",
+      "complete_search",
+      "data_structures",
+      "range_queries",
+      "amortized_analysis__greedy_algorithms"
+    ],
+    "o_n_squared": [
+      "amortized_analysis",
+      "complete_search",
+      "range_queries"
+    ],
+    "o_nlogn": [
+      "sorting",
+      "greedy_algorithms",
+      "bit_manipulation",
+      "greedy_algorithms__sorting",
+      "amortized_analysis__greedy_algorithms"
+    ],
+    "o_1": [
+      "greedy_algorithms__sorting",
+      "range_queries",
+      "amortized_analysis__greedy_algorithms"
+    ]
+  },
+  "negative_tags": {},
+  "families": {
+    "amortized_analysis": [
+      "amortized_analysis",
+      "amortized_analysis__greedy_algorithms"
+    ],
+    "sorting": [
+      "sorting",
+      "greedy_algorithms__sorting"
+    ],
+    "greedy_algorithms": [
+      "greedy_algorithms",
+      "greedy_algorithms__sorting",
+      "amortized_analysis__greedy_algorithms"
+    ],
+    "bit_manipulation": [
+      "bit_manipulation"
+    ],
+    "complete_search": [
+      "complete_search"
+    ],
+    "data_structures": [
+      "data_structures"
+    ],
+    "dynamic_programming": [
+      "dynamic_programming"
+    ],
+    "range_queries": [
+      "range_queries"
+    ]
+  }
+}

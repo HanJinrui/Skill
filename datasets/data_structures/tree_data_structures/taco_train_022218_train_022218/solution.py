@@ -1,0 +1,15 @@
+from operator import or_, xor
+import sys
+greg = 1
+(n, m) = map(int, input().split())
+t = [list(map(int, input().split()))]
+for i in range(n):
+	t += [[(or_, xor)[i & 1](*t[i][j:j + 2]) for j in range(0, len(t[i]), 2)]]
+for i in range(m):
+	(p, b) = sys.stdin.readline().split()
+	p = int(p) - 1
+	t[0][p] = int(b)
+	for j in range(n):
+		p >>= 1
+		t[j + 1][p] = (or_, xor)[j & 1](*t[j][p << 1:(p << 1) + 2])
+	print(t[-1][0])

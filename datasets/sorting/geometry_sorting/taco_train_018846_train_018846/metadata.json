@@ -1,0 +1,22 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "18846",
+  "difficulty": "HARD",
+  "skill_types": [
+    "sorting"
+  ],
+  "tags": [
+    "geometry",
+    "sorting",
+    "mathematics"
+  ],
+  "family_assignment": "sorting",
+  "family_assignments": [
+    "sorting"
+  ],
+  "subtype_assignment": "geometry_sorting",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "geometry__mathematics",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}

@@ -1,0 +1,28 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "3902",
+  "difficulty": "VERY_HARD",
+  "skill_types": [
+    "complete_search"
+  ],
+  "tags": [
+    "constructive_algorithms",
+    "geometry",
+    "string_algorithms",
+    "combinatorics",
+    "complete_search",
+    "number_theory",
+    "game_theory",
+    "mathematics",
+    "polynomials_and_generating_functions"
+  ],
+  "family_assignment": "complete_search",
+  "family_assignments": [
+    "complete_search"
+  ],
+  "subtype_assignment": "geometry_search",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "constructive_algorithms__geometry__string_algorithms__combinatorics__5a0f9f28",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}

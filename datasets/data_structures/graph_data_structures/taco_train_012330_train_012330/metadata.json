@@ -1,0 +1,23 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "12330",
+  "difficulty": "MEDIUM",
+  "skill_types": [
+    "data_structures"
+  ],
+  "tags": [
+    "matrices",
+    "fundamentals",
+    "graph_algorithms",
+    "data_structures"
+  ],
+  "family_assignment": "data_structures",
+  "family_assignments": [
+    "data_structures"
+  ],
+  "subtype_assignment": "graph_data_structures",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "matrices__fundamentals__graph_algorithms",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}

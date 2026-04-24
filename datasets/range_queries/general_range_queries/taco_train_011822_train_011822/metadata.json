@@ -1,0 +1,20 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "11822",
+  "difficulty": "HARD",
+  "skill_types": [
+    "range_queries"
+  ],
+  "tags": [
+    "range_queries"
+  ],
+  "family_assignment": "range_queries",
+  "family_assignments": [
+    "range_queries"
+  ],
+  "subtype_assignment": "general_range_queries",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "range_queries",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}

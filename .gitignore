@@ -1,0 +1,22 @@
+# Secrets and local env
+.env
+rag_experiment/.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Local model and dataset cache
+.hf-cache/
+rag_experiment/.cache/
+Qwen__Qwen2.5-Coder-7B-Instruct.tar.gz
+*.safetensors
+
+# OS / editor noise
+.DS_Store
+
+# Rebuildable dense index artifacts
+rag_experiment/outputs/run.log
+rag_experiment/outputs/stage_d.lock
+rag_experiment/outputs/stage_e/index/dense_embeddings.npy
+rag_experiment/outputs/stage_e/graph_index/*_dense.npy

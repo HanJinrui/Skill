@@ -1,0 +1,33 @@
+Given N leaves numbered from 1 to N . A caterpillar at leaf 1, jumps from leaf to leaf in multiples of A_{j} (A_{j}, 2A_{j}, 3A_{j}).
+j is specific to the caterpillar. Whenever a caterpillar reaches a leaf, it eats it a little bit.. You have to find out how many leaves, from 1 to N, are left uneaten after all K caterpillars have reached the end. Each caterpillar has its own jump factor denoted by A_{j}, and each caterpillar starts at leaf number 1. 
+Example 1:
+Input:
+N=10 K=3
+arr[] = {2, 3, 5} 
+Output: 2
+Explanation: The leaves eaten by the first 
+caterpillar are (2, 4, 6, 8, 10). The leaves 
+eaten by the second caterpilllar are (3, 6, 9).
+The leaves eaten by the third caterpilllar 
+are (5, 10). Ultimately, the uneaten leaves are 
+1, 7 and their number is 2.
+ 
+Your Task:
+Since this is a function problem. You don't need to take any input, as it is already accomplished by the driver code. You just need to complete the function uneatenLeaves() that takes array arr, integer N, and integer K as parameters and returns the number of uneaten leaves.
+ 
+Expected Time Complexity: O(N^{2}).
+Expected Auxiliary Space: O(N).
+ 
+Constraints:
+1 ≤ N ≤ 10^{4}
+
+Starter code:
+```python
+#User function Template for python3
+
+
+
+
+def uneatenLeaves(arr,n,k):
+    # Your code goes here
+```

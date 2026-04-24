@@ -1,0 +1,8 @@
+I = lambda : map(int, input().split())
+n = next(I())
+(a, b) = I()
+(c, d) = I()
+(f, e) = I()
+x = min(b, n - c - f)
+y = min(d, n - x - f)
+print(x, y, n - x - y)

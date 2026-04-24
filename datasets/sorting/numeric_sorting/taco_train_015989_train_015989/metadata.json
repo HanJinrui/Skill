@@ -1,0 +1,22 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "15989",
+  "difficulty": "EASY",
+  "skill_types": [
+    "sorting"
+  ],
+  "tags": [
+    "number_theory",
+    "sorting",
+    "mathematics"
+  ],
+  "family_assignment": "sorting",
+  "family_assignments": [
+    "sorting"
+  ],
+  "subtype_assignment": "numeric_sorting",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "number_theory__mathematics",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}

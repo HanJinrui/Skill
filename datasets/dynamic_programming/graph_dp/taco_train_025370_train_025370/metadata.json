@@ -1,0 +1,23 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "25370",
+  "difficulty": "MEDIUM_HARD",
+  "skill_types": [
+    "dynamic_programming"
+  ],
+  "tags": [
+    "dynamic_programming",
+    "paths_and_circuits",
+    "graph_traversal",
+    "graph_algorithms"
+  ],
+  "family_assignment": "dynamic_programming",
+  "family_assignments": [
+    "dynamic_programming"
+  ],
+  "subtype_assignment": "graph_dp",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "paths_and_circuits__graph_traversal__graph_algorithms",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}

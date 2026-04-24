@@ -1,0 +1,22 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "11835",
+  "difficulty": "MEDIUM_HARD",
+  "skill_types": [
+    "range_queries"
+  ],
+  "tags": [
+    "tree_algorithms",
+    "graph_traversal",
+    "range_queries"
+  ],
+  "family_assignment": "range_queries",
+  "family_assignments": [
+    "range_queries"
+  ],
+  "subtype_assignment": "tree_range_queries",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "tree_algorithms__graph_traversal",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}

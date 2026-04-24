@@ -1,0 +1,21 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "6129",
+  "difficulty": "EASY",
+  "skill_types": [
+    "data_structures"
+  ],
+  "tags": [
+    "fundamentals",
+    "data_structures"
+  ],
+  "family_assignment": "data_structures",
+  "family_assignments": [
+    "data_structures"
+  ],
+  "subtype_assignment": "fundamental_data_structures",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "fundamentals",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}

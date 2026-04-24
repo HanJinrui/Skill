@@ -1,0 +1,54 @@
+version: skill_generation@v1
+recommended_params:
+  temperature: 0.2
+  max_tokens: 3000
+  response_format: json_object
+retry:
+  max_attempts: 3
+  on_parse_error: reduce_temperature_to_0_and_retry
+
+system: |
+  You distill TRANSFERABLE algorithm skills from a batch of
+  consistently-labeled problem+solution pairs. A "skill" is NOT a problem
+  writeup — it is reusable procedural knowledge: "whenever I see these
+  signals, I should apply this algorithmic machinery like this".
+
+  Hard requirements:
+    * Abstract beyond any single example. If an observation is only true
+      for one problem, it does NOT belong in the skill — it belongs under
+      `representative_examples`.
+    * Problem-signals must be observable from the problem statement alone.
+    * The `template_strategy` must be a short executable recipe (a numbered
+      list of steps), generic enough to apply to unseen problems.
+    * `common_pitfalls` must describe mistakes competitive programmers
+      actually make when applying this skill.
+    * Output STRICT JSON only. No markdown, no prose outside the JSON.
+
+user_template: |
+  ### Skill identity
+  scope: {scope}
+  families: {families}
+  skill_id: {skill_id}
+
+  ### Consistent example problems (summarized; solutions attached)
+  {examples_block}
+
+  ### Required JSON schema
+  {{
+    "skill_id": "{skill_id}",
+    "skill_name": str,
+    "scope": "{scope}",
+    "families": [str, ...],
+    "applicable_when": [str, ...],           // 3-6 conditions
+    "problem_signals": [str, ...],           // 4-8 observable cues
+    "core_idea": str,                        // 2-4 sentences
+    "template_strategy": [str, ...],         // 4-8 numbered recipe steps
+    "common_pitfalls": [str, ...],           // 3-6 items
+    "complexity_pattern": str,
+    "representative_examples": [{{"problem_id": str, "reason": str}}, ...],
+    "related_skills": [str, ...],            // other families often confused with this one
+    "retrieval_text": str                    // 60-150 word paragraph packed with
+                                             // keywords useful for BM25/dense retrieval
+  }}
+
+  Return ONLY the JSON object.

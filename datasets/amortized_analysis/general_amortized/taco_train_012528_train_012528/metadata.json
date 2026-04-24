@@ -1,0 +1,20 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "12528",
+  "difficulty": "MEDIUM",
+  "skill_types": [
+    "amortized_analysis"
+  ],
+  "tags": [
+    "amortized_analysis"
+  ],
+  "family_assignment": "amortized_analysis",
+  "family_assignments": [
+    "amortized_analysis"
+  ],
+  "subtype_assignment": "general_amortized",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "amortized_analysis",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}

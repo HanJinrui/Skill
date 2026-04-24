@@ -1,0 +1,22 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "21232",
+  "difficulty": "HARD",
+  "skill_types": [
+    "amortized_analysis"
+  ],
+  "tags": [
+    "combinatorics",
+    "amortized_analysis",
+    "mathematics"
+  ],
+  "family_assignment": "amortized_analysis",
+  "family_assignments": [
+    "amortized_analysis"
+  ],
+  "subtype_assignment": "numeric_amortized",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "combinatorics__mathematics",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}

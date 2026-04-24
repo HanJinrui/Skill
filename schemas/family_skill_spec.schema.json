@@ -1,0 +1,412 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/family_skill_spec.schema.json",
+  "title": "FamilySkillSpec",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "kind",
+    "family_name",
+    "skill_name",
+    "description",
+    "generation_decision",
+    "family_trigger_signals",
+    "nearby_families",
+    "subtype_registry",
+    "subtype_selection_rules",
+    "refusal_rules",
+    "routing_strategy",
+    "output_contract",
+    "files"
+  ],
+  "properties": {
+    "kind": {
+      "const": "family_skill"
+    },
+    "family_name": {
+      "type": "string",
+      "enum": [
+        "amortized_analysis",
+        "bit_manipulation",
+        "complete_search",
+        "data_structures",
+        "dynamic_programming",
+        "greedy_algorithms",
+        "range_queries",
+        "sorting"
+      ]
+    },
+    "skill_name": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 80,
+      "allOf": [
+        {
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        {
+          "not": {
+            "pattern": "(^|-)skill(-|$)"
+          }
+        }
+      ]
+    },
+    "description": {
+      "type": "string",
+      "minLength": 20,
+      "maxLength": 320,
+      "pattern": "^[a-z0-9][a-z0-9 ,()/_:+.-]*$"
+    },
+    "generation_decision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "should_generate_skill",
+        "confidence",
+        "reason"
+      ],
+      "properties": {
+        "should_generate_skill": {
+          "type": "boolean"
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 10,
+          "maxLength": 400
+        }
+      }
+    },
+    "family_trigger_signals": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 10,
+      "items": {
+        "type": "string",
+        "minLength": 4,
+        "maxLength": 240
+      }
+    },
+    "nearby_families": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "family_name",
+          "confusion_reason"
+        ],
+        "properties": {
+          "family_name": {
+            "type": "string",
+            "enum": [
+              "amortized_analysis",
+              "bit_manipulation",
+              "complete_search",
+              "data_structures",
+              "dynamic_programming",
+              "greedy_algorithms",
+              "range_queries",
+              "sorting"
+            ]
+          },
+          "confusion_reason": {
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 260
+          }
+        }
+      }
+    },
+    "subtype_registry": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 24,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "subtype",
+          "skill_name",
+          "short_description",
+          "trigger_summary"
+        ],
+        "properties": {
+          "subtype": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 80
+          },
+          "skill_name": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 80,
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          },
+          "short_description": {
+            "type": "string",
+            "minLength": 10,
+            "maxLength": 220
+          },
+          "trigger_summary": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 4,
+            "items": {
+              "type": "string",
+              "minLength": 4,
+              "maxLength": 180
+            }
+          }
+        }
+      }
+    },
+    "subtype_selection_rules": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 12,
+      "items": {
+        "type": "string",
+        "minLength": 6,
+        "maxLength": 260
+      }
+    },
+    "refusal_rules": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 8,
+      "items": {
+        "type": "string",
+        "minLength": 6,
+        "maxLength": 240
+      }
+    },
+    "routing_strategy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "selection_steps",
+        "tie_breaking_rules",
+        "escalation_rules"
+      ],
+      "properties": {
+        "selection_steps": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 8,
+          "items": {
+            "type": "string",
+            "minLength": 6,
+            "maxLength": 240
+          }
+        },
+        "tie_breaking_rules": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 6,
+          "items": {
+            "type": "string",
+            "minLength": 6,
+            "maxLength": 240
+          }
+        },
+        "escalation_rules": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 6,
+          "items": {
+            "type": "string",
+            "minLength": 6,
+            "maxLength": 240
+          }
+        }
+      }
+    },
+    "output_contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sections",
+        "emit_code"
+      ],
+      "properties": {
+        "sections": {
+          "const": [
+            "家族判断",
+            "候选子类型",
+            "选择理由",
+            "下一步"
+          ]
+        },
+        "emit_code": {
+          "const": false
+        }
+      }
+    },
+    "files": {
+      "type": "array",
+      "minItems": 0,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "path",
+          "content"
+        ],
+        "properties": {
+          "path": {
+            "type": "string",
+            "enum": [
+              "SKILL.md",
+              "agents/openai.yaml",
+              "references/family-taxonomy.md",
+              "references/subtype-selection.md",
+              "references/refusal-rules.md"
+            ]
+          },
+          "content": {
+            "type": "string",
+            "minLength": 20
+          }
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "generation_decision": {
+            "type": "object",
+            "properties": {
+              "should_generate_skill": {
+                "const": true
+              }
+            },
+            "required": [
+              "should_generate_skill"
+            ]
+          }
+        },
+        "required": [
+          "generation_decision"
+        ]
+      },
+      "then": {
+        "properties": {
+          "files": {
+            "type": "array",
+            "minItems": 5,
+            "maxItems": 5,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "path",
+                "content"
+              ],
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "enum": [
+                    "SKILL.md",
+                    "agents/openai.yaml",
+                    "references/family-taxonomy.md",
+                    "references/subtype-selection.md",
+                    "references/refusal-rules.md"
+                  ]
+                },
+                "content": {
+                  "type": "string",
+                  "minLength": 20
+                }
+              }
+            },
+            "allOf": [
+              {
+                "contains": {
+                  "type": "object",
+                  "required": [
+                    "path"
+                  ],
+                  "properties": {
+                    "path": {
+                      "const": "SKILL.md"
+                    }
+                  }
+                }
+              },
+              {
+                "contains": {
+                  "type": "object",
+                  "required": [
+                    "path"
+                  ],
+                  "properties": {
+                    "path": {
+                      "const": "agents/openai.yaml"
+                    }
+                  }
+                }
+              },
+              {
+                "contains": {
+                  "type": "object",
+                  "required": [
+                    "path"
+                  ],
+                  "properties": {
+                    "path": {
+                      "const": "references/family-taxonomy.md"
+                    }
+                  }
+                }
+              },
+              {
+                "contains": {
+                  "type": "object",
+                  "required": [
+                    "path"
+                  ],
+                  "properties": {
+                    "path": {
+                      "const": "references/subtype-selection.md"
+                    }
+                  }
+                }
+              },
+              {
+                "contains": {
+                  "type": "object",
+                  "required": [
+                    "path"
+                  ],
+                  "properties": {
+                    "path": {
+                      "const": "references/refusal-rules.md"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "files": {
+            "type": "array",
+            "maxItems": 0
+          }
+        }
+      }
+    }
+  ]
+}

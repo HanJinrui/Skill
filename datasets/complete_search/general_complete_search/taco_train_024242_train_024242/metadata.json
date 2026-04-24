@@ -1,0 +1,21 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "24242",
+  "difficulty": "MEDIUM",
+  "skill_types": [
+    "complete_search"
+  ],
+  "tags": [
+    "game_theory",
+    "complete_search"
+  ],
+  "family_assignment": "complete_search",
+  "family_assignments": [
+    "complete_search"
+  ],
+  "subtype_assignment": "general_complete_search",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "game_theory",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}

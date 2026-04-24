@@ -1,0 +1,2 @@
+a = sorted(map(int, input().split()))
+print(min(sum(a) // 3, a[0] + a[1]))

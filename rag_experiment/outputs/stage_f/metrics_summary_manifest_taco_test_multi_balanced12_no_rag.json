@@ -1,0 +1,91 @@
+{
+  "total_problems": 12,
+  "total_runs": 36,
+  "pass_at_1": 0.027777777777777776,
+  "pass_at_3": 0.08333333333333333,
+  "single_subset": {
+    "problems": 0,
+    "passed": 0,
+    "pass_at_3": 0.0
+  },
+  "multi_subset": {
+    "problems": 12,
+    "passed": 1,
+    "pass_at_3": 0.08333333333333333
+  },
+  "retrieval": {
+    "avg_calls_per_problem": 0.0,
+    "avg_correct_per_problem": 0.0,
+    "overall_correct_rate": 0.0,
+    "total_calls": 0,
+    "total_hits": 0
+  },
+  "per_family": {
+    "amortized_analysis": {
+      "problems": 3,
+      "passed_problems": 0,
+      "runs": 9,
+      "passed_runs": 0,
+      "retrieval_hits": 0,
+      "retrieval_calls": 0,
+      "pass_at_3": 0.0,
+      "pass_at_1": 0.0,
+      "retrieval_hit_rate": 0.0
+    },
+    "sorting": {
+      "problems": 1,
+      "passed_problems": 0,
+      "runs": 3,
+      "passed_runs": 0,
+      "retrieval_hits": 0,
+      "retrieval_calls": 0,
+      "pass_at_3": 0.0,
+      "pass_at_1": 0.0,
+      "retrieval_hit_rate": 0.0
+    },
+    "dynamic_programming": {
+      "problems": 4,
+      "passed_problems": 0,
+      "runs": 12,
+      "passed_runs": 0,
+      "retrieval_hits": 0,
+      "retrieval_calls": 0,
+      "pass_at_3": 0.0,
+      "pass_at_1": 0.0,
+      "retrieval_hit_rate": 0.0
+    },
+    "complete_search": {
+      "problems": 1,
+      "passed_problems": 0,
+      "runs": 3,
+      "passed_runs": 0,
+      "retrieval_hits": 0,
+      "retrieval_calls": 0,
+      "pass_at_3": 0.0,
+      "pass_at_1": 0.0,
+      "retrieval_hit_rate": 0.0
+    },
+    "bit_manipulation": {
+      "problems": 1,
+      "passed_problems": 1,
+      "runs": 3,
+      "passed_runs": 1,
+      "retrieval_hits": 0,
+      "retrieval_calls": 0,
+      "pass_at_3": 1.0,
+      "pass_at_1": 0.3333333333333333,
+      "retrieval_hit_rate": 0.0
+    },
+    "data_structures": {
+      "problems": 2,
+      "passed_problems": 0,
+      "runs": 6,
+      "passed_runs": 0,
+      "retrieval_hits": 0,
+      "retrieval_calls": 0,
+      "pass_at_3": 0.0,
+      "pass_at_1": 0.0,
+      "retrieval_hit_rate": 0.0
+    }
+  }
+}

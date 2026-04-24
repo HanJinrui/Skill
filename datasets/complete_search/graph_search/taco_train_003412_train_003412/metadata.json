@@ -1,0 +1,22 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "3412",
+  "difficulty": "MEDIUM",
+  "skill_types": [
+    "complete_search"
+  ],
+  "tags": [
+    "complete_search",
+    "graph_algorithms",
+    "constructive_algorithms"
+  ],
+  "family_assignment": "complete_search",
+  "family_assignments": [
+    "complete_search"
+  ],
+  "subtype_assignment": "graph_search",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "graph_algorithms__constructive_algorithms",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}

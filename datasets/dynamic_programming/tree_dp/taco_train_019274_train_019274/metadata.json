@@ -1,0 +1,25 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "19274",
+  "difficulty": "HARD",
+  "skill_types": [
+    "dynamic_programming"
+  ],
+  "tags": [
+    "graph_traversal",
+    "string_algorithms",
+    "implementation",
+    "tree_algorithms",
+    "dynamic_programming",
+    "game_theory"
+  ],
+  "family_assignment": "dynamic_programming",
+  "family_assignments": [
+    "dynamic_programming"
+  ],
+  "subtype_assignment": "tree_dp",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "graph_traversal__string_algorithms__implementation__tree_algorithms__game_theory",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}

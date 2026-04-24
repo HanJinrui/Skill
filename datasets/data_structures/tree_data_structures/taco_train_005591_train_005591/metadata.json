@@ -1,0 +1,25 @@
+{
+  "source_dataset": "TACO",
+  "split": "train",
+  "source_id": "5591",
+  "difficulty": "MEDIUM_HARD",
+  "skill_types": [
+    "data_structures"
+  ],
+  "tags": [
+    "graph_algorithms",
+    "graph_traversal",
+    "combinatorics",
+    "tree_algorithms",
+    "mathematics",
+    "data_structures"
+  ],
+  "family_assignment": "data_structures",
+  "family_assignments": [
+    "data_structures"
+  ],
+  "subtype_assignment": "tree_data_structures",
+  "assignment_scope": "single_family",
+  "raw_subtype_assignment": "graph_algorithms__graph_traversal__combinatorics__tree_algorithms__mathematics",
+  "subtype_assignment_strategy": "canonical_family_tag_rules_v1"
+}
