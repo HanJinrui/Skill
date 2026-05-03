@@ -27,12 +27,43 @@ labeling:
   consistency:
     partial_overlap_min: 1         # at least 1 shared family to be "partial"
 
+stage_c0:
+  verified_source: local           # local | taco-verified
+  taco_verified_hf_name: likaixin/TACO-verified
+  taco_verified_split: train
+  taco_split: train
+  max_solutions_per_problem: 0     # 0 means verify every reference solution
+  max_tests_per_solution: 0        # 0 means run all available official tests
+  show_progress: true
+  log_every_problems: 100
+  blocked_imports:
+    - os
+    - subprocess
+    - socket
+    - requests
+    - urllib
+    - http
+    - ftplib
+    - pathlib
+    - shutil
+    - glob
+    - multiprocessing
+    - threading
+    - ctypes
+  blocked_calls:
+    - eval
+    - exec
+    - compile
+    - open
+    - __import__
+    - breakpoint
+
 stage_d:
   allow_heuristic_fallback: false
 
 rag:
   retrieval:
-    mode: graph                     # flat | graph
+    mode: graph                     # flat | graph | subtype_rag | graph_subtype_rag
     dense_model: BAAI/bge-base-en-v1.5
     bm25_k1: 1.5
     bm25_b: 0.75
@@ -42,7 +73,14 @@ rag:
     # Graph-retriever specific knobs (ignored when mode=flat):
     seed_top_k: 20
     candidate_top_k: 50
-    final_top_k: 3
+    final_top_k: 1
+    min_retrieval_score: 0.22      # flat/subtype: fallback if top1 score is below this (0-1 style)
+    # routing_confidence = min(1, top_family_keyword_score/3) from query_analyzer; 0.35 would block all top_score==1.0 (rc=0.333)
+    min_router_confidence: 0.32     # fallback if routing_confidence (or router_confidence alias) is below this
+    very_low_score_ratio: 0.6      # if top1 score < min_retrieval_score * this ratio, force fallback even when router_confidence is missing
+    # graph_subtype / graph: bundle scores are unbounded; use margin + relative-to-peak instead of min_retrieval_score
+    min_score_margin_graph: 0.04    # fallback when top1 skill score too close to runner-up (uncertain ranking); 0 disables
+    min_score_relative_graph: 0.14 # fallback when top1/population-max skill score ratio below this; 0 disables
     graph_alpha: 0.30
     graph_steps: 3
     conflict_penalty: 0.7
@@ -63,13 +101,16 @@ rag:
     rebuild: false
   graph_index:
     dir: outputs/stage_e/graph_index
+    v2_dir: outputs/stage_e/graph_index_v2
     rebuild: false
     max_prototype_per_skill_build: 8
   prompt:
-    max_skill_tokens: 900          # approx per-skill char budget in prompt
+    max_skill_tokens: 900          # real per-skill token budget in prompt
 
 generation:
   samples_per_problem: 3
+  first_sample_temperature: 0.15   # prioritize PASS@1 stability on sample r0
+  first_sample_top_p: 0.90
   stop_sequences: ["```", "\n# END\n"]
   code_fence_language: python
 
@@ -82,6 +123,9 @@ evaluation:
     memory_limit_mb: 512
     cpu_limit_seconds: 10
   output_dir: outputs/stage_f
+  experiment_protocol:
+    default_compare_modes: [no_rag, subtype_rag, graph_subtype_rag]
+    require_clean_rerun_after_oom: true
 
 logging:
   level: INFO

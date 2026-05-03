@@ -67,17 +67,22 @@ def build_index(settings: Settings, *, mode: str | None = None) -> Path:
     * `mode="flat"` — legacy hybrid BM25 + dense skill index (default when
       `rag.retrieval.mode == "flat"`).
     * `mode="graph"` — full heterogeneous Graph RAG index.
+    * `mode="subtype"` — flat index over Stage D v2 hierarchical skills.
+    * `mode="graph_subtype"` — subtype-level graph index over Stage D v2.
     * `mode=None` — pick based on `rag.retrieval.mode` in config.
     """
     effective = (mode or settings.config["rag"]["retrieval"].get("mode") or "flat").lower()
-    if effective == "graph":
+    if effective in {"graph", "graph_subtype"}:
         from .graph_build import build_graph_index
-        return build_graph_index(settings)
-    return _build_flat_index(settings)
+        return build_graph_index(settings, skill_source="v2" if effective == "graph_subtype" else "legacy")
+    return _build_flat_index(settings, skill_source="v2" if effective in {"subtype", "subtype_rag"} else "legacy")
 
 
-def _build_flat_index(settings: Settings) -> Path:
-    skill_path = settings.stage_dir("stage_d") / "skills_merged.jsonl"
+def _build_flat_index(settings: Settings, *, skill_source: str = "legacy") -> Path:
+    if skill_source == "v2":
+        skill_path = settings.stage_dir("stage_d_v2") / "skills_merged_v2.jsonl"
+    else:
+        skill_path = settings.stage_dir("stage_d") / "skills_merged.jsonl"
     if not skill_path.exists():
         raise FileNotFoundError(f"Stage D skills missing at {skill_path}")
 
@@ -93,6 +98,8 @@ def _build_flat_index(settings: Settings) -> Path:
         deduped.append(s)
 
     index_dir_raw = settings.config["rag"]["index"]["index_dir"]
+    if skill_source == "v2":
+        index_dir_raw = str(Path(index_dir_raw).parent / "index_v2")
     index_dir = Path(index_dir_raw)
     if not index_dir.is_absolute():
         index_dir = settings.project_root / index_dir_raw
@@ -126,6 +133,8 @@ def _build_flat_index(settings: Settings) -> Path:
         "dense_dim": int(embeddings.shape[1]),
         "n_skills": len(deduped),
         "skill_ids": [s["skill_id"] for s in deduped],
+        "skill_source": skill_source,
+        "source_file": str(skill_path),
     })
     LOG.info("Index built at %s (n=%d, dim=%d)", index_dir, embeddings.shape[0], embeddings.shape[1])
     return index_dir

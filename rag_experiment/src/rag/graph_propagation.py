@@ -49,6 +49,8 @@ from .graph_schema import (
     skill_node_id,
 )
 
+GENERIC_PROPAGATION_SIGNALS = frozenset({"maximize", "minimize", "construct"})
+
 
 @dataclass
 class GraphSlice:
@@ -110,7 +112,7 @@ def distribute_seeds_to_skills(
     for nid, sc in (seed_scores_by_view.get("skill_master") or {}).items():
         skill_score[nid] += sc
     for nid, sc in (seed_scores_by_view.get("signal_view") or {}).items():
-        skill_score[nid] += 0.8 * sc  # signal-view is keyword-dense, slight weight
+        skill_score[nid] += 0.25 * sc  # signal-view is keyword-dense; keep it weak.
 
     # Prototype → skill via support edges.
     w_prob = edge_weights.get(EDGE_PROTO_PROB_SUPPORTS_SKILL, 0.8)
@@ -197,10 +199,13 @@ def propagate(
 
     # Expose schema signals / mechanisms as first-class node scores so
     # propagation from them into skills has mass to carry.
-    for sig_id in schema_signals:
+    strong_schema_signals = [sig_id for sig_id in schema_signals if sig_id not in GENERIC_PROPAGATION_SIGNALS]
+    strong_schema_mechanisms = [mech_id for mech_id in schema_mechanisms if mech_id]
+
+    for sig_id in strong_schema_signals:
         nid = signal_node_id(sig_id)
         scores[nid] = max(scores[nid], 1.0)
-    for mech_id in schema_mechanisms:
+    for mech_id in strong_schema_mechanisms:
         nid = mechanism_node_id(mech_id)
         scores[nid] = max(scores[nid], 1.0)
     if seed_signal_scores:

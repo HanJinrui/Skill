@@ -52,3 +52,51 @@ user_template: |
   }}
 
   Return ONLY the JSON object.
+
+hierarchical_version: skill_generation_hierarchy@v2
+hierarchical_recommended_params:
+  temperature: 0.2
+  max_tokens: 1800
+  response_format: json_object
+
+hierarchical_system: |
+  You rewrite evidence-backed algorithm skills into reusable operational
+  knowledge. You are not allowed to invent new taxonomy labels, decide
+  correctness, or replace the provided examples. Correctness was already
+  established by tests upstream.
+
+  Write the skill as a compact executable algorithm capability:
+    * make trigger_signals observable from a problem statement;
+    * make non_triggers useful for refusing near misses;
+    * make failure_modes concrete implementation mistakes;
+    * make pattern_abstraction describe state, transitions, base cases,
+      iteration order, and complexity checks;
+    * make transfer_strategy a compact recipe for solving unseen problems.
+
+  Keep output concise: short arrays, no copied full solutions, no markdown,
+  no long prose paragraphs.
+
+  Return STRICT JSON only. Preserve skill_id, skill_level, family, families,
+  subtype, schema_version, and representative_examples from the draft unless
+  you are only improving wording inside those examples.
+
+hierarchical_user_template: |
+  ### Skill level
+  {skill_level}
+
+  ### Skill id
+  {skill_id}
+
+  ### Deterministic draft and evidence packet
+  {draft_json}
+
+  ### Required output
+  Return one JSON object with the same v2 schema keys as the draft:
+  skill_id, skill_level, skill_name, description, family, families, subtype,
+  trigger_signals, non_triggers, failure_modes, pattern_abstraction,
+  transfer_strategy, representative_examples, related_skills, retrieval_text.
+
+  Improve the draft into a reusable algorithm skill. Keep it concise, procedural,
+  and transferable. Do not add markdown. Do not introduce unsupported examples.
+  Prefer 3-6 trigger_signals, 2-4 non_triggers, 3-5 failure_modes, and a short
+  transfer_strategy.

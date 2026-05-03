@@ -20,3 +20,16 @@ rag_experiment/outputs/run.log
 rag_experiment/outputs/stage_d.lock
 rag_experiment/outputs/stage_e/index/dense_embeddings.npy
 rag_experiment/outputs/stage_e/graph_index/*_dense.npy
+
+# Large Stage C artifacts (regenerate with pipeline; exceed GitHub limits if committed)
+rag_experiment/outputs/stage_c/solution_labeled.jsonl
+rag_experiment/outputs/stage_c/solution_consistent.jsonl
+rag_experiment/outputs/stage_c/solution_inconsistent.jsonl
+rag_experiment/outputs/stage_c/primary_solutions.jsonl
+rag_experiment/outputs/stage_c/primary_solutions_deepseek.jsonl
+rag_experiment/outputs/stage_c/primary_solutions_merged.jsonl
+rag_experiment/outputs/stage_c_backup_*/
+rag_experiment/outputs/stage_c0/
+
+# Rebuildable graph index (optional: remove line to version the index)
+rag_experiment/outputs/stage_e/graph_index_v2/

@@ -43,26 +43,66 @@ from .prototype_index import build_multi_view_indices
 LOG = get_logger(__name__)
 
 
-def _resolve_graph_dir(settings: Settings) -> Path:
+def _resolve_graph_dir(settings: Settings, *, skill_source: str = "legacy") -> Path:
     cfg = settings.config["rag"].get("graph_index", {}) or {}
     raw = cfg.get("dir") or "outputs/stage_e/graph_index"
+    if skill_source == "v2":
+        v2_raw = cfg.get("v2_dir")
+        if v2_raw:
+            raw = v2_raw
+        else:
+            return settings.output_dir / "stage_e" / "graph_index_v2"
     p = Path(raw)
     if not p.is_absolute():
-        p = settings.project_root / p
+        parts = p.parts
+        if parts and parts[0] == "outputs":
+            p = settings.output_dir.joinpath(*parts[1:])
+        else:
+            p = settings.project_root / p
     return p
 
 
-def _load_sources(settings: Settings) -> Dict[str, Any]:
+def _router_rows_to_labels(rows: Sequence[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    out: List[Dict[str, Any]] = []
+    for row in rows:
+        fams = [f for f in (row.get("candidate_families") or []) if isinstance(f, str)]
+        out.append({
+            "problem_id": row.get("problem_id"),
+            "problem_summary": (row.get("problem_statement") or "")[:500],
+            "rule_candidates": fams,
+            "normalized_single_skill": fams[0] if fams else None,
+            "normalized_multi_skills": fams,
+            "is_multi_skill": bool(row.get("is_multi_skill_problem")) or len(fams) >= 2,
+            "original_tags": list(row.get("original_tags") or []),
+        })
+    return out
+
+
+def _load_sources(settings: Settings, *, skill_source: str = "legacy") -> Dict[str, Any]:
     out_dir = settings.output_dir
-    skills = load_jsonl(out_dir / "stage_d" / "skills_merged.jsonl")
-    solutions = load_jsonl(out_dir / "stage_c" / "solution_consistent.jsonl")
-    problem_labels = load_jsonl(out_dir / "stage_b" / "problem_labels.jsonl")
-    problems_multi = load_jsonl(out_dir / "stage_a" / "selected_problems_multi.jsonl")
+    if skill_source == "v2":
+        skills = load_jsonl(out_dir / "stage_d_v2" / "skills_merged_v2.jsonl")
+        # Only primary full-pass solutions become graph prototypes in v2.
+        solutions = [
+            row for row in load_jsonl(out_dir / "stage_c" / "solution_labeled.jsonl")
+            if row.get("is_primary_solution")
+        ]
+        router_rows = load_jsonl(out_dir / "stage_c0" / "router_dataset.jsonl")
+        problem_labels = _router_rows_to_labels(router_rows)
+        problems_multi = router_rows
+        multi_compositions = load_jsonl(out_dir / "stage_c0" / "multi_skill_composition_dataset.jsonl")
+    else:
+        skills = load_jsonl(out_dir / "stage_d" / "skills_merged.jsonl")
+        solutions = load_jsonl(out_dir / "stage_c" / "solution_consistent.jsonl")
+        problem_labels = load_jsonl(out_dir / "stage_b" / "problem_labels.jsonl")
+        problems_multi = load_jsonl(out_dir / "stage_a" / "selected_problems_multi.jsonl")
+        multi_compositions = []
     return {
         "skills": skills,
         "solutions": solutions,
         "problem_labels": problem_labels,
         "problems_multi": problems_multi,
+        "multi_compositions": multi_compositions,
     }
 
 
@@ -97,15 +137,16 @@ def build_graph_index(
     settings: Settings,
     *,
     encoder: Callable[[Sequence[str]], np.ndarray] | None = None,
+    skill_source: str = "legacy",
 ) -> Path:
     """Build and persist the full graph index. Returns the output dir."""
-    sources = _load_sources(settings)
+    sources = _load_sources(settings, skill_source=skill_source)
     if not sources["skills"]:
         raise FileNotFoundError(
             "skills_merged.jsonl missing or empty — run Stage D first."
         )
 
-    graph_dir = _resolve_graph_dir(settings)
+    graph_dir = _resolve_graph_dir(settings, skill_source=skill_source)
     graph_dir.mkdir(parents=True, exist_ok=True)
 
     # ---------------- Nodes ----------------
@@ -143,6 +184,7 @@ def build_graph_index(
         skill_nodes=skill_nodes,
         problem_labels=sources["problem_labels"],
         solutions=sources["solutions"],
+        composition_rows=sources.get("multi_compositions") or None,
     )
     edges += build_skill_conflict_edges(skill_nodes)
     edges += build_mechanism_conflict_edges()
@@ -168,7 +210,8 @@ def build_graph_index(
 
     # ---------------- Meta ----------------
     meta = {
-        "schema_version": "graph_rag@v1",
+        "schema_version": "graph_rag@v2" if skill_source == "v2" else "graph_rag@v1",
+        "skill_source": skill_source,
         "counts": {
             "skill_nodes": len(skill_nodes),
             "family_nodes": len(family_nodes),
@@ -181,10 +224,11 @@ def build_graph_index(
         "edge_types": _edge_type_counts(edges),
         "indices": index_summary,
         "source_files": {
-            "skills": "outputs/stage_d/skills_merged.jsonl",
-            "solutions": "outputs/stage_c/solution_consistent.jsonl",
-            "problem_labels": "outputs/stage_b/problem_labels.jsonl",
-            "problems_multi": "outputs/stage_a/selected_problems_multi.jsonl",
+            "skills": "outputs/stage_d_v2/skills_merged_v2.jsonl" if skill_source == "v2" else "outputs/stage_d/skills_merged.jsonl",
+            "solutions": "outputs/stage_c/solution_labeled.jsonl" if skill_source == "v2" else "outputs/stage_c/solution_consistent.jsonl",
+            "problem_labels": "outputs/stage_c0/router_dataset.jsonl" if skill_source == "v2" else "outputs/stage_b/problem_labels.jsonl",
+            "problems_multi": "outputs/stage_c0/router_dataset.jsonl" if skill_source == "v2" else "outputs/stage_a/selected_problems_multi.jsonl",
+            "multi_compositions": "outputs/stage_c0/multi_skill_composition_dataset.jsonl" if skill_source == "v2" else "",
         },
         "dense_model": settings.embed.model,
     }

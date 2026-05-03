@@ -56,7 +56,7 @@ def build_skill_nodes(skills: Sequence[Dict[str, Any]]) -> List[Dict[str, Any]]:
         node = dict(skill)  # preserve original card shape
         node["node_type"] = "skill"
         node["node_id"] = skill_node_id(sid)
-        node["is_bundle"] = (skill.get("scope") == "multi")
+        node["is_bundle"] = (skill.get("scope") == "multi" or skill.get("skill_level") == "bundle")
         # Derived / standardized facet fields — added, never overwriting.
         node["facets"] = facets.to_dict()
         node["mechanism_tags"] = list(facets.mechanism_tags)
@@ -148,12 +148,21 @@ def _select_prototype_solutions_per_skill(
 
     per_skill: Dict[str, List[Dict[str, Any]]] = {}
     for row in solutions:
-        detected = [s for s in (row.get("detected_multi_skills") or []) if s in CORE_FAMILY_SET]
+        detected = [s for s in (row.get("detected_multi_skills") or row.get("problem_skills") or []) if s in CORE_FAMILY_SET]
+        if not detected and row.get("detected_single_skill") in CORE_FAMILY_SET:
+            detected = [row["detected_single_skill"]]
         if not detected:
             continue
         skill_ids: List[str] = [skill_id_for_single(f) for f in detected]
+        for fam in detected:
+            skill_ids.append(f"family__{fam}")
+        subtype = row.get("primary_subtype")
+        family = row.get("detected_single_skill") or (detected[0] if detected else "")
+        if isinstance(subtype, str) and subtype and isinstance(family, str) and family:
+            skill_ids.append(f"subtype__{family}__{subtype}")
         if len(set(detected)) >= 2:
             skill_ids.append(skill_id_for_multi(detected))
+            skill_ids.append("bundle__" + "__".join(sorted(set(detected))))
         for sid in set(skill_ids):
             per_skill.setdefault(sid, []).append(row)
 

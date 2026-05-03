@@ -24,6 +24,7 @@ def aggregate(run_rows: Iterable[dict[str, Any]], problem_labels: dict[str, dict
 
     retrieval_hits_total = sum(1 for r in rows if r.get("retrieval_hit"))
     retrieval_calls_total = sum(1 for r in rows if r.get("retrieved_skill_ids"))
+    retrieval_only_rows = [r for r in rows if r.get("run_id") == "retrieval"]
 
     # per-problem
     per_problem_hits = []
@@ -34,6 +35,47 @@ def aggregate(run_rows: Iterable[dict[str, Any]], problem_labels: dict[str, dict
     avg_retrievals_per_problem = _safe_mean(per_problem_retrieval_calls)
     avg_hits_per_problem = _safe_mean(per_problem_hits)
     correct_rate_overall = retrieval_hits_total / retrieval_calls_total if retrieval_calls_total else 0.0
+
+    def _rate(field: str) -> float:
+        rel = retrieval_only_rows or [r for r in rows if r.get("retrieved_skill_ids")]
+        if not rel:
+            return 0.0
+        return sum(1 for r in rel if r.get(field)) / len(rel)
+
+    def _conversion() -> float:
+        hit_problems = [
+            pid for pid, runs in by_problem.items()
+            if any(r.get("retrieval_hit") for r in runs)
+        ]
+        if not hit_problems:
+            return 0.0
+        passed = sum(1 for pid in hit_problems if any(r.get("passed") for r in by_problem[pid]))
+        return passed / len(hit_problems)
+
+    def _false_mechanism_rate() -> float:
+        rel = retrieval_only_rows or [r for r in rows if r.get("retrieved_skill_ids")]
+        if not rel:
+            return 0.0
+        false_count = 0
+        total = 0
+        for r in rel:
+            explicit = set((r.get("query_schema") or {}).get("mechanism_hints") or [])
+            matched = set(r.get("matched_mechanisms") or [])
+            if matched:
+                total += 1
+                if not explicit or not (matched & explicit):
+                    false_count += 1
+        return false_count / total if total else 0.0
+
+    def _failure_breakdown() -> dict[str, int]:
+        breakdown: dict[str, int] = {}
+        for r in rows:
+            tag = str(r.get("failure_diagnosis") or "none")
+            breakdown[tag] = int(breakdown.get(tag, 0)) + 1
+        return breakdown
+
+    fallback_total = sum(1 for r in rows if r.get("fallback_to_no_rag"))
+    fallback_rate = fallback_total / total_runs if total_runs else 0.0
 
     # single vs multi split based on problem labels
     single_ids: set[str] = set()
@@ -104,6 +146,15 @@ def aggregate(run_rows: Iterable[dict[str, Any]], problem_labels: dict[str, dict
             "overall_correct_rate": correct_rate_overall,
             "total_calls": retrieval_calls_total,
             "total_hits": retrieval_hits_total,
+            "router_top1_acc": _rate("router_top1_hit"),
+            "family_recall_at_k": _rate("family_recall_hit"),
+            "subtype_recall_at_k": _rate("subtype_recall_hit"),
+            "bundle_recall_at_k": _rate("bundle_recall_hit"),
+            "hit_to_pass_conversion": _conversion(),
+            "false_mechanism_rate": _false_mechanism_rate(),
+            "fallback_to_no_rag_total": fallback_total,
+            "fallback_to_no_rag_rate": fallback_rate,
+            "failure_diagnosis_breakdown": _failure_breakdown(),
         },
         "per_family": per_family_out,
     }

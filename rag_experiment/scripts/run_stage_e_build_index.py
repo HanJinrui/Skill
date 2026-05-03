@@ -23,7 +23,7 @@ from src.settings import get_settings  # noqa: E402
 
 def _parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(description="Stage E: build skill retrieval index")
-    p.add_argument("--mode", choices=["flat", "graph", "both"], default=None,
+    p.add_argument("--mode", choices=["flat", "graph", "subtype", "graph_subtype", "both", "both_v2"], default=None,
                    help="force a build mode; defaults to rag.retrieval.mode in config.yaml")
     return p.parse_args()
 
@@ -43,6 +43,11 @@ def main() -> int:
         graph_dir = build_index(settings, mode="graph")
         log.info("Flat index: %s", flat_dir)
         log.info("Graph index: %s", graph_dir)
+    elif mode == "both_v2":
+        subtype_dir = build_index(settings, mode="subtype")
+        graph_subtype_dir = build_index(settings, mode="graph_subtype")
+        log.info("Subtype flat index: %s", subtype_dir)
+        log.info("Graph subtype index: %s", graph_subtype_dir)
     else:
         out_dir = build_index(settings, mode=mode)
         log.info("Index built at %s", out_dir)

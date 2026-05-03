@@ -18,7 +18,7 @@ encoding of the problem and short BM25 passes over tiny corpora.
 from __future__ import annotations
 
 from pathlib import Path
-from typing import Any, Dict, List, Sequence
+from typing import Any, Dict, List, Sequence, Tuple
 
 import numpy as np
 
@@ -88,6 +88,7 @@ class GraphRetriever:
         edge_weights: Dict[str, float],
         bm25_k1: float = 1.5,
         bm25_b: float = 0.75,
+        method: str = "graph",
     ) -> None:
         self.graph_dir = graph_dir
         self.seed_top_k = seed_top_k
@@ -99,6 +100,7 @@ class GraphRetriever:
         self.max_bundle_size = max_bundle_size
         self.max_prototype_per_skill = max_prototype_per_skill
         self.edge_weights = {**_DEFAULT_EDGE_WEIGHTS, **(edge_weights or {})}
+        self.method = method
 
         # ---- Load node / edge tables
         self.skill_nodes: List[Dict[str, Any]] = load_jsonl(graph_dir / "nodes_skill.jsonl")
@@ -152,14 +154,20 @@ class GraphRetriever:
     # ----------------------------------------------------------------- #
 
     @classmethod
-    def from_settings(cls, settings: Settings) -> "GraphRetriever":
+    def from_settings(cls, settings: Settings, *, graph_dir_name: str | None = None) -> "GraphRetriever":
         rag_cfg = settings.config["rag"]
         ret_cfg = rag_cfg.get("retrieval", {}) or {}
         idx_cfg = rag_cfg.get("graph_index", {}) or {}
         raw_dir = idx_cfg.get("dir") or "outputs/stage_e/graph_index"
+        if graph_dir_name:
+            raw_dir = idx_cfg.get("v2_dir") or str(settings.output_dir / "stage_e" / graph_dir_name)
         graph_dir = Path(raw_dir)
         if not graph_dir.is_absolute():
-            graph_dir = settings.project_root / raw_dir
+            parts = graph_dir.parts
+            if parts and parts[0] == "outputs":
+                graph_dir = settings.output_dir.joinpath(*parts[1:])
+            else:
+                graph_dir = settings.project_root / raw_dir
         return cls(
             graph_dir=graph_dir,
             dense_model=settings.embed.model,
@@ -175,6 +183,7 @@ class GraphRetriever:
             edge_weights={**_DEFAULT_EDGE_WEIGHTS, **(ret_cfg.get("edge_weights") or {})},
             bm25_k1=float(ret_cfg.get("bm25_k1", 1.5)),
             bm25_b=float(ret_cfg.get("bm25_b", 0.75)),
+            method="graph_subtype_rag" if graph_dir_name else "graph",
         )
 
     # ----------------------------------------------------------------- #
@@ -311,6 +320,25 @@ class GraphRetriever:
                     mech_seen.add(m)
                     matched_mechs_all.append(m)
 
+        # Graph gate signals: margin and peak-relative top1 (for generate_with_rag).
+        per_skill: List[Tuple[str, float]] = [
+            (sid, float(all_scores.get(skill_node_id(sid), 0.0)))
+            for sid in self.skills_by_id
+        ]
+        per_skill.sort(key=lambda kv: kv[1], reverse=True)
+        sorted_vals = [sc for _, sc in per_skill if sc > 0.0]
+        top1_pop = sorted_vals[0] if sorted_vals else 0.0
+        top2_pop = sorted_vals[1] if len(sorted_vals) > 1 else 0.0
+        score_margin = float(top1_pop - top2_pop)
+        # Peak over the full propagated state (skills, signals, mechanisms, …) so
+        # the ratio is <1 when a non-skill node dominates the graph walk.
+        max_all_nodes = max(all_scores.values()) if all_scores else 0.0
+        score_relative = float(top1_pop / max(max_all_nodes, 1e-9))
+
+        schema_dict = dict(schema.to_dict())
+        schema_dict["score_margin"] = score_margin
+        schema_dict["score_relative"] = score_relative
+
         return RetrievalResult(
             skill_ids=list(ordered_sids),
             skills=skills_out,
@@ -323,12 +351,12 @@ class GraphRetriever:
                 parse_node_id(nid)[1]
                 for nid, _ in (seeds.topk_by_view.get("signal_view") or [])[: final_k]
             ],
-            method="graph",
+            method=self.method,
             bundle_type=bundle.bundle_type,
             graph_evidence=graph_evidence,
             seed_ids=seed_ids,
             supporting_prototypes=supporting,
             matched_signals=matched_signals_all,
             matched_mechanisms=matched_mechs_all,
-            query_schema=schema.to_dict(),
+            query_schema=schema_dict,
         )

@@ -30,6 +30,8 @@ from ..io_utils import save_json
 
 
 _TOKEN_RE = re.compile(r"[A-Za-z0-9]+")
+_GENERIC_SIGNAL_VIEW_TAGS = frozenset({"maximize", "minimize", "construct"})
+_GENERIC_SIGNAL_WORD_RE = re.compile(r"\b(maximize|minimize|construct\w*)\b", re.IGNORECASE)
 
 
 def tokenize(text: str) -> List[str]:
@@ -73,19 +75,26 @@ def signal_view_text(skill: Dict[str, Any]) -> str:
     parts.append("Families: " + " ".join(skill.get("families") or []))
     if facets.get("mechanism_tags"):
         parts.append("Mechanisms: " + " ".join(facets["mechanism_tags"]))
-    if facets.get("signal_tags"):
-        parts.append("Signals: " + " ".join(facets["signal_tags"]))
+    signal_tags = [s for s in (facets.get("signal_tags") or []) if s not in _GENERIC_SIGNAL_VIEW_TAGS]
+    if signal_tags:
+        parts.append("Signals: " + " ".join(signal_tags))
     if facets.get("operation_tags"):
         parts.append("Operations: " + " ".join(facets["operation_tags"]))
     if facets.get("input_shape_tags"):
         parts.append("Shapes: " + " ".join(facets["input_shape_tags"]))
-    if facets.get("goal_tags"):
-        parts.append("Goals: " + " ".join(facets["goal_tags"]))
+    goal_tags = [s for s in (facets.get("goal_tags") or []) if s not in _GENERIC_SIGNAL_VIEW_TAGS]
+    if goal_tags:
+        parts.append("Goals: " + " ".join(goal_tags))
     if facets.get("complexity_tags"):
         parts.append("Complexity: " + " ".join(facets["complexity_tags"]))
     if skill.get("problem_signals"):
-        parts.append(" ".join(skill["problem_signals"]))
-    return "\n".join(p for p in parts if p)
+        filtered = [
+            str(item) for item in skill["problem_signals"]
+            if str(item).lower() not in _GENERIC_SIGNAL_VIEW_TAGS
+        ]
+        parts.append(" ".join(filtered))
+    text = "\n".join(p for p in parts if p)
+    return _GENERIC_SIGNAL_WORD_RE.sub(" ", text)
 
 
 def prototype_problem_text(node: Dict[str, Any]) -> str:

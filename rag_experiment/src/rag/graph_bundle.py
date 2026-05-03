@@ -50,9 +50,10 @@ def _find_bundle_candidates(
     superset of `member_families`."""
     out: List[str] = []
     for sid, s in skills_by_id.items():
-        if s.get("scope") != "multi":
+        if s.get("scope") == "multi" or s.get("skill_level") == "bundle":
+            fams = set(s.get("family_set") or s.get("families") or [])
+        else:
             continue
-        fams = set(s.get("families") or [])
         if fams and member_families.issubset(fams):
             out.append(sid)
     return out
@@ -108,7 +109,15 @@ def assemble_bundle(
     # Pick the primary (prefer highest-scoring single).
     primary_sid = None
     primary_score = 0.0
-    best_single = next(((sid, sc, s) for sid, sc, s in ranked if s.get("scope") != "multi"), None)
+    best_single = next(
+        ((sid, sc, s) for sid, sc, s in ranked if s.get("skill_level") == "subtype"),
+        None,
+    )
+    if best_single is None:
+        best_single = next(
+            ((sid, sc, s) for sid, sc, s in ranked if s.get("scope") != "multi" and s.get("skill_level") != "bundle"),
+            None,
+        )
     best_any = ranked[0]
     if best_single is None:
         primary_sid, primary_score, _ = best_any
@@ -116,7 +125,7 @@ def assemble_bundle(
         single_sid, single_sc, _ = best_single
         any_sid, any_sc, any_skill = best_any
         # Only let a bundle take primary if it's much better than the top single.
-        if any_skill.get("scope") == "multi" and any_sc >= single_sc * 1.4:
+        if (any_skill.get("scope") == "multi" or any_skill.get("skill_level") == "bundle") and any_sc >= single_sc * 1.4:
             primary_sid, primary_score = any_sid, any_sc
         else:
             primary_sid, primary_score = single_sid, single_sc
@@ -133,7 +142,7 @@ def assemble_bundle(
     for sid, sc, skill in ranked:
         if sid == primary_sid:
             continue
-        if skill.get("scope") == "multi":
+        if skill.get("scope") == "multi" or skill.get("skill_level") == "bundle":
             continue  # bundles come in later
         if conflicting_with_primary.get(sid, 0.0) >= conflict_threshold:
             continue

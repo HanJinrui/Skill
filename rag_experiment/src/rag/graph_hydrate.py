@@ -92,7 +92,7 @@ def hydrate_skill(
         ns, raw = parse_node_id(dst)
         if ns == "signal":
             skill_signals.add(raw)
-    matched_signals = sorted(skill_signals & schema_signals) or sorted(skill_signals)[:3]
+    matched_signals = sorted(skill_signals & schema_signals)
 
     # --- Matched mechanisms
     skill_mechs: Set[str] = set()
@@ -100,7 +100,7 @@ def hydrate_skill(
         ns, raw = parse_node_id(dst)
         if ns == "mechanism":
             skill_mechs.add(raw)
-    matched_mechanisms = sorted(skill_mechs & schema_mechanisms) or sorted(skill_mechs)[:3]
+    matched_mechanisms = sorted(skill_mechs & schema_mechanisms)
 
     # --- Supporting prototypes (problem & solution)
     proto_problem_ids: List[tuple] = []  # (node_id, weight)

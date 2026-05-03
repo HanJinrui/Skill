@@ -61,6 +61,16 @@ class GLMConfig:
 
 
 @dataclass(frozen=True)
+class DeepSeekConfig:
+    api_key: str
+    base_url: str
+    model: str
+    temperature: float
+    max_tokens: int
+    timeout: float
+
+
+@dataclass(frozen=True)
 class QwenConfig:
     local_model_dir: Path | None
     model_id: str
@@ -88,6 +98,7 @@ class Settings:
     reports_dir: Path
     taco_tests_path: Path
     glm: GLMConfig
+    deepseek: DeepSeekConfig
     qwen: QwenConfig
     embed: EmbedConfig
     config: dict[str, Any] = field(default_factory=dict)
@@ -151,6 +162,16 @@ def get_settings() -> Settings:
         max_tokens=_env_int("GLM_MAX_TOKENS", 4096),
         timeout=_env_float("GLM_TIMEOUT", 120.0),
     )
+    deepseek_base_url = _env("GLM_BASE_URL", "https://api.deepseek.com/v1") or "https://api.deepseek.com/v1"
+    deepseek_model = _env("GLM_MODEL", "deepseek-chat") or "deepseek-chat"
+    deepseek = DeepSeekConfig(
+        api_key=_env("DEEPSEEK_API_KEY", _env("ZHIPU_API_KEY", "") or "") or "",
+        base_url=_env("DEEPSEEK_BASE_URL", deepseek_base_url) or deepseek_base_url,
+        model=_env("DEEPSEEK_MODEL", deepseek_model) or deepseek_model,
+        temperature=_env_float("DEEPSEEK_TEMPERATURE", _env_float("GLM_TEMPERATURE", 0.1)),
+        max_tokens=_env_int("DEEPSEEK_MAX_TOKENS", _env_int("GLM_MAX_TOKENS", 4096)),
+        timeout=_env_float("DEEPSEEK_TIMEOUT", _env_float("GLM_TIMEOUT", 120.0)),
+    )
     qwen = QwenConfig(
         local_model_dir=_resolve_path(_env("QWEN_LOCAL_MODEL_DIR")),
         model_id=_env("QWEN_MODEL_ID", "Qwen/Qwen2.5-Coder-7B-Instruct") or "Qwen/Qwen2.5-Coder-7B-Instruct",
@@ -175,6 +196,7 @@ def get_settings() -> Settings:
         reports_dir=reports_dir,
         taco_tests_path=taco_tests_path,
         glm=glm,
+        deepseek=deepseek,
         qwen=qwen,
         embed=embed,
         config=config,

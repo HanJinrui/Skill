@@ -28,6 +28,8 @@ from .graph_schema import (
     signal_surface_patterns,
 )
 
+GENERIC_GOAL_SIGNALS = frozenset({"maximize", "minimize", "construct"})
+
 
 @dataclass(frozen=True)
 class FacetBundle:
@@ -95,6 +97,7 @@ def extract_from_text(
     text: str,
     *,
     family_hint: Sequence[str] | None = None,
+    include_family_implied: bool = True,
 ) -> FacetBundle:
     """Derive facet tags from an arbitrary text blob.
 
@@ -114,7 +117,7 @@ def extract_from_text(
         if any(p.search(text) for p in pats):
             mechanisms.append(mech_id)
 
-    if family_hint:
+    if include_family_implied and family_hint:
         for fam in family_hint:
             for mech_id in FAMILY_MECHANISMS.get(fam, ()):
                 if mech_id not in mechanisms:
@@ -177,6 +180,20 @@ def extract_from_text(
     )
 
 
+def explicit_signal_tags(bundle: FacetBundle) -> Tuple[str, ...]:
+    """Return query-safe signal tags.
+
+    Generic optimization/construction goals are useful as weak text, but they
+    are too broad to seed graph propagation by themselves.
+    """
+    return tuple(sig for sig in bundle.signal_tags if sig not in GENERIC_GOAL_SIGNALS)
+
+
+def explicit_mechanism_tags(bundle: FacetBundle) -> Tuple[str, ...]:
+    """Return mechanism tags that came from surface evidence, not family priors."""
+    return tuple(bundle.mechanism_tags)
+
+
 def extract_skill_facets(skill: Dict[str, Any]) -> FacetBundle:
     """Extract facet tags for a Stage D skill card.
 
@@ -196,7 +213,7 @@ def extract_skill_facets(skill: Dict[str, Any]) -> FacetBundle:
     parts.append(str(skill.get("complexity_pattern") or ""))
     parts.append(str(skill.get("retrieval_text") or ""))
     text = "\n".join(p for p in parts if p)
-    return extract_from_text(text, family_hint=list(skill.get("families") or []))
+    return extract_from_text(text, family_hint=list(skill.get("families") or []), include_family_implied=False)
 
 
 def extract_problem_facets(problem: Dict[str, Any], *, label: Dict[str, Any] | None = None) -> FacetBundle:
@@ -213,7 +230,7 @@ def extract_problem_facets(problem: Dict[str, Any], *, label: Dict[str, Any] | N
     fam_hint: List[str] = []
     if label:
         fam_hint.extend([f for f in (label.get("rule_candidates") or []) if isinstance(f, str)])
-    return extract_from_text(text, family_hint=fam_hint or None)
+    return extract_from_text(text, family_hint=fam_hint or None, include_family_implied=False)
 
 
 def extract_solution_facets(solution: Dict[str, Any]) -> FacetBundle:
@@ -256,7 +273,7 @@ def extract_solution_facets(solution: Dict[str, Any]) -> FacetBundle:
     text_parts.append(str(solution.get("solution_code") or "")[:800])
     text_blob = "\n".join(p for p in text_parts if p)
     fam_hint = list(solution.get("detected_multi_skills") or [])
-    text_bundle = extract_from_text(text_blob, family_hint=fam_hint or None)
+    text_bundle = extract_from_text(text_blob, family_hint=fam_hint or None, include_family_implied=False)
 
     return FacetBundle(
         mechanism_tags=_dedup(list(mechanisms) + list(text_bundle.mechanism_tags)),

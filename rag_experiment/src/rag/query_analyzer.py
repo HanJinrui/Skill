@@ -19,7 +19,7 @@ import re
 from dataclasses import dataclass, field
 from typing import Dict, List, Sequence, Tuple
 
-from .facet_extract import FacetBundle, extract_from_text
+from .facet_extract import FacetBundle, explicit_signal_tags, extract_from_text
 from .graph_schema import CORE_FAMILIES
 
 
@@ -78,6 +78,7 @@ class QuerySchema:
     keywords: List[str] = field(default_factory=list)
     is_multi_skill_likely: bool = False
     family_scores: Dict[str, float] = field(default_factory=dict)
+    routing_confidence: float = 0.0
 
     def to_dict(self) -> Dict[str, object]:
         return {
@@ -92,6 +93,7 @@ class QuerySchema:
             "keywords": list(self.keywords),
             "is_multi_skill_likely": self.is_multi_skill_likely,
             "family_scores": dict(self.family_scores),
+            "routing_confidence": float(self.routing_confidence),
         }
 
 
@@ -149,12 +151,23 @@ def analyze(
 
     family_scores = _score_families(blob)
     # Top families with a minimal evidence threshold.
-    ranked = [fam for fam, s in sorted(family_scores.items(), key=lambda kv: (-kv[1], kv[0]))
-              if s > 0]
-    candidate_families = ranked[:top_family_limit] if ranked else sorted(CORE_FAMILIES)
+    ranked_scores = [(fam, s) for fam, s in sorted(family_scores.items(), key=lambda kv: (-kv[1], kv[0]))
+                     if s > 0]
+    top_score = ranked_scores[0][1] if ranked_scores else 0.0
+    # Conservative routing: weak evidence should remain uncertain instead of
+    # opening all families and letting graph propagation amplify noise.
+    if top_score >= 2.0:
+        candidate_families = [fam for fam, s in ranked_scores if s >= max(1.0, top_score - 1.0)][:top_family_limit]
+    elif top_score >= 1.0:
+        candidate_families = [ranked_scores[0][0]]
+    else:
+        candidate_families = []
+    routing_confidence = min(1.0, top_score / 3.0)
 
-    facets = extract_from_text(blob, family_hint=candidate_families)
+    facets = extract_from_text(blob, family_hint=candidate_families, include_family_implied=False)
     multi = _is_multi_skill_likely(family_scores, facets)
+    strong_signals = list(explicit_signal_tags(facets))
+    explicit_mechanisms = list(facets.mechanism_tags)
 
     return QuerySchema(
         raw_problem_text=problem_text or "",
@@ -166,9 +179,10 @@ def analyze(
             s for s in facets.signal_tags
             if s.startswith("n_le_") or s in ("q_large", "small_alphabet")
         ],
-        signal_tags=list(facets.signal_tags),
-        mechanism_hints=list(facets.mechanism_tags),
+        signal_tags=strong_signals,
+        mechanism_hints=explicit_mechanisms,
         keywords=_extract_keywords(blob),
         is_multi_skill_likely=multi,
         family_scores={k: float(v) for k, v in family_scores.items() if v > 0},
+        routing_confidence=routing_confidence,
     )

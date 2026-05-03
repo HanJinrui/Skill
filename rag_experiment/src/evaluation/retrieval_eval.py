@@ -36,3 +36,38 @@ def is_retrieval_hit(retrieved_ids: list[str], gold_ids: list[str]) -> bool:
     if not gold_ids:
         return False
     return any(sid in gold_ids for sid in retrieved_ids)
+
+
+def family_ids_for_problem(problem: dict[str, Any], label: dict[str, Any] | None = None) -> list[str]:
+    label = label or {}
+    fams = [s for s in (label.get("normalized_multi_skills") or []) if s in CORE_FAMILY_SET]
+    if not fams:
+        fams = [s for s in (problem.get("candidate_families") or []) if s in CORE_FAMILY_SET]
+    if not fams and label.get("normalized_single_skill") in CORE_FAMILY_SET:
+        fams = [label["normalized_single_skill"]]
+    return list(dict.fromkeys(fams))
+
+
+def family_skill_ids(families: list[str]) -> list[str]:
+    ids: list[str] = []
+    for fam in families:
+        for sid in (fam, skill_id_for_single(fam), f"family__{fam}"):
+            if sid not in ids:
+                ids.append(sid)
+    return ids
+
+
+def subtype_gold_ids(primary_rows_by_problem: dict[str, dict[str, Any]], problem_id: str) -> list[str]:
+    row = primary_rows_by_problem.get(problem_id) or {}
+    subtype = row.get("primary_subtype")
+    family = row.get("detected_single_skill") or row.get("family")
+    if isinstance(subtype, str) and subtype and isinstance(family, str) and family:
+        return [f"subtype__{family}__{subtype}"]
+    return []
+
+
+def bundle_gold_ids(families: list[str]) -> list[str]:
+    fams = sorted(set(f for f in families if f in CORE_FAMILY_SET))
+    if len(fams) < 2:
+        return []
+    return [skill_id_for_multi(fams), "bundle__" + "__".join(fams)]

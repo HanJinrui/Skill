@@ -109,13 +109,17 @@ def build_skill_mechanism_edges(skill_nodes: Sequence[Dict[str, Any]]) -> List[D
                 weight=1.0, source="facet_extract",
                 evidence=["skill_text"],
             ))
-        for mech in family_implied - explicit:
-            out.append(_edge(
-                EDGE_SKILL_IMPLEMENTS_MECHANISM,
-                skill_node_id(sid), mechanism_node_id(mech),
-                weight=0.4, source="family_prior",
-                evidence=["family_default"],
-            ))
+        # Stage D v2 skills already carry subtype-specific text. Avoid adding
+        # every family-default mechanism because it makes weak routing look
+        # falsely precise.
+        if not s.get("skill_level"):
+            for mech in family_implied - explicit:
+                out.append(_edge(
+                    EDGE_SKILL_IMPLEMENTS_MECHANISM,
+                    skill_node_id(sid), mechanism_node_id(mech),
+                    weight=0.4, source="family_prior",
+                    evidence=["family_default"],
+                ))
     return out
 
 
@@ -197,20 +201,27 @@ def build_bundle_contains_edges(
     from ..taxonomy import skill_id_for_single
 
     sid_set = {s["skill_id"] for s in skill_nodes}
+    subtype_by_family: Dict[str, List[str]] = {}
+    for s in skill_nodes:
+        if s.get("skill_level") == "subtype":
+            for fam in s.get("families") or []:
+                subtype_by_family.setdefault(fam, []).append(s["skill_id"])
     out: List[Dict[str, Any]] = []
     for s in skill_nodes:
-        if s.get("scope") != "multi":
+        if s.get("scope") != "multi" and s.get("skill_level") != "bundle":
             continue
         bundle_sid = s["skill_id"]
         for fam in s.get("families") or []:
-            part_sid = skill_id_for_single(fam)
-            if part_sid == bundle_sid or part_sid not in sid_set:
-                continue
-            out.append(_edge(
-                EDGE_BUNDLE_CONTAINS_SKILL,
-                skill_node_id(bundle_sid), skill_node_id(part_sid),
-                weight=1.0, source="skill_card",
-            ))
+            part_ids = [skill_id_for_single(fam), f"family__{fam}"] + subtype_by_family.get(fam, [])[:4]
+            for part_sid in part_ids:
+                if part_sid == bundle_sid or part_sid not in sid_set:
+                    continue
+                out.append(_edge(
+                    EDGE_BUNDLE_CONTAINS_SKILL,
+                    skill_node_id(bundle_sid), skill_node_id(part_sid),
+                    weight=1.0 if part_sid.startswith("family__") else 0.6,
+                    source="skill_card",
+                ))
     return out
 
 
@@ -219,6 +230,7 @@ def build_skill_cooccur_edges(
     skill_nodes: Sequence[Dict[str, Any]],
     problem_labels: Sequence[Dict[str, Any]],
     solutions: Sequence[Dict[str, Any]],
+    composition_rows: Sequence[Dict[str, Any]] | None = None,
     min_cooccur: int = 2,
 ) -> List[Dict[str, Any]]:
     """skill_cooccurs_skill: normalized PMI over single-skill cooccurrences.
@@ -233,16 +245,23 @@ def build_skill_cooccur_edges(
 
     # Each observation is a set of distinct families.
     observations: List[Tuple[str, ...]] = []
-    for row in problem_labels:
-        fams = [f for f in (row.get("normalized_multi_skills") or [])
-                if f in FAMILY_MECHANISMS]
-        if len(set(fams)) >= 2:
-            observations.append(tuple(sorted(set(fams))))
-    for row in solutions:
-        fams = [f for f in (row.get("detected_multi_skills") or [])
-                if f in FAMILY_MECHANISMS]
-        if len(set(fams)) >= 2:
-            observations.append(tuple(sorted(set(fams))))
+    if composition_rows is not None:
+        for row in composition_rows:
+            fams = [f for f in (row.get("family_set") or row.get("candidate_families") or [])
+                    if f in FAMILY_MECHANISMS]
+            if len(set(fams)) >= 2:
+                observations.append(tuple(sorted(set(fams))))
+    else:
+        for row in problem_labels:
+            fams = [f for f in (row.get("normalized_multi_skills") or [])
+                    if f in FAMILY_MECHANISMS]
+            if len(set(fams)) >= 2:
+                observations.append(tuple(sorted(set(fams))))
+        for row in solutions:
+            fams = [f for f in (row.get("detected_multi_skills") or [])
+                    if f in FAMILY_MECHANISMS]
+            if len(set(fams)) >= 2:
+                observations.append(tuple(sorted(set(fams))))
 
     if not observations:
         return []
@@ -269,8 +288,8 @@ def build_skill_cooccur_edges(
         pmi = math.log(max(p_ab, 1e-9) / (p_a * p_b))
         # Map (−∞, +∞) → (0, 1] via sigmoid for nicer weight.
         weight = 1.0 / (1.0 + math.exp(-pmi))
-        sid_a = skill_id_for_single(fa)
-        sid_b = skill_id_for_single(fb)
+        sid_a = f"family__{fa}" if f"family__{fa}" in sid_set else skill_id_for_single(fa)
+        sid_b = f"family__{fb}" if f"family__{fb}" in sid_set else skill_id_for_single(fb)
         if sid_a not in sid_set or sid_b not in sid_set:
             continue
         out.append(_edge(
