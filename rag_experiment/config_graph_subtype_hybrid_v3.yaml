@@ -1,0 +1,43 @@
+# graph_subtype_hybrid_v3 - isolate baseline; make graph samples actually use candidate skills.
+# Use with a fresh run tag, for example:
+#   RAG_CONFIG_EXTRA=config_graph_subtype_hybrid_v3.yaml
+#   STAGE_F_RUN_TAG=graph_subtype_hybrid_v3_l72
+#   STAGE_F_LIMIT=72
+#   bash rag_experiment/scripts/run_graph_gated_v5_compare.sh
+
+rag:
+  retrieval:
+    min_router_confidence: 0.34
+    min_score_margin_graph: 0.04
+    min_score_relative_graph: 0.14
+    min_dense_relevance_cosine: 0.30
+    enable_skill_dense_rerank: true
+    allow_family_primary_in_graph_subtype: false
+    subtype_dense_rerank_beta: 0.35
+    retrieve_top_k: 3
+    gates_by_difficulty:
+      easy:
+        max_skill_tokens: 560
+        min_dense_relevance_cosine: 0.32
+      medium:
+        min_score_margin_graph: 0.05
+        min_dense_relevance_cosine: 0.34
+  prompt:
+    max_skill_tokens: 620
+  query_analyzer:
+    manifest_family_boost: 0.75
+
+generation:
+  later_sample_temperature: 0.55
+  per_sample_skill_index: true
+  per_sample_skill_max_index: 2
+  bare_sample0_on_dense_gate_fail: true
+  graph_hybrid:
+    enabled: true
+    sample0_bare: true
+    allow_family_aux: true
+    strict_primary_family_for_multi: false
+    min_router_confidence: 0.34
+    min_score_margin_graph: 0.04
+    min_score_relative_graph: 0.14
+    min_dense_relevance_cosine: 0.43
