@@ -1,0 +1,143 @@
+{
+  "manifest": "/home/hjr/algo-skill-factory/rag_experiment/outputs/eval_manifests/taco_test_family_difficulty_balanced_single120.jsonl",
+  "retrieval_only": false,
+  "modes": [
+    "no_rag",
+    "graph_subtype_rag"
+  ],
+  "run_tag": "graph_subtype_hybrid_v3_l72",
+  "limit": 72,
+  "rag_config_extra": "config_graph_subtype_hybrid_v3.yaml",
+  "isolate_baseline_config": true,
+  "baseline_config_extra": "",
+  "results": {
+    "no_rag": {
+      "metrics_path": "/home/hjr/algo-skill-factory/rag_experiment/outputs/stage_f/metrics_summary_manifest_taco_test_family_difficulty_balanced_single120_no_rag_graph_subtype_hybrid_v3_l72.json",
+      "runs_path": "/home/hjr/algo-skill-factory/rag_experiment/outputs/stage_f/runs_manifest_taco_test_family_difficulty_balanced_single120_no_rag_graph_subtype_hybrid_v3_l72.jsonl",
+      "report_path": "/home/hjr/algo-skill-factory/reports/experiment_report_manifest_taco_test_family_difficulty_balanced_single120_no_rag_graph_subtype_hybrid_v3_l72.md",
+      "total_problems": 72,
+      "total_runs": 216,
+      "pass_at_1": 0.046296296296296294,
+      "sample_pass_rate": 0.046296296296296294,
+      "first_sample_pass_rate": 0.06944444444444445,
+      "pass_at_3": 0.06944444444444445,
+      "retrieval": {
+        "avg_calls_per_problem": 0.0,
+        "avg_correct_per_problem": 0.0,
+        "overall_correct_rate": 0.0,
+        "total_calls": 0,
+        "total_hits": 0,
+        "router_top1_acc": 0.0,
+        "family_recall_at_k": 0.0,
+        "subtype_recall_at_k": 0.0,
+        "bundle_recall_at_k": 0.0,
+        "hit_to_pass_conversion": 0.0,
+        "false_mechanism_rate": 0.0,
+        "fallback_to_no_rag_total": 0,
+        "fallback_to_no_rag_rate": 0.0,
+        "failure_diagnosis_breakdown": {
+          "no_retrieval_context": 206,
+          "none": 10
+        }
+      },
+      "by_difficulty": {
+        "easy": {
+          "problems": 22,
+          "runs": 66,
+          "pass_at_1": 0.10606060606060606,
+          "pass_at_3": 0.13636363636363635,
+          "retrieval_hit_rate": 0.0
+        },
+        "hard": {
+          "problems": 26,
+          "runs": 78,
+          "pass_at_1": 0.02564102564102564,
+          "pass_at_3": 0.038461538461538464,
+          "retrieval_hit_rate": 0.0
+        },
+        "medium": {
+          "problems": 24,
+          "runs": 72,
+          "pass_at_1": 0.013888888888888888,
+          "pass_at_3": 0.041666666666666664,
+          "retrieval_hit_rate": 0.0
+        }
+      },
+      "by_scope": {
+        "single": {
+          "problems": 72,
+          "runs": 216,
+          "pass_at_1": 0.046296296296296294,
+          "pass_at_3": 0.06944444444444445,
+          "retrieval_hit_rate": 0.0
+        }
+      }
+    },
+    "graph_subtype_rag": {
+      "metrics_path": "/home/hjr/algo-skill-factory/rag_experiment/outputs/stage_f/metrics_summary_manifest_taco_test_family_difficulty_balanced_single120_graph_subtype_rag_graph_subtype_hybrid_v3_l72.json",
+      "runs_path": "/home/hjr/algo-skill-factory/rag_experiment/outputs/stage_f/runs_manifest_taco_test_family_difficulty_balanced_single120_graph_subtype_rag_graph_subtype_hybrid_v3_l72.jsonl",
+      "report_path": "/home/hjr/algo-skill-factory/reports/experiment_report_manifest_taco_test_family_difficulty_balanced_single120_graph_subtype_rag_graph_subtype_hybrid_v3_l72.md",
+      "total_problems": 72,
+      "total_runs": 216,
+      "pass_at_1": 0.05092592592592592,
+      "sample_pass_rate": 0.05092592592592592,
+      "first_sample_pass_rate": 0.06944444444444445,
+      "pass_at_3": 0.06944444444444445,
+      "retrieval": {
+        "avg_calls_per_problem": 1.0555555555555556,
+        "avg_correct_per_problem": 0.9305555555555556,
+        "overall_correct_rate": 0.881578947368421,
+        "total_calls": 76,
+        "total_hits": 67,
+        "router_top1_acc": 0.881578947368421,
+        "family_recall_at_k": 0.881578947368421,
+        "subtype_recall_at_k": 0.0,
+        "bundle_recall_at_k": 0.0,
+        "hit_to_pass_conversion": 0.07017543859649122,
+        "false_mechanism_rate": 0.0,
+        "fallback_to_no_rag_total": 140,
+        "fallback_to_no_rag_rate": 0.6481481481481481,
+        "failure_diagnosis_breakdown": {
+          "no_retrieval_context": 131,
+          "implementation_bug": 49,
+          "complexity_mismatch": 1,
+          "none": 11,
+          "prompt_conflict": 15,
+          "routing_error": 9
+        }
+      },
+      "by_difficulty": {
+        "easy": {
+          "problems": 22,
+          "runs": 66,
+          "pass_at_1": 0.12121212121212122,
+          "pass_at_3": 0.13636363636363635,
+          "retrieval_hit_rate": 0.96
+        },
+        "hard": {
+          "problems": 26,
+          "runs": 78,
+          "pass_at_1": 0.02564102564102564,
+          "pass_at_3": 0.038461538461538464,
+          "retrieval_hit_rate": 0.6923076923076923
+        },
+        "medium": {
+          "problems": 24,
+          "runs": 72,
+          "pass_at_1": 0.013888888888888888,
+          "pass_at_3": 0.041666666666666664,
+          "retrieval_hit_rate": 1.0
+        }
+      },
+      "by_scope": {
+        "single": {
+          "problems": 72,
+          "runs": 216,
+          "pass_at_1": 0.05092592592592592,
+          "pass_at_3": 0.06944444444444445,
+          "retrieval_hit_rate": 0.881578947368421
+        }
+      }
+    }
+  }
+}

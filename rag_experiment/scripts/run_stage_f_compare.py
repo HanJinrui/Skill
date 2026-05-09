@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import subprocess
 import sys
@@ -52,6 +53,22 @@ def _parse_args() -> argparse.Namespace:
     parser.add_argument("--seed", type=int, default=0, help="stable seed base; 0 means config experiment.seed")
     parser.add_argument("--run-tag", type=str, default="", help="optional run tag propagated to all modes")
     parser.add_argument("--gpu-policy", type=str, default="auto", help="metadata tag propagated to all modes")
+    parser.add_argument(
+        "--isolate-baseline-config",
+        action="store_true",
+        help="run no_rag without the graph/RAG RAG_CONFIG_EXTRA overlay unless --baseline-config-extra is set",
+    )
+    parser.add_argument(
+        "--baseline-config-extra",
+        default=None,
+        help="optional RAG_CONFIG_EXTRA used only for no_rag when baseline config is isolated",
+    )
+    parser.add_argument(
+        "--limit",
+        type=int,
+        default=0,
+        help="if >0, only evaluate this many problems (forwarded to run_stage_f_eval.py)",
+    )
     return parser.parse_args()
 
 
@@ -74,9 +91,9 @@ def _mode_paths(settings: Any, manifest: Path, mode: str, retrieval_only: bool, 
     }
 
 
-def _run(cmd: list[str], *, cwd: Path, log: Any) -> None:
+def _run(cmd: list[str], *, cwd: Path, log: Any, env: dict[str, str] | None = None) -> None:
     log.info("Running: %s", " ".join(cmd))
-    subprocess.run(cmd, cwd=cwd, check=True)
+    subprocess.run(cmd, cwd=cwd, check=True, env=env)
 
 
 def _load_json(path: Path) -> dict[str, Any]:
@@ -132,6 +149,8 @@ def _summary_for_mode(paths: dict[str, Path]) -> dict[str, Any]:
         "total_problems": metrics.get("total_problems", 0),
         "total_runs": metrics.get("total_runs", 0),
         "pass_at_1": metrics.get("pass_at_1", 0.0),
+        "sample_pass_rate": metrics.get("sample_pass_rate", metrics.get("pass_at_1", 0.0)),
+        "first_sample_pass_rate": metrics.get("first_sample_pass_rate", 0.0),
         "pass_at_3": metrics.get("pass_at_3", 0.0),
         "retrieval": metrics.get("retrieval", {}),
         "by_difficulty": _breakdown(rows, "difficulty_bucket"),
@@ -144,17 +163,27 @@ def _write_compare_report(path: Path, payload: dict[str, Any]) -> None:
     lines.append("# Stage F 对比报告\n\n")
     lines.append(f"- Manifest: `{payload['manifest']}`\n")
     lines.append(f"- Retrieval only: `{payload['retrieval_only']}`\n")
+    if payload.get("run_tag"):
+        lines.append(f"- Run tag: `{payload['run_tag']}`\n")
+    if int(payload.get("limit") or 0) > 0:
+        lines.append(f"- Limit: `{payload['limit']}` problems\n")
+    if payload.get("rag_config_extra"):
+        lines.append(f"- RAG config extra: `{payload['rag_config_extra']}`\n")
+    if payload.get("isolate_baseline_config"):
+        baseline_extra = payload.get("baseline_config_extra") or "<base config>"
+        lines.append(f"- Baseline config: `{baseline_extra}`\n")
     lines.append(f"- Modes: `{', '.join(payload['modes'])}`\n\n")
 
     lines.append("## Overall\n\n")
-    lines.append("| mode | problems | runs | PASS@1 | PASS@3 | retrieval hit | router@1 | family@k | subtype@k | bundle@k | false mechanism |\n")
-    lines.append("| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |\n")
+    lines.append("| mode | problems | runs | PASS@1 | r0 pass | PASS@3 | retrieval hit | router@1 | family@k | subtype@k | bundle@k | false mechanism |\n")
+    lines.append("| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |\n")
     for mode in payload["modes"]:
         item = payload["results"].get(mode, {})
         ret = item.get("retrieval", {})
         lines.append(
             f"| {mode} | {item.get('total_problems', 0)} | {item.get('total_runs', 0)} "
-            f"| {item.get('pass_at_1', 0.0):.4f} | {item.get('pass_at_3', 0.0):.4f} "
+            f"| {item.get('pass_at_1', 0.0):.4f} | {item.get('first_sample_pass_rate', 0.0):.4f} "
+            f"| {item.get('pass_at_3', 0.0):.4f} "
             f"| {ret.get('overall_correct_rate', 0.0):.4f} | {ret.get('router_top1_acc', 0.0):.4f} "
             f"| {ret.get('family_recall_at_k', 0.0):.4f} | {ret.get('subtype_recall_at_k', 0.0):.4f} "
             f"| {ret.get('bundle_recall_at_k', 0.0):.4f} | {ret.get('false_mechanism_rate', 0.0):.4f} |\n"
@@ -212,6 +241,7 @@ def main() -> int:
         _run([args.python, "rag_experiment/scripts/run_stage_e_build_index.py", "--mode", "graph_subtype"], cwd=repo_root, log=log)
 
     results: dict[str, Any] = {}
+    parent_env = os.environ.copy()
     for mode in modes:
         paths = _mode_paths(settings, manifest, mode, args.retrieval_only, args.run_tag)
         if args.force:
@@ -234,19 +264,37 @@ def main() -> int:
             cmd.extend(["--gpu-policy", args.gpu_policy])
         if args.retrieval_only:
             cmd.append("--retrieval-only")
-        _run(cmd, cwd=repo_root, log=log)
+        if args.limit > 0:
+            cmd.extend(["--limit", str(args.limit)])
+        child_env = None
+        if mode == "no_rag" and (args.isolate_baseline_config or args.baseline_config_extra is not None):
+            child_env = parent_env.copy()
+            if args.baseline_config_extra:
+                child_env["RAG_CONFIG_EXTRA"] = args.baseline_config_extra
+                log.info("no_rag baseline uses isolated RAG_CONFIG_EXTRA=%s", args.baseline_config_extra)
+            else:
+                child_env.pop("RAG_CONFIG_EXTRA", None)
+                log.info("no_rag baseline uses base config with RAG_CONFIG_EXTRA unset")
+        _run(cmd, cwd=repo_root, log=log, env=child_env)
         results[mode] = _summary_for_mode(paths)
 
     stem = _sanitize_stem(manifest)
     tag = "retrieval_only" if args.retrieval_only else "generation"
+    clean_run_tag = re.sub(r"[^a-zA-Z0-9_-]+", "_", args.run_tag).strip("_") if args.run_tag else ""
+    tag_suffix = f"_{clean_run_tag}" if clean_run_tag else ""
     payload = {
         "manifest": str(manifest),
         "retrieval_only": bool(args.retrieval_only),
         "modes": modes,
+        "run_tag": args.run_tag or "",
+        "limit": int(args.limit),
+        "rag_config_extra": os.environ.get("RAG_CONFIG_EXTRA", ""),
+        "isolate_baseline_config": bool(args.isolate_baseline_config or args.baseline_config_extra is not None),
+        "baseline_config_extra": args.baseline_config_extra or "",
         "results": results,
     }
-    json_path = settings.stage_dir("stage_f") / f"comparison_{stem}_{tag}.json"
-    md_path = settings.reports_dir / f"comparison_report_{stem}_{tag}.md"
+    json_path = settings.stage_dir("stage_f") / f"comparison_{stem}_{tag}{tag_suffix}.json"
+    md_path = settings.reports_dir / f"comparison_report_{stem}_{tag}{tag_suffix}.md"
     save_json(json_path, payload)
     _write_compare_report(md_path, payload)
     log.info("Comparison JSON -> %s", json_path)

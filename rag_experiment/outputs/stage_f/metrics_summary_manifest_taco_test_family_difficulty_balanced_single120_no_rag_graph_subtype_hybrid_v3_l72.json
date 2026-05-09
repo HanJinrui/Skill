@@ -1,0 +1,125 @@
+{
+  "total_problems": 72,
+  "total_runs": 216,
+  "sample_pass_rate": 0.046296296296296294,
+  "first_sample_pass_rate": 0.06944444444444445,
+  "pass_at_1": 0.046296296296296294,
+  "pass_at_3": 0.06944444444444445,
+  "single_subset": {
+    "problems": 72,
+    "passed": 5,
+    "pass_at_3": 0.06944444444444445
+  },
+  "multi_subset": {
+    "problems": 0,
+    "passed": 0,
+    "pass_at_3": 0.0
+  },
+  "retrieval": {
+    "avg_calls_per_problem": 0.0,
+    "avg_correct_per_problem": 0.0,
+    "overall_correct_rate": 0.0,
+    "total_calls": 0,
+    "total_hits": 0,
+    "router_top1_acc": 0.0,
+    "family_recall_at_k": 0.0,
+    "subtype_recall_at_k": 0.0,
+    "bundle_recall_at_k": 0.0,
+    "hit_to_pass_conversion": 0.0,
+    "false_mechanism_rate": 0.0,
+    "fallback_to_no_rag_total": 0,
+    "fallback_to_no_rag_rate": 0.0,
+    "failure_diagnosis_breakdown": {
+      "no_retrieval_context": 206,
+      "none": 10
+    }
+  },
+  "per_family": {
+    "dynamic_programming": {
+      "problems": 12,
+      "passed_problems": 0,
+      "runs": 36,
+      "passed_runs": 0,
+      "retrieval_hits": 0,
+      "retrieval_calls": 0,
+      "pass_at_3": 0.0,
+      "pass_at_1": 0.0,
+      "retrieval_hit_rate": 0.0
+    },
+    "data_structures": {
+      "problems": 13,
+      "passed_problems": 0,
+      "runs": 39,
+      "passed_runs": 0,
+      "retrieval_hits": 0,
+      "retrieval_calls": 0,
+      "pass_at_3": 0.0,
+      "pass_at_1": 0.0,
+      "retrieval_hit_rate": 0.0
+    },
+    "bit_manipulation": {
+      "problems": 11,
+      "passed_problems": 2,
+      "runs": 33,
+      "passed_runs": 3,
+      "retrieval_hits": 0,
+      "retrieval_calls": 0,
+      "pass_at_3": 0.18181818181818182,
+      "pass_at_1": 0.09090909090909091,
+      "retrieval_hit_rate": 0.0
+    },
+    "complete_search": {
+      "problems": 11,
+      "passed_problems": 1,
+      "runs": 33,
+      "passed_runs": 2,
+      "retrieval_hits": 0,
+      "retrieval_calls": 0,
+      "pass_at_3": 0.09090909090909091,
+      "pass_at_1": 0.06060606060606061,
+      "retrieval_hit_rate": 0.0
+    },
+    "greedy_algorithms": {
+      "problems": 12,
+      "passed_problems": 0,
+      "runs": 36,
+      "passed_runs": 0,
+      "retrieval_hits": 0,
+      "retrieval_calls": 0,
+      "pass_at_3": 0.0,
+      "pass_at_1": 0.0,
+      "retrieval_hit_rate": 0.0
+    },
+    "sorting": {
+      "problems": 9,
+      "passed_problems": 1,
+      "runs": 27,
+      "passed_runs": 3,
+      "retrieval_hits": 0,
+      "retrieval_calls": 0,
+      "pass_at_3": 0.1111111111111111,
+      "pass_at_1": 0.1111111111111111,
+      "retrieval_hit_rate": 0.0
+    },
+    "range_queries": {
+      "problems": 4,
+      "passed_problems": 1,
+      "runs": 12,
+      "passed_runs": 2,
+      "retrieval_hits": 0,
+      "retrieval_calls": 0,
+      "pass_at_3": 0.25,
+      "pass_at_1": 0.16666666666666666,
+      "retrieval_hit_rate": 0.0
+    }
+  },
+  "protocol": {
+    "seed": 20260419,
+    "run_tag": "graph_subtype_hybrid_v3_l72",
+    "gpu_policy": "auto",
+    "rag_mode": "no_rag",
+    "retrieval_only": false,
+    "runs_path": "/home/hjr/algo-skill-factory/rag_experiment/outputs/stage_f/runs_manifest_taco_test_family_difficulty_balanced_single120_no_rag_graph_subtype_hybrid_v3_l72.jsonl",
+    "failure_diagnosis_path": "/home/hjr/algo-skill-factory/rag_experiment/outputs/stage_f/failure_diagnosis_manifest_taco_test_family_difficulty_balanced_single120_no_rag_graph_subtype_hybrid_v3_l72.jsonl"
+  }
+}
