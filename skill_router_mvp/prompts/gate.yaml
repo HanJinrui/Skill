@@ -1,42 +1,58 @@
 system: |
-  You are an algorithm-skill applicability judge. Select only skills whose
-  conditions and complexity fit the problem. Reject near matches explicitly.
-  A multi_algorithm skill is applicable only when each of its named components
-  is necessary in the solution. Return exactly one JSON object.
+  You are an algorithm-skill selector for competitive programming problems.
+  For each candidate skill, decide: does this skill's algorithm directly solve
+  this problem? Output only a JSON object — no prose, no code.
+
+  CONFIDENCE GUIDE (use when applicable=true):
+    0.70–0.85 → Strong match: 3+ trigger signals present AND key applicability
+                conditions clearly hold AND no non-applicability condition is met.
+    0.50–0.70 → Moderate match: 1-2 signals fire, conditions plausibly hold,
+                no clear applicability violation.
+    0.30–0.50 → Weak: signals are indirect or applicability is uncertain.
+    Set applicable=false when ANY non-applicability condition is clearly triggered,
+    or the skill family is wrong for this problem domain.
+
+  MULTI-SKILL RULE: Mark a multi-skill applicable only if EVERY named component
+  algorithm is necessary. If one component can be replaced by something simpler,
+  set applicable=false.
+
+  EXAMPLE (illustrative IDs only — do not copy):
+    Problem: "Find shortest path in a weighted grid (all non-negative weights)."
+    [Candidate 1] skill_id=single.dijkstra.v1
+      Subtype: dijkstra
+      Triggers: shortest path | weighted graph | non-negative weights
+      Use when: graph with non-negative edge weights and single-source shortest path
+      Reject when: unweighted graph (BFS suffices)
+    → {"skill_id": "single.dijkstra.v1", "applicable": true, "confidence": 0.78,
+       "reason": "Non-negative weights + shortest-path query is exactly Dijkstra's domain."}
+
+    [Candidate 2] skill_id=single.binary_search.v1
+      Subtype: binary_search
+      Triggers: monotone predicate | answer in sorted range
+      Use when: answer lies in a monotone-searchable integer or real range
+      Reject when: no monotone structure exists in the problem
+    → {"skill_id": "single.binary_search.v1", "applicable": false, "confidence": 0.10,
+       "reason": "Problem is a shortest-path query; no monotone range to search."}
+
 user_template: |
   [Problem]
   {{problem_statement}}
 
-  [Problem Profile]
-  {{profile_json}}
+  [Extracted Algorithm Signals]
+  {{profile_signals}}
 
-  [Reranked Candidate Skills]
-  {{candidate_cards_json}}
-
-  [Multi Skill Component Links]
-  {{composition_edges_json}}
-
-  Assess every candidate and return:
+  [Candidate Skills — assess each one]
+  {{candidate_cards_text}}
+  {{composition_edges_block}}
+  Assess every candidate above and return exactly:
   {
     "assessments": [
       {
-        "skill_id": "candidate id",
+        "skill_id": "exact candidate skill_id",
         "applicable": true,
         "confidence": 0.0,
-        "matched_signals": ["signal"],
-        "violated_conditions": [],
-        "complexity_fit": "good|borderline|bad",
-        "component_scores": {"component_subtype": 0.0},
-        "reason": "concise reason"
+        "reason": "one concise sentence"
       }
-    ],
-    "selected_skill_ids": [],
-    "selected_confidence": 0.0,
-    "selection_type": "fallback",
-    "runner_up_skill_id": null,
-    "runner_up_reason": "",
-    "margin": 0.0,
-    "ambiguous": false,
-    "fallback_reason": ""
+    ]
   }
-  The program will enforce final selection thresholds after your assessment.
+  The program will enforce the final selection thresholds after your assessment.

@@ -1,7 +1,7 @@
 system: |
   You are an algorithm planner for Python competitive-programming solutions.
-  Follow the selected skill only. Produce an implementation-ready plan, not
-  source code. Return exactly one JSON object.
+  Follow the selected skill only. Produce an implementation-ready plan — not
+  source code. Return exactly one JSON object with no additional prose.
 user_template: |
   [Problem]
   {{problem_statement}}
@@ -12,17 +12,17 @@ user_template: |
   [Rejected Runner Up]
   {{rejected_skills_json}}
 
-  Return:
+  Return this JSON (all fields required):
   {
     "problem_id": "{{problem_id}}",
     "language": "Python 3",
-    "selected_skills": [{"skill_id": "selected id", "role": "main", "confidence": 0.0}],
-    "rejected_skills": [{"skill_id": "runner-up id", "reason": "why rejected"}],
-    "problem_decomposition": ["ordered implementation step"],
-    "state_design": {"main_state": "state", "auxiliary_structures": ["structure"]},
-    "core_invariants": ["invariant"],
-    "complexity": {"time": "O(...)", "space": "O(...)", "constraint_fit": true},
-    "implementation_notes": ["I/O and boundary note"],
-    "test_focus": ["edge case"],
+    "selected_skills": [{"skill_id": "selected id", "role": "main", "confidence": 0.9}],
+    "problem_decomposition": [
+      "step 1: parse input and build data structure",
+      "step 2: apply core algorithm",
+      "step 3: format and print output"
+    ],
+    "complexity": {"time": "O(...)", "space": "O(...)"},
+    "implementation_notes": ["key I/O or boundary note"],
     "output_contract": {"only_code": true, "single_file": true}
   }

@@ -8,6 +8,7 @@ from typing import Any
 import yaml
 
 from .config import Settings
+from .retrieval_text import build_gate_card
 from .schemas import AlgorithmPlan, CompositionEdge, GateDecision, ProblemProfile, RetrievalCandidate, UnifiedSkillCard
 
 
@@ -78,25 +79,39 @@ class PromptBuilder:
         edges: list[CompositionEdge],
     ) -> tuple[str, str]:
         prompt = self._prompt("gate")
-        relevant_ids = {candidate.skill_id for candidate in candidates}
-        relevant_edges = [edge.model_dump(mode="json") for edge in edges if edge.multi_skill_id in relevant_ids]
-        cards = [
-            {
-                **_compact_card(candidate.card),
-                "router_score": candidate.router_score,
-                "rerank_score": candidate.rerank_score,
-                "matched_signals": candidate.matched_signals,
-                "blockers": candidate.blockers,
-            }
-            for candidate in candidates
-        ]
+
+        # Compact profile signals — a few keywords instead of the full profile JSON.
+        signals = list(profile.algorithm_signals[:5]) if profile else []
+        prohibited = list(profile.prohibited_operations[:3]) if profile else []
+        profile_signals = "Signals: " + ", ".join(signals) if signals else "Signals: (none detected)"
+        if prohibited:
+            profile_signals += "  |  Prohibited: " + ", ".join(prohibited)
+
+        # Each candidate rendered as a short text block (~60-80 tokens).
+        candidate_cards_text = "\n\n".join(
+            build_gate_card(candidate.card.model_dump(mode="json"), rank=i)
+            for i, candidate in enumerate(candidates)
+        )
+
+        # Composition edges block — only emitted when multi-skill candidates exist.
+        multi_ids = {c.skill_id for c in candidates if c.skill_type == "multi_algorithm"}
+        relevant_edges = [e for e in edges if e.multi_skill_id in multi_ids]
+        if relevant_edges:
+            edge_lines = "\n".join(
+                f"  {e.multi_skill_id}: requires component '{e.component_subtype}'"
+                for e in relevant_edges[:10]
+            )
+            composition_edges_block = f"[Component Requirements for Multi-Skills]\n{edge_lines}\n"
+        else:
+            composition_edges_block = ""
+
         return str(prompt["system"]), self._render(
             str(prompt["user_template"]),
             {
                 "problem_statement": problem_statement,
-                "profile_json": _json(profile),
-                "candidate_cards_json": _json(cards),
-                "composition_edges_json": _json(relevant_edges),
+                "profile_signals": profile_signals,
+                "candidate_cards_text": candidate_cards_text,
+                "composition_edges_block": composition_edges_block,
             },
         )
 

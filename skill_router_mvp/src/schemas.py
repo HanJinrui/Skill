@@ -74,6 +74,26 @@ class RetrievalCandidate(ContractModel):
     card: UnifiedSkillCard
 
 
+class SimpleGateAssessment(ContractModel):
+    """Minimal per-candidate output the LLM produces in the simplified gate prompt."""
+
+    skill_id: str
+    applicable: bool = False
+    confidence: float = 0.0
+    reason: str = ""
+
+    @field_validator("confidence")
+    @classmethod
+    def bound_simple_confidence(cls, value: float) -> float:
+        return max(0.0, min(1.0, float(value)))
+
+
+class SimplifiedGateOutput(ContractModel):
+    """Full LLM gate response under the simplified prompt schema."""
+
+    assessments: list[SimpleGateAssessment]
+
+
 class GateAssessment(ContractModel):
     skill_id: str
     applicable: bool = False

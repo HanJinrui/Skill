@@ -38,6 +38,36 @@ def _flow_text(value: Any) -> str:
     return " -> ".join(part for part in parts if part)
 
 
+def build_gate_card(raw: dict[str, Any], rank: int = 0) -> str:
+    """Compact text card for the gate prompt (~60-80 tokens per candidate).
+
+    Omits scores and large JSON blobs so the 7B model focuses on the
+    discriminating signals rather than numerical noise.
+    """
+    skill_type = str(raw.get("skill_type") or "")
+    lines = [f"[Candidate {rank + 1}] skill_id={raw.get('skill_id', '')}"]
+    if skill_type == "single_algorithm":
+        if raw.get("primary_subtype"):
+            lines.append(f"  Subtype: {raw['primary_subtype']}")
+        if raw.get("core_mechanism"):
+            lines.append(f"  Mechanism: {str(raw['core_mechanism'])[:130]}")
+    else:
+        sig = raw.get("composition_signature") or []
+        lines.append(f"  Components: {' + '.join(str(s) for s in sig)}")
+        if raw.get("core_composition_mechanism"):
+            lines.append(f"  Mechanism: {str(raw['core_composition_mechanism'])[:130]}")
+    triggers = raw.get("trigger_signals") or []
+    if triggers:
+        lines.append(f"  Triggers: {' | '.join(str(t) for t in triggers[:4])}")
+    applicable = raw.get("applicability_conditions") or []
+    if applicable:
+        lines.append(f"  Use when: {str(applicable[0])[:110]}")
+    reject = raw.get("non_applicability_conditions") or []
+    if reject:
+        lines.append(f"  Reject when: {str(reject[0])[:90]}")
+    return "\n".join(lines)
+
+
 def build_retrieval_text(raw: dict[str, Any]) -> str:
     skill_type = str(raw.get("skill_type") or "")
     lines = [
