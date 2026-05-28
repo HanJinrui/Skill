@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "bit_binary_representation", "confidence": 0.85, "core_mechanism_summary": "Flood-fill using bitmasks to check wall presence.", "rationale": "Tiles encode walls as 4-bit numbers; DFS uses & to test bits for connectivity.", "family_mismatch": false, "is_true_composition": false}}

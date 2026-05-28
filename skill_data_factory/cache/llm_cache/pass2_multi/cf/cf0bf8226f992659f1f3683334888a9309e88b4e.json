@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 1.0, "core_composition_summary": "Linear scan tracking top two maximums.", "rationale": "Single pass O(n) algorithm, no coordination of multiple mechanisms."}}

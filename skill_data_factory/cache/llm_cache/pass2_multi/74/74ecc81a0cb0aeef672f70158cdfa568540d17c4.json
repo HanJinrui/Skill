@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Single dynamic programming approach", "rationale": "The solution uses a 2D DP with state (index, modulo m) to compute maximum subarray cost; no greedy or other mechanisms are present."}}

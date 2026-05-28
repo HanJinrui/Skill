@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Bottom-up DP to count leaf nodes per subtree, then sorting the counts.", "rationale": "The solution relies on a single tree DP mechanism; sorting is only for output format and not a coordinated algorithm."}}

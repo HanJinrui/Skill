@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Single mechanism: rolling hash", "rationale": "The solution uses a custom hash function and sliding window sum to check multiset equality; no multiple algorithmic mechanisms are coordinated."}}

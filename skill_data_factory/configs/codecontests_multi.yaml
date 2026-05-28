@@ -1,0 +1,113 @@
+experiment:
+  name: codecontests_multi_skill_expansion_v1
+  core_families:
+    - amortized_analysis
+    - bit_manipulation
+    - complete_search
+    - data_structures
+    - dynamic_programming
+    - greedy_algorithms
+    - range_queries
+    - sorting
+
+paths:
+  output_dir: outputs/codecontests
+  cache_dir: cache/codecontests
+  prompts_dir: prompts
+  rag_experiment_root: ../rag_experiment
+
+pass1:
+  verified_source: codecontests-local
+  min_official_tests: 5
+  min_statement_chars: 80
+  max_solutions_per_problem: 5
+  show_progress: true
+  log_every_problems: 100
+  codecontests:
+    hf_name: deepmind/code_contests
+    split: train
+    streaming: true
+    allowed_languages:
+      - PYTHON3
+    max_tests_per_solution: 20
+  blocked_imports:
+    - os
+    - subprocess
+    - socket
+    - requests
+    - urllib
+    - http
+    - ftplib
+    - pathlib
+    - shutil
+    - glob
+    - multiprocessing
+    - threading
+    - ctypes
+  blocked_calls:
+    - eval
+    - exec
+    - compile
+    - open
+    - __import__
+    - breakpoint
+
+pass1_route:
+  single_top2_score_gap: 8.0
+  multi_min_distinct_families: 2
+  multi_min_subtype_score: 4.0
+  allow_problem_multi_tag: true
+
+pass2:
+  require_llm: true
+  allow_rule_fallback_final: false
+  max_llm_solutions_per_problem: 3
+  min_llm_confidence: 0.60
+  max_llm_retries: 3
+  max_llm_retries_multi: 2
+  llm_max_tokens: 4096
+  llm_max_tokens_single: 4096
+  llm_max_tokens_multi: 12288
+  llm_max_tokens_ceiling: 24576
+  llm_truncation_jump_to_ceiling: true
+  pass2_single_max_statement_chars: 1800
+  pass2_single_max_code_chars: 4000
+  pass2_multi_max_statement_chars: 1200
+  pass2_multi_max_code_chars: 2800
+  pass2_multi_max_rule_candidates: 8
+  prompt_version_single: solution_subtype_v1
+  prompt_version_multi: solution_composition_v1
+  budget_solutions: 0
+  # Three API keys x three in-flight requests each. Lower this if rate limits require it.
+  max_workers: 9
+
+pass2_primary:
+  max_rows_per_subtype: 200
+  min_rows_per_subtype: 12
+  max_rows_per_composition_key: 80
+  min_rows_per_composition_key: 8
+
+pass3:
+  max_examples_per_skill: 8
+  max_statement_chars: 1000
+  max_code_chars: 1100
+  gold_min_tests: 10
+  gold_min_confidence: 0.65
+  silver_min_tests: 5
+
+evaluation:
+  per_test_timeout_seconds: 5
+  memory_mb: 512
+  sandbox:
+    python_executable: python3
+    memory_limit_mb: 512
+
+merge:
+  taco_composition_path: outputs/multi_algorithm/pass3_evidence/composition_rows.jsonl
+  codecontests_composition_path: outputs/codecontests/multi_algorithm/pass3_evidence/composition_rows.jsonl
+  codecontests_pass1_summary: outputs/codecontests/pass1_manifest/summary.json
+  eval_manifest_glob: ../rag_experiment/outputs/eval_manifests/*.jsonl
+  output_dir: outputs/merged_multi_algorithm/pass3_evidence
+
+logging:
+  level: INFO

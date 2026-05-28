@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.9, "core_composition_summary": "Sorting-based greedy construction with limited linear selection.", "rationale": "The solution sorts descending, filters candidates, then linearly selects up to three; no distinct mechanism composition."}}

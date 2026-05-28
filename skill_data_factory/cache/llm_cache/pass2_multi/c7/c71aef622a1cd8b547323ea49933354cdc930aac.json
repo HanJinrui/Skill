@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 1.0, "core_composition_summary": "Pure tree DP that considers only left and right extremes.", "rationale": "The solution uses a single dynamic programming on trees to compute optimal values, no greedy or other algorithm integration."}}

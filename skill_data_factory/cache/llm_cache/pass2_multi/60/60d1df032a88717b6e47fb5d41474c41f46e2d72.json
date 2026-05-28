@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "none", "confidence": 0.95, "core_composition_summary": "Simple greedy after sorting: pick most negative values.", "rationale": "Only one main algorithmic idea: greedy selection of negative prices. Sorting is trivial preprocessing, not a distinct mechanism."}}

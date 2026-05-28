@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Iteratively builds minimal costs for achievable GCDs using DP-like state updates.", "rationale": "Single DP mechanism: dictionary stores GCD states and optimal costs, updating when new card considered."}}

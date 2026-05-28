@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "dp_1d_state", "confidence": 0.8, "core_mechanism_summary": "Uses formula 2^(n/2) for even n else 0, derived from 1D DP recurrence on width.", "rationale": "The closed form corresponds to dp[i] = 2 * dp[i-2] with dp[2]=2, a one-dimensional state DP.", "family_mismatch": false, "is_true_composition": false}}

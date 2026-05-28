@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "", "rationale": "The solution is a single greedy two-pointer algorithm with sorting as preprocessing, not a composition of distinct mechanisms."}}

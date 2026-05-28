@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 1.0, "core_composition_summary": "Single mechanism: BFS spanning tree construction followed by greedy bottom-up parity assignment.", "rationale": "No dynamic programming used. BFS uses a heap but is trivial; the core is a single algorithm."}}

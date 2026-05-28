@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 1.0, "core_composition_summary": "Brute-force substring search over all substrings of first word.", "rationale": "The solution uses nested loops to generate all substrings and checks existence in all words; no other algorithmic mechanisms."}}

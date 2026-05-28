@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 1.0, "core_composition_summary": "Single DP mechanism", "rationale": "Solution uses a single DP with state (i,j,last_string,start_mask) to count chaotic merges over all substrings; no other algorithmic mechanisms."}}

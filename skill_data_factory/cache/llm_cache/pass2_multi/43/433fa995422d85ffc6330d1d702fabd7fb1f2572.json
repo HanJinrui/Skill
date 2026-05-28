@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Single mechanism: complete search over all 100 houses.", "rationale": "The solution iterates over all houses and removes those within each cop's reach; no integration of sorting or other mechanisms."}}

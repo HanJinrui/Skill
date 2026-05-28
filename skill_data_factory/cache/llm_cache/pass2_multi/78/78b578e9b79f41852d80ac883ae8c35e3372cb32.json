@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 1.0, "core_composition_summary": "Frequency counting and exhaustive search over candidate target frequencies.", "rationale": "The solution uses basic Counter usage and brute-force enumeration; no multiple coordinated algorithmic mechanisms."}}

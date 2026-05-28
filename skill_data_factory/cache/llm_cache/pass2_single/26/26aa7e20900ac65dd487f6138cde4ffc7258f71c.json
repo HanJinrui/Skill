@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "bit_binary_representation", "confidence": 0.95, "core_mechanism_summary": "Iteratively clears the lowest set bit using x &= x - 1 and counts iterations.", "rationale": "Standard Hamming weight calculation using the x & (x-1) trick, directly manipulating binary digits.", "family_mismatch": false, "is_true_composition": false}}

@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "search_backtracking", "confidence": 0.2, "core_mechanism_summary": "Count 5s and 0s, output max 5s multiple of 9 then all 0s.", "rationale": "Solution is greedy/math, not search; selected from candidate families.", "family_mismatch": false, "is_true_composition": false}}

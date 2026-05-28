@@ -1,0 +1,13 @@
+{
+  "route_counts": {
+    "single": 1042,
+    "multi": 804,
+    "quarantine": 0
+  },
+  "outputs": {
+    "single_algorithm_problems": "/home/hjr/algo-skill-factory/skill_data_factory/outputs/single_algorithm/pass1_manifest/problems.jsonl",
+    "single_algorithm_solutions": "/home/hjr/algo-skill-factory/skill_data_factory/outputs/single_algorithm/pass1_manifest/solutions.jsonl",
+    "multi_algorithm_problems": "/home/hjr/algo-skill-factory/skill_data_factory/outputs/multi_algorithm/pass1_manifest/problems.jsonl",
+    "multi_algorithm_solutions": "/home/hjr/algo-skill-factory/skill_data_factory/outputs/multi_algorithm/pass1_manifest/solutions.jsonl"
+  }
+}

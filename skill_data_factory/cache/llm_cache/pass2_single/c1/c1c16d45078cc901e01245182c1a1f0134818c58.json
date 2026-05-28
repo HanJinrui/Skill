@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "search_backtracking", "confidence": 0.1, "core_mechanism_summary": "Uses a set to track seen strings, checking membership before insertion.", "rationale": "Solution is a simple duplicate check, not a search algorithm. No exhaustive enumeration or backtracking.", "family_mismatch": false, "is_true_composition": false}}

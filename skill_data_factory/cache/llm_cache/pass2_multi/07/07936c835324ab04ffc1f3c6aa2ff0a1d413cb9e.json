@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.5, "core_composition_summary": "Single DP mechanism for expectation calculation.", "rationale": "No evidence of multiple mechanisms; likely uses DP with combinatorics for probability. Code incomplete."}}

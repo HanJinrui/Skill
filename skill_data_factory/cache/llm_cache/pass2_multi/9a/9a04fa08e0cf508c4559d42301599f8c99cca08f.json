@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Sorting strings with a custom comparator to maximize 'sh' subsequences.", "rationale": "The solution only uses greedy sorting; no other algorithmic mechanism is coordinated."}}

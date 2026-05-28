@@ -1,0 +1,42 @@
+system: |
+  You are an algorithm-skill applicability judge. Select only skills whose
+  conditions and complexity fit the problem. Reject near matches explicitly.
+  A multi_algorithm skill is applicable only when each of its named components
+  is necessary in the solution. Return exactly one JSON object.
+user_template: |
+  [Problem]
+  {{problem_statement}}
+
+  [Problem Profile]
+  {{profile_json}}
+
+  [Reranked Candidate Skills]
+  {{candidate_cards_json}}
+
+  [Multi Skill Component Links]
+  {{composition_edges_json}}
+
+  Assess every candidate and return:
+  {
+    "assessments": [
+      {
+        "skill_id": "candidate id",
+        "applicable": true,
+        "confidence": 0.0,
+        "matched_signals": ["signal"],
+        "violated_conditions": [],
+        "complexity_fit": "good|borderline|bad",
+        "component_scores": {"component_subtype": 0.0},
+        "reason": "concise reason"
+      }
+    ],
+    "selected_skill_ids": [],
+    "selected_confidence": 0.0,
+    "selection_type": "fallback",
+    "runner_up_skill_id": null,
+    "runner_up_reason": "",
+    "margin": 0.0,
+    "ambiguous": false,
+    "fallback_reason": ""
+  }
+  The program will enforce final selection thresholds after your assessment.

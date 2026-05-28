@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 1.0, "core_composition_summary": "Single simulation with prefix caching and modulo-based query answering", "rationale": "Solution uses sequential simulation with limited prefix storage, no sorting or search algorithms are involved."}}

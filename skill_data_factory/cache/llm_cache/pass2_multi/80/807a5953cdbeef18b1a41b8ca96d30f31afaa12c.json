@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Single DP_2d_state for longest alternating subsequence.", "rationale": "The solution uses one DP mechanism to compute the longest valid subsequence; no coordination of multiple algorithm families."}}

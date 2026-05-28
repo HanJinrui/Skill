@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 1.0, "core_composition_summary": "Single greedy algorithm using two pointers on run-length encoded counts.", "rationale": "The solution uses a single greedy strategy to process runs, no combination of distinct algorithmic families."}}

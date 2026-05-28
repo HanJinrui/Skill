@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 1.0, "core_composition_summary": "Single mechanism: complete search over controlled and uncontrolled choices.", "rationale": "Nested loops enumerate all combinations; no data structures are used."}}

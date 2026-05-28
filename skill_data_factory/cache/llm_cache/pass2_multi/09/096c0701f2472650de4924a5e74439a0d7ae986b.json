@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "", "rationale": "Single greedy mechanism with sorting by rank, then sequential assignment ensuring distinctness and bounds."}}

@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.9, "core_composition_summary": "Single greedy assignment strategy without coordinated multiple mechanisms.", "rationale": "Solution uses a single greedy pass to assign alternating parentheses, no DP, sorting, or multiple algorithm phases."}}

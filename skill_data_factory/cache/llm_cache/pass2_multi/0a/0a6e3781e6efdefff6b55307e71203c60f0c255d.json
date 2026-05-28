@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.9, "core_composition_summary": "Binary search with simulation, not a composition of given families", "rationale": "The algorithm uses binary search and a linear sweep, which are not in the candidate families; sorting is just preprocessing."}}

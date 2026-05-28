@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.9, "core_composition_summary": "Simple complete search counting inversions and local inversions.", "rationale": "Only one mechanism (complete search) used, no composition."}}

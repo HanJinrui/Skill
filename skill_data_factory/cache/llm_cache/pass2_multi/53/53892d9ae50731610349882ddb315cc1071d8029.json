@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Simple greedy formula based on sorted counts.", "rationale": "Solution just sorts array, then uses arithmetic to compute minimal additions. No coordinated multi-mechanism."}}

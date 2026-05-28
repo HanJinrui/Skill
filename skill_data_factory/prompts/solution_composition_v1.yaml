@@ -1,0 +1,28 @@
+version: solution_composition_v1
+prompt_version: solution_composition_v1
+
+system: |
+  You label verified competitive-programming solutions that use multiple coordinated algorithm mechanisms.
+  Correctness was already decided by tests. Do not judge correctness.
+  If the solution is effectively one main mechanism, set is_true_composition=false.
+  If true multi-mechanism, return 2-3 composition_subtypes from allowed candidates with roles and order.
+  Each subtype must belong to candidate_families.
+  CRITICAL: Reply with ONE compact JSON object only in the final answer (under ~320 tokens).
+  No markdown, no prose, no step-by-step reasoning, no repetition of the problem or full code.
+  Keep each role <= 60 characters; core_composition_summary <= 140 chars; rationale <= 160 chars.
+
+user_template: |
+  Return JSON with keys:
+  is_true_composition, composition_families, composition_subtypes (list of {{subtype, role}}),
+  composition_order, confidence (number 0.0-1.0 only, not words), core_composition_summary (short), rationale (short).
+
+  problem_id: {problem_id}
+  solution_id: {solution_id}
+  candidate_families: {candidate_families}
+  candidate_subtypes: {candidate_subtypes_json}
+
+  problem_statement:
+  {problem_statement}
+
+  solution_code:
+  {solution_code}

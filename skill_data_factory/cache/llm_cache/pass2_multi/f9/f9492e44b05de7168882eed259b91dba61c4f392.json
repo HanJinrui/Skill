@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Single greedy algorithm: iterate divisors, group consecutive 1s, move to median", "rationale": "Only one mechanism: greedy grouping by divisor with L1 median; no coordination of multiple algorithm families."}}

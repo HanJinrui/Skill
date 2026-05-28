@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": null, "confidence": 0.95, "core_composition_summary": "Single greedy state update over pages", "rationale": "Algorithm greedily maintains minimal trailing consecutive counts using max(0, x+f - k*y), a single-stage greedy approach."}}

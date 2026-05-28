@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "search_backtracking", "confidence": 0.4, "core_mechanism_summary": "Starts at sqrt(n) and increments/decrements until finding divisors that yield a*b=n.", "rationale": "Closest among provided subtypes; iterative divisor search lacks recursion but is a form of exhaustive search.", "family_mismatch": false, "is_true_composition": false}}

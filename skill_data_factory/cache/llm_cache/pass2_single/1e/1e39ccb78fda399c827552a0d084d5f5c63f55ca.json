@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "dp_2d_state", "confidence": 0.95, "core_mechanism_summary": "2D DP: dp[d][pi] is minimal number with exactly d divisors using first pi+1 primes.", "rationale": "Uses 2D table with states (divisor count, prime index) and recurrence considering prime exponent factorizations.", "family_mismatch": false, "is_true_composition": false}}

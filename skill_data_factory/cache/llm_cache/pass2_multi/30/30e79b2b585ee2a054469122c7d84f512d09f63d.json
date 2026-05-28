@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.0, "core_composition_summary": "Single linear scan with run merging, no DP or search coordination.", "rationale": "Algorithm splits into increasing runs and merges via case analysis; no DP or complete search coordination."}}

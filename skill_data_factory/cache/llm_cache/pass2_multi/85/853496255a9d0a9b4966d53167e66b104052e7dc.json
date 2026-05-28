@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "The solution uses only brute-force complete search over all possible single character moves.", "rationale": "No advanced data structure or multi-mechanism; simple O(N^2) enumeration."}}

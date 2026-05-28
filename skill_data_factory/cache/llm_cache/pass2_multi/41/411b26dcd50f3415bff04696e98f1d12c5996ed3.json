@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Single greedy algorithm with sorting by right endpoint to find minimum nails.", "rationale": "The solution uses a standard greedy interval stabbing algorithm, not a combination of distinct mechanisms."}}

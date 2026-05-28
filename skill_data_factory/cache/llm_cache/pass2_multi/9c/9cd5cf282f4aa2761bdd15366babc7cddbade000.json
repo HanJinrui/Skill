@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "", "rationale": "The solution primarily relies on sorting (pairs and subarrays) and simple interval merging, which is not a distinct mechanism."}}

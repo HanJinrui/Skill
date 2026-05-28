@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Single greedy linear scan tracking digit remainders to cut when sum divisible by 3.", "rationale": "Solution uses a single greedy pass with state reset, no DP or multiple coordinated mechanisms."}}

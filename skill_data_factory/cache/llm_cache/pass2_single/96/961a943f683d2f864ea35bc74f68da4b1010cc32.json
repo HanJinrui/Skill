@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "sorting_custom_key", "confidence": 0.2, "core_mechanism_summary": "Compute max-min of three numbers directly without sorting.", "rationale": "Solution uses built-in max/min to compute range, which equals total distance. No sorting or custom key used; closest subtype from limited candidates.", "family_mismatch": true, "is_true_composition": false}}

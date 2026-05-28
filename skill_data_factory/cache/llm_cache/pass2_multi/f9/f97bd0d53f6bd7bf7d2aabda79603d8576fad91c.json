@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": null, "confidence": 0.99, "core_composition_summary": "Single DP with 2D state and backtracking", "rationale": "Solution uses iterative DP to fill n x 5 table and backtracking to reconstruct valid fingering; no other algorithms."}}

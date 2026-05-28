@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Direct mathematical formula solving quadratic equation.", "rationale": "Uses closed-form math, no sorting or search mechanisms; thus not a composition."}}

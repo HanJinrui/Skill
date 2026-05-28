@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 1.0, "core_composition_summary": "", "rationale": "Solution uses per-dwarf greedy choice (assign speeds to parts for max growth) and final sorting for ranking, but these are independent and sorting is trivial; no coordinated multi-mechanism."}}

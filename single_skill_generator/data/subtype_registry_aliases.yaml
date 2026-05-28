@@ -1,0 +1,35 @@
+version: subtype_registry_aliases_v1
+aliases:
+  ds_union_find: ds_disjoint_set_union
+  union_find: ds_disjoint_set_union
+  dsu: ds_disjoint_set_union
+  connected_components_dynamic: ds_disjoint_set_union
+  range_fenwick_tree: ds_fenwick_tree
+  binary_indexed_tree: ds_fenwick_tree
+  fenwick_tree: ds_fenwick_tree
+  range_segment_tree: ds_segment_tree
+  segment_tree: ds_segment_tree
+  ds_stack_monotonic: ds_monotonic_stack
+  amortized_monotonic_queue: ds_monotonic_queue
+  range_difference_array: difference_array
+  sorting_sweep_line: sweep_line_events
+  sorting_binary_search_answer: binary_search_on_answer
+  binary_search_answer: binary_search_on_answer
+  binary_search: binary_search_lower_upper_bound
+  kmp: string_kmp_prefix_function
+  prefix_function: string_kmp_prefix_function
+  z_algorithm: string_z_algorithm
+  z_function: string_z_algorithm
+  trie: string_trie
+  rolling_hash: string_rolling_hash
+  dp_bitmask: dp_bitmask_subset
+  bit_bitmask_dp: dp_bitmask_subset
+  sliding_window: sliding_window_variable_length
+  fixed_length_sliding_window: sliding_window_fixed_length
+family_overrides:
+  binary_search_lower_upper_bound: binary_search
+  binary_search_on_answer: binary_search
+  coordinate_compression: discretization
+  sweep_line_events: sweep_line
+  sliding_window_fixed_length: two_pointers_sliding_window
+  sliding_window_variable_length: two_pointers_sliding_window

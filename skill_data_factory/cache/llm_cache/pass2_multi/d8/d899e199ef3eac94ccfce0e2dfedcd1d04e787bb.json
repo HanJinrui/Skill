@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Single tree DP bottom-up aggregation", "rationale": "The solution uses a single dynamic programming on tree (dp_tree) to compute answer from leaves to root, no separate sorting or greedy steps."}}

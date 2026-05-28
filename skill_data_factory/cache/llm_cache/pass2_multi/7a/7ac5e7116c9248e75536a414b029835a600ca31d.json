@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Single-step inequality check derived from minimizing x+ceil(d/(x+1)).", "rationale": "Solution uses a closed-form condition (n+1)^2 >= 4d without iterative search or sorting; it's a direct math derivation."}}

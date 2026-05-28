@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Uses union-find (DSU) to skip over single-digit elements, making range updates efficient.", "rationale": "Primary mechanism is union-find data structure; no other distinct families involved."}}

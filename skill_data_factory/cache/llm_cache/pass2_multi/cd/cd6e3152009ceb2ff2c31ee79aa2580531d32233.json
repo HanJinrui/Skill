@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Sort then interleave halves greedily to maximize cheap elements.", "rationale": "Only one mechanism: greedy_sorting_order. Sorting is just a step, no multiple coordinated algorithms."}}

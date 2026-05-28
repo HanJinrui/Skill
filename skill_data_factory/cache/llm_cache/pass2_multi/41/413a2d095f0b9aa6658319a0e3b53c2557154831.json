@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Single linear‑scan array technique; no multiple coordinated mechanisms.", "rationale": "Uses prefix/suffix min/max and a global constraint scan, not sorting, advanced data structures, or amortized analysis."}}

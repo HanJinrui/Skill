@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 1.0, "core_composition_summary": "", "rationale": "The solution uses a single greedy algorithm; the unused brute-force function is not invoked. No multi-mechanism composition."}}

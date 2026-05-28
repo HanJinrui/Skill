@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "DP with segment tree optimization, but not a multi-mechanism composition.", "rationale": "Segment tree not in candidate families; solution is a single DP mechanism."}}

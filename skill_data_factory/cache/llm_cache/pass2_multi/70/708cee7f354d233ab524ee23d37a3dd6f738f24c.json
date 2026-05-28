@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.9, "core_composition_summary": "Simulation using hash map to merge equal elements, then sort by index for output.", "rationale": "Single mechanism: sequential processing with dictionary; sorting is only for output formatting."}}

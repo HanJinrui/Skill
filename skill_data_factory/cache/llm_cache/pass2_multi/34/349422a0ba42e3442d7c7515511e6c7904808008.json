@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.9, "core_composition_summary": "Amortized two-pointer scan on sorted array is the single mechanism.", "rationale": "Sorting is a preprocessing step, not a coordinated mechanism; the core algorithm is the two-pointer greedy traversal."}}

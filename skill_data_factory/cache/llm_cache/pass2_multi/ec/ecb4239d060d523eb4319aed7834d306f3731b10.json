@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "The solution relies primarily on a greedy algorithm with sorting as preprocessing.", "rationale": "Sorting is used only to enable a simple greedy pass, not as a distinct coordinated mechanism."}}

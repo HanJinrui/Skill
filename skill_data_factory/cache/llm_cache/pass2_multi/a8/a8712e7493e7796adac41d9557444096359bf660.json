@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "none", "confidence": 1.0, "core_composition_summary": "", "rationale": "The solution relies solely on sorting and a heuristic partial enumeration to generate the smallest sums; no coordinated multi-mechanism composition."}}

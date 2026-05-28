@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 1.0, "core_composition_summary": "Single DP mechanism tracking two states (inc/dec) per prefix.", "rationale": "The solution uses dynamic programming (inc/dec arrays) to explore possible assignments, with no separate greedy component."}}

@@ -1,0 +1,58 @@
+input:
+  base_skill_bank_path: "inputs/final_release/base_skill_bank.jsonl"
+  legacy_generation_inputs_path: "inputs/final_release/legacy_generation_inputs.jsonl"
+  targeted_additions_bank_path: "inputs/final_release/targeted_additions_bank.jsonl"
+  targeted_additions_evidence_path: "inputs/final_release/targeted_additions_evidence.jsonl"
+
+additional:
+  enabled: true
+  catalog_path: "data/priority_algorithms_v1.yaml"
+  curated_path: "data/curated_algorithm_evidence_v1.yaml"
+
+release:
+  version: "final_release_v1"
+  alias_path: "data/subtype_registry_aliases.yaml"
+  output_dir: "outputs/final_release"
+  single_additions_path: "outputs/final_release/single_skill_bank_additions.jsonl"
+  single_merged_path: "outputs/final_release/single_skill_bank_merged.jsonl"
+  normalized_evidence_path: "outputs/final_release/normalized_evidence_rows.jsonl"
+  subtype_registry_path: "outputs/final_release/subtype_registry.json"
+  maturity_report_path: "outputs/final_release/maturity_report.json"
+  retrieval_report_path: "outputs/final_release/retrieval_gate_report.json"
+  schema_report_path: "outputs/final_release/schema_validation_report.json"
+  evidence_routing_report_path: "outputs/final_release/evidence_routing_report.json"
+  composed_additions_path: "outputs/final_release/composed_skill_bank_additions.jsonl"
+  composition_quarantine_path: "outputs/final_release/composition_evidence_quarantine.jsonl"
+  repair_report_path: "outputs/final_release/repair_report.json"
+  retrieval_top_k: 3
+  stable_min_unique_taco_problems: 5
+  provisional_min_unique_taco_problems: 2
+
+output:
+  output_dir: "outputs/final_release"
+  skill_bank_path: "outputs/final_release/single_skill_bank_additions.jsonl"
+
+representative_selection:
+  max_examples_per_skill: 8
+  min_examples_per_skill: 5
+  prefer_gold: true
+  max_code_lines_soft: 160
+
+llm:
+  enabled: true
+  provider: "deepseek"
+  model: "deepseek-v4-pro"
+  base_url: "https://api.deepseek.com/v1"
+  temperature: 0.2
+  max_tokens: 8192
+  retry_times: 3
+  cache_dir: "inputs/final_release/llm_cache"
+  timeout: 180.0
+  max_workers: 1
+  api_keys: []
+
+validation:
+  min_final_score: 0.85
+  revise_score_threshold: 0.70
+  max_repeated_problem_tokens: 50
+  max_repeated_code_lines: 5

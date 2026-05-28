@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "sorting_binary_search_answer", "confidence": 0.9, "core_mechanism_summary": "Precompute perfect powers, sort, and binary search to count in range.", "rationale": "Uses sorting to allow logarithmic counting, which is the core of the solution.", "family_mismatch": false, "is_true_composition": false}}

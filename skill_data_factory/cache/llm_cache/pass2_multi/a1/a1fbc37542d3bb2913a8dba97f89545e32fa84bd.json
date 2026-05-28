@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.9, "core_composition_summary": "", "rationale": "Sorting is just preprocessing; the core is O(n^2) segment length brute-force, which matches no given complete_search subtype. No true multi-mechanism coordination."}}

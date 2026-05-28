@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Sweep line over sorted time events; no coordinated mechanisms.", "rationale": "The solution uses only sorting events and a counter. No stateful data structures or multiple interacting algorithms."}}

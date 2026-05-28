@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Greedy interval scheduling with sorting", "rationale": "Simple greedy algorithm after sorting by start time; no multi-mechanism composition."}}

@@ -1,0 +1,44 @@
+{
+  "verification_source": "codecontests-local",
+  "external_dataset": {
+    "name": "deepmind/code_contests",
+    "split": "train"
+  },
+  "elapsed_seconds": 67774.91,
+  "min_official_tests": 5,
+  "max_tests_per_solution": 20,
+  "streaming": true,
+  "python2_docker_image": "python:2.7.18-slim-buster",
+  "outputs": {
+    "candidates": "/home/hjr/algo-skill-factory/skill_data_factory/outputs/codecontests/pass1_manifest/candidates.jsonl",
+    "verified_solutions": "/home/hjr/algo-skill-factory/skill_data_factory/outputs/codecontests/pass1_manifest/verified_solutions.jsonl",
+    "verified_problems": "/home/hjr/algo-skill-factory/skill_data_factory/outputs/codecontests/pass1_manifest/verified_problems.jsonl",
+    "summary": "/home/hjr/algo-skill-factory/skill_data_factory/outputs/codecontests/pass1_manifest/summary.json"
+  },
+  "stats": {
+    "scanned": 13328,
+    "pre_scan_pass": 8038,
+    "problems_verified": 4432,
+    "solutions_verified": 27482,
+    "full_pass_solutions": 17609,
+    "language_candidates": {
+      "PYTHON3": 27482
+    },
+    "full_pass_solution_language_counts": {
+      "PYTHON3": 17609
+    },
+    "failure_reasons": {
+      "ok": 79305,
+      "runtime_error": 11191,
+      "unsafe_precheck": 2006,
+      "wrong_answer": 65432,
+      "timeout": 623
+    },
+    "clean_split_counts": {
+      "single_clean": 0,
+      "multi_clean": 4432,
+      "mismatch": 0,
+      "noisy_or_unverified": 1813
+    }
+  }
+}

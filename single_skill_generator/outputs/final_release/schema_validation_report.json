@@ -1,0 +1,286 @@
+{
+  "single_skill_count": 54,
+  "single_valid_count": 54,
+  "composed_skill_count": 1,
+  "composed_valid_count": 1,
+  "single_results": [
+    {
+      "skill_id": "single.binary_search_lower_upper_bound.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.binary_search_on_answer.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.bit_binary_representation.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.bit_xor_trick.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.coordinate_compression.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.difference_array.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.dp_1d_state.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.dp_2d_state.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.dp_bitmask_subset.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.dp_counting_combinatorics.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.dp_digit.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.dp_grid_path.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.dp_interval.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.dp_knapsack.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.dp_lis.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.dp_memoized_recursion.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.dp_tree.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.ds_disjoint_set_union.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.ds_fenwick_tree.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.ds_hash_map.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.ds_heap_priority_queue.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.ds_monotonic_queue.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.ds_monotonic_stack.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.ds_segment_tree.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.graph_bfs_shortest_path_unweighted.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.graph_bipartite_coloring.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.graph_dfs_components_cycle.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.graph_dijkstra_shortest_path.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.graph_mst_kruskal.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.graph_topological_sort.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.greedy_exchange_argument.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.greedy_priority_queue.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.greedy_sorting_order.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.greedy_two_pointers.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.math_combinatorics_ncr.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.math_gcd_lcm.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.math_inclusion_exclusion.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.math_modular_exponentiation.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.math_prime_factorization.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.math_prime_sieve.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.prefix_sum_1d.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.prefix_sum_2d.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.search_backtracking.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.search_bitmask_enumeration.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.search_branch_and_bound.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.search_permutation_enumeration.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.sliding_window_fixed_length.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.sliding_window_variable_length.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.sorting_custom_key.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.string_kmp_prefix_function.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.string_rolling_hash.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.string_trie.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.string_z_algorithm.v1",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "skill_id": "single.sweep_line_events.v1",
+      "valid": true,
+      "errors": []
+    }
+  ],
+  "composed_results": [
+    {
+      "skill_id": "composed.graph_gcd_mst_dsu.v1",
+      "valid": true,
+      "errors": []
+    }
+  ],
+  "unresolved_registry_references": []
+}

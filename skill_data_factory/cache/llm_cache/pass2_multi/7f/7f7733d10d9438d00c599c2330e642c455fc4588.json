@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": ["dynamic_programming"], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Single 2D DP mechanism without composition.", "rationale": "Solution uses a 2D DP array with states based on index and length modulo m. No greedy or other algorithmic families are used."}}

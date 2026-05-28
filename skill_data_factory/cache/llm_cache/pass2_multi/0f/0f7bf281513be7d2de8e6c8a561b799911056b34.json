@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.9, "core_composition_summary": "Greedy prefix selection after sorting", "rationale": "Algorithm is a single mechanism: sort then greedy linear scan checking max <= min diff. No separate composition."}}

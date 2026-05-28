@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "search_backtracking", "confidence": 0.1, "core_mechanism_summary": "Read two integers from input and output their sum.", "rationale": "The solution is a trivial input-output operation with no algorithmic pattern. None of the candidate subtypes apply.", "family_mismatch": true, "is_true_composition": false}}

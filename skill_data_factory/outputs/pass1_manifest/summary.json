@@ -1,0 +1,28 @@
+{
+  "verification_source": "taco-verified",
+  "external_dataset": {
+    "name": "likaixin/TACO-verified",
+    "split": "train"
+  },
+  "elapsed_seconds": 22.34,
+  "min_official_tests": 5,
+  "outputs": {
+    "candidates": "/home/hjr/algo-skill-factory/skill_data_factory/outputs/pass1_manifest/candidates.jsonl",
+    "verified_solutions": "/home/hjr/algo-skill-factory/skill_data_factory/outputs/pass1_manifest/verified_solutions.jsonl",
+    "verified_problems": "/home/hjr/algo-skill-factory/skill_data_factory/outputs/pass1_manifest/verified_problems.jsonl",
+    "summary": "/home/hjr/algo-skill-factory/skill_data_factory/outputs/pass1_manifest/summary.json"
+  },
+  "stats": {
+    "scanned": 12898,
+    "pre_scan_pass": 3265,
+    "problems_verified": 0,
+    "solutions_verified": 6298,
+    "full_pass_solutions": 6298,
+    "clean_split_counts": {
+      "single_clean": 0,
+      "multi_clean": 0,
+      "mismatch": 1419,
+      "noisy_or_unverified": 0
+    }
+  }
+}

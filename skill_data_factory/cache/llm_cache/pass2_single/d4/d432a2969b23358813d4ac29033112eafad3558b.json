@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "sorting_binary_search_answer", "confidence": 0.9, "core_mechanism_summary": "Binary search on number of full rounds to skip, then simulate remaining exams in one pass.", "rationale": "Solution uses binary search on m to find max complete rounds processed, avoiding O(k) simulation.", "family_mismatch": true, "is_true_composition": false}}

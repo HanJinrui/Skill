@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": null, "confidence": 0.95, "core_composition_summary": "Greedy interval selection with sorting by start coordinate.", "rationale": "Sorting is standard preprocessing for the greedy algorithm; no multi-mechanism composition."}}

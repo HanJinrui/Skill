@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Single-pass greedy selection with max tracking.", "rationale": "Solution uses only one algorithm: a linear scan with a greedy skip condition. No sorting or complete search involved."}}

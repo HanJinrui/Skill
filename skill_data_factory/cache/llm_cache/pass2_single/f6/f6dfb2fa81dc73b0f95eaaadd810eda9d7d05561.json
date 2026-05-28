@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "search_permutation_enumeration", "confidence": 0.2, "core_mechanism_summary": "Precompute t-occurrence array, then prefix sums for O(1) range queries.", "rationale": "Solution uses prefix sums, not search; forced to pick from given subtypes, permutation enumeration is rule's top pick.", "family_mismatch": false, "is_true_composition": false}}

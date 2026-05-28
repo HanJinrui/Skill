@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Sorting min and max arrays, then linear scan/counting to compute answer.", "rationale": "Only sorting and a simple linear scan; no dynamic programming or data structures. Effectively a single mechanism."}}

@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "search_permutation_enumeration", "confidence": 0.95, "core_mechanism_summary": "Enumerates all permutations of 5 students to find the order maximizing total happiness.", "rationale": "Uses itertools.permutations for complete search over all 5! arrangements, fitting permutation enumeration.", "family_mismatch": false, "is_true_composition": false}}

@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "dp_1d_state", "confidence": 0.9, "core_mechanism_summary": "1D DP with two monotonic stacks to efficiently compute minimal discrete jumps to each building.", "rationale": "dp[i] is minimal jumps to i, updated from visible predecessors via monotonic stacks; state is single index i.", "family_mismatch": false, "is_true_composition": false}}

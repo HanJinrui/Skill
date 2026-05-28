@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "greedy_exchange_argument", "confidence": 0.9, "core_mechanism_summary": "Tracks balance of 1s difference across positions; answer is max - min balance.", "rationale": "Solution uses a greedy scan with balance, typical of exchange argument proofs. No sorting or data structures needed.", "family_mismatch": false, "is_true_composition": false}}

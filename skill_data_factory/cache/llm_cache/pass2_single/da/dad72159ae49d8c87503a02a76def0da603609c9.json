@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "dp_2d_state", "confidence": 0.3, "core_mechanism_summary": "Brute-force over all subarrays [i,j], compute ones after flipping, track max.", "rationale": "Code iterates all O(n^2) subarrays; no DP table. But given candidate DP subtypes, dp_2d_state matches the nested loop indices.", "family_mismatch": false, "is_true_composition": false}}

@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "none", "confidence": 0.9, "core_composition_summary": "Single mechanism: sorting and sweep line.", "rationale": "Sorts combined array then linear scan with prefix/suffix sums; typical sweep line, not multi-mechanism."}}

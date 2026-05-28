@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "none", "confidence": 1.0, "core_composition_summary": "Not a multi-mechanism composition; single graph traversal algorithm.", "rationale": "Solution uses BFS and diameter computation without any DP, so it's a single mechanism."}}

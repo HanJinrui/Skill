@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "search_backtracking", "confidence": 0.8, "core_mechanism_summary": "recursive traversal of nested list to sum numeric values", "rationale": "Recursion explores nested structure exhaustively, akin to backtracking-like depth-first search, despite no explicit choice/pruning.", "family_mismatch": false, "is_true_composition": false}}

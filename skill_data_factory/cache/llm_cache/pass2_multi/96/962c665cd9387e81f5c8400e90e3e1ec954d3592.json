@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.9, "core_composition_summary": "Sorting plus complete search over contiguous key windows", "rationale": "Sorting enables contiguous window evaluation, then exhaustive min-max over start indices. Effectively a single brute-force mechanism."}}

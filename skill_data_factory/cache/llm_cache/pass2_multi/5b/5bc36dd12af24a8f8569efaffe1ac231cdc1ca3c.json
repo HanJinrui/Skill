@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": null, "confidence": 0.95, "core_composition_summary": "Single greedy constructive algorithm", "rationale": "The solution greedily builds the smallest k-beautiful number >= n by scanning digits and making minimal adjustments."}}

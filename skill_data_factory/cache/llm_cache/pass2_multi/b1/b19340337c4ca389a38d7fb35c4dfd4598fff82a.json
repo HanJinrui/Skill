@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 1.0, "core_composition_summary": "Simple greedy XOR check", "rationale": "No coordinated multiple mechanisms; just a deterministic XOR check and row scan."}}

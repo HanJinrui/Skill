@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.9, "core_composition_summary": "Sorting by left ascending, right descending, then linear scan to find containment.", "rationale": "Single algorithmic pattern: sort then greedy sweep, no coordination of distinct mechanisms."}}

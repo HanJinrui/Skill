@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.9, "core_composition_summary": "Sweep line on sorted endpoints is the primary mechanism; sorting is preprocessing.", "rationale": "Standard sweep line technique uses sorting then linear pass; effectively one algorithm."}}

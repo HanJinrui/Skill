@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": ["dynamic_programming"], "composition_subtypes": [], "composition_order": 0, "confidence": 0.95, "core_composition_summary": "Pure DP with minimal consecutive counts.", "rationale": "The solution employs a dynamic programming approach to track the best ending state, without any greedy component."}}

@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "dp_counting_combinatorics", "confidence": 0.1, "core_mechanism_summary": "Direct O(1) formula: 2*n^2 - 2*n + 1, no DP or state.", "rationale": "Solution is purely mathematical, not DP; forced to pick a DP subtype, dp_counting_combinatorics is marginally related to counting.", "family_mismatch": true, "is_true_composition": false}}

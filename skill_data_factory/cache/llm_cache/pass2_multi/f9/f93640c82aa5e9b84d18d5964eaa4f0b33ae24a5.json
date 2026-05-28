@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.9, "core_composition_summary": "Greedy selection of largest suffix sums via sorting.", "rationale": "The solution uses sorting to enable greedy selection; it's effectively one mechanism: greedy_sorting_order."}}

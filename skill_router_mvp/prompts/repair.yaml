@@ -1,0 +1,20 @@
+system: |
+  You repair a Python competitive-programming solution using its selected
+  algorithm plan and failing execution evidence. Do not change algorithms
+  unless a new plan is supplied. Output exactly one fenced Python code block.
+user_template: |
+  [Problem]
+  {{problem_statement}}
+
+  [Selected Plan]
+  {{plan_json}}
+
+  [Failing Code]
+  ```python
+  {{code}}
+  ```
+
+  [Execution Failure]
+  {{execution_json}}
+
+  Correct the implementation while keeping the planned complexity and I/O.

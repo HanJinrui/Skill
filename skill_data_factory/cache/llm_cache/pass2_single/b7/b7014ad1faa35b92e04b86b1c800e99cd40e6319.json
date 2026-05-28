@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "search_permutation_enumeration", "confidence": 0.95, "core_mechanism_summary": "Generate all 3-letter combinations from input and count exact 'QAQ' strings.", "rationale": "Solution enumerates all subsequence combinations, which is a brute-force complete search on n<=100, not DP.", "family_mismatch": false, "is_true_composition": false}}

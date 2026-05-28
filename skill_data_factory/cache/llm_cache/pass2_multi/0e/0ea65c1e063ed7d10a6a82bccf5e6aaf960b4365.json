@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Two-pointer sliding window to find minimum substring containing all distinct types.", "rationale": "Single mechanism: two pointers with amortized O(n) time. No sorting or other algorithmic families."}}

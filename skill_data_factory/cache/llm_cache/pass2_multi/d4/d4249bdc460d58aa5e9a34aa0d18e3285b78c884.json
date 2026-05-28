@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 1.0, "core_composition_summary": "Single greedy algorithm; no DP or multi-mechanism coordination.", "rationale": "Solution constructs answer digit-by-digit with greedy choices; no DP memoization, just backtracking within greedy framework."}}

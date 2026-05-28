@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 1.0, "core_composition_summary": "Single greedy linear scan: pick first even, else pick first two odds.", "rationale": "The solution only employs a simple greedy loop; no combination of distinct algorithm families."}}

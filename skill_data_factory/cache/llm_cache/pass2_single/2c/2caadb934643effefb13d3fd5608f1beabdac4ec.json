@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "dp_1d_state", "confidence": 0.9, "core_mechanism_summary": "Iterative DP to find longest non-decreasing subsequence length by species index, using a 1D array.", "rationale": "The solution uses a single array dp to track max subsequence length ending with species ≤ j, updated per plant.", "family_mismatch": false, "is_true_composition": false}}

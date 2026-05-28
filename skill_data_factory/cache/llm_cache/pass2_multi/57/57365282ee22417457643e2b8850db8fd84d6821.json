@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Single mechanism: sort arrays, generate limited sums, sort again.", "rationale": "Solution uses only sorting for ordering and a limited brute-force generation; no coordination of multiple mechanisms."}}

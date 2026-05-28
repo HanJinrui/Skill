@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": null, "confidence": 1.0, "core_composition_summary": "Single DP recurrence precomputation", "rationale": "Pure dynamic programming with no composition of multiple mechanisms."}}

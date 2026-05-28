@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.9, "core_composition_summary": "Single greedy interval covering algorithm", "rationale": "The core algorithm is a greedy interval covering. Interval generation is a simple exhaustive search, not a second coordinated algorithmic mechanism."}}

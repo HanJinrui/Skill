@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Single DP mechanism: maximum subarray DP on each modulo class.", "rationale": "Solely uses DP (Kadane's-like) on each independent k-separated subsequence to minimize flips; no multi-mechanism coordination."}}

@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": 0, "confidence": 1.0, "core_composition_summary": "Not a composition; just sorting then elementwise check.", "rationale": "The solution uses sorting to order digits, then a simple check; no multiple algorithms."}}

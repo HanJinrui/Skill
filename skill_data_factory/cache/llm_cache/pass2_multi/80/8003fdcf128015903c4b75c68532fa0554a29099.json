@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Simple sorting and rank lookup using index, no multiple algorithmic mechanisms.", "rationale": "Uses sorting to compute ranks; index lookup is not an algorithmic search pattern. Single mechanism."}}

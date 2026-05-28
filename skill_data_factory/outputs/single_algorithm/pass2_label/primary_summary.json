@@ -1,0 +1,43 @@
+{
+  "track": "single_algorithm",
+  "primary_count": 763,
+  "subtype_or_key_counts": {
+    "dp_2d_state": 98,
+    "dp_1d_state": 94,
+    "sorting_custom_key": 92,
+    "search_backtracking": 82,
+    "greedy_exchange_argument": 71,
+    "search_permutation_enumeration": 46,
+    "greedy_sorting_order": 38,
+    "dp_counting_combinatorics": 37,
+    "search_branch_and_bound": 26,
+    "bit_binary_representation": 25,
+    "search_bitmask_enumeration": 17,
+    "search_dfs_bfs_graph": 15,
+    "sorting_binary_search_answer": 15,
+    "bit_xor_trick": 14,
+    "dp_tree": 13,
+    "ds_hash_map": 13,
+    "greedy_two_pointers": 10,
+    "dp_memoized_recursion": 10,
+    "ds_heap_priority_queue": 10,
+    "sorting_sweep_line": 6,
+    "dp_interval": 6,
+    "greedy_priority_queue": 5,
+    "amortized_two_pointers": 5,
+    "amortized_sliding_window": 4,
+    "dp_bitmask": 2,
+    "bit_set_operations": 2,
+    "dp_knapsack": 1,
+    "greedy_interval_scheduling": 1,
+    "bit_bitmask_dp": 1,
+    "ds_stack_monotonic": 1,
+    "ds_ordered_set": 1,
+    "ds_union_find": 1,
+    "ds_queue_deque": 1
+  },
+  "tier_counts": {
+    "gold": 655,
+    "silver": 108
+  }
+}

@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "search_backtracking", "confidence": 0.0, "core_mechanism_summary": "Reads two integers, computes sum, prints. No search.", "rationale": "The solution performs simple I/O and addition. None of the candidate subtypes match; family_mismatch is true because it's not a complete search.", "family_mismatch": true, "is_true_composition": false}}

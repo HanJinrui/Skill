@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.9, "core_composition_summary": "DP with bitmask enumeration over columns.", "rationale": "Sorting by column max is just preprocessing; the DP independently handles shifts and row subsets."}}

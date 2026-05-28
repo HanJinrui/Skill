@@ -1,0 +1,100 @@
+experiment:
+  name: taco_skill_distillation_v1
+  core_families:
+    - amortized_analysis
+    - bit_manipulation
+    - complete_search
+    - data_structures
+    - dynamic_programming
+    - greedy_algorithms
+    - range_queries
+    - sorting
+
+paths:
+  taco_hf_name: BAAI/TACO
+  taco_hf_split: train
+  rag_experiment_root: ../rag_experiment
+
+pass1:
+  # local = run official tests in-process; taco-verified = trust likaixin/TACO-verified (fast)
+  verified_source: taco-verified
+  taco_verified_hf_name: likaixin/TACO-verified
+  taco_verified_split: train
+  min_official_tests: 5
+  min_statement_chars: 80
+  max_solutions_per_problem: 5
+  max_tests_per_solution: 0
+  show_progress: true
+  log_every_problems: 100
+  blocked_imports:
+    - os
+    - subprocess
+    - socket
+    - requests
+    - urllib
+    - http
+    - ftplib
+    - pathlib
+    - shutil
+    - glob
+    - multiprocessing
+    - threading
+    - ctypes
+  blocked_calls:
+    - eval
+    - exec
+    - compile
+    - open
+    - __import__
+    - breakpoint
+
+pass1_route:
+  single_top2_score_gap: 8.0
+  multi_min_distinct_families: 2
+  multi_min_subtype_score: 4.0
+  allow_problem_multi_tag: true
+
+pass2:
+  require_llm: true
+  allow_rule_fallback_final: false
+  max_llm_solutions_per_problem: 3
+  min_llm_confidence: 0.60
+  max_llm_retries: 3
+  max_llm_retries_multi: 2
+  llm_max_tokens: 4096
+  llm_max_tokens_single: 4096
+  # Multi: start high to avoid 2560→8192 truncation chains (V4 reasoning burns output budget).
+  llm_max_tokens_multi: 12288
+  llm_max_tokens_ceiling: 24576
+  llm_truncation_jump_to_ceiling: true
+  pass2_single_max_statement_chars: 1800
+  pass2_single_max_code_chars: 4000
+  pass2_multi_max_statement_chars: 1200
+  pass2_multi_max_code_chars: 2800
+  pass2_multi_max_rule_candidates: 8
+  prompt_version_single: solution_subtype_v1
+  prompt_version_multi: solution_composition_v1
+  budget_solutions: 0
+  # Used when multiple DEEPSEEK_API_KEYS are configured.
+  max_workers: 9
+
+pass2_primary:
+  max_rows_per_subtype: 200
+  min_rows_per_subtype: 12
+  max_rows_per_composition_key: 80
+  min_rows_per_composition_key: 8
+
+pass3:
+  max_examples_per_skill: 8
+  max_statement_chars: 1000
+  max_code_chars: 1100
+  gold_min_tests: 10
+  gold_min_confidence: 0.65
+  silver_min_tests: 5
+
+evaluation:
+  timeout_sec: 30
+  memory_mb: 1024
+
+logging:
+  level: INFO

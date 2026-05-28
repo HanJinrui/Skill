@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Solution is a pure dynamic programming approach with 2D state, no multi-mechanism composition.", "rationale": "Only DP is used; greedy or data structures are not separate mechanisms."}}

@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Brute-force enumeration of ATK and DEF purchases", "rationale": "Solution uses nested loops to exhaustively search bounded ATK/DEF values; no sorting or other algorithmic mechanism is combined."}}

@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Sorting + greedy loop to distribute sweets", "rationale": "Single greedy approach with sorting preprocessing, no true composition of multiple mechanisms."}}

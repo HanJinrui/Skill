@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Single greedy algorithm pairing extremes after sorting.", "rationale": "Sorting is a preprocessing step to enable greedy pairing, not a coordinated separate algorithm. Overall, it's one primary mechanism."}}

@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 1.0, "core_composition_summary": "Single mechanism: O(n) contribution sum using formula.", "rationale": "Solution directly computes answer via closed-form per-element contribution; no multiple algorithm mechanisms."}}

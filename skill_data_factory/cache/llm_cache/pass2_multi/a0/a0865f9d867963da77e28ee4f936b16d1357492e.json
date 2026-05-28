@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.9, "core_composition_summary": "BFS-based shortest path with portal min aggregation", "rationale": "Solution uses BFS as main mechanism, with simple min operation on portals, not a distinct greedy algorithm."}}

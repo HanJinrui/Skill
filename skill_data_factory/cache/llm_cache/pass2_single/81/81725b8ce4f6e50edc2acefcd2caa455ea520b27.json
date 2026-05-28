@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "dp_2d_state", "confidence": 0.95, "core_mechanism_summary": "2D DP over prefix length and count of intervals; dp[i][j] = max ignoring i-th or taking interval ending at i.", "rationale": "DP table with dimensions n and k, using optimal substructure for disjoint intervals of fixed length.", "family_mismatch": false, "is_true_composition": false}}

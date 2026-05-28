@@ -1,0 +1,3 @@
+{
+  "text": "{\n  \"decision\": \"pass\",\n  \"problems\": [],\n  \"revision_suggestions\": [],\n  \"abstraction_score\": 0.95,\n  \"consistency_score\": 1.0,\n  \"retrieval_score\": 0.95,\n  \"template_score\": 0.95,\n  \"leakage_score\": 1.0,\n  \"final_score\": 0.95\n}"
+}

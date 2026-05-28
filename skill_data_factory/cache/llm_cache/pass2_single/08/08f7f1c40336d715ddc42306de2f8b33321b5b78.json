@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "search_backtracking", "confidence": 0.2, "core_mechanism_summary": "Direct condition: abs(a-b)<=1 and a+b>0.", "rationale": "Solution is O(1) arithmetic check, not search; forced to pick from candidate subtypes, highest score is search_backtracking.", "family_mismatch": false, "is_true_composition": false}}

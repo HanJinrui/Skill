@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Greedy interval scheduling using sorting by right endpoint", "rationale": "The solution is a standard greedy algorithm with sorting, not multiple distinct algorithm families coordinated."}}

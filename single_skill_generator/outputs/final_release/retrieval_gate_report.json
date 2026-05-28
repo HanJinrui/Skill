@@ -1,0 +1,344 @@
+{
+  "method": "generator_local_bm25",
+  "top_k": 3,
+  "num_skills": 54,
+  "skills_tested": 21,
+  "results": {
+    "binary_search_lower_upper_bound": {
+      "num_queries": 1,
+      "top_k": 3,
+      "all_hit": false,
+      "queries": [
+        {
+          "problem_id": "taco_train_023935__23935",
+          "retrieved_subtypes": [
+            "math_gcd_lcm",
+            "math_inclusion_exclusion",
+            "math_prime_factorization"
+          ],
+          "hit": false
+        }
+      ]
+    },
+    "binary_search_on_answer": {
+      "num_queries": 1,
+      "top_k": 3,
+      "all_hit": false,
+      "queries": [
+        {
+          "problem_id": "taco_train_021645__21645",
+          "retrieved_subtypes": [
+            "dp_interval",
+            "math_prime_factorization",
+            "sweep_line_events"
+          ],
+          "hit": false
+        }
+      ]
+    },
+    "bit_binary_representation": {
+      "num_queries": 1,
+      "top_k": 3,
+      "all_hit": false,
+      "queries": [
+        {
+          "problem_id": "taco_train_024758__24758",
+          "retrieved_subtypes": [
+            "graph_mst_kruskal",
+            "graph_bfs_shortest_path_unweighted",
+            "graph_dfs_components_cycle"
+          ],
+          "hit": false
+        }
+      ]
+    },
+    "bit_xor_trick": {
+      "num_queries": 1,
+      "top_k": 3,
+      "all_hit": false,
+      "queries": [
+        {
+          "problem_id": "taco_train_022374__22374",
+          "retrieved_subtypes": [
+            "math_prime_factorization",
+            "bit_binary_representation",
+            "search_bitmask_enumeration"
+          ],
+          "hit": false
+        }
+      ]
+    },
+    "dp_1d_state": {
+      "num_queries": 1,
+      "top_k": 3,
+      "all_hit": true,
+      "queries": [
+        {
+          "problem_id": "taco_train_025264__25264",
+          "retrieved_subtypes": [
+            "dp_1d_state",
+            "dp_interval",
+            "ds_fenwick_tree"
+          ],
+          "hit": true
+        }
+      ]
+    },
+    "dp_2d_state": {
+      "num_queries": 1,
+      "top_k": 3,
+      "all_hit": false,
+      "queries": [
+        {
+          "problem_id": "taco_train_025442__25442",
+          "retrieved_subtypes": [
+            "string_rolling_hash",
+            "graph_bipartite_coloring",
+            "string_trie"
+          ],
+          "hit": false
+        }
+      ]
+    },
+    "dp_counting_combinatorics": {
+      "num_queries": 1,
+      "top_k": 3,
+      "all_hit": false,
+      "queries": [
+        {
+          "problem_id": "taco_train_025115__25115",
+          "retrieved_subtypes": [
+            "search_permutation_enumeration",
+            "math_prime_factorization",
+            "prefix_sum_2d"
+          ],
+          "hit": false
+        }
+      ]
+    },
+    "dp_interval": {
+      "num_queries": 1,
+      "top_k": 3,
+      "all_hit": true,
+      "queries": [
+        {
+          "problem_id": "taco_train_023391__23391",
+          "retrieved_subtypes": [
+            "dp_interval",
+            "sweep_line_events",
+            "graph_bipartite_coloring"
+          ],
+          "hit": true
+        }
+      ]
+    },
+    "dp_memoized_recursion": {
+      "num_queries": 1,
+      "top_k": 3,
+      "all_hit": false,
+      "queries": [
+        {
+          "problem_id": "taco_train_023943__23943",
+          "retrieved_subtypes": [
+            "dp_interval",
+            "search_bitmask_enumeration",
+            "bit_binary_representation"
+          ],
+          "hit": false
+        }
+      ]
+    },
+    "dp_tree": {
+      "num_queries": 1,
+      "top_k": 3,
+      "all_hit": false,
+      "queries": [
+        {
+          "problem_id": "taco_train_025087__25087",
+          "retrieved_subtypes": [
+            "graph_dfs_components_cycle",
+            "bit_binary_representation",
+            "ds_disjoint_set_union"
+          ],
+          "hit": false
+        }
+      ]
+    },
+    "ds_hash_map": {
+      "num_queries": 1,
+      "top_k": 3,
+      "all_hit": false,
+      "queries": [
+        {
+          "problem_id": "taco_train_023585__23585",
+          "retrieved_subtypes": [
+            "prefix_sum_2d",
+            "bit_binary_representation",
+            "math_prime_factorization"
+          ],
+          "hit": false
+        }
+      ]
+    },
+    "ds_heap_priority_queue": {
+      "num_queries": 1,
+      "top_k": 3,
+      "all_hit": false,
+      "queries": [
+        {
+          "problem_id": "taco_train_021126__21126",
+          "retrieved_subtypes": [
+            "bit_binary_representation",
+            "search_bitmask_enumeration",
+            "math_prime_factorization"
+          ],
+          "hit": false
+        }
+      ]
+    },
+    "greedy_exchange_argument": {
+      "num_queries": 1,
+      "top_k": 3,
+      "all_hit": true,
+      "queries": [
+        {
+          "problem_id": "taco_train_025235__25235",
+          "retrieved_subtypes": [
+            "greedy_exchange_argument",
+            "math_prime_factorization",
+            "bit_xor_trick"
+          ],
+          "hit": true
+        }
+      ]
+    },
+    "greedy_priority_queue": {
+      "num_queries": 1,
+      "top_k": 3,
+      "all_hit": false,
+      "queries": [
+        {
+          "problem_id": "taco_train_025271__25271",
+          "retrieved_subtypes": [
+            "bit_xor_trick",
+            "ds_heap_priority_queue",
+            "sliding_window_variable_length"
+          ],
+          "hit": false
+        }
+      ]
+    },
+    "greedy_sorting_order": {
+      "num_queries": 1,
+      "top_k": 3,
+      "all_hit": false,
+      "queries": [
+        {
+          "problem_id": "taco_train_024444__24444",
+          "retrieved_subtypes": [
+            "bit_binary_representation",
+            "math_prime_factorization",
+            "sweep_line_events"
+          ],
+          "hit": false
+        }
+      ]
+    },
+    "greedy_two_pointers": {
+      "num_queries": 1,
+      "top_k": 3,
+      "all_hit": true,
+      "queries": [
+        {
+          "problem_id": "taco_train_023296__23296",
+          "retrieved_subtypes": [
+            "bit_binary_representation",
+            "dp_interval",
+            "greedy_two_pointers"
+          ],
+          "hit": true
+        }
+      ]
+    },
+    "search_backtracking": {
+      "num_queries": 1,
+      "top_k": 3,
+      "all_hit": false,
+      "queries": [
+        {
+          "problem_id": "taco_train_019191__19191",
+          "retrieved_subtypes": [
+            "string_rolling_hash",
+            "string_trie",
+            "bit_xor_trick"
+          ],
+          "hit": false
+        }
+      ]
+    },
+    "search_bitmask_enumeration": {
+      "num_queries": 1,
+      "top_k": 3,
+      "all_hit": true,
+      "queries": [
+        {
+          "problem_id": "taco_train_024755__24755",
+          "retrieved_subtypes": [
+            "search_bitmask_enumeration",
+            "sweep_line_events",
+            "bit_xor_trick"
+          ],
+          "hit": true
+        }
+      ]
+    },
+    "search_branch_and_bound": {
+      "num_queries": 1,
+      "top_k": 3,
+      "all_hit": false,
+      "queries": [
+        {
+          "problem_id": "taco_train_025320__25320",
+          "retrieved_subtypes": [
+            "prefix_sum_2d",
+            "dp_interval",
+            "bit_binary_representation"
+          ],
+          "hit": false
+        }
+      ]
+    },
+    "search_permutation_enumeration": {
+      "num_queries": 1,
+      "top_k": 3,
+      "all_hit": false,
+      "queries": [
+        {
+          "problem_id": "taco_train_024454__24454",
+          "retrieved_subtypes": [
+            "greedy_exchange_argument",
+            "ds_heap_priority_queue",
+            "bit_xor_trick"
+          ],
+          "hit": false
+        }
+      ]
+    },
+    "sorting_custom_key": {
+      "num_queries": 1,
+      "top_k": 3,
+      "all_hit": false,
+      "queries": [
+        {
+          "problem_id": "taco_train_025279__25279",
+          "retrieved_subtypes": [
+            "binary_search_lower_upper_bound",
+            "coordinate_compression",
+            "ds_heap_priority_queue"
+          ],
+          "hit": false
+        }
+      ]
+    }
+  }
+}

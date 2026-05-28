@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "none", "confidence": 0.95, "core_composition_summary": "The solution uses a single greedy backward scan, no multi-mechanism composition.", "rationale": "The code implements a single greedy pass with no DP or sorting; it's a standalone algorithm."}}
