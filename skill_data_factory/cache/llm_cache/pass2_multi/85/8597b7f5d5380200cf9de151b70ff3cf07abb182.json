@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 1.0, "core_composition_summary": "Simple math formula, not a composition of multiple algorithm mechanisms.", "rationale": "The code directly calculates X and Y using algebraic relations without DP or greedy steps."}}

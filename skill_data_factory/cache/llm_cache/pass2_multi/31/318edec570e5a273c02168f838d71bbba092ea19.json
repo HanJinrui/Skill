@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.9, "core_composition_summary": "Simple BFS traversal with counting; no multi-mechanism.", "rationale": "Solution uses a single BFS to compute height parity and leaf counts; no composition of multiple algorithm families."}}

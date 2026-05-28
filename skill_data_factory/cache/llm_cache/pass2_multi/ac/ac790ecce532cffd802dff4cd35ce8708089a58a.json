@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 1.0, "core_composition_summary": "Simple sorting with no composition of multiple algorithmic mechanisms.", "rationale": "The solution uses a single sorting algorithm and a list; no coordinated multi-mechanism pattern."}}

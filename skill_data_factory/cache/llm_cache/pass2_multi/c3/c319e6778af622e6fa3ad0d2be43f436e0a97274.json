@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 1.0, "core_composition_summary": "Simple complete search over subsets using bitmask enumeration.", "rationale": "The solution iterates all 2^n subsets via bitmask, selects those within budget, and tracks max weight. Only one mechanism."}}

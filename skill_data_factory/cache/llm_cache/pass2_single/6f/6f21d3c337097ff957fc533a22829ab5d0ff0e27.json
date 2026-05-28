@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "sorting_custom_key", "confidence": 0.7, "core_mechanism_summary": "Sorts unique elements and picks the second one.", "rationale": "Uses sorting to arrange unique elements; no custom key but sorting is the core operation.", "family_mismatch": true, "is_true_composition": false}}

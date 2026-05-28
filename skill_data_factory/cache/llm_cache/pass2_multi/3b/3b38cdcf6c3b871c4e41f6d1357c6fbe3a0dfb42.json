@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 1.0, "core_composition_summary": "Single mathematical rule: T wins if sum odd or max > half sum, else HL wins.", "rationale": "Solution uses a direct parity and maximum condition, not any algorithmic mechanism like greedy or complete search."}}

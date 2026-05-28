@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "bit_binary_representation", "confidence": 0.8, "core_mechanism_summary": "Counts set bits in XOR to determine number of valid (a,b) pairs using bitwise independence.", "rationale": "Solution uses bitwise AND, shift, popcount; no DP or memoization. Pure math based on binary representation.", "family_mismatch": true, "is_true_composition": false}}

@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "bit_xor_trick", "confidence": 0.9, "core_mechanism_summary": "Parse hex strings to ints, XOR them, format back to hex with zero-padding to min length.", "rationale": "Solution uses XOR operator on integer values after converting from hex, which is a direct application of bitwise XOR.", "family_mismatch": false, "is_true_composition": false}}

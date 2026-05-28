@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 1.0, "core_composition_summary": "Simple greedy iteration; no multi-mechanism composition.", "rationale": "Solution uses a single while loop to accumulate problem-solving time; no sorting or complete search components are involved."}}

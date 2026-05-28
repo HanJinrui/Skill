@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.9, "core_composition_summary": "Sorting groups identical values, then greedy cyclic assignment with truncation for balance.", "rationale": "Primarily greedy assignment with sorting as preprocessing; no multiple coordinated mechanisms."}}

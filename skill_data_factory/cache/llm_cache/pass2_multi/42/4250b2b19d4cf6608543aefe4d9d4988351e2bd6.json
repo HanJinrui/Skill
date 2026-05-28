@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 1.0, "core_composition_summary": "Direct mathematical formula, no composition.", "rationale": "Solution computes answer in O(1) using derived closed form; only one mechanism."}}

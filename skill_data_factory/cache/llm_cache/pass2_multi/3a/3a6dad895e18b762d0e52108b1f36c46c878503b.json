@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Sort then brute-force subarray scan", "rationale": "Sorting is preprocessing; nested loops exhaustively search for longest valid subarray. No coordinated multi-mechanism."}}

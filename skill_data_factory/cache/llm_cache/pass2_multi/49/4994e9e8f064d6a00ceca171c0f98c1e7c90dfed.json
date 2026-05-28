@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Single greedy algorithm: sort arrays and binary search for pairs.", "rationale": "The solution uses a standard greedy matching with sorting, no distinct coordinated mechanisms."}}

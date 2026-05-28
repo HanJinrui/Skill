@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.9, "core_composition_summary": "Sort prices then binary search per query.", "rationale": "Only sorting from candidates; binary search not listed. No DP."}}

@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": 0, "confidence": 0.95, "core_composition_summary": "Simulation of merging process using priority queues and hashmap.", "rationale": "Only one primary mechanism: event-driven simulation with priority queues. No second distinct algorithmic family."}}

@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Sweep line on sorted closed list to find nearest open floor.", "rationale": "Uses sorting and linear scan; no second distinct algorithmic family involved. It is a single mechanism."}}

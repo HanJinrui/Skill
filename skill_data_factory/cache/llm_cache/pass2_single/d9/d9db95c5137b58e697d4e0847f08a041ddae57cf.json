@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "dp_2d_state", "confidence": 1.0, "core_mechanism_summary": "DP on grid: dp[i][j] = min(dp[i+1][j-1:j+2]) + 1 if '*' else 0; answer sum of dp.", "rationale": "Uses a 2D DP array to compute max spruce height per cell by aggregating bottom row cells, typical grid DP.", "family_mismatch": false, "is_true_composition": false}}

@@ -1,0 +1,10 @@
+pydantic>=2.7.0
+PyYAML>=6.0.0
+python-dotenv>=1.0.0
+openai>=1.0.0
+numpy>=1.26.0
+sentence-transformers>=3.0.0
+transformers>=4.46.0
+accelerate>=1.0.0
+torch>=2.1.0
+pytest>=8.0.0

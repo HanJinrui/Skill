@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Simple brute-force enumeration of function definitions for each call.", "rationale": "Only one mechanism: iterative complete search over all function definitions, no sorting or other algorithm."}}

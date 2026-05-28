@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Greedy edge addition connecting components using two-pointer scan", "rationale": "Single greedy mechanism; union-find is only a data structure, not a separate algorithm family."}}

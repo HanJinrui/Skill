@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 1.0, "core_composition_summary": "Sorting and two-pointer sweep to count points by coverage", "rationale": "Solution uses only sorting of endpoints and a linear sweep; no other distinct mechanism like data structures or binary search."}}

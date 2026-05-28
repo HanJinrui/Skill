@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 1.0, "core_composition_summary": "Single greedy condition: 'NO' if first '11' occurs before last '00', else 'YES'.", "rationale": "The solution uses one observation, not multiple coordinated mechanisms."}}

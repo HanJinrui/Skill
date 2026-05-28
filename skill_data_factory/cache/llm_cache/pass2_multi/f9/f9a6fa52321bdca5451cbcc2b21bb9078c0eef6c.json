@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "The solution uses a single DP on tree (post-order DFS) to compute optimal values.", "rationale": "No coordination of multiple distinct algorithm families; only DP on tree via DFS."}}

@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": null, "confidence": 1.0, "core_composition_summary": "Two-pointer sliding window to count triplets where max distance <= d, amortized O(n).", "rationale": "Uses only a monotonic two-pointer technique; no sorting or other mechanisms combined."}}

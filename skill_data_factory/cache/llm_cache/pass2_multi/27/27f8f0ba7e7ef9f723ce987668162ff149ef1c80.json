@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.9, "core_composition_summary": "Dijkstra shortest path with waiting time adjustment.", "rationale": "Core algorithm is Dijkstra with a min-heap. The waiting time handling is a simple loop over a list, not a distinct mechanism."}}

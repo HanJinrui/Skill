@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Single mechanism: bitmask for set intersection check.", "rationale": "Only uses integer bitmask and AND to check common friends. No other data structure or algorithm component. Not a composition."}}

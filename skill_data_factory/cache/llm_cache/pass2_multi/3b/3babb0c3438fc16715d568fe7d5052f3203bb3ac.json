@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.9, "core_composition_summary": "Greedy selection by (depth - subtree size).", "rationale": "The algorithm is a single greedy strategy; sorting and BFS are preprocessing, not distinct algorithm families."}}

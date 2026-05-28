@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "none", "confidence": 0.95, "core_composition_summary": "Single greedy matching optimization", "rationale": "Solution uses frequency counting and a greedy step, no multi-mechanism coordination."}}

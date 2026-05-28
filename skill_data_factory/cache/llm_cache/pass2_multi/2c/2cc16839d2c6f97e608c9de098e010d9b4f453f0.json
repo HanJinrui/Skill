@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": null, "confidence": 1.0, "core_composition_summary": "Iterative simulation using a deque as a sliding window.", "rationale": "Only uses one data structure (deque) and a simple loop; no multiple distinct algorithmic mechanisms."}}

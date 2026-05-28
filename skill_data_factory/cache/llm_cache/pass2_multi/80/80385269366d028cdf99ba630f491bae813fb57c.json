@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": ["dynamic_programming"], "composition_subtypes": [], "composition_order": [], "confidence": 1.0, "core_composition_summary": "Single DP with two states (previous hungry/fed).", "rationale": "Solution uses only dynamic programming with 1D state; no greedy or other mechanisms."}}

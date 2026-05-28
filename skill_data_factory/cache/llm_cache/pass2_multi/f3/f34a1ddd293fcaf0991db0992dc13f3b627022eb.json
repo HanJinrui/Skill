@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "DFS tree traversal computes depth and diameter, then simple win condition.", "rationale": "Only one mechanism: DFS graph search (complete search). No DP or other coordinated algorithms."}}

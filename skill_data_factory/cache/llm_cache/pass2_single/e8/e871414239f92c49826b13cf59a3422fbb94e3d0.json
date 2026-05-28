@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "search_backtracking", "confidence": 0.2, "core_mechanism_summary": "Greedy left-to-right column selection: keep column if adding it keeps rows sorted, else remove.", "rationale": "Code uses simple greedy, not backtracking; selected as least mismatched from given subtypes per rule's hint.", "family_mismatch": true, "is_true_composition": false}}

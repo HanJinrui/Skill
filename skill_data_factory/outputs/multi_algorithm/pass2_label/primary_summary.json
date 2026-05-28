@@ -1,0 +1,42 @@
+{
+  "track": "multi_algorithm",
+  "primary_count": 260,
+  "subtype_or_key_counts": {
+    "greedy_algorithms+sorting": 80,
+    "data_structures+sorting": 23,
+    "amortized_analysis+sorting": 22,
+    "dynamic_programming+sorting": 21,
+    "complete_search+sorting": 13,
+    "data_structures+greedy_algorithms": 13,
+    "bit_manipulation+complete_search": 9,
+    "data_structures+dynamic_programming": 7,
+    "greedy_algorithms": 7,
+    "dynamic_programming+greedy_algorithms": 6,
+    "sorting": 5,
+    "data_structures+greedy_algorithms+sorting": 5,
+    "dynamic_programming": 4,
+    "amortized_analysis+greedy_algorithms+sorting": 4,
+    "data_structures": 4,
+    "amortized_analysis+data_structures": 4,
+    "amortized_analysis+dynamic_programming": 4,
+    "complete_search+dynamic_programming": 4,
+    "bit_manipulation+greedy_algorithms": 3,
+    "bit_manipulation+dynamic_programming": 3,
+    "amortized_analysis+greedy_algorithms": 3,
+    "complete_search+greedy_algorithms+sorting": 2,
+    "amortized_analysis+data_structures+sorting": 2,
+    "dynamic_programming+greedy_algorithms+sorting": 2,
+    "complete_search+greedy_algorithms": 2,
+    "amortized_analysis": 2,
+    "bit_manipulation+data_structures+greedy_algorithms": 1,
+    "data_structures+dynamic_programming+greedy_algorithms": 1,
+    "bit_manipulation+dynamic_programming+greedy_algorithms": 1,
+    "bit_manipulation+sorting": 1,
+    "complete_search": 1,
+    "data_structures+dynamic_programming+sorting": 1
+  },
+  "tier_counts": {
+    "gold": 257,
+    "silver": 3
+  }
+}

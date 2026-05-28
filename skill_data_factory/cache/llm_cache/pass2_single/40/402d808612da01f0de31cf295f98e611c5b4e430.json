@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "sorting_binary_search_answer", "confidence": 0.85, "core_mechanism_summary": "Binary search the max full rounds completed, then simulate remaining visits with a queue.", "rationale": "Uses binary search to find ok where sum(min(ok,a_i)) <= k, reducing simulation steps; no sorting.", "family_mismatch": false, "is_true_composition": false}}

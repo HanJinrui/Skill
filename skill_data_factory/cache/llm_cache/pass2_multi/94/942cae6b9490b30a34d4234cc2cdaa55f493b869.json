@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 1.0, "core_composition_summary": "Uses hash map to count substrings and find shortest unique per number.", "rationale": "Single dictionary-based approach; no sorting or other data structures involved in a coordinated way."}}

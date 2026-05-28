@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "dp_1d_state", "confidence": 0.95, "core_mechanism_summary": "Iteratively accumulate numerator and denominator from recurrence for expected days, using modular arithmetic.", "rationale": "Solves linear recurrence by maintaining cumulative sum and product, equivalent to 1D DP state for f(i).", "family_mismatch": false, "is_true_composition": false}}

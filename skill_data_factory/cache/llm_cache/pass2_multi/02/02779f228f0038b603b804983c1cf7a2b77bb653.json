@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Single DP-on-tree algorithm with minor sorting within state transition.", "rationale": "Sorting is an auxiliary step within DP, not a separate coordinated mechanism."}}

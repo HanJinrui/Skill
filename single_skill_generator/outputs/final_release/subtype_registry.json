@@ -1,0 +1,1996 @@
+{
+  "version": "subtype_registry_v3",
+  "aliases": {
+    "ds_union_find": "ds_disjoint_set_union",
+    "union_find": "ds_disjoint_set_union",
+    "dsu": "ds_disjoint_set_union",
+    "connected_components_dynamic": "ds_disjoint_set_union",
+    "range_fenwick_tree": "ds_fenwick_tree",
+    "binary_indexed_tree": "ds_fenwick_tree",
+    "fenwick_tree": "ds_fenwick_tree",
+    "range_segment_tree": "ds_segment_tree",
+    "segment_tree": "ds_segment_tree",
+    "ds_stack_monotonic": "ds_monotonic_stack",
+    "amortized_monotonic_queue": "ds_monotonic_queue",
+    "range_difference_array": "difference_array",
+    "sorting_sweep_line": "sweep_line_events",
+    "sorting_binary_search_answer": "binary_search_on_answer",
+    "binary_search_answer": "binary_search_on_answer",
+    "binary_search": "binary_search_lower_upper_bound",
+    "kmp": "string_kmp_prefix_function",
+    "prefix_function": "string_kmp_prefix_function",
+    "z_algorithm": "string_z_algorithm",
+    "z_function": "string_z_algorithm",
+    "trie": "string_trie",
+    "rolling_hash": "string_rolling_hash",
+    "dp_bitmask": "dp_bitmask_subset",
+    "bit_bitmask_dp": "dp_bitmask_subset",
+    "sliding_window": "sliding_window_variable_length",
+    "fixed_length_sliding_window": "sliding_window_fixed_length"
+  },
+  "entries": {
+    "binary_search_lower_upper_bound": {
+      "canonical_subtype": "binary_search_lower_upper_bound",
+      "alias_subtypes": [
+        "binary_search"
+      ],
+      "algorithm_family": "binary_search",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "binary_search_on_answer": {
+      "canonical_subtype": "binary_search_on_answer",
+      "alias_subtypes": [
+        "binary_search_answer",
+        "sorting_binary_search_answer"
+      ],
+      "algorithm_family": "binary_search",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "bit_binary_representation": {
+      "canonical_subtype": "bit_binary_representation",
+      "alias_subtypes": [],
+      "algorithm_family": "bit_manipulation",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "bit_xor_trick": {
+      "canonical_subtype": "bit_xor_trick",
+      "alias_subtypes": [],
+      "algorithm_family": "bit_manipulation",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "coordinate_compression": {
+      "canonical_subtype": "coordinate_compression",
+      "alias_subtypes": [],
+      "algorithm_family": "discretization",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "difference_array": {
+      "canonical_subtype": "difference_array",
+      "alias_subtypes": [
+        "range_difference_array"
+      ],
+      "algorithm_family": "range_queries",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "dp_1d_state": {
+      "canonical_subtype": "dp_1d_state",
+      "alias_subtypes": [],
+      "algorithm_family": "dynamic_programming",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "dp_2d_state": {
+      "canonical_subtype": "dp_2d_state",
+      "alias_subtypes": [],
+      "algorithm_family": "dynamic_programming",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "dp_bitmask_subset": {
+      "canonical_subtype": "dp_bitmask_subset",
+      "alias_subtypes": [
+        "bit_bitmask_dp",
+        "dp_bitmask"
+      ],
+      "algorithm_family": "dynamic_programming",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "dp_counting_combinatorics": {
+      "canonical_subtype": "dp_counting_combinatorics",
+      "alias_subtypes": [],
+      "algorithm_family": "dynamic_programming",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "dp_digit": {
+      "canonical_subtype": "dp_digit",
+      "alias_subtypes": [],
+      "algorithm_family": "dynamic_programming",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "dp_grid_path": {
+      "canonical_subtype": "dp_grid_path",
+      "alias_subtypes": [],
+      "algorithm_family": "dynamic_programming",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "dp_interval": {
+      "canonical_subtype": "dp_interval",
+      "alias_subtypes": [],
+      "algorithm_family": "dynamic_programming",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "dp_knapsack": {
+      "canonical_subtype": "dp_knapsack",
+      "alias_subtypes": [],
+      "algorithm_family": "dynamic_programming",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "dp_lis": {
+      "canonical_subtype": "dp_lis",
+      "alias_subtypes": [],
+      "algorithm_family": "dynamic_programming",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "dp_memoized_recursion": {
+      "canonical_subtype": "dp_memoized_recursion",
+      "alias_subtypes": [],
+      "algorithm_family": "dynamic_programming",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "dp_tree": {
+      "canonical_subtype": "dp_tree",
+      "alias_subtypes": [],
+      "algorithm_family": "dynamic_programming",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "ds_disjoint_set_union": {
+      "canonical_subtype": "ds_disjoint_set_union",
+      "alias_subtypes": [
+        "connected_components_dynamic",
+        "ds_union_find",
+        "dsu",
+        "union_find"
+      ],
+      "algorithm_family": "data_structures",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "ds_fenwick_tree": {
+      "canonical_subtype": "ds_fenwick_tree",
+      "alias_subtypes": [
+        "binary_indexed_tree",
+        "fenwick_tree",
+        "range_fenwick_tree"
+      ],
+      "algorithm_family": "data_structures",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "ds_hash_map": {
+      "canonical_subtype": "ds_hash_map",
+      "alias_subtypes": [],
+      "algorithm_family": "data_structures",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "ds_heap_priority_queue": {
+      "canonical_subtype": "ds_heap_priority_queue",
+      "alias_subtypes": [],
+      "algorithm_family": "data_structures",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "ds_monotonic_queue": {
+      "canonical_subtype": "ds_monotonic_queue",
+      "alias_subtypes": [
+        "amortized_monotonic_queue"
+      ],
+      "algorithm_family": "data_structures",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "ds_monotonic_stack": {
+      "canonical_subtype": "ds_monotonic_stack",
+      "alias_subtypes": [
+        "ds_stack_monotonic"
+      ],
+      "algorithm_family": "data_structures",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "ds_segment_tree": {
+      "canonical_subtype": "ds_segment_tree",
+      "alias_subtypes": [
+        "range_segment_tree",
+        "segment_tree"
+      ],
+      "algorithm_family": "data_structures",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "graph_bfs_shortest_path_unweighted": {
+      "canonical_subtype": "graph_bfs_shortest_path_unweighted",
+      "alias_subtypes": [],
+      "algorithm_family": "graph_algorithms",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "graph_bipartite_coloring": {
+      "canonical_subtype": "graph_bipartite_coloring",
+      "alias_subtypes": [],
+      "algorithm_family": "graph_algorithms",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "graph_dfs_components_cycle": {
+      "canonical_subtype": "graph_dfs_components_cycle",
+      "alias_subtypes": [],
+      "algorithm_family": "graph_algorithms",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "graph_dijkstra_shortest_path": {
+      "canonical_subtype": "graph_dijkstra_shortest_path",
+      "alias_subtypes": [],
+      "algorithm_family": "graph_algorithms",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "graph_gcd_mst_dsu": {
+      "canonical_subtype": "graph_gcd_mst_dsu",
+      "alias_subtypes": [
+        "greedy_dsu_gcd_mst"
+      ],
+      "algorithm_family": "graph_composed_optimization",
+      "publication_status": "present",
+      "skill_type": "composed_algorithm"
+    },
+    "graph_mst_kruskal": {
+      "canonical_subtype": "graph_mst_kruskal",
+      "alias_subtypes": [],
+      "algorithm_family": "graph_algorithms",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "graph_topological_sort": {
+      "canonical_subtype": "graph_topological_sort",
+      "alias_subtypes": [],
+      "algorithm_family": "graph_algorithms",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "greedy_exchange_argument": {
+      "canonical_subtype": "greedy_exchange_argument",
+      "alias_subtypes": [],
+      "algorithm_family": "greedy_algorithms",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "greedy_priority_queue": {
+      "canonical_subtype": "greedy_priority_queue",
+      "alias_subtypes": [],
+      "algorithm_family": "greedy_algorithms",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "greedy_sorting_order": {
+      "canonical_subtype": "greedy_sorting_order",
+      "alias_subtypes": [],
+      "algorithm_family": "greedy_algorithms",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "greedy_two_pointers": {
+      "canonical_subtype": "greedy_two_pointers",
+      "alias_subtypes": [],
+      "algorithm_family": "greedy_algorithms",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "math_combinatorics_ncr": {
+      "canonical_subtype": "math_combinatorics_ncr",
+      "alias_subtypes": [],
+      "algorithm_family": "math_algorithms",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "math_gcd_lcm": {
+      "canonical_subtype": "math_gcd_lcm",
+      "alias_subtypes": [],
+      "algorithm_family": "math_algorithms",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "math_inclusion_exclusion": {
+      "canonical_subtype": "math_inclusion_exclusion",
+      "alias_subtypes": [],
+      "algorithm_family": "math_algorithms",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "math_modular_exponentiation": {
+      "canonical_subtype": "math_modular_exponentiation",
+      "alias_subtypes": [],
+      "algorithm_family": "math_algorithms",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "math_prime_factorization": {
+      "canonical_subtype": "math_prime_factorization",
+      "alias_subtypes": [],
+      "algorithm_family": "math_algorithms",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "math_prime_sieve": {
+      "canonical_subtype": "math_prime_sieve",
+      "alias_subtypes": [],
+      "algorithm_family": "math_algorithms",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "prefix_sum_1d": {
+      "canonical_subtype": "prefix_sum_1d",
+      "alias_subtypes": [],
+      "algorithm_family": "range_queries",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "prefix_sum_2d": {
+      "canonical_subtype": "prefix_sum_2d",
+      "alias_subtypes": [],
+      "algorithm_family": "range_queries",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "search_backtracking": {
+      "canonical_subtype": "search_backtracking",
+      "alias_subtypes": [],
+      "algorithm_family": "complete_search",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "search_bitmask_enumeration": {
+      "canonical_subtype": "search_bitmask_enumeration",
+      "alias_subtypes": [],
+      "algorithm_family": "complete_search",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "search_branch_and_bound": {
+      "canonical_subtype": "search_branch_and_bound",
+      "alias_subtypes": [],
+      "algorithm_family": "complete_search",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "search_permutation_enumeration": {
+      "canonical_subtype": "search_permutation_enumeration",
+      "alias_subtypes": [],
+      "algorithm_family": "complete_search",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "sliding_window_fixed_length": {
+      "canonical_subtype": "sliding_window_fixed_length",
+      "alias_subtypes": [
+        "fixed_length_sliding_window"
+      ],
+      "algorithm_family": "two_pointers_sliding_window",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "sliding_window_variable_length": {
+      "canonical_subtype": "sliding_window_variable_length",
+      "alias_subtypes": [
+        "sliding_window"
+      ],
+      "algorithm_family": "two_pointers_sliding_window",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "sorting_custom_key": {
+      "canonical_subtype": "sorting_custom_key",
+      "alias_subtypes": [],
+      "algorithm_family": "sorting",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "string_kmp_prefix_function": {
+      "canonical_subtype": "string_kmp_prefix_function",
+      "alias_subtypes": [
+        "kmp",
+        "prefix_function"
+      ],
+      "algorithm_family": "string_algorithms",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "string_rolling_hash": {
+      "canonical_subtype": "string_rolling_hash",
+      "alias_subtypes": [
+        "rolling_hash"
+      ],
+      "algorithm_family": "string_algorithms",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "string_trie": {
+      "canonical_subtype": "string_trie",
+      "alias_subtypes": [
+        "trie"
+      ],
+      "algorithm_family": "string_algorithms",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "string_z_algorithm": {
+      "canonical_subtype": "string_z_algorithm",
+      "alias_subtypes": [
+        "z_algorithm",
+        "z_function"
+      ],
+      "algorithm_family": "string_algorithms",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "sweep_line_events": {
+      "canonical_subtype": "sweep_line_events",
+      "alias_subtypes": [
+        "sorting_sweep_line"
+      ],
+      "algorithm_family": "sweep_line",
+      "publication_status": "present",
+      "skill_type": "single_algorithm"
+    },
+    "2d_difference_array": {
+      "canonical_subtype": "2d_difference_array",
+      "alias_subtypes": [],
+      "algorithm_family": "2d_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "2d_prefix_sum": {
+      "canonical_subtype": "2d_prefix_sum",
+      "alias_subtypes": [],
+      "algorithm_family": "2d_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "amortized_sliding_window": {
+      "canonical_subtype": "amortized_sliding_window",
+      "alias_subtypes": [],
+      "algorithm_family": "amortized_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "amortized_two_pointers": {
+      "canonical_subtype": "amortized_two_pointers",
+      "alias_subtypes": [],
+      "algorithm_family": "amortized_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "array_longest_increasing_contiguous": {
+      "canonical_subtype": "array_longest_increasing_contiguous",
+      "alias_subtypes": [],
+      "algorithm_family": "array_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "backtracking": {
+      "canonical_subtype": "backtracking",
+      "alias_subtypes": [],
+      "algorithm_family": "backtracking_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "binary_search_on_monotonic_sequence": {
+      "canonical_subtype": "binary_search_on_monotonic_sequence",
+      "alias_subtypes": [],
+      "algorithm_family": "binary_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "binary_search_on_real_answer": {
+      "canonical_subtype": "binary_search_on_real_answer",
+      "alias_subtypes": [],
+      "algorithm_family": "binary_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "binary_search_on_sorted_array": {
+      "canonical_subtype": "binary_search_on_sorted_array",
+      "alias_subtypes": [],
+      "algorithm_family": "binary_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "bit_set_operations": {
+      "canonical_subtype": "bit_set_operations",
+      "alias_subtypes": [],
+      "algorithm_family": "bit_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "bitmask_state_compression_in_games": {
+      "canonical_subtype": "bitmask_state_compression_in_games",
+      "alias_subtypes": [],
+      "algorithm_family": "bitmask_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "bloom_filter": {
+      "canonical_subtype": "bloom_filter",
+      "alias_subtypes": [],
+      "algorithm_family": "bloom_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "border_array": {
+      "canonical_subtype": "border_array",
+      "alias_subtypes": [],
+      "algorithm_family": "border_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "bucket_sort": {
+      "canonical_subtype": "bucket_sort",
+      "alias_subtypes": [],
+      "algorithm_family": "bucket_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "combinatorics_using_formula": {
+      "canonical_subtype": "combinatorics_using_formula",
+      "alias_subtypes": [],
+      "algorithm_family": "combinatorics_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "compressed_trie": {
+      "canonical_subtype": "compressed_trie",
+      "alias_subtypes": [],
+      "algorithm_family": "compressed_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "coordinate_compression_sweep": {
+      "canonical_subtype": "coordinate_compression_sweep",
+      "alias_subtypes": [],
+      "algorithm_family": "coordinate_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "counting_sort": {
+      "canonical_subtype": "counting_sort",
+      "alias_subtypes": [],
+      "algorithm_family": "counting_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "dense_ranking": {
+      "canonical_subtype": "dense_ranking",
+      "alias_subtypes": [],
+      "algorithm_family": "dense_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "dfs_memoization_on_grid": {
+      "canonical_subtype": "dfs_memoization_on_grid",
+      "alias_subtypes": [],
+      "algorithm_family": "dfs_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "difference_array_2d": {
+      "canonical_subtype": "difference_array_2d",
+      "alias_subtypes": [],
+      "algorithm_family": "difference_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "difference_array_with_prefix_sums": {
+      "canonical_subtype": "difference_array_with_prefix_sums",
+      "alias_subtypes": [],
+      "algorithm_family": "difference_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "divide_and_conquer": {
+      "canonical_subtype": "divide_and_conquer",
+      "alias_subtypes": [],
+      "algorithm_family": "divide_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "divide_and_conquer_subarray_problems": {
+      "canonical_subtype": "divide_and_conquer_subarray_problems",
+      "alias_subtypes": [],
+      "algorithm_family": "divide_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "dp_bitmask_knapsack": {
+      "canonical_subtype": "dp_bitmask_knapsack",
+      "alias_subtypes": [],
+      "algorithm_family": "dp_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "dp_bitmask_permutation": {
+      "canonical_subtype": "dp_bitmask_permutation",
+      "alias_subtypes": [],
+      "algorithm_family": "dp_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "dp_bounded_knapsack": {
+      "canonical_subtype": "dp_bounded_knapsack",
+      "alias_subtypes": [],
+      "algorithm_family": "dp_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "dp_coin_change": {
+      "canonical_subtype": "dp_coin_change",
+      "alias_subtypes": [],
+      "algorithm_family": "dp_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "dp_digit_counting": {
+      "canonical_subtype": "dp_digit_counting",
+      "alias_subtypes": [],
+      "algorithm_family": "dp_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "dp_digit_mask": {
+      "canonical_subtype": "dp_digit_mask",
+      "alias_subtypes": [],
+      "algorithm_family": "dp_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "dp_digit_modulo": {
+      "canonical_subtype": "dp_digit_modulo",
+      "alias_subtypes": [],
+      "algorithm_family": "dp_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "dp_digit_product": {
+      "canonical_subtype": "dp_digit_product",
+      "alias_subtypes": [],
+      "algorithm_family": "dp_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "dp_fractional_knapsack": {
+      "canonical_subtype": "dp_fractional_knapsack",
+      "alias_subtypes": [],
+      "algorithm_family": "dp_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "dp_grid_min_max_path": {
+      "canonical_subtype": "dp_grid_min_max_path",
+      "alias_subtypes": [],
+      "algorithm_family": "dp_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "dp_grid_multi_source": {
+      "canonical_subtype": "dp_grid_multi_source",
+      "alias_subtypes": [],
+      "algorithm_family": "dp_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "dp_grid_with_cost": {
+      "canonical_subtype": "dp_grid_with_cost",
+      "alias_subtypes": [],
+      "algorithm_family": "dp_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "dp_grid_with_variable_step_size": {
+      "canonical_subtype": "dp_grid_with_variable_step_size",
+      "alias_subtypes": [],
+      "algorithm_family": "dp_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "dp_knapsack_with_dependencies": {
+      "canonical_subtype": "dp_knapsack_with_dependencies",
+      "alias_subtypes": [],
+      "algorithm_family": "dp_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "dp_lcs": {
+      "canonical_subtype": "dp_lcs",
+      "alias_subtypes": [],
+      "algorithm_family": "dp_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "dp_lis_2d": {
+      "canonical_subtype": "dp_lis_2d",
+      "alias_subtypes": [],
+      "algorithm_family": "dp_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "dp_lis_count": {
+      "canonical_subtype": "dp_lis_count",
+      "alias_subtypes": [],
+      "algorithm_family": "dp_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "dp_lis_reconstruction": {
+      "canonical_subtype": "dp_lis_reconstruction",
+      "alias_subtypes": [],
+      "algorithm_family": "dp_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "dp_lis_with_requirement_to_output_sequence": {
+      "canonical_subtype": "dp_lis_with_requirement_to_output_sequence",
+      "alias_subtypes": [],
+      "algorithm_family": "dp_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "dp_lnds": {
+      "canonical_subtype": "dp_lnds",
+      "alias_subtypes": [],
+      "algorithm_family": "dp_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "dp_multiple_knapsack": {
+      "canonical_subtype": "dp_multiple_knapsack",
+      "alias_subtypes": [],
+      "algorithm_family": "dp_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "dp_on_general_dag": {
+      "canonical_subtype": "dp_on_general_dag",
+      "alias_subtypes": [],
+      "algorithm_family": "dp_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "dp_on_graphs": {
+      "canonical_subtype": "dp_on_graphs",
+      "alias_subtypes": [],
+      "algorithm_family": "dp_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "dp_over_subsets_with_last_element": {
+      "canonical_subtype": "dp_over_subsets_with_last_element",
+      "alias_subtypes": [],
+      "algorithm_family": "dp_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "dp_prefix_sum": {
+      "canonical_subtype": "dp_prefix_sum",
+      "alias_subtypes": [],
+      "algorithm_family": "dp_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "dp_sos": {
+      "canonical_subtype": "dp_sos",
+      "alias_subtypes": [],
+      "algorithm_family": "dp_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "dp_subset_sum": {
+      "canonical_subtype": "dp_subset_sum",
+      "alias_subtypes": [],
+      "algorithm_family": "dp_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "dp_unbounded_knapsack": {
+      "canonical_subtype": "dp_unbounded_knapsack",
+      "alias_subtypes": [],
+      "algorithm_family": "dp_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "ds_balanced_bst": {
+      "canonical_subtype": "ds_balanced_bst",
+      "alias_subtypes": [],
+      "algorithm_family": "ds_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "ds_bit_2d": {
+      "canonical_subtype": "ds_bit_2d",
+      "alias_subtypes": [],
+      "algorithm_family": "ds_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "ds_deque_tricks": {
+      "canonical_subtype": "ds_deque_tricks",
+      "alias_subtypes": [],
+      "algorithm_family": "ds_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "ds_difference_array": {
+      "canonical_subtype": "ds_difference_array",
+      "alias_subtypes": [],
+      "algorithm_family": "ds_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "ds_dynamic_connectivity": {
+      "canonical_subtype": "ds_dynamic_connectivity",
+      "alias_subtypes": [],
+      "algorithm_family": "ds_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "ds_fenwick_tree_2d": {
+      "canonical_subtype": "ds_fenwick_tree_2d",
+      "alias_subtypes": [],
+      "algorithm_family": "ds_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "ds_heap_sliding_window": {
+      "canonical_subtype": "ds_heap_sliding_window",
+      "alias_subtypes": [],
+      "algorithm_family": "ds_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "ds_lazy_segment_tree": {
+      "canonical_subtype": "ds_lazy_segment_tree",
+      "alias_subtypes": [],
+      "algorithm_family": "ds_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "ds_monotonic_stack_2d_variant": {
+      "canonical_subtype": "ds_monotonic_stack_2d_variant",
+      "alias_subtypes": [],
+      "algorithm_family": "ds_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "ds_monotonic_stack_circular_array": {
+      "canonical_subtype": "ds_monotonic_stack_circular_array",
+      "alias_subtypes": [],
+      "algorithm_family": "ds_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "ds_monotonic_stack_next_smaller": {
+      "canonical_subtype": "ds_monotonic_stack_next_smaller",
+      "alias_subtypes": [],
+      "algorithm_family": "ds_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "ds_monotonic_stack_previous_greater": {
+      "canonical_subtype": "ds_monotonic_stack_previous_greater",
+      "alias_subtypes": [],
+      "algorithm_family": "ds_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "ds_monotonic_stack_previous_smaller": {
+      "canonical_subtype": "ds_monotonic_stack_previous_smaller",
+      "alias_subtypes": [],
+      "algorithm_family": "ds_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "ds_ordered_set": {
+      "canonical_subtype": "ds_ordered_set",
+      "alias_subtypes": [],
+      "algorithm_family": "ds_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "ds_persistent_union_find": {
+      "canonical_subtype": "ds_persistent_union_find",
+      "alias_subtypes": [],
+      "algorithm_family": "ds_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "ds_prefix_sum": {
+      "canonical_subtype": "ds_prefix_sum",
+      "alias_subtypes": [],
+      "algorithm_family": "ds_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "ds_prefix_sums": {
+      "canonical_subtype": "ds_prefix_sums",
+      "alias_subtypes": [],
+      "algorithm_family": "ds_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "ds_queue_deque": {
+      "canonical_subtype": "ds_queue_deque",
+      "alias_subtypes": [],
+      "algorithm_family": "ds_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "ds_segment_tree_2d": {
+      "canonical_subtype": "ds_segment_tree_2d",
+      "alias_subtypes": [],
+      "algorithm_family": "ds_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "ds_segment_tree_lazy": {
+      "canonical_subtype": "ds_segment_tree_lazy",
+      "alias_subtypes": [],
+      "algorithm_family": "ds_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "ds_segment_tree_merging": {
+      "canonical_subtype": "ds_segment_tree_merging",
+      "alias_subtypes": [],
+      "algorithm_family": "ds_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "ds_segment_tree_persistent": {
+      "canonical_subtype": "ds_segment_tree_persistent",
+      "alias_subtypes": [],
+      "algorithm_family": "ds_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "ds_sliding_window": {
+      "canonical_subtype": "ds_sliding_window",
+      "alias_subtypes": [],
+      "algorithm_family": "ds_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "ds_sparse_table": {
+      "canonical_subtype": "ds_sparse_table",
+      "alias_subtypes": [],
+      "algorithm_family": "ds_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "ds_sparse_table_2d": {
+      "canonical_subtype": "ds_sparse_table_2d",
+      "alias_subtypes": [],
+      "algorithm_family": "ds_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "ds_stack_simple": {
+      "canonical_subtype": "ds_stack_simple",
+      "alias_subtypes": [],
+      "algorithm_family": "ds_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "ds_two_pointers": {
+      "canonical_subtype": "ds_two_pointers",
+      "alias_subtypes": [],
+      "algorithm_family": "ds_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "ds_union_find_with_rollback": {
+      "canonical_subtype": "ds_union_find_with_rollback",
+      "alias_subtypes": [],
+      "algorithm_family": "ds_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "dynamic_programming": {
+      "canonical_subtype": "dynamic_programming",
+      "alias_subtypes": [],
+      "algorithm_family": "dynamic_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "dynamic_programming_on_subarrays": {
+      "canonical_subtype": "dynamic_programming_on_subarrays",
+      "alias_subtypes": [],
+      "algorithm_family": "dynamic_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "exponential_search": {
+      "canonical_subtype": "exponential_search",
+      "alias_subtypes": [],
+      "algorithm_family": "exponential_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "finite_state_machine": {
+      "canonical_subtype": "finite_state_machine",
+      "alias_subtypes": [],
+      "algorithm_family": "finite_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "floodfill": {
+      "canonical_subtype": "floodfill",
+      "alias_subtypes": [],
+      "algorithm_family": "floodfill_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "graph_0_1_bfs": {
+      "canonical_subtype": "graph_0_1_bfs",
+      "alias_subtypes": [],
+      "algorithm_family": "graph_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "graph_a_star": {
+      "canonical_subtype": "graph_a_star",
+      "alias_subtypes": [],
+      "algorithm_family": "graph_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "graph_bellman_ford": {
+      "canonical_subtype": "graph_bellman_ford",
+      "alias_subtypes": [],
+      "algorithm_family": "graph_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "graph_bfs_components_cycle": {
+      "canonical_subtype": "graph_bfs_components_cycle",
+      "alias_subtypes": [],
+      "algorithm_family": "graph_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "graph_bfs_shortest_path": {
+      "canonical_subtype": "graph_bfs_shortest_path",
+      "alias_subtypes": [],
+      "algorithm_family": "graph_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "graph_bfs_traversal": {
+      "canonical_subtype": "graph_bfs_traversal",
+      "alias_subtypes": [],
+      "algorithm_family": "graph_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "graph_bidirectional_bfs": {
+      "canonical_subtype": "graph_bidirectional_bfs",
+      "alias_subtypes": [],
+      "algorithm_family": "graph_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "graph_bipartite_check": {
+      "canonical_subtype": "graph_bipartite_check",
+      "alias_subtypes": [],
+      "algorithm_family": "graph_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "graph_bipartite_matching": {
+      "canonical_subtype": "graph_bipartite_matching",
+      "alias_subtypes": [],
+      "algorithm_family": "graph_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "graph_connected_components": {
+      "canonical_subtype": "graph_connected_components",
+      "alias_subtypes": [],
+      "algorithm_family": "graph_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "graph_count_paths_dag": {
+      "canonical_subtype": "graph_count_paths_dag",
+      "alias_subtypes": [],
+      "algorithm_family": "graph_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "graph_cycle_detection": {
+      "canonical_subtype": "graph_cycle_detection",
+      "alias_subtypes": [],
+      "algorithm_family": "graph_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "graph_dfs": {
+      "canonical_subtype": "graph_dfs",
+      "alias_subtypes": [],
+      "algorithm_family": "graph_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "graph_dfs_components": {
+      "canonical_subtype": "graph_dfs_components",
+      "alias_subtypes": [],
+      "algorithm_family": "graph_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "graph_dfs_cycle_detection_directed": {
+      "canonical_subtype": "graph_dfs_cycle_detection_directed",
+      "alias_subtypes": [],
+      "algorithm_family": "graph_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "graph_dfs_general": {
+      "canonical_subtype": "graph_dfs_general",
+      "alias_subtypes": [],
+      "algorithm_family": "graph_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "graph_dijkstra_shortest_path_weighted": {
+      "canonical_subtype": "graph_dijkstra_shortest_path_weighted",
+      "alias_subtypes": [],
+      "algorithm_family": "graph_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "graph_dp_on_dag": {
+      "canonical_subtype": "graph_dp_on_dag",
+      "alias_subtypes": [],
+      "algorithm_family": "graph_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "graph_find_all_cycles": {
+      "canonical_subtype": "graph_find_all_cycles",
+      "alias_subtypes": [],
+      "algorithm_family": "graph_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "graph_floyd_warshall": {
+      "canonical_subtype": "graph_floyd_warshall",
+      "alias_subtypes": [],
+      "algorithm_family": "graph_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "graph_k_coloring": {
+      "canonical_subtype": "graph_k_coloring",
+      "alias_subtypes": [],
+      "algorithm_family": "graph_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "graph_longest_path": {
+      "canonical_subtype": "graph_longest_path",
+      "alias_subtypes": [],
+      "algorithm_family": "graph_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "graph_maximum_matching": {
+      "canonical_subtype": "graph_maximum_matching",
+      "alias_subtypes": [],
+      "algorithm_family": "graph_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "graph_maximum_spanning_tree": {
+      "canonical_subtype": "graph_maximum_spanning_tree",
+      "alias_subtypes": [],
+      "algorithm_family": "graph_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "graph_minimum_bottleneck_spanning_tree": {
+      "canonical_subtype": "graph_minimum_bottleneck_spanning_tree",
+      "alias_subtypes": [],
+      "algorithm_family": "graph_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "graph_minimum_spanning_forest": {
+      "canonical_subtype": "graph_minimum_spanning_forest",
+      "alias_subtypes": [],
+      "algorithm_family": "graph_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "graph_mst_directed": {
+      "canonical_subtype": "graph_mst_directed",
+      "alias_subtypes": [],
+      "algorithm_family": "graph_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "graph_mst_prim": {
+      "canonical_subtype": "graph_mst_prim",
+      "alias_subtypes": [],
+      "algorithm_family": "graph_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "graph_multi_source_bfs": {
+      "canonical_subtype": "graph_multi_source_bfs",
+      "alias_subtypes": [],
+      "algorithm_family": "graph_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "graph_odd_cycle_detection": {
+      "canonical_subtype": "graph_odd_cycle_detection",
+      "alias_subtypes": [],
+      "algorithm_family": "graph_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "graph_prim_mst": {
+      "canonical_subtype": "graph_prim_mst",
+      "alias_subtypes": [],
+      "algorithm_family": "graph_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "graph_scc_kosaraju": {
+      "canonical_subtype": "graph_scc_kosaraju",
+      "alias_subtypes": [],
+      "algorithm_family": "graph_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "graph_shortest_path_dag": {
+      "canonical_subtype": "graph_shortest_path_dag",
+      "alias_subtypes": [],
+      "algorithm_family": "graph_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "graph_shortest_path_tree": {
+      "canonical_subtype": "graph_shortest_path_tree",
+      "alias_subtypes": [],
+      "algorithm_family": "graph_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "graph_steiner_tree": {
+      "canonical_subtype": "graph_steiner_tree",
+      "alias_subtypes": [],
+      "algorithm_family": "graph_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "graph_topological_sort_cycle": {
+      "canonical_subtype": "graph_topological_sort_cycle",
+      "alias_subtypes": [],
+      "algorithm_family": "graph_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "graph_traversal_connected_components": {
+      "canonical_subtype": "graph_traversal_connected_components",
+      "alias_subtypes": [],
+      "algorithm_family": "graph_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "graph_two_coloring": {
+      "canonical_subtype": "graph_two_coloring",
+      "alias_subtypes": [],
+      "algorithm_family": "graph_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "graph_union_find_cycle": {
+      "canonical_subtype": "graph_union_find_cycle",
+      "alias_subtypes": [],
+      "algorithm_family": "graph_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "greedy_algorithms": {
+      "canonical_subtype": "greedy_algorithms",
+      "alias_subtypes": [],
+      "algorithm_family": "greedy_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "greedy_interval_scheduling": {
+      "canonical_subtype": "greedy_interval_scheduling",
+      "alias_subtypes": [],
+      "algorithm_family": "greedy_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "hamiltonian_path_dp": {
+      "canonical_subtype": "hamiltonian_path_dp",
+      "alias_subtypes": [],
+      "algorithm_family": "hamiltonian_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "hash_table_set": {
+      "canonical_subtype": "hash_table_set",
+      "alias_subtypes": [],
+      "algorithm_family": "hash_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "hashing_arbitrary_values": {
+      "canonical_subtype": "hashing_arbitrary_values",
+      "alias_subtypes": [],
+      "algorithm_family": "hashing_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "large_text_search": {
+      "canonical_subtype": "large_text_search",
+      "alias_subtypes": [],
+      "algorithm_family": "large_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "lcp_array": {
+      "canonical_subtype": "lcp_array",
+      "alias_subtypes": [],
+      "algorithm_family": "lcp_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "manacher": {
+      "canonical_subtype": "manacher",
+      "alias_subtypes": [],
+      "algorithm_family": "manacher_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "math_all_divisors": {
+      "canonical_subtype": "math_all_divisors",
+      "alias_subtypes": [],
+      "algorithm_family": "math_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "math_combinations": {
+      "canonical_subtype": "math_combinations",
+      "alias_subtypes": [],
+      "algorithm_family": "math_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "math_combinatorics": {
+      "canonical_subtype": "math_combinatorics",
+      "alias_subtypes": [],
+      "algorithm_family": "math_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "math_combinatorics_catalan": {
+      "canonical_subtype": "math_combinatorics_catalan",
+      "alias_subtypes": [],
+      "algorithm_family": "math_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "math_combinatorics_factorial": {
+      "canonical_subtype": "math_combinatorics_factorial",
+      "alias_subtypes": [],
+      "algorithm_family": "math_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "math_combinatorics_ncr_large": {
+      "canonical_subtype": "math_combinatorics_ncr_large",
+      "alias_subtypes": [],
+      "algorithm_family": "math_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "math_combinatorics_ncr_mod": {
+      "canonical_subtype": "math_combinatorics_ncr_mod",
+      "alias_subtypes": [],
+      "algorithm_family": "math_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "math_combinatorics_npr": {
+      "canonical_subtype": "math_combinatorics_npr",
+      "alias_subtypes": [],
+      "algorithm_family": "math_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "math_counting_multiples": {
+      "canonical_subtype": "math_counting_multiples",
+      "alias_subtypes": [],
+      "algorithm_family": "math_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "math_exponentiation_by_squaring": {
+      "canonical_subtype": "math_exponentiation_by_squaring",
+      "alias_subtypes": [],
+      "algorithm_family": "math_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "math_extended_gcd": {
+      "canonical_subtype": "math_extended_gcd",
+      "alias_subtypes": [],
+      "algorithm_family": "math_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "math_fermat_little_theorem": {
+      "canonical_subtype": "math_fermat_little_theorem",
+      "alias_subtypes": [],
+      "algorithm_family": "math_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "math_gcd": {
+      "canonical_subtype": "math_gcd",
+      "alias_subtypes": [],
+      "algorithm_family": "math_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "math_gcd_pairwise": {
+      "canonical_subtype": "math_gcd_pairwise",
+      "alias_subtypes": [],
+      "algorithm_family": "math_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "math_inclusion_exclusion_complement": {
+      "canonical_subtype": "math_inclusion_exclusion_complement",
+      "alias_subtypes": [],
+      "algorithm_family": "math_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "math_inclusion_exclusion_with_mobius": {
+      "canonical_subtype": "math_inclusion_exclusion_with_mobius",
+      "alias_subtypes": [],
+      "algorithm_family": "math_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "math_linear_sieve": {
+      "canonical_subtype": "math_linear_sieve",
+      "alias_subtypes": [],
+      "algorithm_family": "math_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "math_matrix_exponentiation": {
+      "canonical_subtype": "math_matrix_exponentiation",
+      "alias_subtypes": [],
+      "algorithm_family": "math_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "math_modular_addition": {
+      "canonical_subtype": "math_modular_addition",
+      "alias_subtypes": [],
+      "algorithm_family": "math_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "math_modular_arithmetic": {
+      "canonical_subtype": "math_modular_arithmetic",
+      "alias_subtypes": [],
+      "algorithm_family": "math_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "math_modular_inverse": {
+      "canonical_subtype": "math_modular_inverse",
+      "alias_subtypes": [],
+      "algorithm_family": "math_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "math_modular_multiplication": {
+      "canonical_subtype": "math_modular_multiplication",
+      "alias_subtypes": [],
+      "algorithm_family": "math_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "math_modular_multiplicative_inverse": {
+      "canonical_subtype": "math_modular_multiplicative_inverse",
+      "alias_subtypes": [],
+      "algorithm_family": "math_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "math_number_theory": {
+      "canonical_subtype": "math_number_theory",
+      "alias_subtypes": [],
+      "algorithm_family": "math_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "math_number_theory_modular": {
+      "canonical_subtype": "math_number_theory_modular",
+      "alias_subtypes": [],
+      "algorithm_family": "math_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "math_pollard_rho": {
+      "canonical_subtype": "math_pollard_rho",
+      "alias_subtypes": [],
+      "algorithm_family": "math_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "math_power_brute_force": {
+      "canonical_subtype": "math_power_brute_force",
+      "alias_subtypes": [],
+      "algorithm_family": "math_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "math_primality_test": {
+      "canonical_subtype": "math_primality_test",
+      "alias_subtypes": [],
+      "algorithm_family": "math_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "math_primality_test_miller_rabin": {
+      "canonical_subtype": "math_primality_test_miller_rabin",
+      "alias_subtypes": [],
+      "algorithm_family": "math_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "math_prime_generation": {
+      "canonical_subtype": "math_prime_generation",
+      "alias_subtypes": [],
+      "algorithm_family": "math_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "math_prime_segmented_sieve": {
+      "canonical_subtype": "math_prime_segmented_sieve",
+      "alias_subtypes": [],
+      "algorithm_family": "math_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "math_sieve_eratosthenes": {
+      "canonical_subtype": "math_sieve_eratosthenes",
+      "alias_subtypes": [],
+      "algorithm_family": "math_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "math_sieve_for_factorization": {
+      "canonical_subtype": "math_sieve_for_factorization",
+      "alias_subtypes": [],
+      "algorithm_family": "math_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "math_smallest_prime_factor_precomputation": {
+      "canonical_subtype": "math_smallest_prime_factor_precomputation",
+      "alias_subtypes": [],
+      "algorithm_family": "math_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "math_trial_division": {
+      "canonical_subtype": "math_trial_division",
+      "alias_subtypes": [],
+      "algorithm_family": "math_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "meet_in_the_middle": {
+      "canonical_subtype": "meet_in_the_middle",
+      "alias_subtypes": [],
+      "algorithm_family": "meet_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "normalization_by_order": {
+      "canonical_subtype": "normalization_by_order",
+      "alias_subtypes": [],
+      "algorithm_family": "normalization_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "online_range_query": {
+      "canonical_subtype": "online_range_query",
+      "alias_subtypes": [],
+      "algorithm_family": "online_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "order_statistics": {
+      "canonical_subtype": "order_statistics",
+      "alias_subtypes": [],
+      "algorithm_family": "order_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "prefix_hash": {
+      "canonical_subtype": "prefix_hash",
+      "alias_subtypes": [],
+      "algorithm_family": "prefix_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "prefix_sum": {
+      "canonical_subtype": "prefix_sum",
+      "alias_subtypes": [],
+      "algorithm_family": "prefix_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "prefix_sum_3d": {
+      "canonical_subtype": "prefix_sum_3d",
+      "alias_subtypes": [],
+      "algorithm_family": "prefix_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "prefix_sum_array": {
+      "canonical_subtype": "prefix_sum_array",
+      "alias_subtypes": [],
+      "algorithm_family": "prefix_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "prefix_sum_range_query": {
+      "canonical_subtype": "prefix_sum_range_query",
+      "alias_subtypes": [],
+      "algorithm_family": "prefix_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "prefix_sum_with_binary_search": {
+      "canonical_subtype": "prefix_sum_with_binary_search",
+      "alias_subtypes": [],
+      "algorithm_family": "prefix_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "prefix_sum_with_non_invertible_operations": {
+      "canonical_subtype": "prefix_sum_with_non_invertible_operations",
+      "alias_subtypes": [],
+      "algorithm_family": "prefix_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "prefix_xor": {
+      "canonical_subtype": "prefix_xor",
+      "alias_subtypes": [],
+      "algorithm_family": "prefix_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "range_set_update": {
+      "canonical_subtype": "range_set_update",
+      "alias_subtypes": [],
+      "algorithm_family": "range_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "ranking": {
+      "canonical_subtype": "ranking",
+      "alias_subtypes": [],
+      "algorithm_family": "ranking_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "search_dfs_bfs_graph": {
+      "canonical_subtype": "search_dfs_bfs_graph",
+      "alias_subtypes": [],
+      "algorithm_family": "search_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "segment_tree_range_queries": {
+      "canonical_subtype": "segment_tree_range_queries",
+      "alias_subtypes": [],
+      "algorithm_family": "segment_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "shortest_path_bfs": {
+      "canonical_subtype": "shortest_path_bfs",
+      "alias_subtypes": [],
+      "algorithm_family": "shortest_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "sliding_window_2d": {
+      "canonical_subtype": "sliding_window_2d",
+      "alias_subtypes": [],
+      "algorithm_family": "sliding_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "sliding_window_maximum": {
+      "canonical_subtype": "sliding_window_maximum",
+      "alias_subtypes": [],
+      "algorithm_family": "sliding_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "sliding_window_minimum": {
+      "canonical_subtype": "sliding_window_minimum",
+      "alias_subtypes": [],
+      "algorithm_family": "sliding_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "sliding_window_monotonic_queue": {
+      "canonical_subtype": "sliding_window_monotonic_queue",
+      "alias_subtypes": [],
+      "algorithm_family": "sliding_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "sliding_window_with_hashmap": {
+      "canonical_subtype": "sliding_window_with_hashmap",
+      "alias_subtypes": [],
+      "algorithm_family": "sliding_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "sorting_builtin": {
+      "canonical_subtype": "sorting_builtin",
+      "alias_subtypes": [],
+      "algorithm_family": "sorting_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "sparse_table": {
+      "canonical_subtype": "sparse_table",
+      "alias_subtypes": [],
+      "algorithm_family": "sparse_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "sqrt_decomposition": {
+      "canonical_subtype": "sqrt_decomposition",
+      "alias_subtypes": [],
+      "algorithm_family": "sqrt_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "string_aho_corasick": {
+      "canonical_subtype": "string_aho_corasick",
+      "alias_subtypes": [],
+      "algorithm_family": "string_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "string_boyer_moore": {
+      "canonical_subtype": "string_boyer_moore",
+      "alias_subtypes": [],
+      "algorithm_family": "string_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "string_edit_distance": {
+      "canonical_subtype": "string_edit_distance",
+      "alias_subtypes": [],
+      "algorithm_family": "string_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "string_hashing": {
+      "canonical_subtype": "string_hashing",
+      "alias_subtypes": [],
+      "algorithm_family": "string_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "string_kmp_automaton": {
+      "canonical_subtype": "string_kmp_automaton",
+      "alias_subtypes": [],
+      "algorithm_family": "string_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "string_manacher": {
+      "canonical_subtype": "string_manacher",
+      "alias_subtypes": [],
+      "algorithm_family": "string_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "string_minimum_window_substring": {
+      "canonical_subtype": "string_minimum_window_substring",
+      "alias_subtypes": [],
+      "algorithm_family": "string_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "string_rabin_karp": {
+      "canonical_subtype": "string_rabin_karp",
+      "alias_subtypes": [],
+      "algorithm_family": "string_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "string_suffix_array": {
+      "canonical_subtype": "string_suffix_array",
+      "alias_subtypes": [],
+      "algorithm_family": "string_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "string_trie_autocomplete": {
+      "canonical_subtype": "string_trie_autocomplete",
+      "alias_subtypes": [],
+      "algorithm_family": "string_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "string_trie_longest_prefix": {
+      "canonical_subtype": "string_trie_longest_prefix",
+      "alias_subtypes": [],
+      "algorithm_family": "string_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "string_trie_prefix_count": {
+      "canonical_subtype": "string_trie_prefix_count",
+      "alias_subtypes": [],
+      "algorithm_family": "string_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "string_z_function": {
+      "canonical_subtype": "string_z_function",
+      "alias_subtypes": [],
+      "algorithm_family": "string_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "substring_equality": {
+      "canonical_subtype": "substring_equality",
+      "alias_subtypes": [],
+      "algorithm_family": "substring_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "suffix_array": {
+      "canonical_subtype": "suffix_array",
+      "alias_subtypes": [],
+      "algorithm_family": "suffix_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "suffix_automaton": {
+      "canonical_subtype": "suffix_automaton",
+      "alias_subtypes": [],
+      "algorithm_family": "suffix_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "suffix_tree": {
+      "canonical_subtype": "suffix_tree",
+      "alias_subtypes": [],
+      "algorithm_family": "suffix_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "sweep_line_geometric": {
+      "canonical_subtype": "sweep_line_geometric",
+      "alias_subtypes": [],
+      "algorithm_family": "sweep_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "ternary_search": {
+      "canonical_subtype": "ternary_search",
+      "alias_subtypes": [],
+      "algorithm_family": "ternary_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "ternary_search_on_unimodal_function": {
+      "canonical_subtype": "ternary_search_on_unimodal_function",
+      "alias_subtypes": [],
+      "algorithm_family": "ternary_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "tsp_dp": {
+      "canonical_subtype": "tsp_dp",
+      "alias_subtypes": [],
+      "algorithm_family": "tsp_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "two_dimensional_rolling_hash": {
+      "canonical_subtype": "two_dimensional_rolling_hash",
+      "alias_subtypes": [],
+      "algorithm_family": "two_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "two_pointer_sliding_window_variable_length": {
+      "canonical_subtype": "two_pointer_sliding_window_variable_length",
+      "alias_subtypes": [],
+      "algorithm_family": "two_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "two_pointer_sorted_arrays": {
+      "canonical_subtype": "two_pointer_sorted_arrays",
+      "alias_subtypes": [],
+      "algorithm_family": "two_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "two_pointer_technique_for_pairs_in_sorted_array": {
+      "canonical_subtype": "two_pointer_technique_for_pairs_in_sorted_array",
+      "alias_subtypes": [],
+      "algorithm_family": "two_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "two_pointers": {
+      "canonical_subtype": "two_pointers",
+      "alias_subtypes": [],
+      "algorithm_family": "two_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    },
+    "value_remapping_with_arbitrary_function": {
+      "canonical_subtype": "value_remapping_with_arbitrary_function",
+      "alias_subtypes": [],
+      "algorithm_family": "value_planned",
+      "publication_status": "planned",
+      "skill_type": "single_algorithm"
+    }
+  },
+  "unresolved_references": []
+}

@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Simple sorting of odd numbers then merging back.", "rationale": "Only one main mechanism (sorting) with list comprehension; no coordinated multi-mechanism."}}

@@ -1,0 +1,15 @@
+{
+  "bank_version": "bank67_v1",
+  "single_source": "/home/hjr/algo-skill-factory/single_skill_generator/outputs/final_release/single_skill_bank_merged.jsonl",
+  "multi_source": "/home/hjr/algo-skill-factory/multi_skill_generator/outputs/multi_skill_bank.jsonl",
+  "single_sha256": "22ac3bce74f42bfa2cb88c3325cdd93433ee4b9b4c7c2e54cc6a6375ccce00fe",
+  "multi_sha256": "9edf864be9e58ea23e2092449068ca56f19da9d96d2317663252e84e2940d0fe",
+  "single_count": 54,
+  "multi_count": 13,
+  "total_count": 67,
+  "status_counts": {
+    "provisional": 24,
+    "seed": 33,
+    "stable": 10
+  }
+}

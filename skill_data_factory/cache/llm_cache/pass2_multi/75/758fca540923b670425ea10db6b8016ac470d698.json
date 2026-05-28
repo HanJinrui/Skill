@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Not a composition; single bit manipulation trick", "rationale": "The solution only uses bitwise AND on integer row representations to check common friends. No other algorithmic mechanism."}}

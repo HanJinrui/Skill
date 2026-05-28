@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Simple bipartite coloring is not multi-mechanism", "rationale": "Solution uses only bipartite coloring, not complete search or amortized analysis."}}

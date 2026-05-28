@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Greedy monotonic stack to produce lexicographically maximum string with unique characters.", "rationale": "Only one mechanism: greedy exchange argument with stack; no DP or multi-step coordination."}}

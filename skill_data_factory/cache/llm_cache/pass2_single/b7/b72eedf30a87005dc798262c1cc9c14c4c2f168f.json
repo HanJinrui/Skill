@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "bit_binary_representation", "confidence": 0.9, "core_mechanism_summary": "Element-wise bitwise OR with fill value for missing elements.", "rationale": "Uses bitwise OR on pairs from two arrays; zip_longest handles length mismatch.", "family_mismatch": false, "is_true_composition": false}}

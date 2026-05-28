@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": null, "confidence": 1.0, "core_composition_summary": "Greedy fight order by sorting dragons by strength, then sequential check.", "rationale": "Single mechanism: sorting is preprocessing for the greedy algorithm; not a separate coordinated mechanism."}}

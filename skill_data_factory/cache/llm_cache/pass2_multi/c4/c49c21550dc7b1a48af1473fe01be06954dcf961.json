@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.99, "core_composition_summary": "Single linear enumeration over possible number of floors with a derived formula check.", "rationale": "Only a simple for-loop with break; no coordination of multiple algorithm families."}}

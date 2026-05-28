@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "search_backtracking", "confidence": 0.2, "core_mechanism_summary": "Direct formula computing valid count from min/max of corner sums, no search.", "rationale": "Solution uses arithmetic, not backtracking or enumeration; completely mismatches the candidate search subtypes.", "family_mismatch": true, "is_true_composition": false}}

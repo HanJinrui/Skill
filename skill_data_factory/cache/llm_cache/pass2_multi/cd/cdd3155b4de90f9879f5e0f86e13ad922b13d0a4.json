@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.9, "core_composition_summary": "Sorting to build graph edges", "rationale": "Only sorting is in candidate families; Dijkstra is not allowed, so single mechanism."}}

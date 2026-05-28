@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "none", "confidence": 0.95, "core_composition_summary": "Single greedy pass compressing same-sign blocks by max.", "rationale": "Solution uses only one greedy pass over array, no DP or amortized analysis."}}

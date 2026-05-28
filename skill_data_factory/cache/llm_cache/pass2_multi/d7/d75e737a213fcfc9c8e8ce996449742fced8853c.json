@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": null, "confidence": 1.0, "core_composition_summary": "Simple incremental max update with selective full recomputation.", "rationale": "No coordinated multi-mechanism; just one ad-hoc loop maintaining global max."}}

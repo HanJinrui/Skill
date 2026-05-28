@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "search_backtracking", "confidence": 0.1, "core_mechanism_summary": "Precomputed array lookup mapping input index to output value.", "rationale": "The solution uses a fixed array and returns a value based on input, not employing any search or backtracking algorithm.", "family_mismatch": true, "is_true_composition": false}}

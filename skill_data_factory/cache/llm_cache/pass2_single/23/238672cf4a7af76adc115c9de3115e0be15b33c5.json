@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "sorting_custom_key", "confidence": 0.5, "core_mechanism_summary": "Sort array, then iterate incrementing target when element can cover next integer.", "rationale": "Solution uses sorting for greedy mex assignment; no custom key, but this is the best available subtype from the candidates.", "family_mismatch": false, "is_true_composition": false}}

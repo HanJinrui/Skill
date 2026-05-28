@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": ["sorting"], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Sort coordinates then greedy scan based on positive/negative counts", "rationale": "Only one main mechanism: sorting to order points, then a linear pass with counter; no multiple algorithms."}}

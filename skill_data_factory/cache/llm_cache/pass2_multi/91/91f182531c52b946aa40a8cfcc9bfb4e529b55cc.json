@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.9, "core_composition_summary": "Sorting-based sweep line for processing points in order.", "rationale": "The solution only uses sorting and a single pass loop, fitting the sweep line pattern. No multiple coordinated mechanisms."}}

@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": null, "confidence": 1.0, "core_composition_summary": "Single-mechanism: event sorting with custom ordering and linear scan to count overlaps.", "rationale": "Only sorting and a simple linear pass; no coordination of multiple algorithmic mechanisms."}}

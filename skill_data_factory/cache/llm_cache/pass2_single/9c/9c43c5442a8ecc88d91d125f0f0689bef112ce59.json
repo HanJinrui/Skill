@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "dp_1d_state", "confidence": 0.85, "core_mechanism_summary": "DP over prefix length with Z-function to find longest matching substring from previous positions.", "rationale": "State is 1D dp[i], not 2D; Z-function on reversed prefixes helps check substring match for cost b.", "family_mismatch": false, "is_true_composition": false}}

@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Single DP with 2D state (position, finger).", "rationale": "Only one mechanism: dynamic programming with 2D state, no coordination with other algorithms."}}

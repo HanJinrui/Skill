@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": 0, "confidence": 1.0, "core_composition_summary": "Binary search for maximum even y with count checking.", "rationale": "Solution is just binary search on answer with mathematical counting functions; no DP or sorting."}}

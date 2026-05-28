@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Sorting then greedy", "rationale": "Sorts exponents descending, then uses greedy to allocate numbers to minimize absolute difference."}}

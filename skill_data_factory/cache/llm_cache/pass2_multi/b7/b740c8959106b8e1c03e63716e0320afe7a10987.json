@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Greedy selection of gaps to fill using sorted gap lengths.", "rationale": "Solution uses a single greedy algorithm with sorting as a subroutine, not a coordination of multiple distinct algorithmic families."}}

@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 1.0, "core_composition_summary": "Direct mathematical condition based on max pile and parity of total stones.", "rationale": "The solution uses a simple arithmetic check, not multiple algorithmic mechanisms."}}

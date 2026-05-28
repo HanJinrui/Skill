@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 1.0, "core_composition_summary": "Simple greedy selection after sorting possible cuts by cost.", "rationale": "The algorithm sorts potential cut costs and greedily picks the smallest ones. No other algorithmic paradigm is used."}}

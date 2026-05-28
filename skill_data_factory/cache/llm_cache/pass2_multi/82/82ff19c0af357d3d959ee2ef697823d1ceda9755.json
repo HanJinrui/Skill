@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Sorting enables greedy pairing strategy, but overall a single greedy algorithm.", "rationale": "Solution sorts then uses greedy selection with prefix sums; not a multi-mechanism coordination."}}

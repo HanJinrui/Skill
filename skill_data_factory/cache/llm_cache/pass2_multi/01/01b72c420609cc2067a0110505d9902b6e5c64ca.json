@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 1.0, "core_composition_summary": "Exhaustive search over all cells, expanding max star at each center.", "rationale": "Single mechanism: complete search with greedy expansion per center, no multiple coordinated algorithms."}}

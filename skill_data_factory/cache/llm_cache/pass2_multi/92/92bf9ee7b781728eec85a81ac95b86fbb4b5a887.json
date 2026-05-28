@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.9, "core_composition_summary": "Greedy selection with min and max heaps", "rationale": "Only one main mechanism: greedy algorithm using priority queues to alternately pick min/max removable cube."}}

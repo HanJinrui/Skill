@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Sorting and greedy alternating assignment.", "rationale": "Single mechanism: greedy_sorting_order. Sorting players and alternating picks is a classic greedy approach, not a composition of distinct families."}}

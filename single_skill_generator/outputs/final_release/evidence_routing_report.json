@@ -1,0 +1,109 @@
+{
+  "rules": {
+    "binary_search_on_answer": "Retain only monotonic feasibility/answer-space evidence; route explicit sorted-position lookup evidence to binary_search_lower_upper_bound."
+  },
+  "events": [
+    {
+      "problem_id": "taco_train_004525__4525",
+      "solution_id": "s1",
+      "source_subtype": "sorting_binary_search_answer",
+      "routed_to": "binary_search_on_answer",
+      "reason": "monotonic feasibility/answer-space evidence retained"
+    },
+    {
+      "problem_id": "taco_train_005281__5281",
+      "solution_id": "s2",
+      "source_subtype": "sorting_binary_search_answer",
+      "routed_to": "binary_search_lower_upper_bound",
+      "reason": "ordered lookup/location evidence routed away from answer search"
+    },
+    {
+      "problem_id": "taco_train_009312__9312",
+      "solution_id": "s0",
+      "source_subtype": "sorting_binary_search_answer",
+      "routed_to": "binary_search_on_answer",
+      "reason": "monotonic feasibility/answer-space evidence retained"
+    },
+    {
+      "problem_id": "taco_train_011415__11415",
+      "solution_id": "s1",
+      "source_subtype": "sorting_binary_search_answer",
+      "routed_to": "binary_search_lower_upper_bound",
+      "reason": "ordered lookup/location evidence routed away from answer search"
+    },
+    {
+      "problem_id": "taco_train_014800__14800",
+      "solution_id": "s0",
+      "source_subtype": "sorting_binary_search_answer",
+      "routed_to": "binary_search_on_answer",
+      "reason": "monotonic feasibility/answer-space evidence retained"
+    },
+    {
+      "problem_id": "taco_train_021645__21645",
+      "solution_id": "s0",
+      "source_subtype": "sorting_binary_search_answer",
+      "routed_to": "binary_search_on_answer",
+      "reason": "monotonic feasibility/answer-space evidence retained"
+    },
+    {
+      "problem_id": "taco_train_003139__3139",
+      "solution_id": "s0",
+      "source_subtype": "sorting_binary_search_answer",
+      "routed_to": "binary_search_on_answer",
+      "reason": "monotonic feasibility/answer-space evidence retained"
+    },
+    {
+      "problem_id": "taco_train_010794__10794",
+      "solution_id": "s2",
+      "source_subtype": "sorting_binary_search_answer",
+      "routed_to": "binary_search_lower_upper_bound",
+      "reason": "ordered lookup/location evidence routed away from answer search"
+    },
+    {
+      "problem_id": "taco_train_013724__13724",
+      "solution_id": "s0",
+      "source_subtype": "sorting_binary_search_answer",
+      "routed_to": "binary_search_on_answer",
+      "reason": "monotonic feasibility/answer-space evidence retained"
+    },
+    {
+      "problem_id": "taco_train_014451__14451",
+      "solution_id": "s0",
+      "source_subtype": "sorting_binary_search_answer",
+      "routed_to": "binary_search_on_answer",
+      "reason": "monotonic feasibility/answer-space evidence retained"
+    },
+    {
+      "problem_id": "taco_train_016880__16880",
+      "solution_id": "s2",
+      "source_subtype": "sorting_binary_search_answer",
+      "routed_to": "binary_search_lower_upper_bound",
+      "reason": "ordered lookup/location evidence routed away from answer search"
+    },
+    {
+      "problem_id": "taco_train_008819__8819",
+      "solution_id": "s0",
+      "source_subtype": "sorting_binary_search_answer",
+      "routed_to": "binary_search_lower_upper_bound",
+      "reason": "ordered lookup/location evidence routed away from answer search"
+    },
+    {
+      "problem_id": "taco_train_013039__13039",
+      "solution_id": "s1",
+      "source_subtype": "sorting_binary_search_answer",
+      "routed_to": "binary_search_on_answer",
+      "reason": "monotonic feasibility/answer-space evidence retained"
+    },
+    {
+      "problem_id": "taco_train_023935__23935",
+      "solution_id": "s2",
+      "source_subtype": "sorting_binary_search_answer",
+      "routed_to": "binary_search_lower_upper_bound",
+      "reason": "ordered lookup/location evidence routed away from answer search"
+    }
+  ],
+  "routed_counts": {
+    "binary_search_on_answer": 8,
+    "binary_search_lower_upper_bound": 6
+  }
+}

@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "dp_2d_state", "confidence": 0.2, "core_mechanism_summary": "Recursive backtracking over archer hit counts with pruning; no DP memoization.", "rationale": "Solution is a complete search, not DP. Forced to pick a DP subtype from list; dp_2d_state is top scored, though not accurate.", "family_mismatch": true, "is_true_composition": false}}

@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Greedy assignment with sorted leaf depths", "rationale": "Sorting is used to order leaf depths for a simple greedy scan; the algorithm is effectively a single greedy mechanism."}}

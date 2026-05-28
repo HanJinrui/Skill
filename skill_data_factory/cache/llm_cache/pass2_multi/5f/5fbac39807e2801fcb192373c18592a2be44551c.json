@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Single mechanism: complete search via DFS recursion.", "rationale": "The solution uses only recursion (DFS) to enumerate numbers, no bit manipulation involved."}}

@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "search_backtracking", "confidence": 0.1, "core_mechanism_summary": "Count distinct distances between dwarf and candy in each row, -1 if impossible.", "rationale": "Solution uses set and index differences, no backtracking or search; it's a greedy observation.", "family_mismatch": true, "is_true_composition": false}}

@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 1.0, "core_composition_summary": "Single mechanism: tree DP for diameter computation after edge removal.", "rationale": "Only dynamic programming (dp_tree) used; no amortized analysis or multiple coordinated algorithms."}}

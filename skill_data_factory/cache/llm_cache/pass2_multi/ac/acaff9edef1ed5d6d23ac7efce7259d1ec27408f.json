@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Simple prefix sum precomputation to answer range queries in O(1).", "rationale": "The solution uses cumulative counts to check valley conditions per query, no multiple algorithm mechanisms."}}

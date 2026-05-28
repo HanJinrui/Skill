@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.98, "core_composition_summary": "Simple iterative loop to count triangular numbers until exceeding N.", "rationale": "Solution uses a single for-loop with early break; no multiple coordinated algorithmic mechanisms from the given families."}}

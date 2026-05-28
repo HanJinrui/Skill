@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Single greedy algorithm checking base-w digits.", "rationale": "The code processes digits of m in base w with a greedy rule, no DP or other mechanisms combined."}}

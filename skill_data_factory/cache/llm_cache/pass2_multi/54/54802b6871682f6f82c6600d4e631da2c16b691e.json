@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Not a composition; single brute-force row update.", "rationale": "Solution uses a straightforward per-row recomputation after each update without DP or greedy coordination."}}

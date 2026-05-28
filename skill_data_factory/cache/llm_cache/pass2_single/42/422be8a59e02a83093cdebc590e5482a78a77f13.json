@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "dp_2d_state", "confidence": 0.4, "core_mechanism_summary": "Precomputed lookup table maps 8-bit truth table to minimal expression string.", "rationale": "The solution uses no DP or bit manipulation; it decodes a precomputed answer. The original DP likely generated the table.", "family_mismatch": true, "is_true_composition": false}}

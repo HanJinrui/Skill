@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": ["bit_manipulation"], "composition_subtypes": [], "composition_order": null, "confidence": 1.0, "core_composition_summary": "Bit-by-bit scanning of n and m to construct MEX via XOR properties.", "rationale": "Solution uses only bit manipulations; no sorting or greedy algorithms."}}

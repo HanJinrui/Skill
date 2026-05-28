@@ -1,0 +1,10 @@
+{
+  "track": "single_algorithm",
+  "stats": {
+    "labeled": 2845,
+    "quarantine": 129,
+    "skipped_done": 2,
+    "budget_stop": false
+  },
+  "calls": 2974
+}

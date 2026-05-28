@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.9, "core_composition_summary": "DP for suffix interpretations, Z-function for deduplication.", "rationale": "Z-function is a minor utility; the DP is the main algorithmic mechanism."}}

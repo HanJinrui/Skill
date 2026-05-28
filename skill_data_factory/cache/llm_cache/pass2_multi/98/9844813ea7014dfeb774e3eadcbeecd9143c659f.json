@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.9, "core_composition_summary": "DP only", "rationale": "The solution uses a DP with two states (height 1 or 2) to compute min cost, with no other algorithm families."}}

@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Heap-based simulation of snow melting with prefix sums.", "rationale": "Only priority queue is used; prefix sums are not a distinct algorithm family."}}

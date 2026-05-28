@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.9, "core_composition_summary": "Uses offline DSU merging with sorting, no recognized multi-mechanism composition.", "rationale": "Sorting prepares intervals, then parent arrays merge them; DSU is not in candidate subtypes."}}

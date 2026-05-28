@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Binary search over number of cookies.", "rationale": "Solution uses binary search on answer space; no sorting or complete enumeration is performed."}}

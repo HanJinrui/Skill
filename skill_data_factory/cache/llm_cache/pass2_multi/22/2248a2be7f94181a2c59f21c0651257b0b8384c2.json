@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "DP with preprocessing sorting", "rationale": "Core mechanism is dynamic programming; sorting is only auxiliary preprocessing, not a coordinated combination of distinct paradigms."}}

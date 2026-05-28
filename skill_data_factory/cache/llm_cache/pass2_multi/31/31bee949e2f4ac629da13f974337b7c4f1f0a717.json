@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Single greedy two-pointer algorithm", "rationale": "The solution uses only one algorithmic mechanism: a greedy two-pointer expansion with a balance-swap trick, no DP or separate mechanisms."}}

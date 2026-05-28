@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Sorting array and scanning consecutive differences for minimum.", "rationale": "Sorting is the main mechanism; the linear scan is a direct application, not a separate algorithmic family."}}

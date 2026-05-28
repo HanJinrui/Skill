@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Single DP with two 2D states for rock-pushing grid paths.", "rationale": "The solution uses only dynamic programming, no other distinct algorithmic family like sorting."}}

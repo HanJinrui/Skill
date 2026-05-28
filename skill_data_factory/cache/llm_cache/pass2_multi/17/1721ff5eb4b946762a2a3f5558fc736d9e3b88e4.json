@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "", "rationale": "Single mechanism: nested loops with early break (limit 20) to count good substrings, using bitwise shifts and next array; not a coordinated multi-algorithm composition."}}

@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "", "rationale": "Single mechanism: exhaustive search over substrings of length up to 18, using precomputed prefix zeros. No coordination of multiple algorithm families."}}

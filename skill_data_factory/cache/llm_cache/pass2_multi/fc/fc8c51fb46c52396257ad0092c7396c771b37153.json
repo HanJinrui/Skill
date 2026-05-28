@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.9, "core_composition_summary": "Greedy selection with min-heap: add elements, remove smallest when sum negative", "rationale": "Single mechanism: greedy with priority queue, not a multi-mechanism composition."}}

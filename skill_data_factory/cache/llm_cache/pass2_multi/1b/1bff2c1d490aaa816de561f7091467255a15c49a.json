@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.3, "core_composition_summary": "The provided code snippet only shows I/O and AVL tree utility; main algorithm not visible.", "rationale": "No coordination of multiple algorithm mechanisms evident from the code fragment."}}

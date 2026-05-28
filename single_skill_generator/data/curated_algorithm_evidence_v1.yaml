@@ -1,0 +1,690 @@
+version: curated_algorithm_evidence_v1
+description: Executable canonical examples used only when verified evidence is insufficient.
+algorithms:
+  graph_bfs_shortest_path_unweighted:
+    statement: Compute minimum edge-count distances from a source in an unweighted undirected graph.
+    mechanism: Traverse vertices in breadth-first layers and assign each distance once.
+    reference_code: |
+      from collections import deque
+      def solve_case(n, edges, source):
+          graph = [[] for _ in range(n)]
+          for u, v in edges:
+              graph[u].append(v)
+              graph[v].append(u)
+          dist = [-1] * n
+          dist[source] = 0
+          queue = deque([source])
+          while queue:
+              u = queue.popleft()
+              for v in graph[u]:
+                  if dist[v] == -1:
+                      dist[v] = dist[u] + 1
+                      queue.append(v)
+          return dist
+    tests:
+      - {args: [5, [[0, 1], [1, 2], [0, 3]], 0], expected: [0, 1, 2, 1, -1]}
+  graph_dfs_components_cycle:
+    statement: Count undirected connected components and determine whether any component contains a cycle.
+    mechanism: Run DFS from each unseen vertex while tracking the parent edge.
+    reference_code: |
+      def solve_case(n, edges):
+          graph = [[] for _ in range(n)]
+          for u, v in edges:
+              graph[u].append(v)
+              graph[v].append(u)
+          seen = [False] * n
+          has_cycle = False
+          components = 0
+          def dfs(u, parent):
+              nonlocal has_cycle
+              seen[u] = True
+              for v in graph[u]:
+                  if not seen[v]:
+                      dfs(v, u)
+                  elif v != parent:
+                      has_cycle = True
+          for u in range(n):
+              if not seen[u]:
+                  components += 1
+                  dfs(u, -1)
+          return [components, has_cycle]
+    tests:
+      - {args: [5, [[0, 1], [1, 2], [2, 0], [3, 4]]], expected: [2, true]}
+  graph_topological_sort:
+    statement: Return a valid ordering of tasks subject to directed prerequisites, or an empty order for a cycle.
+    mechanism: Repeatedly remove indegree-zero vertices using Kahn's algorithm.
+    reference_code: |
+      from collections import deque
+      def solve_case(n, edges):
+          graph = [[] for _ in range(n)]
+          indegree = [0] * n
+          for u, v in edges:
+              graph[u].append(v)
+              indegree[v] += 1
+          queue = deque(i for i in range(n) if indegree[i] == 0)
+          order = []
+          while queue:
+              u = queue.popleft()
+              order.append(u)
+              for v in graph[u]:
+                  indegree[v] -= 1
+                  if indegree[v] == 0:
+                      queue.append(v)
+          return order if len(order) == n else []
+    tests:
+      - {args: [4, [[0, 1], [1, 2], [2, 3]]], expected: [0, 1, 2, 3]}
+  graph_dijkstra_shortest_path:
+    statement: Find source distances in a directed graph whose edge weights are nonnegative.
+    mechanism: Finalize shortest tentative distances with a min-priority queue and relaxation.
+    reference_code: |
+      import heapq
+      def solve_case(n, edges, source):
+          graph = [[] for _ in range(n)]
+          for u, v, w in edges:
+              graph[u].append((v, w))
+          dist = [10**18] * n
+          dist[source] = 0
+          heap = [(0, source)]
+          while heap:
+              d, u = heapq.heappop(heap)
+              if d != dist[u]:
+                  continue
+              for v, w in graph[u]:
+                  nd = d + w
+                  if nd < dist[v]:
+                      dist[v] = nd
+                      heapq.heappush(heap, (nd, v))
+          return dist
+    tests:
+      - {args: [4, [[0, 1, 5], [0, 2, 1], [2, 1, 1], [1, 3, 2]], 0], expected: [0, 2, 1, 4]}
+  graph_mst_kruskal:
+    statement: Compute the total weight of a minimum spanning tree of a connected weighted graph.
+    mechanism: Sort edges by weight and accept edges that join different DSU components.
+    reference_code: |
+      def solve_case(n, edges):
+          parent = list(range(n))
+          size = [1] * n
+          def find(x):
+              while parent[x] != x:
+                  parent[x] = parent[parent[x]]
+                  x = parent[x]
+              return x
+          total = 0
+          used = 0
+          for w, u, v in sorted(edges):
+              a, b = find(u), find(v)
+              if a == b:
+                  continue
+              if size[a] < size[b]:
+                  a, b = b, a
+              parent[b] = a
+              size[a] += size[b]
+              total += w
+              used += 1
+          return total if used == n - 1 else -1
+    tests:
+      - {args: [4, [[1, 0, 1], [4, 0, 2], [2, 1, 2], [3, 2, 3]]], expected: 6}
+  graph_bipartite_coloring:
+    statement: Decide whether an undirected graph can be split into two groups with every edge crossing groups.
+    mechanism: BFS-color each component with opposite colors along every edge.
+    reference_code: |
+      from collections import deque
+      def solve_case(n, edges):
+          graph = [[] for _ in range(n)]
+          for u, v in edges:
+              graph[u].append(v)
+              graph[v].append(u)
+          color = [-1] * n
+          for start in range(n):
+              if color[start] != -1:
+                  continue
+              color[start] = 0
+              queue = deque([start])
+              while queue:
+                  u = queue.popleft()
+                  for v in graph[u]:
+                      if color[v] == -1:
+                          color[v] = color[u] ^ 1
+                          queue.append(v)
+                      elif color[v] == color[u]:
+                          return []
+          return color
+    tests:
+      - {args: [4, [[0, 1], [1, 2], [2, 3], [3, 0]]], expected: [0, 1, 0, 1]}
+  ds_disjoint_set_union:
+    statement: Process component merges and answer whether queried pairs are connected.
+    mechanism: Maintain representatives with path compression and union by size.
+    reference_code: |
+      def solve_case(n, unions, queries):
+          parent = list(range(n))
+          size = [1] * n
+          def find(x):
+              if parent[x] != x:
+                  parent[x] = find(parent[x])
+              return parent[x]
+          for u, v in unions:
+              a, b = find(u), find(v)
+              if a != b:
+                  if size[a] < size[b]:
+                      a, b = b, a
+                  parent[b] = a
+                  size[a] += size[b]
+          return [find(u) == find(v) for u, v in queries]
+    tests:
+      - {args: [5, [[0, 1], [1, 2], [3, 4]], [[0, 2], [0, 4]]], expected: [true, false]}
+  ds_fenwick_tree:
+    statement: Answer interval sums while applying point additions to an array.
+    mechanism: Store prefix contributions in a binary indexed tree using lowbit jumps.
+    reference_code: |
+      def solve_case(values, operations):
+          n = len(values)
+          bit = [0] * (n + 1)
+          def add(i, delta):
+              i += 1
+              while i <= n:
+                  bit[i] += delta
+                  i += i & -i
+          def prefix(i):
+              ans = 0
+              while i > 0:
+                  ans += bit[i]
+                  i -= i & -i
+              return ans
+          for i, value in enumerate(values):
+              add(i, value)
+          out = []
+          for op in operations:
+              if op[0] == "add":
+                  add(op[1], op[2])
+              else:
+                  out.append(prefix(op[2] + 1) - prefix(op[1]))
+          return out
+    tests:
+      - {args: [[2, 1, 3, 4], [["sum", 1, 3], ["add", 2, 2], ["sum", 0, 2]]], expected: [8, 8]}
+  ds_segment_tree:
+    statement: Support point assignment updates and minimum queries over array intervals.
+    mechanism: Store interval aggregates in a balanced segment tree.
+    reference_code: |
+      def solve_case(values, operations):
+          size = 1
+          while size < len(values):
+              size *= 2
+          tree = [10**18] * (2 * size)
+          for i, value in enumerate(values):
+              tree[size + i] = value
+          for i in range(size - 1, 0, -1):
+              tree[i] = min(tree[2 * i], tree[2 * i + 1])
+          def update(i, value):
+              i += size
+              tree[i] = value
+              while i > 1:
+                  i //= 2
+                  tree[i] = min(tree[2 * i], tree[2 * i + 1])
+          def query(left, right):
+              left += size
+              right += size + 1
+              ans = 10**18
+              while left < right:
+                  if left & 1:
+                      ans = min(ans, tree[left])
+                      left += 1
+                  if right & 1:
+                      right -= 1
+                      ans = min(ans, tree[right])
+                  left //= 2
+                  right //= 2
+              return ans
+          out = []
+          for op in operations:
+              if op[0] == "set":
+                  update(op[1], op[2])
+              else:
+                  out.append(query(op[1], op[2]))
+          return out
+    tests:
+      - {args: [[7, 2, 5, 4], [["min", 1, 3], ["set", 1, 9], ["min", 0, 2]]], expected: [2, 5]}
+  ds_monotonic_stack:
+    statement: For each position, find the next greater value to its right or report none.
+    mechanism: Keep unresolved indices in a decreasing stack and pop when dominated.
+    reference_code: |
+      def solve_case(values):
+          answer = [-1] * len(values)
+          stack = []
+          for i, value in enumerate(values):
+              while stack and values[stack[-1]] < value:
+                  answer[stack.pop()] = value
+              stack.append(i)
+          return answer
+    tests:
+      - {args: [[2, 1, 4, 3]], expected: [4, 4, -1, -1]}
+  ds_monotonic_queue:
+    statement: Return the maximum value in every contiguous window of a fixed size.
+    mechanism: Maintain decreasing candidate indices in a deque and evict expired indices.
+    reference_code: |
+      from collections import deque
+      def solve_case(values, width):
+          queue = deque()
+          out = []
+          for i, value in enumerate(values):
+              while queue and queue[0] <= i - width:
+                  queue.popleft()
+              while queue and values[queue[-1]] <= value:
+                  queue.pop()
+              queue.append(i)
+              if i + 1 >= width:
+                  out.append(values[queue[0]])
+          return out
+    tests:
+      - {args: [[1, 3, -1, 2, 5], 3], expected: [3, 3, 5]}
+  prefix_sum_1d:
+    statement: Answer multiple inclusive interval sum queries on a fixed one-dimensional array.
+    mechanism: Build cumulative totals so each query subtracts two prefixes.
+    reference_code: |
+      def solve_case(values, queries):
+          prefix = [0]
+          for value in values:
+              prefix.append(prefix[-1] + value)
+          return [prefix[right + 1] - prefix[left] for left, right in queries]
+    tests:
+      - {args: [[3, -1, 4, 2], [[0, 2], [2, 3]]], expected: [6, 6]}
+  prefix_sum_2d:
+    statement: Answer inclusive rectangle sum queries on a fixed matrix.
+    mechanism: Build a padded two-dimensional prefix table and use four-corner inclusion-exclusion.
+    reference_code: |
+      def solve_case(grid, queries):
+          rows, cols = len(grid), len(grid[0])
+          prefix = [[0] * (cols + 1) for _ in range(rows + 1)]
+          for r in range(rows):
+              for c in range(cols):
+                  prefix[r + 1][c + 1] = grid[r][c] + prefix[r][c + 1] + prefix[r + 1][c] - prefix[r][c]
+          out = []
+          for r1, c1, r2, c2 in queries:
+              out.append(prefix[r2 + 1][c2 + 1] - prefix[r1][c2 + 1] - prefix[r2 + 1][c1] + prefix[r1][c1])
+          return out
+    tests:
+      - {args: [[[1, 2, 3], [4, 5, 6]], [[0, 1, 1, 2], [1, 0, 1, 1]]], expected: [16, 9]}
+  difference_array:
+    statement: Apply multiple inclusive range increments and return the final array.
+    mechanism: Mark update boundaries in a difference array and reconstruct by prefix accumulation.
+    reference_code: |
+      def solve_case(values, updates):
+          diff = [0] * (len(values) + 1)
+          previous = 0
+          for i, value in enumerate(values):
+              diff[i] = value - previous
+              previous = value
+          for left, right, delta in updates:
+              diff[left] += delta
+              if right + 1 < len(values):
+                  diff[right + 1] -= delta
+          out = []
+          running = 0
+          for i in range(len(values)):
+              running += diff[i]
+              out.append(running)
+          return out
+    tests:
+      - {args: [[1, 1, 1, 1], [[1, 3, 2], [0, 1, -1]]], expected: [0, 2, 3, 3]}
+  sweep_line_events:
+    statement: Compute the greatest number of simultaneously active half-open intervals.
+    mechanism: Sort endpoint deltas and accumulate the active count in coordinate order.
+    reference_code: |
+      def solve_case(intervals):
+          events = []
+          for start, end in intervals:
+              events.append((start, 1))
+              events.append((end, -1))
+          active = 0
+          best = 0
+          for _, delta in sorted(events):
+              active += delta
+              best = max(best, active)
+          return best
+    tests:
+      - {args: [[[1, 4], [2, 5], [4, 6]]], expected: 2}
+  coordinate_compression:
+    statement: Replace sparse numeric coordinates with zero-based ranks while preserving their ordering.
+    mechanism: Sort unique coordinates and map each original value to its index.
+    reference_code: |
+      def solve_case(values):
+          ordered = sorted(set(values))
+          rank = {value: i for i, value in enumerate(ordered)}
+          return [rank[value] for value in values]
+    tests:
+      - {args: [[100, -5, 100, 20]], expected: [2, 0, 2, 1]}
+  sliding_window_fixed_length:
+    statement: Find the maximum sum among contiguous subarrays of a prescribed length.
+    mechanism: Update a fixed-size window sum by adding the entering value and removing the leaving value.
+    reference_code: |
+      def solve_case(values, width):
+          current = sum(values[:width])
+          best = current
+          for i in range(width, len(values)):
+              current += values[i] - values[i - width]
+              best = max(best, current)
+          return best
+    tests:
+      - {args: [[2, -1, 4, 3, -2], 3], expected: 6}
+  sliding_window_variable_length:
+    statement: For positive values, find the minimum contiguous length whose sum reaches a target.
+    mechanism: Expand the right boundary and shrink the left boundary while feasibility holds.
+    reference_code: |
+      def solve_case(values, target):
+          left = 0
+          total = 0
+          best = len(values) + 1
+          for right, value in enumerate(values):
+              total += value
+              while total >= target:
+                  best = min(best, right - left + 1)
+                  total -= values[left]
+                  left += 1
+          return 0 if best > len(values) else best
+    tests:
+      - {args: [[2, 3, 1, 2, 4, 3], 7], expected: 2}
+  binary_search_on_answer:
+    statement: Find the minimum capacity needed to split ordered workloads into at most a given number of batches.
+    mechanism: Binary search the monotonic feasibility predicate over candidate capacities.
+    reference_code: |
+      def solve_case(loads, batches):
+          def feasible(capacity):
+              used = 1
+              current = 0
+              for load in loads:
+                  if current + load > capacity:
+                      used += 1
+                      current = 0
+                  current += load
+              return used <= batches
+          low, high = max(loads), sum(loads)
+          while low < high:
+              mid = (low + high) // 2
+              if feasible(mid):
+                  high = mid
+              else:
+                  low = mid + 1
+          return low
+    tests:
+      - {args: [[7, 2, 5, 10, 8], 2], expected: 18}
+  binary_search_lower_upper_bound:
+    statement: Count occurrences of requested values in a sorted array.
+    mechanism: Use lower and upper insertion boundaries to isolate equal values.
+    reference_code: |
+      from bisect import bisect_left, bisect_right
+      def solve_case(values, queries):
+          return [bisect_right(values, query) - bisect_left(values, query) for query in queries]
+    tests:
+      - {args: [[1, 2, 2, 2, 4], [2, 3]], expected: [3, 0]}
+  math_gcd_lcm:
+    statement: Compute the greatest common divisor and least common multiple of two positive integers.
+    mechanism: Use Euclid's remainder reduction and derive lcm from the gcd.
+    reference_code: |
+      def solve_case(a, b):
+          x, y = a, b
+          while y:
+              x, y = y, x % y
+          return [x, a // x * b]
+    tests:
+      - {args: [12, 18], expected: [6, 36]}
+  math_modular_exponentiation:
+    statement: Evaluate a large nonnegative integer power modulo a positive modulus.
+    mechanism: Square the base and consume binary exponent bits.
+    reference_code: |
+      def solve_case(base, exponent, modulus):
+          answer = 1 % modulus
+          base %= modulus
+          while exponent:
+              if exponent & 1:
+                  answer = answer * base % modulus
+              base = base * base % modulus
+              exponent //= 2
+          return answer
+    tests:
+      - {args: [3, 13, 17], expected: 12}
+  math_prime_sieve:
+    statement: List every prime number not exceeding a specified bound.
+    mechanism: Mark composites beginning at each discovered prime's square.
+    reference_code: |
+      def solve_case(limit):
+          prime = [True] * (limit + 1)
+          if limit >= 0:
+              prime[0] = False
+          if limit >= 1:
+              prime[1] = False
+          p = 2
+          while p * p <= limit:
+              if prime[p]:
+                  for multiple in range(p * p, limit + 1, p):
+                      prime[multiple] = False
+              p += 1
+          return [i for i in range(limit + 1) if prime[i]]
+    tests:
+      - {args: [12], expected: [2, 3, 5, 7, 11]}
+  math_prime_factorization:
+    statement: Return the prime factorization of a positive integer as prime-exponent pairs.
+    mechanism: Trial-divide up to the changing square root and retain a final prime remainder.
+    reference_code: |
+      def solve_case(number):
+          factors = []
+          divisor = 2
+          while divisor * divisor <= number:
+              count = 0
+              while number % divisor == 0:
+                  number //= divisor
+                  count += 1
+              if count:
+                  factors.append([divisor, count])
+              divisor += 1
+          if number > 1:
+              factors.append([number, 1])
+          return factors
+    tests:
+      - {args: [360], expected: [[2, 3], [3, 2], [5, 1]]}
+  math_combinatorics_ncr:
+    statement: Calculate the number of ways to choose a fixed-size subset from distinct items.
+    mechanism: Multiply and divide incrementally using symmetry of binomial coefficients.
+    reference_code: |
+      def solve_case(n, r):
+          if r < 0 or r > n:
+              return 0
+          r = min(r, n - r)
+          answer = 1
+          for i in range(1, r + 1):
+              answer = answer * (n - r + i) // i
+          return answer
+    tests:
+      - {args: [8, 3], expected: 56}
+  math_inclusion_exclusion:
+    statement: Count positive integers up to a limit divisible by at least one supplied divisor.
+    mechanism: Sum and subtract subset intersections whose multiples are governed by lcm.
+    reference_code: |
+      from math import gcd
+      def solve_case(limit, divisors):
+          answer = 0
+          for mask in range(1, 1 << len(divisors)):
+              multiple = 1
+              bits = 0
+              for i, value in enumerate(divisors):
+                  if mask >> i & 1:
+                      bits += 1
+                      multiple = multiple // gcd(multiple, value) * value
+              count = limit // multiple
+              answer += count if bits % 2 else -count
+          return answer
+    tests:
+      - {args: [20, [2, 3]], expected: 13}
+  string_kmp_prefix_function:
+    statement: Return all starting positions where a pattern occurs within a text.
+    mechanism: Build prefix fallback lengths and continue scanning without backing up text positions.
+    reference_code: |
+      def solve_case(text, pattern):
+          combined = pattern + "#" + text
+          pi = [0] * len(combined)
+          for i in range(1, len(combined)):
+              j = pi[i - 1]
+              while j and combined[i] != combined[j]:
+                  j = pi[j - 1]
+              if combined[i] == combined[j]:
+                  j += 1
+              pi[i] = j
+          m = len(pattern)
+          return [i - 2 * m for i in range(m + 1, len(combined)) if pi[i] == m]
+    tests:
+      - {args: ["ababa", "aba"], expected: [0, 2]}
+  string_z_algorithm:
+    statement: Find all positions of a pattern in a text using prefix match lengths.
+    mechanism: Maintain the rightmost Z-box while comparing against the combined pattern-text prefix.
+    reference_code: |
+      def solve_case(text, pattern):
+          data = pattern + "#" + text
+          z = [0] * len(data)
+          left = right = 0
+          for i in range(1, len(data)):
+              if i <= right:
+                  z[i] = min(right - i + 1, z[i - left])
+              while i + z[i] < len(data) and data[z[i]] == data[i + z[i]]:
+                  z[i] += 1
+              if i + z[i] - 1 > right:
+                  left, right = i, i + z[i] - 1
+          m = len(pattern)
+          return [i - m - 1 for i in range(m + 1, len(data)) if z[i] >= m]
+    tests:
+      - {args: ["aaaa", "aa"], expected: [0, 1, 2]}
+  string_rolling_hash:
+    statement: Locate occurrences of a pattern in a text using equal-length substring fingerprints.
+    mechanism: Compare polynomial rolling hashes and confirm candidates to guard against collisions.
+    reference_code: |
+      def solve_case(text, pattern):
+          if len(pattern) > len(text):
+              return []
+          base = 911382323
+          mod = 1000000007
+          size = len(pattern)
+          power = pow(base, size, mod)
+          target = 0
+          window = 0
+          for i in range(size):
+              target = (target * base + ord(pattern[i])) % mod
+              window = (window * base + ord(text[i])) % mod
+          out = []
+          for start in range(len(text) - size + 1):
+              if window == target and text[start:start + size] == pattern:
+                  out.append(start)
+              if start + size < len(text):
+                  window = (window * base - ord(text[start]) * power + ord(text[start + size])) % mod
+          return out
+    tests:
+      - {args: ["abracadabra", "abra"], expected: [0, 7]}
+  string_trie:
+    statement: Store words and answer exact membership queries by shared prefixes.
+    mechanism: Extend a character trie on insertion and mark terminal nodes.
+    reference_code: |
+      def solve_case(words, queries):
+          root = {}
+          terminal = "#"
+          for word in words:
+              node = root
+              for char in word:
+                  node = node.setdefault(char, {})
+              node[terminal] = True
+          out = []
+          for word in queries:
+              node = root
+              for char in word:
+                  if char not in node:
+                      node = None
+                      break
+                  node = node[char]
+              out.append(bool(node is not None and terminal in node))
+          return out
+    tests:
+      - {args: [["cat", "car", "dog"], ["car", "ca", "dot"]], expected: [true, false, false]}
+  dp_knapsack:
+    statement: Maximize total value under a capacity when every item may be chosen at most once.
+    mechanism: Update one-dimensional capacity states in descending order for each item.
+    reference_code: |
+      def solve_case(capacity, items):
+          dp = [0] * (capacity + 1)
+          for weight, value in items:
+              for used in range(capacity, weight - 1, -1):
+                  dp[used] = max(dp[used], dp[used - weight] + value)
+          return dp[capacity]
+    tests:
+      - {args: [7, [[3, 4], [4, 5], [2, 3]]], expected: 9}
+  dp_lis:
+    statement: Find the length of a strictly increasing subsequence in a sequence.
+    mechanism: Maintain the smallest attainable tail value for every subsequence length.
+    reference_code: |
+      from bisect import bisect_left
+      def solve_case(values):
+          tails = []
+          for value in values:
+              pos = bisect_left(tails, value)
+              if pos == len(tails):
+                  tails.append(value)
+              else:
+                  tails[pos] = value
+          return len(tails)
+    tests:
+      - {args: [[10, 9, 2, 5, 3, 7, 101, 18]], expected: 4}
+  dp_bitmask_subset:
+    statement: Compute the cheapest tour starting and ending at a fixed city while visiting every city once.
+    mechanism: Use a bitmask for visited vertices and transition by appending one unvisited vertex.
+    reference_code: |
+      def solve_case(cost):
+          n = len(cost)
+          full = (1 << n) - 1
+          dp = [[10**18] * n for _ in range(1 << n)]
+          dp[1][0] = 0
+          for mask in range(1 << n):
+              for last in range(n):
+                  if dp[mask][last] == 10**18:
+                      continue
+                  for nxt in range(n):
+                      if mask >> nxt & 1 == 0:
+                          new_mask = mask | (1 << nxt)
+                          dp[new_mask][nxt] = min(dp[new_mask][nxt], dp[mask][last] + cost[last][nxt])
+          return min(dp[full][last] + cost[last][0] for last in range(n))
+    tests:
+      - {args: [[[0, 10, 15], [10, 0, 20], [15, 20, 0]]], expected: 45}
+  dp_digit:
+    statement: Count integers from zero through a bound whose decimal digits sum to a requested value.
+    mechanism: Memoize digit-position states with remaining sum and tight-bound status.
+    reference_code: |
+      from functools import lru_cache
+      def solve_case(bound, target):
+          digits = list(map(int, str(bound)))
+          @lru_cache(None)
+          def dp(pos, remaining, tight):
+              if remaining < 0:
+                  return 0
+              if pos == len(digits):
+                  return 1 if remaining == 0 else 0
+              limit = digits[pos] if tight else 9
+              total = 0
+              for digit in range(limit + 1):
+                  total += dp(pos + 1, remaining - digit, tight and digit == limit)
+              return total
+          return dp(0, target, True)
+    tests:
+      - {args: [25, 5], expected: 3}
+  dp_grid_path:
+    statement: Count paths from the upper-left to lower-right grid cell while avoiding blocked cells and moving down or right.
+    mechanism: Accumulate path counts from upper and left predecessor cells.
+    reference_code: |
+      def solve_case(blocked):
+          rows, cols = len(blocked), len(blocked[0])
+          dp = [[0] * cols for _ in range(rows)]
+          if not blocked[0][0]:
+              dp[0][0] = 1
+          for r in range(rows):
+              for c in range(cols):
+                  if blocked[r][c] or (r == 0 and c == 0):
+                      continue
+                  if r:
+                      dp[r][c] += dp[r - 1][c]
+                  if c:
+                      dp[r][c] += dp[r][c - 1]
+          return dp[-1][-1]
+    tests:
+      - {args: [[[false, false, false], [false, true, false], [false, false, false]]], expected: 2}

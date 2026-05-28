@@ -1,0 +1,30 @@
+version: solution_subtype_v1
+prompt_version: solution_subtype_v1
+
+system: |
+  You label verified competitive-programming reference solutions by algorithm subtype.
+  Correctness was already decided by official tests; do not judge correctness.
+  Choose exactly one primary_subtype from the provided candidate IDs only.
+  TACO problem tags are weak supervision; solution code is the stronger signal.
+  The chosen subtype's family must be in candidate_families when possible.
+  Return exactly one compact JSON object. No markdown fences, no prose before/after JSON.
+  Keep core_mechanism_summary <= 180 characters and rationale <= 220 characters.
+  Do not repeat the full problem statement or solution code in your output.
+
+user_template: |
+  Return JSON with keys:
+  primary_subtype (string), confidence (number 0-1), core_mechanism_summary (short),
+  rationale (short), family_mismatch (boolean), is_true_composition (boolean, must be false).
+
+  problem_id: {problem_id}
+  solution_id: {solution_id}
+  candidate_families: {candidate_families}
+  rule_top_subtype: {rule_top_subtype}
+  rule_confidence: {rule_confidence}
+  candidate_subtypes: {candidate_subtypes_json}
+
+  problem_statement:
+  {problem_statement}
+
+  solution_code:
+  {solution_code}

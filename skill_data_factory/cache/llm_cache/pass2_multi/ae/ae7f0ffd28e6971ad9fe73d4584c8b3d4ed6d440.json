@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "", "rationale": "The solution is a single greedy algorithm that sorts the contested middle cards to distribute them optimally. No coordination of multiple distinct mechanisms."}}

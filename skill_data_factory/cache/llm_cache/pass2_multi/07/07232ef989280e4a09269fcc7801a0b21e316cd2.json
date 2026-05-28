@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Graph cycle detection and topological sort with hash map for pattern lookup.", "rationale": "Core is graph algorithm; hash map is supportive. No multi-mechanism composition from allowed families."}}

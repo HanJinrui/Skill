@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "dp_memoized_recursion", "confidence": 0.95, "core_mechanism_summary": "Top-down memoized DP selecting from ends of array, maximizing sum with multiplier 2^turn.", "rationale": "Uses lru_cache on recursive function over remaining cards and turn count, a classic memoized DP pattern.", "family_mismatch": false, "is_true_composition": false}}

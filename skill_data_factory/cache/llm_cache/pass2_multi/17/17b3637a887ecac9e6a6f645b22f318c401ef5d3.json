@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Greedy destruction order sorted by cost ascending to maximize points using thresholds.", "rationale": "Single greedy algorithm with sorting preprocessing; no composition of distinct algorithm families."}}

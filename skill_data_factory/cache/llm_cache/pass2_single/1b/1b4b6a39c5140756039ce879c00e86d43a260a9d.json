@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "dp_1d_state", "confidence": 0.1, "core_mechanism_summary": "Greedy allocation: assign each line a characters, then distribute remaining characters cyclically until exhausted.", "rationale": "No DP recurrence or state; it's a direct length calculation using a greedy loop.", "family_mismatch": true, "is_true_composition": false}}

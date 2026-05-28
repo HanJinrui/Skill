@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Greedy pairing after sorting; single mechanism.", "rationale": "Sorting is preprocessing for greedy pass; fits greedy_sorting_order. Not a coordination of distinct mechanisms."}}

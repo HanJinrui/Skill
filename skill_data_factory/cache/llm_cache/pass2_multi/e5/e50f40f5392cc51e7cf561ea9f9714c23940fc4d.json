@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": ["complete_search"], "composition_subtypes": [], "composition_order": [], "confidence": 1.0, "core_composition_summary": "Simple brute-force enumeration over cost range, single mechanism.", "rationale": "Only a loop checking each cost; no amortized structure. Single complete search pattern."}}

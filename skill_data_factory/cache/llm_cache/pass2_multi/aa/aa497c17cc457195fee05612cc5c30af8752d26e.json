@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Sort by cost to apply greedy selection from the cheapest exams first.", "rationale": "The solution is a standard greedy algorithm with a sorting preprocessing step, not a true multi-mechanism composition."}}

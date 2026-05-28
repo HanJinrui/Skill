@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Single DP mechanism with sliding window sums and Z-function for duplicate counting", "rationale": "Z-function is not in candidate families; DP is the sole main mechanism despite Z-function optimization."}}

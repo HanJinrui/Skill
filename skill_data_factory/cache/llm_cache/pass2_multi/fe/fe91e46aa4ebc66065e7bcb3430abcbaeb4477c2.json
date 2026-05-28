@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.8, "core_composition_summary": "Single greedy algorithm using a priority queue", "rationale": "Solution uses a single greedy algorithm with a heap for efficient updates; no coordination of multiple distinct algorithm families."}}

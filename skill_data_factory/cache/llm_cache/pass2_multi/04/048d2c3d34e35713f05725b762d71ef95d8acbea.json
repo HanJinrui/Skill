@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": ["greedy_algorithms"], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Greedy base-w digit reduction", "rationale": "Single mechanism: iterative greedy digit processing with base w representation."}}

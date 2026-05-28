@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": null, "confidence": 0.95, "core_composition_summary": "Solution uses DSU to efficiently fill string positions. No other coordinated mechanisms.", "rationale": "Only one algorithmic mechanism: DSU for next available index. No sorting or greedy required."}}

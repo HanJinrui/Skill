@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "search_backtracking", "confidence": 0.2, "core_mechanism_summary": "Direct combinatorial formula: 25*(n+1)+1, avoiding any search.", "rationale": "The solution uses a closed-form count, not a search algorithm, but the problem can be framed as a complete search over insertions.", "family_mismatch": true, "is_true_composition": false}}

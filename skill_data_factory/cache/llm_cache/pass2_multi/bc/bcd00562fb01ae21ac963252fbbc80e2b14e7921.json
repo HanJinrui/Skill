@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": 0, "confidence": 1.0, "core_composition_summary": "", "rationale": "Single greedy: sort by a_i, then try each type as repeated flower. Uses binary search for efficiency, but no multi-mechanism composition. greedy_sorting_order."}}

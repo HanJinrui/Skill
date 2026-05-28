@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "none", "confidence": 0.95, "core_composition_summary": "Simple list comprehension to filter non-zero (and booleans) and concatenate zeros.", "rationale": "Uses a single mechanism: filtering and concatenation. No coordination of multiple algorithms."}}

@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.9, "core_composition_summary": "Hash map aggregation then sorting to select top s orders.", "rationale": "Only one main algorithmic step (sorting) with basic data structure; no multiple coordinated mechanisms."}}

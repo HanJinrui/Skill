@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Single mechanism: sorting with a custom key.", "rationale": "The solution uses sorted() with key=b.index, which is a single sorting mechanism without any explicit data structure composition."}}

@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "greedy_exchange_argument", "confidence": 0.7, "core_mechanism_summary": "Greedy scan matching longest magic prefix ('144', '14', '1') to consume the string.", "rationale": "Code greedily matches longest valid token first, optimal via exchange argument. No backtracking or two pointers.", "family_mismatch": false, "is_true_composition": false}}

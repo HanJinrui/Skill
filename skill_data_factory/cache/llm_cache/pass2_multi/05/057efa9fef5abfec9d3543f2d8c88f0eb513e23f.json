@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Single greedy construction with backtracking", "rationale": "Uses a single greedy algorithm with backtracking to construct the answer; no DP or other mechanisms are combined."}}

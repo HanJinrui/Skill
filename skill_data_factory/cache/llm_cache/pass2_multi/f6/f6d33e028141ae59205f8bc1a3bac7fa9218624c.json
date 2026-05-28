@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 1.0, "core_composition_summary": "Uses bitwise XOR and popcount to count differing bits, then filters friends.", "rationale": "Single mechanism: bit manipulation for Hamming distance calculation. No search or multi-step coordination."}}
