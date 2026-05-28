@@ -1,0 +1,1375 @@
+{
+  "rules": {
+    "stable": ">=5 unique TACO problem_id, TACO-only representatives, and all held-out local retrieval queries hit in top-3",
+    "provisional": "2-4 unique TACO problem_id without predominant curated evidence, or stable evidence failing retrieval gate",
+    "seed": "0-1 unique TACO problem_id or predominantly curated evidence"
+  },
+  "status_counts": {
+    "provisional": 16,
+    "seed": 33,
+    "stable": 5
+  },
+  "source_dataset_counts": {
+    "TACO+curated": 7,
+    "TACO": 19,
+    "curated": 28
+  },
+  "methodology_note": "Additional coverage uses targeted evidence distillation plus curated seed construction; seed skills require future validation on distinct verified TACO problems.",
+  "skills": {
+    "binary_search_lower_upper_bound": {
+      "num_source_rows": 11,
+      "unique_taco_problem_ids": [
+        "taco_train_005281__5281",
+        "taco_train_008819__8819",
+        "taco_train_010794__10794",
+        "taco_train_011415__11415",
+        "taco_train_016880__16880",
+        "taco_train_023935__23935"
+      ],
+      "num_unique_taco_problems": 6,
+      "curated_rows": 5,
+      "origin_counts": {
+        "taco_verified": 6,
+        "curated": 5
+      },
+      "candidate_for_stable": true,
+      "held_out_problem_ids": [
+        "taco_train_023935__23935"
+      ],
+      "status": "provisional",
+      "status_reason": ">=5 unique TACO problems but local retrieval top-3 gate did not pass",
+      "retrieval_gate_passed": false
+    },
+    "binary_search_on_answer": {
+      "num_source_rows": 13,
+      "unique_taco_problem_ids": [
+        "taco_train_003139__3139",
+        "taco_train_004525__4525",
+        "taco_train_009312__9312",
+        "taco_train_013039__13039",
+        "taco_train_013724__13724",
+        "taco_train_014451__14451",
+        "taco_train_014800__14800",
+        "taco_train_021645__21645"
+      ],
+      "num_unique_taco_problems": 8,
+      "curated_rows": 5,
+      "origin_counts": {
+        "taco_verified": 8,
+        "curated": 5
+      },
+      "candidate_for_stable": true,
+      "held_out_problem_ids": [
+        "taco_train_021645__21645"
+      ],
+      "status": "provisional",
+      "status_reason": ">=5 unique TACO problems but local retrieval top-3 gate did not pass",
+      "retrieval_gate_passed": false
+    },
+    "bit_binary_representation": {
+      "num_source_rows": 18,
+      "unique_taco_problem_ids": [
+        "taco_train_001632__1632",
+        "taco_train_002585__2585",
+        "taco_train_003223__3223",
+        "taco_train_007625__7625",
+        "taco_train_008662__8662",
+        "taco_train_009404__9404",
+        "taco_train_009723__9723",
+        "taco_train_011853__11853",
+        "taco_train_012105__12105",
+        "taco_train_013575__13575",
+        "taco_train_014655__14655",
+        "taco_train_017138__17138",
+        "taco_train_021371__21371",
+        "taco_train_021606__21606",
+        "taco_train_022547__22547",
+        "taco_train_023326__23326",
+        "taco_train_024264__24264",
+        "taco_train_024758__24758"
+      ],
+      "num_unique_taco_problems": 18,
+      "curated_rows": 0,
+      "origin_counts": {
+        "taco_verified": 18
+      },
+      "candidate_for_stable": true,
+      "held_out_problem_ids": [
+        "taco_train_024758__24758"
+      ],
+      "status": "provisional",
+      "status_reason": ">=5 unique TACO problems but local retrieval top-3 gate did not pass",
+      "retrieval_gate_passed": false
+    },
+    "bit_xor_trick": {
+      "num_source_rows": 10,
+      "unique_taco_problem_ids": [
+        "taco_train_007802__7802",
+        "taco_train_011517__11517",
+        "taco_train_012207__12207",
+        "taco_train_012570__12570",
+        "taco_train_014708__14708",
+        "taco_train_015997__15997",
+        "taco_train_016179__16179",
+        "taco_train_016839__16839",
+        "taco_train_018537__18537",
+        "taco_train_022374__22374"
+      ],
+      "num_unique_taco_problems": 10,
+      "curated_rows": 0,
+      "origin_counts": {
+        "taco_verified": 10
+      },
+      "candidate_for_stable": true,
+      "held_out_problem_ids": [
+        "taco_train_022374__22374"
+      ],
+      "status": "provisional",
+      "status_reason": ">=5 unique TACO problems but local retrieval top-3 gate did not pass",
+      "retrieval_gate_passed": false
+    },
+    "coordinate_compression": {
+      "num_source_rows": 5,
+      "unique_taco_problem_ids": [
+        "taco_train_005106__5106"
+      ],
+      "num_unique_taco_problems": 1,
+      "curated_rows": 2,
+      "origin_counts": {
+        "taco_verified": 3,
+        "curated": 2
+      },
+      "candidate_for_stable": false,
+      "held_out_problem_ids": [],
+      "status": "seed",
+      "status_reason": "0-1 unique TACO problems or evidence remains predominantly curated",
+      "retrieval_gate_passed": false
+    },
+    "difference_array": {
+      "num_source_rows": 5,
+      "unique_taco_problem_ids": [],
+      "num_unique_taco_problems": 0,
+      "curated_rows": 5,
+      "origin_counts": {
+        "curated": 5
+      },
+      "candidate_for_stable": false,
+      "held_out_problem_ids": [],
+      "status": "seed",
+      "status_reason": "0-1 unique TACO problems or evidence remains predominantly curated",
+      "retrieval_gate_passed": false
+    },
+    "dp_1d_state": {
+      "num_source_rows": 86,
+      "unique_taco_problem_ids": [
+        "taco_train_000112__112",
+        "taco_train_000236__236",
+        "taco_train_000406__406",
+        "taco_train_000767__767",
+        "taco_train_000771__771",
+        "taco_train_001216__1216",
+        "taco_train_001724__1724",
+        "taco_train_001850__1850",
+        "taco_train_002491__2491",
+        "taco_train_003036__3036",
+        "taco_train_003807__3807",
+        "taco_train_003867__3867",
+        "taco_train_004269__4269",
+        "taco_train_004327__4327",
+        "taco_train_004346__4346",
+        "taco_train_004472__4472",
+        "taco_train_004905__4905",
+        "taco_train_005010__5010",
+        "taco_train_005210__5210",
+        "taco_train_005498__5498",
+        "taco_train_005871__5871",
+        "taco_train_005997__5997",
+        "taco_train_006639__6639",
+        "taco_train_006757__6757",
+        "taco_train_007292__7292",
+        "taco_train_007376__7376",
+        "taco_train_007738__7738",
+        "taco_train_007816__7816",
+        "taco_train_008494__8494",
+        "taco_train_008558__8558",
+        "taco_train_008839__8839",
+        "taco_train_008842__8842",
+        "taco_train_008853__8853",
+        "taco_train_009063__9063",
+        "taco_train_009439__9439",
+        "taco_train_009577__9577",
+        "taco_train_009642__9642",
+        "taco_train_010389__10389",
+        "taco_train_010665__10665",
+        "taco_train_010782__10782",
+        "taco_train_011334__11334",
+        "taco_train_011800__11800",
+        "taco_train_012066__12066",
+        "taco_train_012317__12317",
+        "taco_train_013301__13301",
+        "taco_train_013606__13606",
+        "taco_train_013623__13623",
+        "taco_train_013695__13695",
+        "taco_train_014292__14292",
+        "taco_train_015057__15057",
+        "taco_train_015176__15176",
+        "taco_train_015613__15613",
+        "taco_train_015650__15650",
+        "taco_train_015690__15690",
+        "taco_train_016421__16421",
+        "taco_train_016729__16729",
+        "taco_train_016817__16817",
+        "taco_train_017086__17086",
+        "taco_train_018193__18193",
+        "taco_train_018302__18302",
+        "taco_train_019430__19430",
+        "taco_train_019449__19449",
+        "taco_train_019725__19725",
+        "taco_train_019838__19838",
+        "taco_train_019924__19924",
+        "taco_train_020990__20990",
+        "taco_train_021722__21722",
+        "taco_train_021783__21783",
+        "taco_train_022212__22212",
+        "taco_train_022218__22218",
+        "taco_train_022613__22613",
+        "taco_train_022770__22770",
+        "taco_train_022807__22807",
+        "taco_train_022817__22817",
+        "taco_train_023075__23075",
+        "taco_train_023340__23340",
+        "taco_train_023552__23552",
+        "taco_train_023750__23750",
+        "taco_train_023963__23963",
+        "taco_train_024317__24317",
+        "taco_train_024814__24814",
+        "taco_train_025032__25032",
+        "taco_train_025082__25082",
+        "taco_train_025136__25136",
+        "taco_train_025180__25180",
+        "taco_train_025264__25264"
+      ],
+      "num_unique_taco_problems": 86,
+      "curated_rows": 0,
+      "origin_counts": {
+        "taco_verified": 86
+      },
+      "candidate_for_stable": true,
+      "held_out_problem_ids": [
+        "taco_train_025264__25264"
+      ],
+      "status": "stable",
+      "status_reason": ">=5 unique TACO problems, TACO-only representatives, and local retrieval top-3 gate passed",
+      "retrieval_gate_passed": true
+    },
+    "dp_2d_state": {
+      "num_source_rows": 91,
+      "unique_taco_problem_ids": [
+        "taco_train_000001__1",
+        "taco_train_000136__136",
+        "taco_train_000437__437",
+        "taco_train_000777__777",
+        "taco_train_000949__949",
+        "taco_train_001001__1001",
+        "taco_train_001032__1032",
+        "taco_train_001841__1841",
+        "taco_train_001865__1865",
+        "taco_train_002038__2038",
+        "taco_train_002438__2438",
+        "taco_train_002624__2624",
+        "taco_train_002874__2874",
+        "taco_train_003025__3025",
+        "taco_train_003049__3049",
+        "taco_train_003423__3423",
+        "taco_train_003661__3661",
+        "taco_train_003830__3830",
+        "taco_train_004038__4038",
+        "taco_train_004467__4467",
+        "taco_train_004574__4574",
+        "taco_train_004585__4585",
+        "taco_train_004693__4693",
+        "taco_train_005253__5253",
+        "taco_train_005387__5387",
+        "taco_train_005578__5578",
+        "taco_train_005624__5624",
+        "taco_train_005657__5657",
+        "taco_train_005993__5993",
+        "taco_train_006171__6171",
+        "taco_train_006177__6177",
+        "taco_train_006212__6212",
+        "taco_train_006562__6562",
+        "taco_train_007025__7025",
+        "taco_train_007395__7395",
+        "taco_train_007479__7479",
+        "taco_train_007977__7977",
+        "taco_train_009090__9090",
+        "taco_train_009164__9164",
+        "taco_train_009303__9303",
+        "taco_train_009589__9589",
+        "taco_train_010329__10329",
+        "taco_train_011128__11128",
+        "taco_train_011131__11131",
+        "taco_train_011196__11196",
+        "taco_train_012325__12325",
+        "taco_train_012634__12634",
+        "taco_train_013265__13265",
+        "taco_train_013572__13572",
+        "taco_train_013630__13630",
+        "taco_train_013770__13770",
+        "taco_train_013967__13967",
+        "taco_train_014393__14393",
+        "taco_train_015078__15078",
+        "taco_train_015120__15120",
+        "taco_train_015250__15250",
+        "taco_train_015453__15453",
+        "taco_train_015497__15497",
+        "taco_train_016307__16307",
+        "taco_train_016609__16609",
+        "taco_train_016948__16948",
+        "taco_train_017078__17078",
+        "taco_train_017165__17165",
+        "taco_train_017850__17850",
+        "taco_train_017999__17999",
+        "taco_train_018611__18611",
+        "taco_train_019163__19163",
+        "taco_train_019216__19216",
+        "taco_train_019330__19330",
+        "taco_train_019351__19351",
+        "taco_train_019407__19407",
+        "taco_train_020082__20082",
+        "taco_train_020916__20916",
+        "taco_train_021083__21083",
+        "taco_train_021095__21095",
+        "taco_train_021498__21498",
+        "taco_train_021499__21499",
+        "taco_train_021755__21755",
+        "taco_train_022076__22076",
+        "taco_train_022737__22737",
+        "taco_train_022828__22828",
+        "taco_train_022997__22997",
+        "taco_train_023251__23251",
+        "taco_train_023410__23410",
+        "taco_train_023462__23462",
+        "taco_train_024304__24304",
+        "taco_train_024348__24348",
+        "taco_train_024378__24378",
+        "taco_train_024799__24799",
+        "taco_train_025423__25423",
+        "taco_train_025442__25442"
+      ],
+      "num_unique_taco_problems": 91,
+      "curated_rows": 0,
+      "origin_counts": {
+        "taco_verified": 91
+      },
+      "candidate_for_stable": true,
+      "held_out_problem_ids": [
+        "taco_train_025442__25442"
+      ],
+      "status": "provisional",
+      "status_reason": ">=5 unique TACO problems but local retrieval top-3 gate did not pass",
+      "retrieval_gate_passed": false
+    },
+    "dp_bitmask_subset": {
+      "num_source_rows": 5,
+      "unique_taco_problem_ids": [],
+      "num_unique_taco_problems": 0,
+      "curated_rows": 5,
+      "origin_counts": {
+        "curated": 5
+      },
+      "candidate_for_stable": false,
+      "held_out_problem_ids": [],
+      "status": "seed",
+      "status_reason": "0-1 unique TACO problems or evidence remains predominantly curated",
+      "retrieval_gate_passed": false
+    },
+    "dp_counting_combinatorics": {
+      "num_source_rows": 27,
+      "unique_taco_problem_ids": [
+        "taco_train_000091__91",
+        "taco_train_000298__298",
+        "taco_train_000424__424",
+        "taco_train_001110__1110",
+        "taco_train_003113__3113",
+        "taco_train_003656__3656",
+        "taco_train_004643__4643",
+        "taco_train_006488__6488",
+        "taco_train_006798__6798",
+        "taco_train_007169__7169",
+        "taco_train_008093__8093",
+        "taco_train_009288__9288",
+        "taco_train_009453__9453",
+        "taco_train_011721__11721",
+        "taco_train_011775__11775",
+        "taco_train_015234__15234",
+        "taco_train_016017__16017",
+        "taco_train_016769__16769",
+        "taco_train_017893__17893",
+        "taco_train_018503__18503",
+        "taco_train_018552__18552",
+        "taco_train_019561__19561",
+        "taco_train_021723__21723",
+        "taco_train_024105__24105",
+        "taco_train_024169__24169",
+        "taco_train_024464__24464",
+        "taco_train_025115__25115"
+      ],
+      "num_unique_taco_problems": 27,
+      "curated_rows": 0,
+      "origin_counts": {
+        "taco_verified": 27
+      },
+      "candidate_for_stable": true,
+      "held_out_problem_ids": [
+        "taco_train_025115__25115"
+      ],
+      "status": "provisional",
+      "status_reason": ">=5 unique TACO problems but local retrieval top-3 gate did not pass",
+      "retrieval_gate_passed": false
+    },
+    "dp_digit": {
+      "num_source_rows": 5,
+      "unique_taco_problem_ids": [],
+      "num_unique_taco_problems": 0,
+      "curated_rows": 5,
+      "origin_counts": {
+        "curated": 5
+      },
+      "candidate_for_stable": false,
+      "held_out_problem_ids": [],
+      "status": "seed",
+      "status_reason": "0-1 unique TACO problems or evidence remains predominantly curated",
+      "retrieval_gate_passed": false
+    },
+    "dp_grid_path": {
+      "num_source_rows": 5,
+      "unique_taco_problem_ids": [],
+      "num_unique_taco_problems": 0,
+      "curated_rows": 5,
+      "origin_counts": {
+        "curated": 5
+      },
+      "candidate_for_stable": false,
+      "held_out_problem_ids": [],
+      "status": "seed",
+      "status_reason": "0-1 unique TACO problems or evidence remains predominantly curated",
+      "retrieval_gate_passed": false
+    },
+    "dp_interval": {
+      "num_source_rows": 5,
+      "unique_taco_problem_ids": [
+        "taco_train_000798__798",
+        "taco_train_005489__5489",
+        "taco_train_006300__6300",
+        "taco_train_022879__22879",
+        "taco_train_023391__23391"
+      ],
+      "num_unique_taco_problems": 5,
+      "curated_rows": 0,
+      "origin_counts": {
+        "taco_verified": 5
+      },
+      "candidate_for_stable": true,
+      "held_out_problem_ids": [
+        "taco_train_023391__23391"
+      ],
+      "status": "stable",
+      "status_reason": ">=5 unique TACO problems, TACO-only representatives, and local retrieval top-3 gate passed",
+      "retrieval_gate_passed": true
+    },
+    "dp_knapsack": {
+      "num_source_rows": 5,
+      "unique_taco_problem_ids": [],
+      "num_unique_taco_problems": 0,
+      "curated_rows": 5,
+      "origin_counts": {
+        "curated": 5
+      },
+      "candidate_for_stable": false,
+      "held_out_problem_ids": [],
+      "status": "seed",
+      "status_reason": "0-1 unique TACO problems or evidence remains predominantly curated",
+      "retrieval_gate_passed": false
+    },
+    "dp_lis": {
+      "num_source_rows": 5,
+      "unique_taco_problem_ids": [],
+      "num_unique_taco_problems": 0,
+      "curated_rows": 5,
+      "origin_counts": {
+        "curated": 5
+      },
+      "candidate_for_stable": false,
+      "held_out_problem_ids": [],
+      "status": "seed",
+      "status_reason": "0-1 unique TACO problems or evidence remains predominantly curated",
+      "retrieval_gate_passed": false
+    },
+    "dp_memoized_recursion": {
+      "num_source_rows": 9,
+      "unique_taco_problem_ids": [
+        "taco_train_001298__1298",
+        "taco_train_001715__1715",
+        "taco_train_005842__5842",
+        "taco_train_014086__14086",
+        "taco_train_019467__19467",
+        "taco_train_020677__20677",
+        "taco_train_021244__21244",
+        "taco_train_023091__23091",
+        "taco_train_023943__23943"
+      ],
+      "num_unique_taco_problems": 9,
+      "curated_rows": 0,
+      "origin_counts": {
+        "taco_verified": 9
+      },
+      "candidate_for_stable": true,
+      "held_out_problem_ids": [
+        "taco_train_023943__23943"
+      ],
+      "status": "provisional",
+      "status_reason": ">=5 unique TACO problems but local retrieval top-3 gate did not pass",
+      "retrieval_gate_passed": false
+    },
+    "dp_tree": {
+      "num_source_rows": 12,
+      "unique_taco_problem_ids": [
+        "taco_train_002505__2505",
+        "taco_train_005123__5123",
+        "taco_train_005691__5691",
+        "taco_train_006200__6200",
+        "taco_train_008315__8315",
+        "taco_train_012715__12715",
+        "taco_train_013982__13982",
+        "taco_train_014079__14079",
+        "taco_train_016180__16180",
+        "taco_train_017150__17150",
+        "taco_train_020663__20663",
+        "taco_train_025087__25087"
+      ],
+      "num_unique_taco_problems": 12,
+      "curated_rows": 0,
+      "origin_counts": {
+        "taco_verified": 12
+      },
+      "candidate_for_stable": true,
+      "held_out_problem_ids": [
+        "taco_train_025087__25087"
+      ],
+      "status": "provisional",
+      "status_reason": ">=5 unique TACO problems but local retrieval top-3 gate did not pass",
+      "retrieval_gate_passed": false
+    },
+    "ds_disjoint_set_union": {
+      "num_source_rows": 5,
+      "unique_taco_problem_ids": [],
+      "num_unique_taco_problems": 0,
+      "curated_rows": 5,
+      "origin_counts": {
+        "curated": 5
+      },
+      "candidate_for_stable": false,
+      "held_out_problem_ids": [],
+      "status": "seed",
+      "status_reason": "0-1 unique TACO problems or evidence remains predominantly curated",
+      "retrieval_gate_passed": false
+    },
+    "ds_fenwick_tree": {
+      "num_source_rows": 5,
+      "unique_taco_problem_ids": [],
+      "num_unique_taco_problems": 0,
+      "curated_rows": 5,
+      "origin_counts": {
+        "curated": 5
+      },
+      "candidate_for_stable": false,
+      "held_out_problem_ids": [],
+      "status": "seed",
+      "status_reason": "0-1 unique TACO problems or evidence remains predominantly curated",
+      "retrieval_gate_passed": false
+    },
+    "ds_hash_map": {
+      "num_source_rows": 10,
+      "unique_taco_problem_ids": [
+        "taco_train_002971__2971",
+        "taco_train_003347__3347",
+        "taco_train_008390__8390",
+        "taco_train_008466__8466",
+        "taco_train_010385__10385",
+        "taco_train_010635__10635",
+        "taco_train_014855__14855",
+        "taco_train_017160__17160",
+        "taco_train_021960__21960",
+        "taco_train_023585__23585"
+      ],
+      "num_unique_taco_problems": 10,
+      "curated_rows": 0,
+      "origin_counts": {
+        "taco_verified": 10
+      },
+      "candidate_for_stable": true,
+      "held_out_problem_ids": [
+        "taco_train_023585__23585"
+      ],
+      "status": "provisional",
+      "status_reason": ">=5 unique TACO problems but local retrieval top-3 gate did not pass",
+      "retrieval_gate_passed": false
+    },
+    "ds_heap_priority_queue": {
+      "num_source_rows": 9,
+      "unique_taco_problem_ids": [
+        "taco_train_004339__4339",
+        "taco_train_006429__6429",
+        "taco_train_006893__6893",
+        "taco_train_007867__7867",
+        "taco_train_013359__13359",
+        "taco_train_016980__16980",
+        "taco_train_019232__19232",
+        "taco_train_019595__19595",
+        "taco_train_021126__21126"
+      ],
+      "num_unique_taco_problems": 9,
+      "curated_rows": 0,
+      "origin_counts": {
+        "taco_verified": 9
+      },
+      "candidate_for_stable": true,
+      "held_out_problem_ids": [
+        "taco_train_021126__21126"
+      ],
+      "status": "provisional",
+      "status_reason": ">=5 unique TACO problems but local retrieval top-3 gate did not pass",
+      "retrieval_gate_passed": false
+    },
+    "ds_monotonic_queue": {
+      "num_source_rows": 5,
+      "unique_taco_problem_ids": [],
+      "num_unique_taco_problems": 0,
+      "curated_rows": 5,
+      "origin_counts": {
+        "curated": 5
+      },
+      "candidate_for_stable": false,
+      "held_out_problem_ids": [],
+      "status": "seed",
+      "status_reason": "0-1 unique TACO problems or evidence remains predominantly curated",
+      "retrieval_gate_passed": false
+    },
+    "ds_monotonic_stack": {
+      "num_source_rows": 5,
+      "unique_taco_problem_ids": [],
+      "num_unique_taco_problems": 0,
+      "curated_rows": 5,
+      "origin_counts": {
+        "curated": 5
+      },
+      "candidate_for_stable": false,
+      "held_out_problem_ids": [],
+      "status": "seed",
+      "status_reason": "0-1 unique TACO problems or evidence remains predominantly curated",
+      "retrieval_gate_passed": false
+    },
+    "ds_segment_tree": {
+      "num_source_rows": 5,
+      "unique_taco_problem_ids": [],
+      "num_unique_taco_problems": 0,
+      "curated_rows": 5,
+      "origin_counts": {
+        "curated": 5
+      },
+      "candidate_for_stable": false,
+      "held_out_problem_ids": [],
+      "status": "seed",
+      "status_reason": "0-1 unique TACO problems or evidence remains predominantly curated",
+      "retrieval_gate_passed": false
+    },
+    "graph_bfs_shortest_path_unweighted": {
+      "num_source_rows": 5,
+      "unique_taco_problem_ids": [],
+      "num_unique_taco_problems": 0,
+      "curated_rows": 5,
+      "origin_counts": {
+        "curated": 5
+      },
+      "candidate_for_stable": false,
+      "held_out_problem_ids": [],
+      "status": "seed",
+      "status_reason": "0-1 unique TACO problems or evidence remains predominantly curated",
+      "retrieval_gate_passed": false
+    },
+    "graph_bipartite_coloring": {
+      "num_source_rows": 5,
+      "unique_taco_problem_ids": [],
+      "num_unique_taco_problems": 0,
+      "curated_rows": 5,
+      "origin_counts": {
+        "curated": 5
+      },
+      "candidate_for_stable": false,
+      "held_out_problem_ids": [],
+      "status": "seed",
+      "status_reason": "0-1 unique TACO problems or evidence remains predominantly curated",
+      "retrieval_gate_passed": false
+    },
+    "graph_dfs_components_cycle": {
+      "num_source_rows": 5,
+      "unique_taco_problem_ids": [],
+      "num_unique_taco_problems": 0,
+      "curated_rows": 5,
+      "origin_counts": {
+        "curated": 5
+      },
+      "candidate_for_stable": false,
+      "held_out_problem_ids": [],
+      "status": "seed",
+      "status_reason": "0-1 unique TACO problems or evidence remains predominantly curated",
+      "retrieval_gate_passed": false
+    },
+    "graph_dijkstra_shortest_path": {
+      "num_source_rows": 5,
+      "unique_taco_problem_ids": [],
+      "num_unique_taco_problems": 0,
+      "curated_rows": 5,
+      "origin_counts": {
+        "curated": 5
+      },
+      "candidate_for_stable": false,
+      "held_out_problem_ids": [],
+      "status": "seed",
+      "status_reason": "0-1 unique TACO problems or evidence remains predominantly curated",
+      "retrieval_gate_passed": false
+    },
+    "graph_mst_kruskal": {
+      "num_source_rows": 5,
+      "unique_taco_problem_ids": [],
+      "num_unique_taco_problems": 0,
+      "curated_rows": 5,
+      "origin_counts": {
+        "curated": 5
+      },
+      "candidate_for_stable": false,
+      "held_out_problem_ids": [],
+      "status": "seed",
+      "status_reason": "0-1 unique TACO problems or evidence remains predominantly curated",
+      "retrieval_gate_passed": false
+    },
+    "graph_topological_sort": {
+      "num_source_rows": 5,
+      "unique_taco_problem_ids": [
+        "taco_train_000924__924"
+      ],
+      "num_unique_taco_problems": 1,
+      "curated_rows": 3,
+      "origin_counts": {
+        "taco_verified": 2,
+        "curated": 3
+      },
+      "candidate_for_stable": false,
+      "held_out_problem_ids": [],
+      "status": "seed",
+      "status_reason": "0-1 unique TACO problems or evidence remains predominantly curated",
+      "retrieval_gate_passed": false
+    },
+    "greedy_exchange_argument": {
+      "num_source_rows": 62,
+      "unique_taco_problem_ids": [
+        "taco_train_000225__225",
+        "taco_train_000281__281",
+        "taco_train_000766__766",
+        "taco_train_000930__930",
+        "taco_train_001398__1398",
+        "taco_train_002292__2292",
+        "taco_train_002328__2328",
+        "taco_train_003377__3377",
+        "taco_train_004079__4079",
+        "taco_train_004091__4091",
+        "taco_train_004480__4480",
+        "taco_train_005446__5446",
+        "taco_train_005479__5479",
+        "taco_train_006127__6127",
+        "taco_train_006234__6234",
+        "taco_train_006311__6311",
+        "taco_train_006458__6458",
+        "taco_train_006495__6495",
+        "taco_train_007062__7062",
+        "taco_train_007617__7617",
+        "taco_train_007794__7794",
+        "taco_train_007821__7821",
+        "taco_train_008241__8241",
+        "taco_train_008353__8353",
+        "taco_train_009179__9179",
+        "taco_train_009531__9531",
+        "taco_train_010268__10268",
+        "taco_train_010394__10394",
+        "taco_train_010513__10513",
+        "taco_train_010714__10714",
+        "taco_train_010927__10927",
+        "taco_train_011148__11148",
+        "taco_train_011856__11856",
+        "taco_train_012657__12657",
+        "taco_train_012876__12876",
+        "taco_train_012902__12902",
+        "taco_train_013037__13037",
+        "taco_train_014161__14161",
+        "taco_train_014627__14627",
+        "taco_train_014944__14944",
+        "taco_train_014988__14988",
+        "taco_train_015540__15540",
+        "taco_train_015555__15555",
+        "taco_train_016356__16356",
+        "taco_train_016409__16409",
+        "taco_train_017871__17871",
+        "taco_train_018567__18567",
+        "taco_train_018889__18889",
+        "taco_train_018964__18964",
+        "taco_train_019242__19242",
+        "taco_train_019402__19402",
+        "taco_train_019427__19427",
+        "taco_train_020499__20499",
+        "taco_train_020684__20684",
+        "taco_train_020863__20863",
+        "taco_train_020945__20945",
+        "taco_train_022039__22039",
+        "taco_train_022231__22231",
+        "taco_train_022371__22371",
+        "taco_train_023533__23533",
+        "taco_train_025225__25225",
+        "taco_train_025235__25235"
+      ],
+      "num_unique_taco_problems": 62,
+      "curated_rows": 0,
+      "origin_counts": {
+        "taco_verified": 62
+      },
+      "candidate_for_stable": true,
+      "held_out_problem_ids": [
+        "taco_train_025235__25235"
+      ],
+      "status": "stable",
+      "status_reason": ">=5 unique TACO problems, TACO-only representatives, and local retrieval top-3 gate passed",
+      "retrieval_gate_passed": true
+    },
+    "greedy_priority_queue": {
+      "num_source_rows": 5,
+      "unique_taco_problem_ids": [
+        "taco_train_000228__228",
+        "taco_train_009333__9333",
+        "taco_train_010638__10638",
+        "taco_train_024132__24132",
+        "taco_train_025271__25271"
+      ],
+      "num_unique_taco_problems": 5,
+      "curated_rows": 0,
+      "origin_counts": {
+        "taco_verified": 5
+      },
+      "candidate_for_stable": true,
+      "held_out_problem_ids": [
+        "taco_train_025271__25271"
+      ],
+      "status": "provisional",
+      "status_reason": ">=5 unique TACO problems but local retrieval top-3 gate did not pass",
+      "retrieval_gate_passed": false
+    },
+    "greedy_sorting_order": {
+      "num_source_rows": 35,
+      "unique_taco_problem_ids": [
+        "taco_train_000158__158",
+        "taco_train_000181__181",
+        "taco_train_000820__820",
+        "taco_train_001118__1118",
+        "taco_train_004426__4426",
+        "taco_train_004649__4649",
+        "taco_train_004690__4690",
+        "taco_train_004714__4714",
+        "taco_train_005112__5112",
+        "taco_train_005256__5256",
+        "taco_train_006768__6768",
+        "taco_train_007966__7966",
+        "taco_train_008175__8175",
+        "taco_train_009129__9129",
+        "taco_train_009897__9897",
+        "taco_train_009991__9991",
+        "taco_train_010171__10171",
+        "taco_train_010664__10664",
+        "taco_train_011797__11797",
+        "taco_train_012036__12036",
+        "taco_train_013541__13541",
+        "taco_train_014122__14122",
+        "taco_train_014589__14589",
+        "taco_train_015421__15421",
+        "taco_train_016106__16106",
+        "taco_train_016570__16570",
+        "taco_train_017145__17145",
+        "taco_train_018710__18710",
+        "taco_train_019476__19476",
+        "taco_train_021818__21818",
+        "taco_train_021877__21877",
+        "taco_train_022331__22331",
+        "taco_train_023362__23362",
+        "taco_train_024006__24006",
+        "taco_train_024444__24444"
+      ],
+      "num_unique_taco_problems": 35,
+      "curated_rows": 0,
+      "origin_counts": {
+        "taco_verified": 35
+      },
+      "candidate_for_stable": true,
+      "held_out_problem_ids": [
+        "taco_train_024444__24444"
+      ],
+      "status": "provisional",
+      "status_reason": ">=5 unique TACO problems but local retrieval top-3 gate did not pass",
+      "retrieval_gate_passed": false
+    },
+    "greedy_two_pointers": {
+      "num_source_rows": 8,
+      "unique_taco_problem_ids": [
+        "taco_train_000252__252",
+        "taco_train_000757__757",
+        "taco_train_001706__1706",
+        "taco_train_005476__5476",
+        "taco_train_011537__11537",
+        "taco_train_021990__21990",
+        "taco_train_023254__23254",
+        "taco_train_023296__23296"
+      ],
+      "num_unique_taco_problems": 8,
+      "curated_rows": 0,
+      "origin_counts": {
+        "taco_verified": 8
+      },
+      "candidate_for_stable": true,
+      "held_out_problem_ids": [
+        "taco_train_023296__23296"
+      ],
+      "status": "stable",
+      "status_reason": ">=5 unique TACO problems, TACO-only representatives, and local retrieval top-3 gate passed",
+      "retrieval_gate_passed": true
+    },
+    "math_combinatorics_ncr": {
+      "num_source_rows": 5,
+      "unique_taco_problem_ids": [],
+      "num_unique_taco_problems": 0,
+      "curated_rows": 5,
+      "origin_counts": {
+        "curated": 5
+      },
+      "candidate_for_stable": false,
+      "held_out_problem_ids": [],
+      "status": "seed",
+      "status_reason": "0-1 unique TACO problems or evidence remains predominantly curated",
+      "retrieval_gate_passed": false
+    },
+    "math_gcd_lcm": {
+      "num_source_rows": 5,
+      "unique_taco_problem_ids": [
+        "taco_train_010418__10418"
+      ],
+      "num_unique_taco_problems": 1,
+      "curated_rows": 3,
+      "origin_counts": {
+        "taco_verified": 2,
+        "curated": 3
+      },
+      "candidate_for_stable": false,
+      "held_out_problem_ids": [],
+      "status": "seed",
+      "status_reason": "0-1 unique TACO problems or evidence remains predominantly curated",
+      "retrieval_gate_passed": false
+    },
+    "math_inclusion_exclusion": {
+      "num_source_rows": 5,
+      "unique_taco_problem_ids": [],
+      "num_unique_taco_problems": 0,
+      "curated_rows": 5,
+      "origin_counts": {
+        "curated": 5
+      },
+      "candidate_for_stable": false,
+      "held_out_problem_ids": [],
+      "status": "seed",
+      "status_reason": "0-1 unique TACO problems or evidence remains predominantly curated",
+      "retrieval_gate_passed": false
+    },
+    "math_modular_exponentiation": {
+      "num_source_rows": 5,
+      "unique_taco_problem_ids": [],
+      "num_unique_taco_problems": 0,
+      "curated_rows": 5,
+      "origin_counts": {
+        "curated": 5
+      },
+      "candidate_for_stable": false,
+      "held_out_problem_ids": [],
+      "status": "seed",
+      "status_reason": "0-1 unique TACO problems or evidence remains predominantly curated",
+      "retrieval_gate_passed": false
+    },
+    "math_prime_factorization": {
+      "num_source_rows": 5,
+      "unique_taco_problem_ids": [],
+      "num_unique_taco_problems": 0,
+      "curated_rows": 5,
+      "origin_counts": {
+        "curated": 5
+      },
+      "candidate_for_stable": false,
+      "held_out_problem_ids": [],
+      "status": "seed",
+      "status_reason": "0-1 unique TACO problems or evidence remains predominantly curated",
+      "retrieval_gate_passed": false
+    },
+    "math_prime_sieve": {
+      "num_source_rows": 5,
+      "unique_taco_problem_ids": [
+        "taco_train_010612__10612"
+      ],
+      "num_unique_taco_problems": 1,
+      "curated_rows": 2,
+      "origin_counts": {
+        "taco_verified": 3,
+        "curated": 2
+      },
+      "candidate_for_stable": false,
+      "held_out_problem_ids": [],
+      "status": "seed",
+      "status_reason": "0-1 unique TACO problems or evidence remains predominantly curated",
+      "retrieval_gate_passed": false
+    },
+    "prefix_sum_1d": {
+      "num_source_rows": 5,
+      "unique_taco_problem_ids": [],
+      "num_unique_taco_problems": 0,
+      "curated_rows": 5,
+      "origin_counts": {
+        "curated": 5
+      },
+      "candidate_for_stable": false,
+      "held_out_problem_ids": [],
+      "status": "seed",
+      "status_reason": "0-1 unique TACO problems or evidence remains predominantly curated",
+      "retrieval_gate_passed": false
+    },
+    "prefix_sum_2d": {
+      "num_source_rows": 5,
+      "unique_taco_problem_ids": [],
+      "num_unique_taco_problems": 0,
+      "curated_rows": 5,
+      "origin_counts": {
+        "curated": 5
+      },
+      "candidate_for_stable": false,
+      "held_out_problem_ids": [],
+      "status": "seed",
+      "status_reason": "0-1 unique TACO problems or evidence remains predominantly curated",
+      "retrieval_gate_passed": false
+    },
+    "search_backtracking": {
+      "num_source_rows": 15,
+      "unique_taco_problem_ids": [
+        "taco_train_002621__2621",
+        "taco_train_005661__5661",
+        "taco_train_006097__6097",
+        "taco_train_006468__6468",
+        "taco_train_007734__7734",
+        "taco_train_008099__8099",
+        "taco_train_008190__8190",
+        "taco_train_008692__8692",
+        "taco_train_008756__8756",
+        "taco_train_015131__15131",
+        "taco_train_016399__16399",
+        "taco_train_016608__16608",
+        "taco_train_017766__17766",
+        "taco_train_018500__18500",
+        "taco_train_019191__19191"
+      ],
+      "num_unique_taco_problems": 15,
+      "curated_rows": 0,
+      "origin_counts": {
+        "taco_verified": 15
+      },
+      "candidate_for_stable": true,
+      "held_out_problem_ids": [
+        "taco_train_019191__19191"
+      ],
+      "status": "provisional",
+      "status_reason": ">=5 unique TACO problems but local retrieval top-3 gate did not pass",
+      "retrieval_gate_passed": false
+    },
+    "search_bitmask_enumeration": {
+      "num_source_rows": 11,
+      "unique_taco_problem_ids": [
+        "taco_train_000099__99",
+        "taco_train_002799__2799",
+        "taco_train_003610__3610",
+        "taco_train_004408__4408",
+        "taco_train_005985__5985",
+        "taco_train_007643__7643",
+        "taco_train_009025__9025",
+        "taco_train_010152__10152",
+        "taco_train_016745__16745",
+        "taco_train_017719__17719",
+        "taco_train_024755__24755"
+      ],
+      "num_unique_taco_problems": 11,
+      "curated_rows": 0,
+      "origin_counts": {
+        "taco_verified": 11
+      },
+      "candidate_for_stable": true,
+      "held_out_problem_ids": [
+        "taco_train_024755__24755"
+      ],
+      "status": "stable",
+      "status_reason": ">=5 unique TACO problems, TACO-only representatives, and local retrieval top-3 gate passed",
+      "retrieval_gate_passed": true
+    },
+    "search_branch_and_bound": {
+      "num_source_rows": 10,
+      "unique_taco_problem_ids": [
+        "taco_train_004927__4927",
+        "taco_train_005137__5137",
+        "taco_train_007113__7113",
+        "taco_train_011194__11194",
+        "taco_train_011494__11494",
+        "taco_train_011876__11876",
+        "taco_train_018808__18808",
+        "taco_train_019868__19868",
+        "taco_train_020321__20321",
+        "taco_train_025320__25320"
+      ],
+      "num_unique_taco_problems": 10,
+      "curated_rows": 0,
+      "origin_counts": {
+        "taco_verified": 10
+      },
+      "candidate_for_stable": true,
+      "held_out_problem_ids": [
+        "taco_train_025320__25320"
+      ],
+      "status": "provisional",
+      "status_reason": ">=5 unique TACO problems but local retrieval top-3 gate did not pass",
+      "retrieval_gate_passed": false
+    },
+    "search_permutation_enumeration": {
+      "num_source_rows": 28,
+      "unique_taco_problem_ids": [
+        "taco_train_000172__172",
+        "taco_train_000667__667",
+        "taco_train_000887__887",
+        "taco_train_003297__3297",
+        "taco_train_003819__3819",
+        "taco_train_004550__4550",
+        "taco_train_005827__5827",
+        "taco_train_006031__6031",
+        "taco_train_007212__7212",
+        "taco_train_008052__8052",
+        "taco_train_008671__8671",
+        "taco_train_009680__9680",
+        "taco_train_009964__9964",
+        "taco_train_011674__11674",
+        "taco_train_011770__11770",
+        "taco_train_012336__12336",
+        "taco_train_012484__12484",
+        "taco_train_016070__16070",
+        "taco_train_018443__18443",
+        "taco_train_018596__18596",
+        "taco_train_019937__19937",
+        "taco_train_020839__20839",
+        "taco_train_020946__20946",
+        "taco_train_021800__21800",
+        "taco_train_022264__22264",
+        "taco_train_022474__22474",
+        "taco_train_023709__23709",
+        "taco_train_024454__24454"
+      ],
+      "num_unique_taco_problems": 28,
+      "curated_rows": 0,
+      "origin_counts": {
+        "taco_verified": 28
+      },
+      "candidate_for_stable": true,
+      "held_out_problem_ids": [
+        "taco_train_024454__24454"
+      ],
+      "status": "provisional",
+      "status_reason": ">=5 unique TACO problems but local retrieval top-3 gate did not pass",
+      "retrieval_gate_passed": false
+    },
+    "sliding_window_fixed_length": {
+      "num_source_rows": 5,
+      "unique_taco_problem_ids": [
+        "taco_train_012317__12317"
+      ],
+      "num_unique_taco_problems": 1,
+      "curated_rows": 3,
+      "origin_counts": {
+        "taco_verified": 2,
+        "curated": 3
+      },
+      "candidate_for_stable": false,
+      "held_out_problem_ids": [],
+      "status": "seed",
+      "status_reason": "0-1 unique TACO problems or evidence remains predominantly curated",
+      "retrieval_gate_passed": false
+    },
+    "sliding_window_variable_length": {
+      "num_source_rows": 5,
+      "unique_taco_problem_ids": [],
+      "num_unique_taco_problems": 0,
+      "curated_rows": 5,
+      "origin_counts": {
+        "curated": 5
+      },
+      "candidate_for_stable": false,
+      "held_out_problem_ids": [],
+      "status": "seed",
+      "status_reason": "0-1 unique TACO problems or evidence remains predominantly curated",
+      "retrieval_gate_passed": false
+    },
+    "sorting_custom_key": {
+      "num_source_rows": 54,
+      "unique_taco_problem_ids": [
+        "taco_train_001157__1157",
+        "taco_train_001321__1321",
+        "taco_train_001602__1602",
+        "taco_train_002279__2279",
+        "taco_train_002534__2534",
+        "taco_train_003306__3306",
+        "taco_train_003783__3783",
+        "taco_train_004009__4009",
+        "taco_train_004652__4652",
+        "taco_train_005406__5406",
+        "taco_train_005410__5410",
+        "taco_train_006026__6026",
+        "taco_train_006175__6175",
+        "taco_train_006260__6260",
+        "taco_train_007665__7665",
+        "taco_train_008471__8471",
+        "taco_train_008980__8980",
+        "taco_train_009665__9665",
+        "taco_train_010088__10088",
+        "taco_train_010348__10348",
+        "taco_train_011184__11184",
+        "taco_train_011378__11378",
+        "taco_train_011423__11423",
+        "taco_train_011619__11619",
+        "taco_train_011712__11712",
+        "taco_train_011948__11948",
+        "taco_train_013463__13463",
+        "taco_train_014239__14239",
+        "taco_train_014575__14575",
+        "taco_train_014978__14978",
+        "taco_train_015041__15041",
+        "taco_train_015472__15472",
+        "taco_train_015829__15829",
+        "taco_train_016279__16279",
+        "taco_train_016405__16405",
+        "taco_train_017872__17872",
+        "taco_train_017992__17992",
+        "taco_train_018314__18314",
+        "taco_train_018845__18845",
+        "taco_train_018914__18914",
+        "taco_train_019926__19926",
+        "taco_train_019989__19989",
+        "taco_train_020662__20662",
+        "taco_train_020802__20802",
+        "taco_train_021274__21274",
+        "taco_train_021601__21601",
+        "taco_train_022196__22196",
+        "taco_train_023012__23012",
+        "taco_train_023109__23109",
+        "taco_train_023287__23287",
+        "taco_train_024312__24312",
+        "taco_train_024442__24442",
+        "taco_train_024918__24918",
+        "taco_train_025279__25279"
+      ],
+      "num_unique_taco_problems": 54,
+      "curated_rows": 0,
+      "origin_counts": {
+        "taco_verified": 54
+      },
+      "candidate_for_stable": true,
+      "held_out_problem_ids": [
+        "taco_train_025279__25279"
+      ],
+      "status": "provisional",
+      "status_reason": ">=5 unique TACO problems but local retrieval top-3 gate did not pass",
+      "retrieval_gate_passed": false
+    },
+    "string_kmp_prefix_function": {
+      "num_source_rows": 5,
+      "unique_taco_problem_ids": [],
+      "num_unique_taco_problems": 0,
+      "curated_rows": 5,
+      "origin_counts": {
+        "curated": 5
+      },
+      "candidate_for_stable": false,
+      "held_out_problem_ids": [],
+      "status": "seed",
+      "status_reason": "0-1 unique TACO problems or evidence remains predominantly curated",
+      "retrieval_gate_passed": false
+    },
+    "string_rolling_hash": {
+      "num_source_rows": 5,
+      "unique_taco_problem_ids": [],
+      "num_unique_taco_problems": 0,
+      "curated_rows": 5,
+      "origin_counts": {
+        "curated": 5
+      },
+      "candidate_for_stable": false,
+      "held_out_problem_ids": [],
+      "status": "seed",
+      "status_reason": "0-1 unique TACO problems or evidence remains predominantly curated",
+      "retrieval_gate_passed": false
+    },
+    "string_trie": {
+      "num_source_rows": 5,
+      "unique_taco_problem_ids": [],
+      "num_unique_taco_problems": 0,
+      "curated_rows": 5,
+      "origin_counts": {
+        "curated": 5
+      },
+      "candidate_for_stable": false,
+      "held_out_problem_ids": [],
+      "status": "seed",
+      "status_reason": "0-1 unique TACO problems or evidence remains predominantly curated",
+      "retrieval_gate_passed": false
+    },
+    "string_z_algorithm": {
+      "num_source_rows": 5,
+      "unique_taco_problem_ids": [],
+      "num_unique_taco_problems": 0,
+      "curated_rows": 5,
+      "origin_counts": {
+        "curated": 5
+      },
+      "candidate_for_stable": false,
+      "held_out_problem_ids": [],
+      "status": "seed",
+      "status_reason": "0-1 unique TACO problems or evidence remains predominantly curated",
+      "retrieval_gate_passed": false
+    },
+    "sweep_line_events": {
+      "num_source_rows": 5,
+      "unique_taco_problem_ids": [],
+      "num_unique_taco_problems": 0,
+      "curated_rows": 5,
+      "origin_counts": {
+        "curated": 5
+      },
+      "candidate_for_stable": false,
+      "held_out_problem_ids": [],
+      "status": "seed",
+      "status_reason": "0-1 unique TACO problems or evidence remains predominantly curated",
+      "retrieval_gate_passed": false
+    }
+  }
+}

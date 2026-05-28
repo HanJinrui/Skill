@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 1.0, "core_composition_summary": "Simple slicing and sorting of subarray.", "rationale": "Only one mechanism: built-in sorted on a slice; no multiple coordinated algorithms."}}

@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 1.0, "core_composition_summary": "Single sorting mechanism", "rationale": "The solution sorts the array once and uses index to compute ranks; only one algorithmic component."}}

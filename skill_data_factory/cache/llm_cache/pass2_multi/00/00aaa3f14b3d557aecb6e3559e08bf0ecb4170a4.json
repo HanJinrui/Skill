@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Mathematical reduction to a single loop over possible ceiling counts.", "rationale": "No algorithmic patterns from DP or greedy; the solution is a simple mathematical insight with a brute-force loop."}}

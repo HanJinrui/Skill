@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Single DP from right to left computing max books kept (not moved); answer is n minus that.", "rationale": "Solution uses only dynamic programming; no coordination of multiple algorithm families."}}

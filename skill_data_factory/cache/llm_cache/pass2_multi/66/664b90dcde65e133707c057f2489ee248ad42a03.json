@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": ["bit_manipulation"], "composition_subtypes": [], "composition_order": [], "confidence": 1.0, "core_composition_summary": "Direct index calculation using bit manipulation on reversed digits.", "rationale": "Solution uses only bitwise operations to compute index; no multi-mechanism coordination."}}

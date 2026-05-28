@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": null, "confidence": 0.95, "core_composition_summary": "Single mechanism: priority queue for top-2 selection.", "rationale": "Solution uses only heapq.nlargest, a heap-based selection for the largest two, with no other coordinated algorithm."}}

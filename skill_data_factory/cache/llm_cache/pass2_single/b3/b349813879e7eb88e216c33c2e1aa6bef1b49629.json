@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "ds_queue_deque", "confidence": 0.3, "core_mechanism_summary": "Linear search for first card of queried color, then move it to front by list slicing.", "rationale": "Simulates card deck sequence; operations resemble a deque (move-to-front) but uses basic list instead of deque.", "family_mismatch": false, "is_true_composition": false}}

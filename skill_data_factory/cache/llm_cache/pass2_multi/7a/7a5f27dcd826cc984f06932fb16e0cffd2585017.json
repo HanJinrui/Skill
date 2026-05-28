@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": ["greedy_algorithms", "sorting"], "composition_subtypes": [], "composition_order": [], "confidence": 0.9, "core_composition_summary": "Sorting then greedy selection from largest elements.", "rationale": "Main mechanism is greedy; sorting is preprocessing, not a separate coordinated algorithm."}}

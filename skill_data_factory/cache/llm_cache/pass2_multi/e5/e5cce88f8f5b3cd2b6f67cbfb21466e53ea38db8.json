@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "", "rationale": "The solution uses basic built-in operations and a single sorting step to compute statistics; it does not combine multiple distinct algorithmic mechanisms in a coordinated way."}}

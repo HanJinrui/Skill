@@ -1,0 +1,68 @@
+input:
+  composition_path: "data/composition_rows.jsonl"
+  allow_legacy_taco_fallback: true
+
+output:
+  output_dir: "outputs"
+  skill_bank_path: "outputs/multi_skill_bank.jsonl"
+  evidence_map_path: "outputs/multi_skill_evidence_map.json"
+  report_path: "outputs/multi_skill_generation_report.json"
+  generation_inputs_path: "outputs/multi_skill_generation_inputs.jsonl"
+  manual_review_path: "outputs/manual_review_rows.jsonl"
+  repaired_orders_path: "outputs/repaired_composition_orders.jsonl"
+  rejected_path: "outputs/rejected_or_held_compositions.json"
+
+filter:
+  require_syntax_ok: true
+  require_safe_exec_ok: true
+  require_full_pass: true
+  require_pass_rate: 1.0
+  algorithm_scope: "multi"
+  min_subtype_confidence: 0.90
+  allow_silver: true
+  require_complete_order: true
+
+grouping:
+  stable_min_rows: 5
+  provisional_min_rows: 3
+  classic_min_rows: 2
+  hold_min_rows: 1
+  min_rows_for_generation: 3
+
+representative_selection:
+  max_examples_per_skill: 8
+  min_examples_per_skill: 3
+  max_code_lines_soft: 160
+  max_code_excerpt_lines: 120
+  prefer_complete_order: true
+  prefer_unrepaired_order: true
+
+composition_order_repair:
+  enable_rule_repair: true
+  enable_llm_repair: false
+  min_llm_repair_confidence: 0.80
+
+relation_classifier:
+  use_rule_classifier: true
+  fallback_relation: "other_composition"
+
+llm:
+  enabled: true
+  provider: "deepseek"
+  model: "deepseek-v4-pro"
+  temperature: 0.2
+  max_tokens: 8192
+  retry_times: 3
+  max_revision_rounds: 2
+  max_workers: 3
+  cache_dir: "outputs/cache"
+
+validation:
+  min_final_score: 0.85
+  revise_score_threshold: 0.70
+  max_repeated_problem_tokens: 50
+  max_repeated_code_lines: 5
+  min_invariants: 2
+  min_common_pitfalls: 3
+  require_state_interface: true
+  require_order_consistency: true

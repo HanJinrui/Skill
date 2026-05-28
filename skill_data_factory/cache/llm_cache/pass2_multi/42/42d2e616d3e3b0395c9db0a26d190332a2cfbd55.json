@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "", "rationale": "Solution uses DP for max subarray sums (left/right Kadane) and another DP pass to combine; all DP, no true multi-family composition."}}

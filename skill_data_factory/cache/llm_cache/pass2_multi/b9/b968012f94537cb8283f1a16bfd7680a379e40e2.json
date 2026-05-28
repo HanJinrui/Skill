@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Greedy scan over sorted frequencies to maximize kept elements.", "rationale": "Solution is a single greedy algorithm using sorting as preprocessing; not a composition of distinct mechanisms."}}

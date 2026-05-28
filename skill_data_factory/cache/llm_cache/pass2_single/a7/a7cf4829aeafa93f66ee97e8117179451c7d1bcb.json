@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "dp_2d_state", "confidence": 0.95, "core_mechanism_summary": "Four 2D DP tables compute max path sums from corners to each cell, then combine for max meeting point.", "rationale": "Uses DP with 2D state (i,j) for prefix/suffix path maxima; typical grid DP pattern.", "family_mismatch": false, "is_true_composition": false}}

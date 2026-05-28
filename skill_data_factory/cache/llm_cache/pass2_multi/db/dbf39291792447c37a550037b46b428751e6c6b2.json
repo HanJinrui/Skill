@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Uses binary search on precomputed sorted list of c values.", "rationale": "The solution precomputes c values via a loop and uses binary search for queries, effectively a single mechanism."}}

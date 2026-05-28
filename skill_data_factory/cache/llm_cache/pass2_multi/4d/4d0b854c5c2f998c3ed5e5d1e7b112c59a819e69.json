@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Greedy algorithm with sorting preprocessing.", "rationale": "The core is a greedy turn-based selection; sorting is just a helper step, not a separate coordinated mechanism."}}

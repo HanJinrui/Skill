@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Single mechanism: frequency counting and max character selection.", "rationale": "No multi-algorithm coordination; just count and output largest character."}}

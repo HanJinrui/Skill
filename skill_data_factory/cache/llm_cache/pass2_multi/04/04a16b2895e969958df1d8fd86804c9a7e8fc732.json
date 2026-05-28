@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Single greedy algorithm with segment counting and cost comparison", "rationale": "No multiple mechanisms; only greedy strategy with exchange argument."}}

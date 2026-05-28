@@ -1,0 +1,94 @@
+experiment:
+  name: bank67_router_mvp
+  bank_version: bank67_v1
+  seed: 20260527
+  expected_single_skills: 54
+  expected_multi_skills: 13
+
+paths:
+  single_skill_bank: ../single_skill_generator/outputs/final_release/single_skill_bank_merged.jsonl
+  multi_skill_bank: ../multi_skill_generator/outputs/multi_skill_bank.jsonl
+  single_eval_manifest: ../rag_experiment/outputs/eval_manifests/taco_test_family_difficulty_balanced_single120.jsonl
+  multi_eval_manifest: ../rag_experiment/outputs/eval_manifests/taco_test_family_difficulty_balanced_multi72.jsonl
+  output_dir: outputs
+  index_dir: outputs/index/bank67_v1
+  annotation_dir: outputs/annotations
+  runs_dir: outputs/runs
+  reports_dir: outputs/reports
+
+retrieval:
+  dense_model: BAAI/bge-m3
+  reranker_model: BAAI/bge-reranker-v2-m3
+  device: cpu
+  bm25_k1: 1.5
+  bm25_b: 0.75
+  candidate_limit: 12
+  rerank_limit: 4
+  single_pool_limit: 12
+  multi_pool_limit: 8
+  status_prior:
+    stable: 1.0
+    provisional: 0.75
+    seed: 0.55
+  weights:
+    sparse: 0.30
+    dense: 0.30
+    rule: 0.25
+    status: 0.15
+    hard_non_applicable: 0.60
+    soft_non_applicable: 0.25
+
+routing:
+  single_min_confidence: 0.50
+  single_auto_confidence: 0.70
+  multi_min_confidence: 0.62
+  component_min_confidence: 0.45
+  multi_over_single_margin: 0.05
+  ambiguous_margin: 0.05
+  reroute_margin: 0.08
+  structured_retry_count: 1
+  always_pick_best: true
+
+annotation_judge:
+  provider: deepseek
+  model: deepseek-v4-pro
+  base_url: https://api.deepseek.com
+  max_tokens: 1400
+  thinking: disabled
+  timeout_seconds: 120
+  max_retries: 3
+  json_attempts: 3
+  confidence_threshold: 0.75
+  second_pass: true
+
+model:
+  model_id: Qwen/Qwen2.5-Coder-7B-Instruct
+  # Read-only unpacked local copy corresponding to ../Qwen__Qwen2.5-Coder-7B-Instruct.tar.gz.
+  local_model_dir: ../.hf-cache/models/Qwen__Qwen2.5-Coder-7B-Instruct
+  device_map: auto
+  dtype: bfloat16
+  trust_remote_code: false
+  profile_temperature: 0.0
+  route_temperature: 0.0
+  plan_temperature: 0.0
+  code_first_temperature: 0.15
+  code_first_top_p: 0.90
+  code_later_temperature: 0.72
+  code_later_top_p: 0.95
+  max_profile_tokens: 1200
+  max_route_tokens: 3000
+  max_plan_tokens: 3200
+  max_code_tokens: 4096
+
+evaluation:
+  samples_per_problem: 3
+  per_test_timeout_seconds: 5
+  max_tests_per_problem: 20
+  cpu_limit_seconds: 10
+  memory_limit_mb: 512
+  python_executable: python3
+  modes:
+    - direct_qwen
+    - legacy_hint
+    - routed_plan
+    - routed_plan_closed_loop

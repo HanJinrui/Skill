@@ -1,0 +1,17 @@
+{
+  "version": "final_release_v1",
+  "gcd_repair_method": "deepseek-v4-pro",
+  "gcd_mst_quarantined_rows": 4,
+  "binary_search_routing_counts": {
+    "binary_search_on_answer": 8,
+    "binary_search_lower_upper_bound": 6
+  },
+  "single_additions": 35,
+  "single_merged": 54,
+  "composed_additions": 1,
+  "source_checksums": {
+    "base_skill_bank": "702cd57c72e63a663d17a7d2aa072edf83c5e902f2ae2716280869ca3de21005",
+    "targeted_additions_bank": "2a6b3b928ccfa06a5b59f44e429bd15b9dae579678ba9a131822f4743bace4e2",
+    "targeted_additions_evidence": "1af07f35597653bbaa1e8b7873280119fbce3ad3916096fc4fc71752c58af250"
+  }
+}

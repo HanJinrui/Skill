@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": ["sorting", "greedy_algorithms"], "composition_subtypes": [], "composition_order": [], "confidence": 1.0, "core_composition_summary": "Greedy two-pointer pairing after sorting descending.", "rationale": "Single mechanism: sort and greedy two-pointer scan to pair kangaroos."}}

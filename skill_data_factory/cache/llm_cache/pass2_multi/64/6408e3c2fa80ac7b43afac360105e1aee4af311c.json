@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.99, "core_composition_summary": "Nested loop brute force enumeration over left/right choices.", "rationale": "Only a complete search over controlled/uncontrolled left choices, no data structures or multi-mechanism coordination."}}

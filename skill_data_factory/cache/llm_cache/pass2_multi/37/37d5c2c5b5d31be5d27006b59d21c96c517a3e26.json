@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 1.0, "core_composition_summary": "Simple greedy: sort by a-b, take first k now, rest min(a,b).", "rationale": "Sorting is only preprocessing; the core is a single greedy pass. No separate coordinated mechanisms."}}

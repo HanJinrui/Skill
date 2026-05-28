@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 1.0, "core_composition_summary": "Single mechanism: sort then compute min/max x greedily.", "rationale": "Only sorting is used as preprocessing; no search or enumeration. The calculation of range is linear greedy, not complete search."}}

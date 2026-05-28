@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "", "rationale": "Greedy selection based on depth minus subtree size with sorting is a single mechanism, no multi-algorithm coordination."}}

@@ -1,0 +1,6 @@
+{
+  "single_root": "/home/hjr/algo-skill-factory/skill_data_factory/outputs/single_algorithm/pass3_evidence",
+  "multi_root": "/home/hjr/algo-skill-factory/skill_data_factory/outputs/multi_algorithm/pass3_evidence",
+  "single_distillation": "/home/hjr/algo-skill-factory/skill_data_factory/outputs/single_algorithm/pass3_evidence/distillation_rows.jsonl",
+  "multi_composition": "/home/hjr/algo-skill-factory/skill_data_factory/outputs/multi_algorithm/pass3_evidence/composition_rows.jsonl"
+}

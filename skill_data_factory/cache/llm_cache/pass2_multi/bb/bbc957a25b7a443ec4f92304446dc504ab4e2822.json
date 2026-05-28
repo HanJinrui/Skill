@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Single greedy pass from right to left updating kill boundary.", "rationale": "Solution uses one main mechanism: greedy iteration with a maintained boundary; no multiple coordinated algorithms."}}

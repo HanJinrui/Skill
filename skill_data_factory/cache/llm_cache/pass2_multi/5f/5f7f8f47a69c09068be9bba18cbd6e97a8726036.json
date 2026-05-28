@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": ["sorting", "greedy_algorithms"], "composition_subtypes": [], "composition_order": "not applicable", "confidence": 0.95, "core_composition_summary": "Sort array then compute min(second_largest-1, n-2)", "rationale": "The solution uses sorting to enable a simple greedy choice, not a multi-mechanism composition."}}

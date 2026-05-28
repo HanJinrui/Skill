@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Direct formula (m//2 - m//4 + 1)*(m//4 + 1) mod 1e9+7, no algorithmic composition.", "rationale": "Solution computes answer via closed-form arithmetic, not using DP or bit manipulation. Single mechanism."}}

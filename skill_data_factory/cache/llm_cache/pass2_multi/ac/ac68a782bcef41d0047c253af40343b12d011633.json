@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": ["greedy_algorithms"], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Sorting then greedy selection of largest months to reach growth target", "rationale": "Sorting is only pre-processing for greedy pick-largest; effectively a single greedy mechanism."}}

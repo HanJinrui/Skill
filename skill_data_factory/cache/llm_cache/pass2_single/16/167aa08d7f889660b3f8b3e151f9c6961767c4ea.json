@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "dp_2d_state", "confidence": 0.2, "core_mechanism_summary": "Brute-force: for each i,j, flips segment [i,j] and counts total ones via explicit summation O(n^3).", "rationale": "Code does complete search, but constrained to dp candidates; dp_2d_state chosen as most scored despite mismatch.", "family_mismatch": false, "is_true_composition": false}}

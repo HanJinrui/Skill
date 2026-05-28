@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": null, "confidence": 0.95, "core_composition_summary": "Sorts arrays and uses a greedy assignment to minimize total sweets.", "rationale": "Solution relies on a single mechanism: greedy with sorting. No coordinated multi-mechanism present."}}

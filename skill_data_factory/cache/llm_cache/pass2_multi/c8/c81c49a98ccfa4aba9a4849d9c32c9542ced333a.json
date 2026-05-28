@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "none", "confidence": 1.0, "core_composition_summary": "", "rationale": "Only a single greedy parsing algorithm is used, with no additional DP or other coordinated mechanisms."}}

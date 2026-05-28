@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "search_branch_and_bound", "confidence": 0.95, "core_mechanism_summary": "Exhaustively iterates over all substrings, counting occurrences; returns max length with count>=2.", "rationale": "No greedy choice; solution uses triple nested loops to check every substring, typical complete search.", "family_mismatch": false, "is_true_composition": false}}

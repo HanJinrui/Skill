@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Single monotonic stack with prefix sums to check max>=sum for all subarrays.", "rationale": "Solution uses a single monotonic stack (decreasing) with prefix sums; no distinct mechanisms combined."}}

@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "none", "confidence": 0.95, "core_composition_summary": "Simple enumeration over possible number of plates for cake a.", "rationale": "Only one mechanism: linear search over plate splits."}}

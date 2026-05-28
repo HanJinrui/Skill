@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.9, "core_composition_summary": "Sort array then check adjacent differences; if any gap >=2, not possible.", "rationale": "Sorting is a preprocessing step enabling a simple greedy check; the solution is a single greedy mechanism."}}

@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Sorting of internal vertex weights and cumulative sums", "rationale": "Only one algorithmic mechanism: sorting collected weights and computing prefix sums. No coordination of multiple distinct algorithms."}}

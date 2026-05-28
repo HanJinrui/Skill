@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Binary search over answer with greedy simulation check", "rationale": "Only one mechanism: binary search with sorting preprocessing, no DP or multi-step algorithm coordination."}}

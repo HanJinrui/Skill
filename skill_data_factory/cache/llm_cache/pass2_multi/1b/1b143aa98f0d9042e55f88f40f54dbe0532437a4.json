@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 1.0, "core_composition_summary": "Greedy selection of matchboxes sorted by highest matches per box.", "rationale": "Only one algorithm mechanism: greedy taking of maximum bi boxes. No sorting used; max() in loop is simple iteration."}}

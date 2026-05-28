@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.9, "core_composition_summary": "DP on sorted marbles", "rationale": "Sorting is a preprocessing step; the core algorithm is dynamic programming with 2D state representing whether the current marble is pinned."}}

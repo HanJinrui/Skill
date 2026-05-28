@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 1.0, "core_composition_summary": "Sort by a_i + i and check for duplicates.", "rationale": "Solution uses a single technique: sorting with a derived key to achieve a greedy ordering. No multiple distinct mechanisms."}}

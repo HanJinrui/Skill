@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "bit_binary_representation", "confidence": 0.95, "core_mechanism_summary": "Greedy fill lowest zero bits via l |= l+1 to maximize set bits while staying <= r.", "rationale": "The code directly manipulates binary representation to maximize popcount, fitting bit_binary_representation.", "family_mismatch": false, "is_true_composition": false}}

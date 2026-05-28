@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Simulation with repeated sorting and XOR; no multi-mechanism composition.", "rationale": "Only one primary mechanism: sorting and bitwise XOR in a loop. No DP or complete search."}}

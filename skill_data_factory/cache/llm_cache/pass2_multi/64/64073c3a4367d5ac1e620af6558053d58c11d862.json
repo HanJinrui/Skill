@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Sliding window with two pointers to find minimal segment meeting frequency requirements.", "rationale": "Uses a single sliding window mechanism; no other coordinated algorithms are present."}}

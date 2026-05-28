@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "DP with memoized recursion", "rationale": "Solution uses DFS with memoization, a single dynamic programming mechanism, not a composition."}}

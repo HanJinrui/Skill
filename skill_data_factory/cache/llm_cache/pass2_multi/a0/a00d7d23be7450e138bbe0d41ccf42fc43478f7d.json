@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Greedy assignment by sorting sight, then counting inversions in rows.", "rationale": "The solution uses a single greedy sorting and counting mechanism, with no coordination of multiple distinct algorithms."}}

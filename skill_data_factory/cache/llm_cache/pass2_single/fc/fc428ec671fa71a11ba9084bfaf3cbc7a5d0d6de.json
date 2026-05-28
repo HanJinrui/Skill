@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "ds_hash_map", "confidence": 0.98, "core_mechanism_summary": "Computes slopes from gun to each stormtrooper, stores distinct slopes in a set, and outputs the set size.", "rationale": "Uses a hash set to count unique slope values, which directly maps to the minimum shots needed.", "family_mismatch": false, "is_true_composition": false}}

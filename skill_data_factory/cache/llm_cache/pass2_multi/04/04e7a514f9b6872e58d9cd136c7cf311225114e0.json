@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Single greedy scan with carry for each divisor", "rationale": "The algorithm iterates left to right making local optimal remainder decisions; no coordination of distinct algorithm families."}}

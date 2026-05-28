@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": ["greedy_algorithms"], "composition_subtypes": [], "composition_order": "", "confidence": 0.99, "core_composition_summary": "Single greedy pass tracking safe tide phase intervals.", "rationale": "The solution uses a greedy decision based on a state variable 'left', no other algorithm paradigm present."}}

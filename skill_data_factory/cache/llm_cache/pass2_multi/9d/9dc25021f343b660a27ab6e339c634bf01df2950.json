@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.9, "core_composition_summary": "Sort descending then check two cases for sum and extra element.", "rationale": "The solution uses a single greedy approach after sorting; no coordination of distinct algorithmic components."}}

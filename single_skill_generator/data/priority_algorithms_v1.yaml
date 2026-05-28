@@ -1,0 +1,192 @@
+version: priority_algorithms_v1
+description: Canonical algorithm subtypes for the additional single-skill generation batch.
+direct_aliases:
+  ds_union_find: ds_disjoint_set_union
+  range_fenwick_tree: ds_fenwick_tree
+  range_segment_tree: ds_segment_tree
+  ds_stack_monotonic: ds_monotonic_stack
+  amortized_monotonic_queue: ds_monotonic_queue
+  range_difference_array: difference_array
+  sorting_sweep_line: sweep_line_events
+  sorting_binary_search_answer: binary_search_on_answer
+requires_mechanism_relabel:
+  - search_dfs_bfs_graph
+  - range_prefix_sum
+  - amortized_sliding_window
+  - dp_bitmask
+algorithms:
+  - id: graph_bfs_shortest_path_unweighted
+    family: graph_algorithms
+    label: Unweighted BFS shortest path
+    cues: [breadth-first, bfs, deque, shortest path, unweighted, distance]
+    boundary: Use only when layers from a source give shortest edge counts without weights.
+  - id: graph_dfs_components_cycle
+    family: graph_algorithms
+    label: DFS components and cycle detection
+    cues: [depth-first, dfs, connected component, cycle, visited, graph]
+    boundary: Use traversal state for components or cycle detection, not shortest paths.
+  - id: graph_topological_sort
+    family: graph_algorithms
+    label: Topological sorting
+    cues: [topological, indegree, dag, prerequisite, kahn, directed acyclic]
+    boundary: Requires directed precedence constraints and rejects cyclic orderings.
+  - id: graph_dijkstra_shortest_path
+    family: graph_algorithms
+    label: Dijkstra shortest path
+    cues: [dijkstra, heapq, priority queue, shortest path, weighted, relax]
+    boundary: Edge weights must be nonnegative.
+  - id: graph_mst_kruskal
+    family: graph_algorithms
+    label: Kruskal minimum spanning tree
+    cues: [minimum spanning, mst, kruskal, union find, edge weight, spanning tree]
+    boundary: Optimizes a connecting tree, not per-source shortest paths.
+  - id: graph_bipartite_coloring
+    family: graph_algorithms
+    label: Bipartite graph coloring
+    cues: [bipartite, two color, coloring, odd cycle, partition, graph]
+    boundary: Checks two-color feasibility rather than arbitrary graph coloring.
+  - id: ds_disjoint_set_union
+    family: data_structures
+    label: Disjoint set union
+    cues: [union find, disjoint set, dsu, parent, connectivity, merge]
+    boundary: Maintains merge-only components with find and union operations.
+  - id: ds_fenwick_tree
+    family: data_structures
+    label: Fenwick tree
+    cues: [fenwick, binary indexed tree, bit, prefix sum, point update, lowbit]
+    boundary: Supports invertible prefix aggregation rather than arbitrary range lazy updates.
+  - id: ds_segment_tree
+    family: data_structures
+    label: Segment tree
+    cues: [segment tree, range query, range minimum, tree array, point update, lazy]
+    boundary: Uses interval tree aggregation where prefix-only structures are insufficient.
+  - id: ds_monotonic_stack
+    family: data_structures
+    label: Monotonic stack
+    cues: [monotonic stack, next greater, previous smaller, histogram, stack, nearest]
+    boundary: Resolves nearest dominance relationships, not window extrema.
+  - id: ds_monotonic_queue
+    family: data_structures
+    label: Monotonic queue
+    cues: [monotonic queue, deque, sliding maximum, sliding minimum, window maximum]
+    boundary: Maintains extrema in a moving window with expirations.
+  - id: prefix_sum_1d
+    family: range_queries
+    label: One-dimensional prefix sums
+    cues: [prefix sum, cumulative sum, range sum, subarray sum, interval sum]
+    boundary: Aggregates intervals on one index axis.
+  - id: prefix_sum_2d
+    family: range_queries
+    label: Two-dimensional prefix sums
+    cues: [2d prefix, matrix sum, rectangle sum, submatrix, grid query]
+    boundary: Requires rectangle inclusion-exclusion over two axes.
+  - id: difference_array
+    family: range_queries
+    label: Difference array
+    cues: [difference array, range add, interval update, prefix recovery, imos]
+    boundary: Applies offline range updates before reconstruction.
+  - id: sweep_line_events
+    family: sweep_line
+    label: Sweep line events
+    cues: [sweep line, events, interval overlap, endpoint, active, timeline]
+    boundary: Processes ordered events; it is not a static range query structure.
+  - id: coordinate_compression
+    family: discretization
+    label: Coordinate compression
+    cues: [coordinate compression, rank, discretize, sorted unique, large coordinate]
+    boundary: Preserves relative order of sparse coordinates, not values themselves.
+  - id: sliding_window_fixed_length
+    family: two_pointers_sliding_window
+    label: Fixed-length sliding window
+    cues: [sliding window, fixed length, subarray length, window sum, length k]
+    boundary: Window size is predetermined rather than adjusted by a condition.
+  - id: sliding_window_variable_length
+    family: two_pointers_sliding_window
+    label: Variable-length sliding window
+    cues: [two pointers, sliding window, at most, at least, shrink, expand]
+    boundary: Monotone feasibility allows advancing each boundary only forward.
+  - id: binary_search_on_answer
+    family: binary_search
+    label: Binary search on answer
+    cues: [binary search answer, feasible, minimum capacity, maximum minimum, predicate]
+    boundary: Searches a monotonic feasibility space, not an array location.
+  - id: binary_search_lower_upper_bound
+    family: binary_search
+    label: Lower and upper bound binary search
+    cues: [lower bound, upper bound, bisect, sorted array, first position, occurrence count]
+    boundary: Locates insertion boundaries in sorted data.
+  - id: math_gcd_lcm
+    family: math_algorithms
+    label: GCD and LCM
+    cues: [gcd, lcm, greatest common divisor, euclid, divisible]
+    boundary: Uses divisibility reduction rather than prime enumeration.
+  - id: math_modular_exponentiation
+    family: math_algorithms
+    label: Modular exponentiation
+    cues: [modular exponentiation, fast power, pow, exponent, modulo, binary exponentiation]
+    boundary: Repeated squaring for large powers modulo an integer.
+  - id: math_prime_sieve
+    family: math_algorithms
+    label: Prime sieve
+    cues: [sieve, primes up to, eratosthenes, is prime, smallest prime]
+    boundary: Precomputes primality over a bounded range.
+  - id: math_prime_factorization
+    family: math_algorithms
+    label: Prime factorization
+    cues: [prime factor, factorization, divisors, trial division, exponent]
+    boundary: Decomposes particular integers instead of enumerating all primes alone.
+  - id: math_combinatorics_ncr
+    family: math_algorithms
+    label: Binomial coefficients
+    cues: [ncr, binomial, combinations, choose, factorial, pascal]
+    boundary: Counts selections independent of order.
+  - id: math_inclusion_exclusion
+    family: math_algorithms
+    label: Inclusion-exclusion principle
+    cues: [inclusion exclusion, divisible by, union count, lcm, subsets]
+    boundary: Alternates intersections when counting a union of overlapping sets.
+  - id: string_kmp_prefix_function
+    family: string_algorithms
+    label: KMP prefix function
+    cues: [kmp, prefix function, failure function, pattern matching, lps]
+    boundary: Uses fallback borders for linear pattern matching.
+  - id: string_z_algorithm
+    family: string_algorithms
+    label: Z algorithm
+    cues: [z algorithm, z-function, prefix match, pattern occurrence, z-box]
+    boundary: Stores prefix match lengths at every position.
+  - id: string_rolling_hash
+    family: string_algorithms
+    label: Rolling hash
+    cues: [rolling hash, polynomial hash, substring, hash compare, rabin karp]
+    boundary: Hash equality requires collision awareness.
+  - id: string_trie
+    family: string_algorithms
+    label: Trie
+    cues: [trie, prefix tree, insert word, prefix query, dictionary]
+    boundary: Shares character prefixes across many stored strings.
+  - id: dp_knapsack
+    family: dynamic_programming
+    label: Zero-one knapsack
+    cues: [knapsack, capacity, weight, value, choose items, 0/1]
+    boundary: Each item is chosen at most once unless explicitly unbounded.
+  - id: dp_lis
+    family: dynamic_programming
+    label: Longest increasing subsequence
+    cues: [longest increasing subsequence, lis, tails, strictly increasing, bisect]
+    boundary: Finds ordered subsequences, not contiguous subarrays.
+  - id: dp_bitmask_subset
+    family: dynamic_programming
+    label: Bitmask subset DP
+    cues: [bitmask dp, subset, mask, tsp, visited set, transition]
+    boundary: State explicitly represents chosen elements with bits.
+  - id: dp_digit
+    family: dynamic_programming
+    label: Digit DP
+    cues: [digit dp, digits, tight, leading zero, count numbers, upper bound]
+    boundary: Enumerates digit prefixes constrained by a numeric bound.
+  - id: dp_grid_path
+    family: dynamic_programming
+    label: Grid path DP
+    cues: [grid path, matrix path, obstacle, right down, ways, cell dp]
+    boundary: State advances across cells under local predecessor moves.

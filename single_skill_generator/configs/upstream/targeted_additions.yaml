@@ -1,0 +1,69 @@
+input:
+  distillation_path: "work/upstream/additions/additional_evidence_rows.jsonl"
+
+additional:
+  enabled: true
+  catalog_path: "data/priority_algorithms_v1.yaml"
+  curated_path: "data/curated_algorithm_evidence_v1.yaml"
+  verified_problems_path: "../skill_data_factory/outputs/pass1_manifest/verified_problems.jsonl"
+  verified_solutions_path: "../skill_data_factory/outputs/pass1_manifest/verified_solutions.jsonl"
+  curated_variants_per_skill: 5
+  max_verified_candidates_per_skill: 8
+  min_verified_label_confidence: 0.90
+
+output:
+  output_dir: "work/upstream/additions"
+  coverage_report_path: "work/upstream/additions/coverage_report.json"
+  skill_bank_path: "work/upstream/additions/targeted_additions_bank.jsonl"
+  merged_skill_bank_path: "work/upstream/additions/merged_preview.jsonl"
+  base_skill_bank_path: "inputs/final_release/base_skill_bank.jsonl"
+  evidence_map_path: "work/upstream/additions/evidence_map.json"
+  report_path: "work/upstream/additions/generation_report.json"
+  generation_inputs_path: "work/upstream/additions/generation_inputs.jsonl"
+  rejected_path: "work/upstream/additions/rejected_subtypes.json"
+
+filter:
+  require_syntax_ok: true
+  require_safe_exec_ok: true
+  require_full_pass: true
+  require_pass_rate: 1.0
+  algorithm_scope: "single"
+  require_true_composition_false: true
+  require_primary_solution: true
+  require_taco_family_alignment: true
+  accepted_evidence_tiers: ["gold", "curated"]
+  allow_curated_evidence: true
+  min_subtype_confidence: 0.85
+
+grouping:
+  group_key: "primary_subtype"
+  stable_min_rows: 10
+  provisional_min_rows: 5
+  hold_min_rows: 1
+  allow_seed_with_curated: true
+
+representative_selection:
+  max_examples_per_skill: 8
+  min_examples_per_skill: 5
+  prefer_gold: true
+  max_code_lines_soft: 160
+
+llm:
+  enabled: true
+  provider: "deepseek"
+  model: "deepseek-v4-pro"
+  base_url: "https://api.deepseek.com/v1"
+  temperature: 0.2
+  max_tokens: 8192
+  retry_times: 3
+  cache_dir: "work/cache/additions"
+  timeout: 180.0
+  max_workers: 3
+  api_keys: []
+
+validation:
+  min_final_score: 0.85
+  revise_score_threshold: 0.70
+  max_repeated_problem_tokens: 50
+  max_repeated_code_lines: 5
+  require_all_additional_skills: true

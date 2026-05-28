@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.9, "core_composition_summary": "Greedy selection with parity constraints inside binary search", "rationale": "Binary search is not in candidate families; only greedy check, so effectively one mechanism."}}

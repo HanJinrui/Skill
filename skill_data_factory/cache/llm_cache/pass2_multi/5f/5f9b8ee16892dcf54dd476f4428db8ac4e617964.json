@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 1.0, "core_composition_summary": "Single greedy algorithm for sock matching.", "rationale": "Solution uses one pass greedy counting and integer arithmetic; no separate mechanisms like sorting or amortized analysis."}}

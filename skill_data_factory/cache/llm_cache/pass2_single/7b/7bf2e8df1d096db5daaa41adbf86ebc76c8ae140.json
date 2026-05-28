@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "dp_1d_state", "confidence": 0.9, "core_mechanism_summary": "Iterative 0/1 knapsack DP using a dictionary mapping time used to max points, updating per item.", "rationale": "The state is one-dimensional (time used), updated item by item, characteristic of dp_1d_state.", "family_mismatch": false, "is_true_composition": false}}

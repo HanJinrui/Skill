@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.0, "core_composition_summary": "Irrelevant number theory code; no graph or range query logic.", "rationale": "Code does not implement any mechanisms from candidate families; it is a collection of utility functions unrelated to the problem."}}

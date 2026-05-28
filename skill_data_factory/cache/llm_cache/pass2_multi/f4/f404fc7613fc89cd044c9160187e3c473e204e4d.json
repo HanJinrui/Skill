@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Sort then greedy assignment to 1..n", "rationale": "The algorithm simply sorts and then iterates, performing a single greedy matching. Sorting is preprocessing, not a distinct coordinated mechanism."}}

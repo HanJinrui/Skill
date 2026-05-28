@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 1.0, "core_composition_summary": "Simple pair enumeration with set lookup for midpoint existence; single mechanism.", "rationale": "Only one algorithmic family (complete search) is used; sorting not involved."}}

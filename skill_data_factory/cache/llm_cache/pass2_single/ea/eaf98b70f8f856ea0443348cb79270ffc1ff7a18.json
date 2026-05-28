@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "search_backtracking", "confidence": 0.1, "core_mechanism_summary": "Linear scan through scores, tracking current max and min, counting when a score breaks a record.", "rationale": "Solution uses greedy linear pass, not complete search; chosen as rule_top_subtype, but it's a poor fit.", "family_mismatch": true, "is_true_composition": false}}

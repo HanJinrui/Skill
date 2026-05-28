@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": null, "confidence": 0.95, "core_composition_summary": "Sorting-enabled greedy selection; single mechanism.", "rationale": "Sorting gaps is preprocessing; the greedy step of picking smallest n-k gaps is the main logic. Not a multi-mechanism composition."}}

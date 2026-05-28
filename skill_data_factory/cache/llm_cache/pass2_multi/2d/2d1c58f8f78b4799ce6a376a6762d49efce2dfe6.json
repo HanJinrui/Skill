@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Single greedy interval scheduling algorithm.", "rationale": "Solves by interpreting clique condition as interval non-overlap, then applies classic greedy on sorted right endpoints—only one mechanism."}}

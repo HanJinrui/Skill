@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "DP with bitmask states and precomputed constraints; no multi-mechanism composition.", "rationale": "The core is DP; bit manipulation is only data representation, not a separate coordinating algorithm."}}

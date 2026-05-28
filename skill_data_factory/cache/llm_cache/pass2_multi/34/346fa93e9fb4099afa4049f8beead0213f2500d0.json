@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Single mechanism: amortized two pointers sliding window", "rationale": "Input is sorted; the algorithm uses two pointers to count combinations, no additional algorithms."}}

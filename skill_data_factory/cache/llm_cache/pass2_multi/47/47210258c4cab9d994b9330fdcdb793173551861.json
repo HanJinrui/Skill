@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Single dynamic programming mechanism iteratively updating 1D array.", "rationale": "Solution uses only DP with alternating directional updates; no other algorithm families involved."}}

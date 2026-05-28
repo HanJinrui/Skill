@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Solution sums min of edge endpoints, a simple greedy observation.", "rationale": "Single greedy mechanism; no coordination of multiple algorithms."}}

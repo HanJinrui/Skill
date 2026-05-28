@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 1.0, "core_composition_summary": "Mathematical formula directly computes the answer.", "rationale": "The solution uses closed-form expressions, not sorting or complete search."}}

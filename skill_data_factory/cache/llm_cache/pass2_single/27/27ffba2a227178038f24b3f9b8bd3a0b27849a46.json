@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "ds_hash_map", "confidence": 0.1, "core_mechanism_summary": "Recursively adds corresponding elements of two lists representing polynomial coefficients.", "rationale": "Solution uses simple recursion without hash maps; forced by limited candidate subtypes and rule_top_subtype.", "family_mismatch": false, "is_true_composition": false}}

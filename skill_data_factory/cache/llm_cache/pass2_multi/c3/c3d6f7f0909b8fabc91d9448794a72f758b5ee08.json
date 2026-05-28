@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Binary search wraps a bitmask DP to find minimal coverage length.", "rationale": "Core is DP with bitmask state. Binary search is auxiliary and not in candidate families, so single mechanism."}}

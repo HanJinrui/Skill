@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 1.0, "core_composition_summary": "Single greedy pick largest coin until sum > half.", "rationale": "Only one algorithm used: greedy selection after sorting; no coordination of multiple mechanisms."}}

@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "search_backtracking", "confidence": 0.1, "core_mechanism_summary": "Trivial arithmetic: reads two ints and prints sum.", "rationale": "Solution is O(1) addition, no search, but forced to pick from given complete_search subtypes; backtracking is chosen as rule top.", "family_mismatch": false, "is_true_composition": false}}

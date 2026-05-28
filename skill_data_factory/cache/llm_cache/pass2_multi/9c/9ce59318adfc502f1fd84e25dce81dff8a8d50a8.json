@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Tree DP with re-rooting for cost calculation", "rationale": "Uses a single DP mechanism: bottom-up computation of subtree sums and re-rooting to compute all costs. No multiple mechanisms."}}

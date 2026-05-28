@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Greedy matching after sorting", "rationale": "The algorithm sorts both arrays and greedily checks if each a_i can map to b_i as equal or a_i+1. It is a single mechanism, not a composition."}}

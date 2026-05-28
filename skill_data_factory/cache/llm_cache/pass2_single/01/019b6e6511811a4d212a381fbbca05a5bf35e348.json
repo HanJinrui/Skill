@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "sorting_custom_key", "confidence": 0.6, "core_mechanism_summary": "Sort levels; count elements strictly greater than min.", "rationale": "Insight: only heroes with initial level > min can become winners. Sorting simplifies identification of min and counting.", "family_mismatch": false, "is_true_composition": false}}

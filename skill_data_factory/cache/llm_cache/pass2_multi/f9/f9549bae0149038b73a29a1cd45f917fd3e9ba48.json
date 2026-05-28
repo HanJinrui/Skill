@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.9, "core_composition_summary": "Z-algorithm (amortized) for borders; counting via sorting not allowed family.", "rationale": "Only amortized analysis used; sorting is not in candidate families. Single mechanism."}}

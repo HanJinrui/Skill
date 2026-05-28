@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.9, "core_composition_summary": "Greedy strategy with sorted arrays to always choose max or remove opponent's max.", "rationale": "The solution uses sorting to facilitate a greedy two-pointer simulation; effectively one main mechanism."}}

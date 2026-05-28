@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.9, "core_composition_summary": "Single DP on tree mechanism.", "rationale": "The solution uses only tree DP (bottom-up) to compute min/max node values; no other algorithmic families are composed."}}

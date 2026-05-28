@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Single greedy counting of bipartite cell colors.", "rationale": "The solution computes black and white cell counts using parity checks and outputs min(r,b). No multiple algorithms coordinated."}}

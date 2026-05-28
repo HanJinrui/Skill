@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Single mechanism: DP on LPS array for occurrence counting.", "rationale": "Uses KMP prefix function to compute borders, then DP to count occurrences. Only one main algorithm mechanism."}}

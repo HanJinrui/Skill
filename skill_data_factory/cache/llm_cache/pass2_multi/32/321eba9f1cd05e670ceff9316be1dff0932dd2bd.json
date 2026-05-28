@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 1.0, "core_composition_summary": "Single binary search on prefix sums.", "rationale": "The solution uses only one algorithmic pattern (binary search on cumulative sums) without multiple coordinated mechanisms."}}

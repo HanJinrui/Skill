@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "bit_xor_trick", "confidence": 0.95, "core_mechanism_summary": "Computes XOR 1..n using modulo 4 pattern: 0→n, 1→1, 2→n+1, 3→0.", "rationale": "Solution directly exploits the well-known property that XOR from 1 to n cycles every 4, mapping n%4 to specific results.", "family_mismatch": false, "is_true_composition": false}}

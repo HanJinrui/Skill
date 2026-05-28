@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Exhaustive subset enumeration using bitmask loops.", "rationale": "Single mechanism: complete search over all subsets via bitmask enumeration. No additional algorithmic technique."}}

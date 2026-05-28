@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.9, "core_composition_summary": "Greedy selection based on precomputed limit after sorting coupons by cost.", "rationale": "Sorting is only a preprocessing step for the greedy algorithm; the core logic is a single greedy mechanism."}}

@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "bit_set_operations", "confidence": 0.9, "core_mechanism_summary": "Count set bits in XOR to find Hamming distance between two integers.", "rationale": "Uses bitwise XOR to isolate differing bits, then counts set bits via popcount (bin(...).count('1')). This is direct bit set counting.", "family_mismatch": false, "is_true_composition": false}}

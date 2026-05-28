@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.9, "core_composition_summary": "Hash map frequency counting and bucket construction.", "rationale": "Primary mechanism is Counter (hash map) with trivial bucket sorting."}}

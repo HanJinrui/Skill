@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "dp_tree", "confidence": 0.95, "core_mechanism_summary": "DP on binary tree: each node stores counts of possible winners from its children; updates propagate along path to root.", "rationale": "Uses bottom-up DP on binary tournament tree, recomputing only affected nodes.", "family_mismatch": false, "is_true_composition": false}}

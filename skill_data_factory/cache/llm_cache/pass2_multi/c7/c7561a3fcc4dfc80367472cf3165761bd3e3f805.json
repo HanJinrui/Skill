@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": null, "confidence": 0.95, "core_composition_summary": "Greedy counting of valid subsequences", "rationale": "Only one main mechanism: greedy sequential matching with counters."}}

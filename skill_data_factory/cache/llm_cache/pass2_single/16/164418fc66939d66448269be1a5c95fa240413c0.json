@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "dp_1d_state", "confidence": 0.9, "core_mechanism_summary": "Computes sequence x[n] using 16-term linear recurrence with precomputed coefficients and initial values.", "rationale": "Solution uses 1D DP storing only past 16 values, no multidimensional state.", "family_mismatch": false, "is_true_composition": false}}

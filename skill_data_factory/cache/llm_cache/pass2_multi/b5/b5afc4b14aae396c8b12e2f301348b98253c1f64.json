@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.8, "core_composition_summary": "Single greedy algorithm using AVL tree for efficient selection.", "rationale": "Only greedy selection with AVL; no evidence of multiple coordinated algorithm families."}}

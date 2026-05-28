@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.99, "core_composition_summary": "Brute-force enumeration over possible OR results.", "rationale": "Only a complete search is performed; no combination of multiple algorithm families."}}

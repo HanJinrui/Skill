@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 1.0, "core_composition_summary": "Single DP over the array sequence with precomputed per-array values.", "rationale": "Solution uses one DP mechanism, not a coordinated composition of multiple algorithm families."}}

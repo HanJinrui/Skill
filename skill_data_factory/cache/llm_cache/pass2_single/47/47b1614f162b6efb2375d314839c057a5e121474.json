@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "search_backtracking", "confidence": 0.1, "core_mechanism_summary": "Computes time as min of row travel time and column travel time using arithmetic, no search.", "rationale": "Solution uses direct formula derived from bouncing pattern, not any complete search method.", "family_mismatch": true, "is_true_composition": false}}

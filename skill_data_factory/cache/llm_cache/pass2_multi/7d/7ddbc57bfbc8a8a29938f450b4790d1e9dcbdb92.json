@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.9, "core_composition_summary": "Uses sieve and prefix sums, not in candidate families", "rationale": "Mechanisms (sieve, prefix sum) not covered by allowed families (DP, sorting, data_structs, complete_search)."}}

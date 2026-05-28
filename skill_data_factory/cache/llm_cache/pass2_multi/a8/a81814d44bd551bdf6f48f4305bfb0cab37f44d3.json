@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Greedy algorithm that sorts the array and then assigns heights step by step.", "rationale": "Sorting is preprocessing for the greedy step; overall a single greedy mechanism."}}

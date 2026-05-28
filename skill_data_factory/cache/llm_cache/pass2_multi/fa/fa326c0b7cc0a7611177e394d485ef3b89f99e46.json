@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Single greedy mechanism with sorting as preprocessing.", "rationale": "Solution sorts to find longest planks, then applies greedy min bound; only one algorithmic idea."}}

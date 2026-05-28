@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.99, "core_composition_summary": "Only sorting by computed key; no multi-mechanism composition.", "rationale": "Solution computes max of two assignments per grower and sorts; no greedy or other algorithm besides sorting."}}

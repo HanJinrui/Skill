@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Single greedy mechanism: repeatedly swap x with first ai > x until sorted.", "rationale": "Solution uses only a greedy loop without sorting or DP; no coordination of multiple distinct algorithm mechanisms."}}

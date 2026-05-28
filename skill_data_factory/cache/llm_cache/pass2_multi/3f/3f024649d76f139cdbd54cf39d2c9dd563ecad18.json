@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.9, "core_composition_summary": "Ternary search over target height with greedy cost calculation", "rationale": "Solution uses ternary search (not in candidate families) and a greedy subroutine; effectively a single algorithmic mechanism."}}

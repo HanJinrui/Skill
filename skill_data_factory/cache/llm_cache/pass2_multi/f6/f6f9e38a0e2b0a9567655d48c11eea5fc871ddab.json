@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 1.0, "core_composition_summary": "Sort then greedy selection.", "rationale": "The solution sorts and does a single greedy pass; no multiple mechanisms."}}

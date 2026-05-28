@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": 0, "confidence": 0.95, "core_composition_summary": "Pure greedy reverse traversal of change points.", "rationale": "Only one mechanism: greedy choice from farthest block to nearest, no DP or sorting."}}

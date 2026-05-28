@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "dp_2d_state", "confidence": 0.95, "core_mechanism_summary": "Bottom-up DP on 2D grid of (boxes, items) using game theory mex for impartial game.", "rationale": "Solution uses dictionary memoization for states (boxes, items) and computes mex of successor states, typical of 2D state DP.", "family_mismatch": false, "is_true_composition": false}}

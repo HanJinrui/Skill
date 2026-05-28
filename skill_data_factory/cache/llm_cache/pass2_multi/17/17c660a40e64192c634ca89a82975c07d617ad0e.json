@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.9, "core_composition_summary": "", "rationale": "Sorting is preprocessing; main logic is a linear scan with binary search to find max window, which is a single algorithm mechanism."}}

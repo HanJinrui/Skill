@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 1.0, "core_composition_summary": "Single mechanism: frequency map counting.", "rationale": "Uses only a hash map to count occurrences and iterate over powers of 2; no multiple algorithms."}}

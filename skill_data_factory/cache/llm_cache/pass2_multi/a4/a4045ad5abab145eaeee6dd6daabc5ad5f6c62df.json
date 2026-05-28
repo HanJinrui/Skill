@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Single DP phase solving maximum subarray per value in one pass.", "rationale": "Solution uses a Kadane-style DP state per value (counter) and global minus to track c's, no other algorithmic family involved."}}

@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "search_branch_and_bound", "confidence": 0.3, "core_mechanism_summary": "Recursive computation with memoization for sequence generation.", "rationale": "The solution uses top-down DP, not a search algorithm; candidate subtypes are all search-based.", "family_mismatch": true, "is_true_composition": false}}

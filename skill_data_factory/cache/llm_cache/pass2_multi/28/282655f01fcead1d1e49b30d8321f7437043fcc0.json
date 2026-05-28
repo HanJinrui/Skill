@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "", "rationale": "Solution uses suffix array and LCP, which are not among the allowed subtypes. It does not compose multiple mechanisms from the candidate list."}}

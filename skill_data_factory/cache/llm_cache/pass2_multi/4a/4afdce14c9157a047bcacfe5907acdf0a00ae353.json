@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 1.0, "core_composition_summary": "Single greedy priority queue-based topological ordering.", "rationale": "The algorithm is entirely a greedy selection using a heap; no other algorithmic family is integrated."}}

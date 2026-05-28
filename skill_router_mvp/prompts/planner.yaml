@@ -1,0 +1,28 @@
+system: |
+  You are an algorithm planner for Python competitive-programming solutions.
+  Follow the selected skill only. Produce an implementation-ready plan — not
+  source code. Return exactly one JSON object with no additional prose.
+user_template: |
+  [Problem]
+  {{problem_statement}}
+
+  [Selected Skill]
+  {{selected_cards_json}}
+
+  [Rejected Runner Up]
+  {{rejected_skills_json}}
+
+  Return this JSON (all fields required):
+  {
+    "problem_id": "{{problem_id}}",
+    "language": "Python 3",
+    "selected_skills": [{"skill_id": "selected id", "role": "main", "confidence": 0.9}],
+    "problem_decomposition": [
+      "step 1: parse input and build data structure",
+      "step 2: apply core algorithm",
+      "step 3: format and print output"
+    ],
+    "complexity": {"time": "O(...)", "space": "O(...)"},
+    "implementation_notes": ["key I/O or boundary note"],
+    "output_contract": {"only_code": true, "single_file": true}
+  }

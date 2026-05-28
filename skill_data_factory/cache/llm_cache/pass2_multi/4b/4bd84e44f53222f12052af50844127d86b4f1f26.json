@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Single greedy math formula iteration, no composition", "rationale": "Solution computes tallest pyramid height via closed-form and subtracts, no DP, sorting, or search."}}

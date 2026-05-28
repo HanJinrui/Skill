@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 1.0, "core_composition_summary": "Simple exhaustive search over all combinations of at least 2 problems.", "rationale": "The solution enumerates all combinations recursively without any additional mechanism like bitmasking or pruning."}}

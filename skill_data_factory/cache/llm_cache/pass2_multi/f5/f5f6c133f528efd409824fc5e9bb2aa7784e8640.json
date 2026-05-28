@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.99, "core_composition_summary": "Simple linear scan for minimum and divisibility check.", "rationale": "No coordination of multiple algorithm families; just min and any() linear scan."}}

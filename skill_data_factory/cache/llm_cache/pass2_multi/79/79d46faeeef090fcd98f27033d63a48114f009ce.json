@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.95, "core_composition_summary": "Sorts all inversion pairs using a custom key to determine swap order.", "rationale": "Effectively a single sorting mechanism with a custom key; no greedy or other algorithm is separately applied."}}

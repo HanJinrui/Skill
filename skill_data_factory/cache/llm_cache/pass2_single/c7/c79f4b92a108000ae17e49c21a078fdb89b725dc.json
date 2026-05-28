@@ -1,0 +1,1 @@
+{"payload": {"primary_subtype": "search_backtracking", "confidence": 0.3, "core_mechanism_summary": "Iteratively increases odd n until n^2+1 >= 2x, special case x=3 → n=5.", "rationale": "Solution efficiently computes n via a mathematical bound, not DP; no state transitions or memoization. Loop simply tests n.", "family_mismatch": true, "is_true_composition": false}}

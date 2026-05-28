@@ -1,0 +1,8 @@
+{
+  "track": "multi_algorithm",
+  "stats": {
+    "labeled": 407,
+    "quarantine": 1729
+  },
+  "calls": 2136
+}

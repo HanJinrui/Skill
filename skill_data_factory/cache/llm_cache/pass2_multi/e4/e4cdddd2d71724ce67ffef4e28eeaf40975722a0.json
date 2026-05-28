@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Sorting and sliding window over keys to minimize max time.", "rationale": "Only sorting plus linear scan; no distinct algorithm families combined."}}

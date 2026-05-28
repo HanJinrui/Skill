@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "Solution uses direct string trimming and comparison, no multi-mechanism.", "rationale": "The code trims common prefix/suffix and checks shifted substrings; not DP, greedy, or amortized."}}

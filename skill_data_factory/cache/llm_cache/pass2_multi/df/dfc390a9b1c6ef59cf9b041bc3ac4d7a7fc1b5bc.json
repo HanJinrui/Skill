@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": "", "confidence": 0.0, "core_composition_summary": "", "rationale": "Solution relies on segment tree (range_queries) not in allowed subtypes; sorting and hashing are auxiliary; effectively one main mechanism."}}

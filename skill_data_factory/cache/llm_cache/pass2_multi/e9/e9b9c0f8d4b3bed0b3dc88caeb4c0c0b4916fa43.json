@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": [], "composition_subtypes": [], "composition_order": [], "confidence": 0.9, "core_composition_summary": "Greedy algorithm after sorting", "rationale": "Single mechanism: greedy scan over sorted list; sorting is merely preprocessing."}}

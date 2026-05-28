@@ -1,0 +1,1 @@
+{"payload": {"is_true_composition": false, "composition_families": ["dynamic_programming"], "composition_subtypes": [], "composition_order": [], "confidence": 0.95, "core_composition_summary": "2D dynamic programming to allocate limited favorite cards among players", "rationale": "Solution uses a single DP per favorite number, not incorporating multiple algorithmic families."}}
