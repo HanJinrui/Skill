@@ -1,0 +1,82 @@
+{
+  "manifest": "/home/hjr/algo-skill-factory/rag_experiment/outputs/eval_manifests/taco_test_family_difficulty_balanced_single120.jsonl",
+  "modes": [
+    "direct_qwen",
+    "legacy_hint",
+    "routed_plan",
+    "routed_plan_closed_loop"
+  ],
+  "annotations": {
+    "path": "outputs/annotations/bank67_route_deepseek_silver.jsonl",
+    "total_rows": 143,
+    "reviewed_rows": 143,
+    "needs_review_rows": 0,
+    "reviewed_out_of_bank_rows": 70,
+    "label_sources": [
+      "deepseek_silver"
+    ]
+  },
+  "metrics": {
+    "direct_qwen": {
+      "problems": 92,
+      "sample_pass_at_1": 0.043478260869565216,
+      "ac_at_3": 0.043478260869565216,
+      "plan_json_valid_rate": null,
+      "mean_extra_iterations": 0.0,
+      "single_top1_accuracy": 0.0,
+      "multi_skill_set_f1": null,
+      "fallback_count": 0,
+      "mean_latency_ms": {
+        "generate_execute": 30548.641304347828
+      }
+    },
+    "legacy_hint": {
+      "problems": 92,
+      "sample_pass_at_1": 0.06521739130434782,
+      "ac_at_3": 0.08695652173913043,
+      "plan_json_valid_rate": null,
+      "mean_extra_iterations": 0.0,
+      "single_top1_accuracy": 0.11627906976744186,
+      "multi_skill_set_f1": null,
+      "fallback_count": 0,
+      "mean_latency_ms": {
+        "generate_execute": 32004.83695652174,
+        "retrieve_rerank": 941.5869565217391
+      }
+    },
+    "routed_plan": {
+      "problems": 92,
+      "sample_pass_at_1": 0.05434782608695652,
+      "ac_at_3": 0.07608695652173914,
+      "plan_json_valid_rate": 0.532608695652174,
+      "mean_extra_iterations": 0.0,
+      "single_top1_accuracy": 0.09302325581395349,
+      "multi_skill_set_f1": null,
+      "fallback_count": 43,
+      "mean_latency_ms": {
+        "gate": 47007.38043478261,
+        "generate_execute": 32402.532608695652,
+        "plan": 4585.684782608696,
+        "profile": 3242.3152173913045,
+        "retrieve_rerank": 816.4891304347826
+      }
+    },
+    "routed_plan_closed_loop": {
+      "problems": 92,
+      "sample_pass_at_1": 0.06521739130434782,
+      "ac_at_3": 0.08695652173913043,
+      "plan_json_valid_rate": 0.532608695652174,
+      "mean_extra_iterations": 1.4565217391304348,
+      "single_top1_accuracy": 0.09302325581395349,
+      "multi_skill_set_f1": null,
+      "fallback_count": 43,
+      "mean_latency_ms": {
+        "gate": 47000.836956521736,
+        "generate_execute": 45739.70652173913,
+        "plan": 4582.597826086957,
+        "profile": 3243.195652173913,
+        "retrieve_rerank": 813.5652173913044
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "manifest": "/home/hjr/algo-skill-factory/rag_experiment/outputs/eval_manifests/taco_test_family_difficulty_balanced_single120.jsonl",
+  "modes": [
+    "direct_qwen",
+    "routed_plan"
+  ],
+  "annotations": {
+    "path": "outputs/annotations/bank67_route_deepseek_silver.jsonl",
+    "total_rows": 143,
+    "reviewed_rows": 143,
+    "needs_review_rows": 0,
+    "reviewed_out_of_bank_rows": 70,
+    "label_sources": [
+      "deepseek_silver"
+    ]
+  },
+  "metrics": {
+    "direct_qwen": {
+      "problems": 2,
+      "sample_pass_at_1": 0.0,
+      "ac_at_3": 0.0,
+      "plan_json_valid_rate": null,
+      "mean_extra_iterations": 0.0,
+      "single_top1_accuracy": 0.0,
+      "multi_skill_set_f1": null,
+      "fallback_count": 0,
+      "mean_latency_ms": {
+        "generate_execute": 59323.0
+      }
+    },
+    "routed_plan": {
+      "problems": 2,
+      "sample_pass_at_1": 0.0,
+      "ac_at_3": 0.0,
+      "plan_json_valid_rate": 1.0,
+      "mean_extra_iterations": 0.0,
+      "single_top1_accuracy": 0.0,
+      "multi_skill_set_f1": null,
+      "fallback_count": 0,
+      "mean_latency_ms": {
+        "gate": 58184.5,
+        "generate_execute": 9863.0,
+        "plan": 7415.0,
+        "profile": 3252.0,
+        "retrieve_rerank": 6522.5
+      }
+    }
+  }
+}
